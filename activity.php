@@ -27,6 +27,9 @@ if(isset($username))
   <link href="vendor/css/bootstrap.min.css" rel="stylesheet">
   <link href="resource/css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="resource/css/animate.min.css">
+  <link href="vendor/fonts/css/fontawesome.min.css" rel="stylesheet">
+  <link href="vendor/fonts/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="resource/css/animate.min.css">
 </head>
 <style media="screen">
 body{
@@ -47,23 +50,26 @@ background-attachment: fixed;
                     <form action="" method="GET" class="form-inline my-2 my-lg-0">
                       <input class="form-control mr-sm-5 text-dark" style="width:55vh; margin-top:15px;" type="search" name="search" value="" placeholder="Enter keyword..." autocomplete="off">
                         <br>
-                      <label class="ml-1 text-muted mr-5" style="margin-top:15px;">Filter by:</label>
+                      <label class="ml-1 text-muted mr-1" style="margin-top:15px;">Filter by:</label>
                         <select class="form-control mr-2 text-dark browser-default custom-select" name="down" style="width:20vh; margin-top:15px;" id="select" name="criteria" style="width: 115px;">
                           <option value="date" title="Title for Item 1">Date</option>
                           <option value="schoolName" title="Title for Item 2">School</option>
                           <option value="facilitator" title="Title for Item 3">Facilitator</option>
                           <option value="collegeDepartment" title="Title for Item 4">Department</option>
                         </select>
-                      <input class="btn text-white mr-5 mt-3" style="background-color:#d75094;" type="submit" name="submit" value="Search">
-                      <li class="nav-item"><a class="nav-link text-dark mr-3" style="margin-top:15px;" href="addActivity.php">New record</a></li>
-                      <li class="nav-item"><button class="btn text-dark mr-3 py-3" style="margin-top:15px; background-color: transparent;" name="logout">Logout</button></li>
+                        <span class="btn btn-default mr-3 mt-3" style="background-color:#d75094;">
+                              <i class="fas fa-search" style="color:white;"></i>
+                      <input type="submit"name="submit"value="Search"style="background:none;border:0;color:white;">
+                        </span>
+                      <li class="nav-item"><a class="nav-link text-dark mr-3" style="margin-top:15px;" href="addActivity.php"><span>&#43;</span> New record</a></li>
+                      <li class="nav-item"><button class="btn text-dark mr-3 py-3" style="margin-top:15px; background-color: transparent;" name="logout"><i class="fas fa-sign-out-alt mr-1"></i>Logout</button></li>
                     </form>
                   </ul>
                 </div>
               </div>
             </nav>
-            <a type="submit" name="participant" href="participant.php" class="btn my-3 mr-3 float-right text-white" style="background-color:#d75094;">Participant</a>
-            <a type="submit" name="viewGraph" href="dataTable.php" class="btn my-3 mr-3 float-right text-white" style="background-color:#d75094;">View Figures</a>
+            <a type="submit" name="participant" href="participant.php" class="btn my-3 mr-3 float-right text-white" style="background-color:#d75094;"><i class="fas fa-users mr-2"></i>Participant</a>
+            <a type="submit" name="viewGraph" href="dataTable.php" class="btn my-3 mr-3 float-right text-white" style="background-color:#d75094;"><i class="fas fa-chart-bar mr-2"></i>View Figures</a>
             <div class="container-fluid px-0">
             <nav class="mt-3">
             <div class="nav nav-tabs animated fadeInUp" id="nav-tab" role="tablist">
