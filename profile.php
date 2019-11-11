@@ -7,6 +7,9 @@
     <link href="vendor/css/bootstrap.min.css" rel="stylesheet">
     <link href="resource/css/edit.css" rel="stylesheet">
     <link rel="stylesheet" href="resource/css/animate.min.css">
+    <link href="vendor/fonts/css/fontawesome.min.css" rel="stylesheet">
+    <link href="vendor/fonts/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="resource/css/animate.min.css">
   </head>
   <style media="screen">
   body{
@@ -25,7 +28,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ml-auto">
                 <form action="" method="GET" class="form-inline my-2 my-lg-0">
-                  <li class="nav-item"><a class="nav-link text-dark mr-3" style="margin-top:15px;" href="participant.php">Go back</a></li>
+                  <li class="nav-item"><a class="nav-link text-dark mr-3" style="margin-top:15px;" href="participant.php"><i class="fas fa-arrow-left mr-1"></i>Return</a></li>
                 </form>
               </ul>
             </div>
