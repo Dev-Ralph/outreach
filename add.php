@@ -14,6 +14,7 @@ if(isset($_POST['add'])){
     <title>New Record</title>
     <link href="vendor/css/bootstrap.min.css" rel="stylesheet">
     <link href="resource/css/edit.css" rel="stylesheet">
+    <link rel="stylesheet" href="resource/css/animate.min.css">
   </head>
   <style media="screen">
   body{
@@ -42,7 +43,7 @@ if(isset($_POST['add'])){
         <div class="container-fluid ">
           <div class="row justify-content-center">
             <div class="col-md-10">
-              <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+              <div class="card animated fadeInUp" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
               -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
               -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
                   <div class="card-header text-white bg-white"><h2 style="color:#d75093">New record</h2>

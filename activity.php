@@ -26,6 +26,7 @@ if(isset($username))
   <title>Homepage | Activity</title>
   <link href="vendor/css/bootstrap.min.css" rel="stylesheet">
   <link href="resource/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="resource/css/animate.min.css">
 </head>
 <style media="screen">
 body{
@@ -65,7 +66,7 @@ background-attachment: fixed;
             <a type="submit" name="viewGraph" href="dataTable.php" class="btn my-3 mr-3 float-right text-white" style="background-color:#d75094;">View Figures</a>
             <div class="container-fluid px-0">
             <nav class="mt-3">
-            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <div class="nav nav-tabs animated fadeInUp" id="nav-tab" role="tablist">
               <a class="nav-link px-3 active" style="color:#d75094;" id="nav-literacy-tab" data-toggle="tab" href="#nav-literacy" role="tab" aria-controls="nav-literacy" aria-selected="true">Literacy & Numeracy</a>
               <a class="nav-link px-3" style="color:#d75094;" id="nav-health-tab" data-toggle="tab" href="#nav-health" role="tab" aria-controls="nav-health" aria-selected="false">Health & Wellness</a>
               <a class="nav-link px-3" style="color:#d75094;" id="nav-environment-tab" data-toggle="tab" href="#nav-environment" role="tab" aria-controls="nav-environment" aria-selected="false">Environment Care</a>
@@ -84,7 +85,7 @@ background-attachment: fixed;
               }
               ?>
             </div>
-            <div class="tab-pane fade" id="nav-health" role="tabpanel" aria-labelledby="nav-health-tab">
+            <div class="tab-pane fade animated fadeInUp" id="nav-health" role="tabpanel" aria-labelledby="nav-health-tab">
               <?php
               require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/viewActivity.php';
               $view = new viewActivity;
@@ -95,7 +96,7 @@ background-attachment: fixed;
               }
               ?>
             </div>
-            <div class="tab-pane fade" id="nav-environment" role="tabpanel" aria-labelledby="nav-environment-tab">
+            <div class="tab-pane fade animated fadeInUp" id="nav-environment" role="tabpanel" aria-labelledby="nav-environment-tab">
               <?php
               require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/viewActivity.php';
               $view = new viewActivity;
@@ -106,7 +107,7 @@ background-attachment: fixed;
               }
               ?>
             </div>
-            <div class="tab-pane fade" id="nav-livelihood" role="tabpanel" aria-labelledby="nav-livelihood-tab">
+            <div class="tab-pane fade animated fadeInUp" id="nav-livelihood" role="tabpanel" aria-labelledby="nav-livelihood-tab">
               <?php
               require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/viewActivity.php';
               $view = new viewActivity;

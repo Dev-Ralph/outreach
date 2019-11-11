@@ -6,6 +6,7 @@
     <title>Register page</title>
     <link href="vendor/css/bootstrap.min.css" rel="stylesheet">
     <link href="resource/css/edit.css" rel="stylesheet">
+    <link rel="stylesheet" href="resource/css/animate.min.css">
   </head>
   <style media="screen">
   body{
@@ -31,7 +32,7 @@
             </div>
           </nav>
       <div class="container">
-        <div class="row pt-3 pb-3">
+        <div class="row pt-3 pb-3 animated zoomIn">
           <div class="col-12 text-center">
           <IMG SRC="resource/img/logotrans2.png" WIDTH=400 HEIGHT=AUTO class="mx-auto">
           </div>
@@ -95,7 +96,7 @@
        </div>
      </footer>
      <!-- Footer -->
-     
+
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="vendor/js/bootstrap.min.js"></script>

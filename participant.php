@@ -80,7 +80,7 @@ background-attachment: fixed;
             </div>
           </nav>
           <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="nav-literacy" role="tabpanel" aria-labelledby="nav-literacy-tab">
+            <div class="tab-pane fade show active animated fadeInUp" id="nav-literacy" role="tabpanel" aria-labelledby="nav-literacy-tab">
               <?php
               require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/view.php';
               $view = new view;
@@ -91,7 +91,7 @@ background-attachment: fixed;
               }
               ?>
             </div>
-            <div class="tab-pane fade" id="nav-health" role="tabpanel" aria-labelledby="nav-health-tab">
+            <div class="tab-pane fade animated fadeInUp" id="nav-health" role="tabpanel" aria-labelledby="nav-health-tab">
               <?php
               require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/view.php';
               $view = new view;
@@ -102,7 +102,7 @@ background-attachment: fixed;
               }
               ?>
             </div>
-            <div class="tab-pane fade" id="nav-environment" role="tabpanel" aria-labelledby="nav-environment-tab">
+            <div class="tab-pane fade animated fadeInUp" id="nav-environment" role="tabpanel" aria-labelledby="nav-environment-tab">
               <?php
               require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/view.php';
               $view = new view;
@@ -113,7 +113,7 @@ background-attachment: fixed;
               }
               ?>
             </div>
-            <div class="tab-pane fade" id="nav-livelihood" role="tabpanel" aria-labelledby="nav-livelihood-tab">
+            <div class="tab-pane fade animated fadeInUp" id="nav-livelihood" role="tabpanel" aria-labelledby="nav-livelihood-tab">
               <?php
               require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/view.php';
               $view = new view;

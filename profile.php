@@ -6,6 +6,7 @@
     <title>Register page</title>
     <link href="vendor/css/bootstrap.min.css" rel="stylesheet">
     <link href="resource/css/edit.css" rel="stylesheet">
+    <link rel="stylesheet" href="resource/css/animate.min.css">
   </head>
   <style media="screen">
   body{
@@ -30,13 +31,13 @@
             </div>
           </div>
         </nav>
-      <div class="container-fluid mt-4">
+      <div class="container-fluid mt-4 ">
         <form action="" method="POST" class="form-inline my-2 my-lg-0">
-          <input class="form-control text-dark mr-3" type="search" name="schl_numberSearch" value="" placeholder="Enter ID Number" autocomplete="off">
+          <input class="form-control text-dark mr-3 " type="search" name="schl_numberSearch" value="" placeholder="Enter ID Number" autocomplete="off">
           <input class="btn text-white" style="background-color:#d75094;" type="submit" name="searchProfile" value="Search">
         </form>
       </div>
-      <div class="container-fluid mt-4 px-0">
+      <div class="container-fluid mt-4 px-0 animated fadeInUp">
         <div class="row">
 
         <?php

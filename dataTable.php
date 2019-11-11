@@ -6,6 +6,7 @@
     <title>Register page</title>
     <link href="vendor/css/bootstrap.min.css" rel="stylesheet">
     <link href="resource/css/edit.css" rel="stylesheet">
+    <link rel="stylesheet" href="resource/css/animate.min.css">
   </head>
   <style media="screen">
   body{
@@ -52,21 +53,21 @@
               </div>
             </nav>
             <div class="tab-content" id="nav-tabContent">
-              <div class="tab-pane fade show active" id="nav-attendees" role="tabpanel" aria-labelledby="nav-attendees-tab">
+              <div class="tab-pane fade show active animated fadeInUp" id="nav-attendees" role="tabpanel" aria-labelledby="nav-attendees-tab">
                 <?php
                 require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTable.php';
                 $dataTable = new dataTable;
                 $dataTable->dataTableAttendeesLiteracy();
                 ?>
               </div>
-              <div class="tab-pane fade" id="nav-college" role="tabpanel" aria-labelledby="nav-college-tab">
+              <div class="tab-pane fade animated fadeInUp" id="nav-college" role="tabpanel" aria-labelledby="nav-college-tab">
                 <?php
                 require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTable.php';
                 $dataTable = new dataTable;
                 $dataTable->dataTableDepartmentLiteracy();
                 ?>
               </div>
-              <div class="tab-pane fade" id="nav-proponents" role="tabpanel" aria-labelledby="nav-proponents-tab">
+              <div class="tab-pane fade animated fadeInUp" id="nav-proponents" role="tabpanel" aria-labelledby="nav-proponents-tab">
                 <?php
                 require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTable.php';
                 $dataTable = new dataTable;
@@ -76,7 +77,7 @@
             </div>
             </div>
             </div>
-            <div class="tab-pane fade" id="v-pills-health" role="tabpanel" aria-labelledby="v-pills-health-tab">
+            <div class="tab-pane fade animated fadeInUp" id="v-pills-health" role="tabpanel" aria-labelledby="v-pills-health-tab">
               <div class="container-fluid px-0">
               <nav>
               <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -86,21 +87,21 @@
               </div>
             </nav>
             <div class="tab-content" id="nav-tabContent">
-              <div class="tab-pane fade show active" id="nav-attendees1" role="tabpanel" aria-labelledby="nav-attendees1-tab">
+              <div class="tab-pane fade show active animated fadeInUp" id="nav-attendees1" role="tabpanel" aria-labelledby="nav-attendees1-tab">
                 <?php
                 require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTable.php';
                 $dataTable = new dataTable;
                 $dataTable->dataTableAttendeesHealth();
                 ?>
               </div>
-              <div class="tab-pane fade" id="nav-college1" role="tabpanel" aria-labelledby="nav-college1-tab">
+              <div class="tab-pane fade animated fadeInUp" id="nav-college1" role="tabpanel" aria-labelledby="nav-college1-tab">
                 <?php
                 require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTable.php';
                 $dataTable = new dataTable;
                 $dataTable->dataTableDepartmentHealth();
                 ?>
               </div>
-              <div class="tab-pane fade" id="nav-proponents1" role="tabpanel" aria-labelledby="nav-proponents1-tab">
+              <div class="tab-pane fade animated fadeInUp" id="nav-proponents1" role="tabpanel" aria-labelledby="nav-proponents1-tab">
                 <?php
                 require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTable.php';
                 $dataTable = new dataTable;
@@ -110,7 +111,7 @@
             </div>
             </div>
             </div>
-            <div class="tab-pane fade " id="v-pills-environment" role="tabpanel" aria-labelledby="v-pills-environment-tab">
+            <div class="tab-pane fade animated fadeInUp" id="v-pills-environment" role="tabpanel" aria-labelledby="v-pills-environment-tab">
               <div class="container-fluid px-0">
               <nav>
               <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -120,21 +121,21 @@
               </div>
             </nav>
             <div class="tab-content" id="nav-tabContent">
-              <div class="tab-pane fade show active" id="nav-attendees2" role="tabpanel" aria-labelledby="nav-attendees2-tab">
+              <div class="tab-pane fade show active animated fadeInUp" id="nav-attendees2" role="tabpanel" aria-labelledby="nav-attendees2-tab">
                 <?php
                 require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTable.php';
                 $dataTable = new dataTable;
                 $dataTable->dataTableAttendeesEnvironment();
                 ?>
               </div>
-              <div class="tab-pane fade " id="nav-college2" role="tabpanel" aria-labelledby="nav-college2-tab">
+              <div class="tab-pane fade animated fadeInUp " id="nav-college2" role="tabpanel" aria-labelledby="nav-college2-tab">
                 <?php
                 require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTable.php';
                 $dataTable = new dataTable;
                 $dataTable->dataTableDepartmentEnvironment();
                 ?>
               </div>
-              <div class="tab-pane fade " id="nav-proponents2" role="tabpanel" aria-labelledby="nav-proponents2-tab">
+              <div class="tab-pane fade  animated fadeInUp" id="nav-proponents2" role="tabpanel" aria-labelledby="nav-proponents2-tab">
                 <?php
                 require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTable.php';
                 $dataTable = new dataTable;
@@ -144,7 +145,7 @@
             </div>
             </div>
             </div>
-            <div class="tab-pane fade " id="v-pills-livelihood" role="tabpanel" aria-labelledby="v-pills-livelihood-tab">
+            <div class="tab-pane fade animated fadeInUp " id="v-pills-livelihood" role="tabpanel" aria-labelledby="v-pills-livelihood-tab">
               <div class="container-fluid px-0">
               <nav>
               <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -154,21 +155,21 @@
               </div>
             </nav>
             <div class="tab-content" id="nav-tabContent">
-              <div class="tab-pane fade show active " id="nav-attendees3" role="tabpanel" aria-labelledby="nav-attendees3-tab">
+              <div class="tab-pane fade show active animated fadeInUp " id="nav-attendees3" role="tabpanel" aria-labelledby="nav-attendees3-tab">
                 <?php
                 require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTable.php';
                 $dataTable = new dataTable;
                 $dataTable->dataTableAttendeesLivelihood();
                 ?>
               </div>
-              <div class="tab-pane fade " id="nav-college3" role="tabpanel" aria-labelledby="nav-college3-tab">
+              <div class="tab-pane fade animated fadeInUp " id="nav-college3" role="tabpanel" aria-labelledby="nav-college3-tab">
                 <?php
                 require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTable.php';
                 $dataTable = new dataTable;
                 $dataTable->dataTableDepartmentLivelihood();
                 ?>
               </div>
-              <div class="tab-pane fade " id="nav-proponents3" role="tabpanel" aria-labelledby="nav-proponents3-tab">
+              <div class="tab-pane fade animated fadeInUp " id="nav-proponents3" role="tabpanel" aria-labelledby="nav-proponents3-tab">
                 <?php
                 require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTable.php';
                 $dataTable = new dataTable;
