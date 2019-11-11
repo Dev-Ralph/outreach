@@ -34,10 +34,10 @@
         <div class="row">
         <div class="col-3">
           <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-            <a class="nav-link active" id="v-pills-literacy-tab" data-toggle="pill" href="#v-pills-literacy" role="tab" aria-controls="v-pills-literacy" aria-selected="true">Literacy & Numeracy</a>
-            <a class="nav-link" id="v-pills-health-tab" data-toggle="pill" href="#v-pills-health" role="tab" aria-controls="v-pills-health" aria-selected="false">Health & Wellness</a>
-            <a class="nav-link" id="v-pills-environment-tab" data-toggle="pill" href="#v-pills-environment" role="tab" aria-controls="v-pills-environment" aria-selected="false">Environment Care</a>
-            <a class="nav-link" id="v-pills-livelihood-tab" data-toggle="pill" href="#v-pills-livelihood" role="tab" aria-controls="v-pills-livelihood" aria-selected="false">Livelihood & Entrepreneurship</a>
+            <a class="nav-link active" style="color:#d75094;" id="v-pills-literacy-tab" data-toggle="pill" href="#v-pills-literacy" role="tab" aria-controls="v-pills-literacy" aria-selected="true">Literacy & Numeracy</a>
+            <a class="nav-link" style="color:#d75094;" id="v-pills-health-tab" data-toggle="pill" href="#v-pills-health" role="tab" aria-controls="v-pills-health" aria-selected="false">Health & Wellness</a>
+            <a class="nav-link" style="color:#d75094;" id="v-pills-environment-tab" data-toggle="pill" href="#v-pills-environment" role="tab" aria-controls="v-pills-environment" aria-selected="false">Environment Care</a>
+            <a class="nav-link" style="color:#d75094;" id="v-pills-livelihood-tab" data-toggle="pill" href="#v-pills-livelihood" role="tab" aria-controls="v-pills-livelihood" aria-selected="false">Livelihood & Entrepreneurship</a>
           </div>
         </div>
         <div class="col-9">
@@ -46,9 +46,9 @@
               <div class="container-fluid px-0">
               <nav>
               <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                <a class="nav-link px-3 active" id="nav-attendees-tab" data-toggle="tab" href="#nav-attendees" role="tab" aria-controls="nav-attendees" aria-selected="true">Attendees</a>
-                <a class="nav-link px-3" id="nav-proponents-tab" data-toggle="tab" href="#nav-proponents" role="tab" aria-controls="nav-proponents" aria-selected="false">Activity</a>
-                <a class="nav-link px-3" id="nav-college-tab" data-toggle="tab" href="#nav-college" role="tab" aria-controls="nav-college" aria-selected="false">College Department</a>
+                <a class="nav-link px-3 active" style="color:#d75094;" id="nav-attendees-tab" data-toggle="tab" href="#nav-attendees" role="tab" aria-controls="nav-attendees" aria-selected="true">Attendees</a>
+                <a class="nav-link px-3" style="color:#d75094;" id="nav-proponents-tab" data-toggle="tab" href="#nav-proponents" role="tab" aria-controls="nav-proponents" aria-selected="false">Activity</a>
+                <a class="nav-link px-3" style="color:#d75094;" id="nav-college-tab" data-toggle="tab" href="#nav-college" role="tab" aria-controls="nav-college" aria-selected="false">College Department</a>
               </div>
             </nav>
             <div class="tab-content" id="nav-tabContent">
@@ -80,9 +80,9 @@
               <div class="container-fluid px-0">
               <nav>
               <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                <a class="nav-link px-3 active" id="nav-attendees1-tab" data-toggle="tab" href="#nav-attendees1" role="tab" aria-controls="nav-attendees1" aria-selected="true">Attendees</a>
-                <a class="nav-link px-3" id="nav-proponents1-tab" data-toggle="tab" href="#nav-proponents1" role="tab" aria-controls="nav-proponents1" aria-selected="false">Activity</a>
-                <a class="nav-link px-3" id="nav-college1-tab" data-toggle="tab" href="#nav-college1" role="tab" aria-controls="nav-college1" aria-selected="false">College Department</a>
+                <a class="nav-link px-3 active" style="color:#d75094;" id="nav-attendees1-tab" data-toggle="tab" href="#nav-attendees1" role="tab" aria-controls="nav-attendees1" aria-selected="true">Attendees</a>
+                <a class="nav-link px-3" style="color:#d75094;" id="nav-proponents1-tab" data-toggle="tab" href="#nav-proponents1" role="tab" aria-controls="nav-proponents1" aria-selected="false">Activity</a>
+                <a class="nav-link px-3" style="color:#d75094;" id="nav-college1-tab" data-toggle="tab" href="#nav-college1" role="tab" aria-controls="nav-college1" aria-selected="false">College Department</a>
               </div>
             </nav>
             <div class="tab-content" id="nav-tabContent">
@@ -114,9 +114,9 @@
               <div class="container-fluid px-0">
               <nav>
               <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                <a class="nav-link px-3 active" id="nav-attendees2-tab" data-toggle="tab" href="#nav-attendees2" role="tab" aria-controls="nav-attendees2" aria-selected="true">Attendees</a>
-                <a class="nav-link px-3" id="nav-proponents2-tab" data-toggle="tab" href="#nav-proponents2" role="tab" aria-controls="nav-proponents2" aria-selected="false">Activity</a>
-                <a class="nav-link px-3" id="nav-college2-tab" data-toggle="tab" href="#nav-college2" role="tab" aria-controls="nav-college2" aria-selected="false">College Department</a>
+                <a class="nav-link px-3 active" style="color:#d75094;" id="nav-attendees2-tab" data-toggle="tab" href="#nav-attendees2" role="tab" aria-controls="nav-attendees2" aria-selected="true">Attendees</a>
+                <a class="nav-link px-3" style="color:#d75094;" id="nav-proponents2-tab" data-toggle="tab" href="#nav-proponents2" role="tab" aria-controls="nav-proponents2" aria-selected="false">Activity</a>
+                <a class="nav-link px-3" style="color:#d75094;" id="nav-college2-tab" data-toggle="tab" href="#nav-college2" role="tab" aria-controls="nav-college2" aria-selected="false">College Department</a>
               </div>
             </nav>
             <div class="tab-content" id="nav-tabContent">
@@ -148,9 +148,9 @@
               <div class="container-fluid px-0">
               <nav>
               <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                <a class="nav-link px-3 active" id="nav-attendees3-tab" data-toggle="tab" href="#nav-attendees3" role="tab" aria-controls="nav-attendees3" aria-selected="true">Attendees</a>
-                <a class="nav-link px-3" id="nav-proponents3-tab" data-toggle="tab" href="#nav-proponents3" role="tab" aria-controls="nav-proponents3" aria-selected="false">Activity</a>
-                <a class="nav-link px-3" id="nav-college3-tab" data-toggle="tab" href="#nav-college3" role="tab" aria-controls="nav-college3" aria-selected="false">College Department</a>
+                <a class="nav-link px-3 active" style="color:#d75094;" id="nav-attendees3-tab" data-toggle="tab" href="#nav-attendees3" role="tab" aria-controls="nav-attendees3" aria-selected="true">Attendees</a>
+                <a class="nav-link px-3" style="color:#d75094;" id="nav-proponents3-tab" data-toggle="tab" href="#nav-proponents3" role="tab" aria-controls="nav-proponents3" aria-selected="false">Activity</a>
+                <a class="nav-link px-3" style="color:#d75094;" id="nav-college3-tab" data-toggle="tab" href="#nav-college3" role="tab" aria-controls="nav-college3" aria-selected="false">College Department</a>
               </div>
             </nav>
             <div class="tab-content" id="nav-tabContent">
