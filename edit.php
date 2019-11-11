@@ -34,12 +34,12 @@ $edit->showEdit();
   <body >
       <nav class="navbar navbar-expand-sm navbar-light bg-white">
         <div class="container-fluid">
-            <a class="navbar-brand" href="homepage.php"><IMG SRC="resource/img/logo.png" ALT="Logo" WIDTH=250 HEIGHT=80></a>
+            <a class="navbar-brand" href="participant.php"><IMG SRC="resource/img/logo.png" ALT="Logo" WIDTH=250 HEIGHT=80></a>
             <button class="navbar-toggler bg-white" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                   <form action="" method="GET" class="form-inline my-2 my-lg-0">
-                    <li class="nav-item"><a class="nav-link text-dark mr-3" style="margin-top:15px;" href="homepage.php">Go back</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark mr-3" style="margin-top:15px;" href="participant.php">Go back</a></li>
                   </form>
                 </ul>
               </div>
