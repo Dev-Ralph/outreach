@@ -20,6 +20,7 @@ $edit->showEdit();
     <title>Register page</title>
     <link href="vendor/css/bootstrap.min.css" rel="stylesheet">
     <link href="resource/css/edit.css" rel="stylesheet">
+    <link rel="stylesheet" href="resource/css/animate.min.css">
   </head>
   <style media="screen">
   body{
@@ -33,12 +34,12 @@ $edit->showEdit();
   <body >
       <nav class="navbar navbar-expand-sm navbar-light bg-white">
         <div class="container-fluid">
-            <a class="navbar-brand" href="homepage.php"><IMG SRC="resource/img/logo.png" ALT="Logo" WIDTH=250 HEIGHT=80></a>
+            <a class="navbar-brand" href="participant.php"><IMG SRC="resource/img/logo.png" ALT="Logo" WIDTH=250 HEIGHT=80></a>
             <button class="navbar-toggler bg-white" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                   <form action="" method="GET" class="form-inline my-2 my-lg-0">
-                    <li class="nav-item"><a class="nav-link text-dark mr-3" style="margin-top:15px;" href="homepage.php">Go back</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark mr-3" style="margin-top:15px;" href="participant.php">Go back</a></li>
                   </form>
                 </ul>
               </div>
@@ -48,7 +49,7 @@ $edit->showEdit();
         <div class="container-fluid ">
           <div class="row justify-content-center">
             <div class="col-md-8">
-              <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+              <div class="card animated fadeInUp" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
               -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
               -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
                   <div class="card-header text-white bg-white"><h2 style="color:#d75093">Edit record</h2></div>

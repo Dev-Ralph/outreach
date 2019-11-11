@@ -18,6 +18,7 @@ if(isset($_GET['login'])){
   <link href="vendor/fonts/css/fontawesome.css" rel="stylesheet">
   <link href="vendor/fonts/css/brands.css" rel="stylesheet">
   <link href="vendor/fonts/css/solid.css" rel="stylesheet">
+  <link rel="stylesheet" href="resource/css/animate.min.css">
 </head>
 <style media="screen">
 body{
@@ -31,13 +32,13 @@ background-attachment: fixed;
 <body>
   <nav class="navbar navbar-expand-sm navbar-light bg-white">
     <div class="container-fluid justify-content-center">
-        <a class="navbar-brand ml-1" href="homepage.php"><IMG SRC="resource/img/transparent.png" ALT="Logo" WIDTH=250 HEIGHT=80></a>
+        <a class="navbar-brand ml-1" href="participant.php"><IMG SRC="resource/img/transparent.png" ALT="Logo" WIDTH=250 HEIGHT=80></a>
         </div>
       </nav>
   <div class="container-fluid justify-content-center">
       <div class="col" >
           <div class="d-flex justify-content-center h-100">
-            <div class="user_card">
+            <div class="user_card animated zoomIn">
               <div class="d-flex justify-content-center">
                 <div class="brand_logo_container" style="margin-top:30px;">
                   <img src="resource/img/logotrans3.png" class="brand_logo" alt="Logo">
@@ -86,7 +87,7 @@ background-attachment: fixed;
       </div>
     </footer>
     <!-- Footer -->
-    
+
 </body>
 </html>
   <script src="vendor/js/jquery.min.js"></script>
