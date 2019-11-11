@@ -44,10 +44,10 @@ background-attachment: fixed;
                 <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav ml-auto">
                     <form action="" method="GET" class="form-inline my-2 my-lg-0">
-                      <input class="form-control mr-sm-5 text-dark" style="width:55vh; margin-top:15px;" type="search" name="search" value="" placeholder="Enter keyword..." autocomplete="off">
+                      <input class="form-control mr-sm-5 mt-3 text-dark" style="width:55vh;" type="search" name="search" value="" placeholder="Enter keyword..." autocomplete="off">
                         <br>
-                      <label class="ml-1 text-muted mr-5" style="margin-top:15px;">Filter by:</label>
-                        <select class="form-control mr-2 text-dark browser-default custom-select" name="down" style="width:20vh; margin-top:15px;" id="select" style="width: 115px;">
+                      <label class="ml-1 text-muted mr-5 mt-3">Filter by:</label>
+                        <select class="form-control mr-2 mt-3 text-dark browser-default custom-select" name="down" style="width:20vh;" id="select">
                           <option value="title" title="Title for Item 1">Activity</option>
                           <option value="date" title="Title for Item 2">Date</option>
                           <option value="participation" title="Title for Item 3">Participation</option>
@@ -55,8 +55,8 @@ background-attachment: fixed;
                           <option value="proponent" title="Title for Item 5">Proponent</option>
                         </select>
                       <input class="btn btn-primary text-white mr-5 mt-3" type="submit" name="submit" value="Search">
-                      <li class="nav-item"><a class="nav-link text-dark mr-3" style="margin-top:15px;" href="add.php">New record</a></li>
-                      <li class="nav-item"><button class="btn text-dark mr-3 py-3" style="margin-top:15px; background-color: transparent;" name="logout">Logout</button></li>
+                      <li class="nav-item"><a class="nav-link text-dark mr-3 mt-3" href="add.php">New record</a></li>
+                      <li class="nav-item"><button class="btn text-dark mr-3 py-3 mt-3" style="background-color: transparent;" name="logout">Logout</button></li>
                     </form>
                   </ul>
                 </div>
@@ -120,6 +120,18 @@ background-attachment: fixed;
             </div>
           </div>
           </div>
+
+          <!-- Footer -->
+          <footer>
+            <div class="container row mb-5" >
+              <div class="mt-2">
+                <div class="mb-4">
+                  <div class="footer-copyright text-center py-3 text-white fixed-bottom"  style="background-color: #d75093;">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div>
+                </div>
+              </div>
+            </div>
+          </footer>
+          <!-- Footer -->
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="vendor/js/bootstrap.min.js"></script>

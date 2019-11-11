@@ -110,7 +110,7 @@
             </div>
             </div>
             </div>
-            <div class="tab-pane fade" id="v-pills-environment" role="tabpanel" aria-labelledby="v-pills-environment-tab">
+            <div class="tab-pane fade " id="v-pills-environment" role="tabpanel" aria-labelledby="v-pills-environment-tab">
               <div class="container-fluid px-0">
               <nav>
               <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -127,14 +127,14 @@
                 $dataTable->dataTableAttendeesEnvironment();
                 ?>
               </div>
-              <div class="tab-pane fade" id="nav-college2" role="tabpanel" aria-labelledby="nav-college2-tab">
+              <div class="tab-pane fade " id="nav-college2" role="tabpanel" aria-labelledby="nav-college2-tab">
                 <?php
                 require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTable.php';
                 $dataTable = new dataTable;
                 $dataTable->dataTableDepartmentEnvironment();
                 ?>
               </div>
-              <div class="tab-pane fade" id="nav-proponents2" role="tabpanel" aria-labelledby="nav-proponents2-tab">
+              <div class="tab-pane fade " id="nav-proponents2" role="tabpanel" aria-labelledby="nav-proponents2-tab">
                 <?php
                 require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTable.php';
                 $dataTable = new dataTable;
@@ -144,7 +144,7 @@
             </div>
             </div>
             </div>
-            <div class="tab-pane fade" id="v-pills-livelihood" role="tabpanel" aria-labelledby="v-pills-livelihood-tab">
+            <div class="tab-pane fade " id="v-pills-livelihood" role="tabpanel" aria-labelledby="v-pills-livelihood-tab">
               <div class="container-fluid px-0">
               <nav>
               <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -154,21 +154,21 @@
               </div>
             </nav>
             <div class="tab-content" id="nav-tabContent">
-              <div class="tab-pane fade show active" id="nav-attendees3" role="tabpanel" aria-labelledby="nav-attendees3-tab">
+              <div class="tab-pane fade show active " id="nav-attendees3" role="tabpanel" aria-labelledby="nav-attendees3-tab">
                 <?php
                 require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTable.php';
                 $dataTable = new dataTable;
                 $dataTable->dataTableAttendeesLivelihood();
                 ?>
               </div>
-              <div class="tab-pane fade" id="nav-college3" role="tabpanel" aria-labelledby="nav-college3-tab">
+              <div class="tab-pane fade " id="nav-college3" role="tabpanel" aria-labelledby="nav-college3-tab">
                 <?php
                 require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTable.php';
                 $dataTable = new dataTable;
                 $dataTable->dataTableDepartmentLivelihood();
                 ?>
               </div>
-              <div class="tab-pane fade" id="nav-proponents3" role="tabpanel" aria-labelledby="nav-proponents3-tab">
+              <div class="tab-pane fade " id="nav-proponents3" role="tabpanel" aria-labelledby="nav-proponents3-tab">
                 <?php
                 require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTable.php';
                 $dataTable = new dataTable;
@@ -183,6 +183,19 @@
       </div>
       </div>
   </body>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container row mb-5" >
+      <div class="mt-2">
+        <div class="mb-4">
+          <div class="footer-copyright text-center py-3 text-white fixed-bottom"  style="background-color: #d75093;">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer -->
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="vendor/js/bootstrap.min.js"></script>
 </html>
