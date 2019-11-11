@@ -53,7 +53,7 @@ background-attachment: fixed;
                           <option value="facilitator" title="Title for Item 3">Facilitator</option>
                           <option value="collegeDepartment" title="Title for Item 4">Department</option>
                         </select>
-                      <input class="btn btn-primary text-white mr-5 mt-3" type="submit" name="submit" value="Search">
+                      <input class="btn text-white mr-5 mt-3" style="background-color:#d75094;" type="submit" name="submit" value="Search">
                       <li class="nav-item"><a class="nav-link text-dark mr-3" style="margin-top:15px;" href="addActivity.php">New record</a></li>
                       <li class="nav-item"><button class="btn text-dark mr-3 py-3" style="margin-top:15px; background-color: transparent;" name="logout">Logout</button></li>
                     </form>
@@ -61,15 +61,15 @@ background-attachment: fixed;
                 </div>
               </div>
             </nav>
-            <a type="submit" name="participant" href="participant.php" class="btn btn-success my-3 mr-3 float-right">Participant</a>
-            <a type="submit" name="viewGraph" href="dataTable.php" class="btn btn-success my-3 mr-3 float-right">View Figures</a>
+            <a type="submit" name="participant" href="participant.php" class="btn my-3 mr-3 float-right text-white" style="background-color:#d75094;">Participant</a>
+            <a type="submit" name="viewGraph" href="dataTable.php" class="btn my-3 mr-3 float-right text-white" style="background-color:#d75094;">View Figures</a>
             <div class="container-fluid px-0">
             <nav class="mt-3">
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
-              <a class="nav-link px-3 active" id="nav-literacy-tab" data-toggle="tab" href="#nav-literacy" role="tab" aria-controls="nav-literacy" aria-selected="true">Literacy & Numeracy</a>
-              <a class="nav-link px-3" id="nav-health-tab" data-toggle="tab" href="#nav-health" role="tab" aria-controls="nav-health" aria-selected="false">Health & Wellness</a>
-              <a class="nav-link px-3" id="nav-environment-tab" data-toggle="tab" href="#nav-environment" role="tab" aria-controls="nav-environment" aria-selected="false">Environment Care</a>
-              <a class="nav-link px-3" id="nav-livelihood-tab" data-toggle="tab" href="#nav-livelihood" role="tab" aria-controls="nav-livelihood" aria-selected="false">Livelihood & Entrepreneurship</a>
+              <a class="nav-link px-3 active" style="color:#d75094;" id="nav-literacy-tab" data-toggle="tab" href="#nav-literacy" role="tab" aria-controls="nav-literacy" aria-selected="true">Literacy & Numeracy</a>
+              <a class="nav-link px-3" style="color:#d75094;" id="nav-health-tab" data-toggle="tab" href="#nav-health" role="tab" aria-controls="nav-health" aria-selected="false">Health & Wellness</a>
+              <a class="nav-link px-3" style="color:#d75094;" id="nav-environment-tab" data-toggle="tab" href="#nav-environment" role="tab" aria-controls="nav-environment" aria-selected="false">Environment Care</a>
+              <a class="nav-link px-3" style="color:#d75094;" id="nav-livelihood-tab" data-toggle="tab" href="#nav-livelihood" role="tab" aria-controls="nav-livelihood" aria-selected="false">Livelihood & Entrepreneurship</a>
             </div>
           </nav>
           <div class="tab-content" id="nav-tabContent">

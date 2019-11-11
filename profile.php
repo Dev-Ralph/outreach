@@ -33,7 +33,7 @@
       <div class="container-fluid mt-4">
         <form action="" method="POST" class="form-inline my-2 my-lg-0">
           <input class="form-control text-dark mr-3" type="search" name="schl_numberSearch" value="" placeholder="Enter ID Number" autocomplete="off">
-          <input class="btn btn-primary text-white" type="submit" name="searchProfile" value="Search">
+          <input class="btn text-white" style="background-color:#d75094;" type="submit" name="searchProfile" value="Search">
         </form>
       </div>
       <div class="container-fluid mt-4 px-0">
