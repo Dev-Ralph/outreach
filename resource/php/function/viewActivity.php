@@ -38,7 +38,7 @@ public function viewAllLiteracy(){
             echo '<td class="text-center">'.$result->proponent.'</td>';
             echo '<td class="text-center">'.$result->mean.'</td>';
             echo '<td class="text-center">'.$result->interpretation.'</td>';
-            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'"">View</a> <a class="btn btn-outline-danger" href="?delete='.$result->outreach_activity_id.'">Delete</a></td>';
+            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-danger" href="?delete='.$result->outreach_activity_id.'"><i class="far fa-trash-alt mr-1"></i>Delete</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -90,7 +90,7 @@ public function viewAllHealth(){
             echo '<td class="text-center">'.$result->proponent.'</td>';
             echo '<td class="text-center">'.$result->mean.'</td>';
             echo '<td class="text-center">'.$result->interpretation.'</td>';
-            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'"">View</a> <a class="btn btn-outline-danger" href="?delete='.$result->outreach_activity_id.'">Delete</a></td>';
+            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-danger" href="?delete='.$result->outreach_activity_id.'"><i class="far fa-trash-alt mr-1"></i>Delete</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -142,7 +142,7 @@ public function viewAllEnvironment(){
             echo '<td class="text-center">'.$result->proponent.'</td>';
             echo '<td class="text-center">'.$result->mean.'</td>';
             echo '<td class="text-center">'.$result->interpretation.'</td>';
-            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'"">View</a> <a class="btn btn-outline-danger" href="?delete='.$result->outreach_activity_id.'">Delete</a></td>';
+            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-danger" href="?delete='.$result->outreach_activity_id.'"><i class="far fa-trash-alt mr-1"></i>Delete</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -194,7 +194,7 @@ public function viewAllLivelihood(){
             echo '<td class="text-center">'.$result->proponent.'</td>';
             echo '<td class="text-center">'.$result->mean.'</td>';
             echo '<td class="text-center">'.$result->interpretation.'</td>';
-            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'"">View</a> <a class="btn btn-outline-danger" href="?delete='.$result->outreach_activity_id.'">Delete</a></td>';
+            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-danger" href="?delete='.$result->outreach_activity_id.'"><i class="far fa-trash-alt mr-1"></i>Delete</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -251,7 +251,7 @@ public function viewAllLivelihood(){
             echo '<td class="text-center">'.$result->proponent.'</td>';
             echo '<td class="text-center">'.$result->mean.'</td>';
             echo '<td class="text-center">'.$result->interpretation.'</td>';
-            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'"">View</a> <a class="btn btn-outline-danger" href="?delete='.$result->outreach_activity_id.'">Delete</a></td>';
+            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-danger" href="?delete='.$result->outreach_activity_id.'"><i class="far fa-trash-alt mr-1"></i>Delete</a></td>';
             echo '</tr>';
             }
             echo '</table>';
