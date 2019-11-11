@@ -38,7 +38,7 @@ public function viewAllLiteracy(){
             echo '<td class="text-center">'.$result->participation.'</td>';
             echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
             echo '<td class="text-center">'.$result->proponent.'</td>';
-            echo  '<td class="text-center"><a class="btn btn-outline-danger" href="?delete='.$result->outreach_id.'">Delete</a></td>';
+            echo  '<td class="text-center"><a class="btn btn-outline-danger" href="?delete='.$result->outreach_id.'"><i class="far fa-trash-alt mr-1"></i>Delete</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -89,7 +89,7 @@ public function viewAllHealth(){
               echo '<td class="text-center">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
               echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
               echo '<td class="text-center">'.$result->proponent.'</td>';
-              echo  '<td class="text-center"><a class="btn btn-outline-danger" href="?delete='.$result->outreach_id.'">Delete</a></td>';
+              echo  '<td class="text-center"><a class="btn btn-outline-danger" href="?delete='.$result->outreach_id.'"><i class="far fa-trash-alt mr-1"></i>Delete</a></td>';
               echo '</tr>';
             }
             echo '</table>';
@@ -140,7 +140,7 @@ public function viewAllEnvironment(){
               echo '<td class="text-center">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
               echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
               echo '<td class="text-center">'.$result->proponent.'</td>';
-              echo  '<td class="text-center"><a class="btn btn-outline-danger" href="?delete='.$result->outreach_id.'">Delete</a></td>';
+              echo  '<td class="text-center"><a class="btn btn-outline-danger" href="?delete='.$result->outreach_id.'"><i class="far fa-trash-alt mr-1"></i>Delete</a></td>';
               echo '</tr>';
             }
             echo '</table>';
@@ -191,7 +191,7 @@ public function viewAllLivelihood(){
               echo '<td class="text-center">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
               echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
               echo '<td class="text-center">'.$result->proponent.'</td>';
-              echo  '<td class="text-center"><a class="btn btn-outline-danger" href="?delete='.$result->outreach_id.'">Delete</a></td>';
+              echo  '<td class="text-center"><a class="btn btn-outline-danger" href="?delete='.$result->outreach_id.'"><i class="far fa-trash-alt mr-1"></i>Delete</a></td>';
               echo '</tr>';
             }
             echo '</table>';
