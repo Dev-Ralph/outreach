@@ -28,7 +28,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ml-auto">
                 <form action="" method="GET" class="form-inline my-2 my-lg-0">
-                  <li class="nav-item"><a class="nav-link text-dark mr-3" style="margin-top:15px;" href="participant.php"><i class="fas fa-arrow-left mr-1"></i>Return</a></li>
+                  <li class="nav-item"><a class="nav-link text-dark mr-3 mt-3" href="participant.php"><i class="fas fa-arrow-left mr-1"></i>Return</a></li>
                 </form>
               </ul>
             </div>
