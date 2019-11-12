@@ -26,7 +26,6 @@ if(isset($username))
   <title>Homepage | Activity</title>
   <link href="vendor/css/bootstrap.min.css" rel="stylesheet">
   <link href="resource/css/style.css" rel="stylesheet">
-  <link rel="stylesheet" href="resource/css/animate.min.css">
   <link href="vendor/fonts/css/fontawesome.min.css" rel="stylesheet">
   <link href="vendor/fonts/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="resource/css/animate.min.css">
@@ -57,30 +56,30 @@ background-attachment: fixed;
                           <option value="facilitator" title="Title for Item 3">Facilitator</option>
                           <option value="collegeDepartment" title="Title for Item 4">Department</option>
                         </select>
-                        <span class="btn btn-default mr-3 mt-3" style="background-color:#d75094;">
+                        <span class="btn btn-default mr-3" style="background-color:#d75094;margin-top:13px">
                               <i class="fas fa-search" style="color:white;"></i>
                       <input type="submit"name="submit"value="Search"style="background:none;border:0;color:white;">
                         </span>
-                      <li class="nav-item"><a class="nav-link text-dark mr-3" style="margin-top:15px;" href="addActivity.php"><span>&#43;</span> New record</a></li>
+                      <li class="nav-item"><a class="nav-link text-dark mr-2" style="margin-top:15px;" href="add.php"><span>&#43;</span> New record</a></li>
                       <li class="nav-item"><button class="btn text-dark mr-3 py-3" style="margin-top:15px; background-color: transparent;" name="logout"><i class="fas fa-sign-out-alt mr-1"></i>Logout</button></li>
                     </form>
                   </ul>
                 </div>
               </div>
             </nav>
-            <a type="submit" name="participant" href="participant.php" class="btn my-3 mr-3 float-right text-white" style="background-color:#d75094;"><i class="fas fa-users mr-2"></i>Participant</a>
-            <a type="submit" name="viewGraph" href="dataTable.php" class="btn my-3 mr-3 float-right text-white" style="background-color:#d75094;"><i class="fas fa-chart-bar mr-2"></i>View Figures</a>
+            <a type="submit" name="activity" href="participant.php" class="btn btn-default my-3 mr-3 text-light float-right" style="background-color:#d75094"><i class="fas fa-users mr-2"></i>Participant</a>
+            <a type="submit" name="viewGraph" href="dataTable.php" class="btn btn-default my-3 mr-3 text-light float-right" style="background-color:#d75094"><i class="fas fa-chart-bar mr-2"></i>View Figures</a>
             <div class="container-fluid px-0">
             <nav class="mt-3">
-            <div class="nav nav-tabs animated fadeInUp" id="nav-tab" role="tablist">
-              <a class="nav-link px-3 active" style="color:#d75094;" id="nav-literacy-tab" data-toggle="tab" href="#nav-literacy" role="tab" aria-controls="nav-literacy" aria-selected="true">Literacy & Numeracy</a>
-              <a class="nav-link px-3" style="color:#d75094;" id="nav-health-tab" data-toggle="tab" href="#nav-health" role="tab" aria-controls="nav-health" aria-selected="false">Health & Wellness</a>
-              <a class="nav-link px-3" style="color:#d75094;" id="nav-environment-tab" data-toggle="tab" href="#nav-environment" role="tab" aria-controls="nav-environment" aria-selected="false">Environment Care</a>
-              <a class="nav-link px-3" style="color:#d75094;" id="nav-livelihood-tab" data-toggle="tab" href="#nav-livelihood" role="tab" aria-controls="nav-livelihood" aria-selected="false">Livelihood & Entrepreneurship</a>
+            <div class="nav nav-tabs"id="nav-tab" role="tablist">
+              <a class="nav-link px-3 active"  style="color:#d75094;" id="nav-literacy-tab" data-toggle="tab" href="#nav-literacy" role="tab" aria-controls="nav-literacy" aria-selected="true">Literacy & Numeracy</a>
+              <a class="nav-link px-3" style="color:#d75094;"  id="nav-health-tab" data-toggle="tab" href="#nav-health" role="tab" aria-controls="nav-health" aria-selected="false">Health & Wellness</a>
+              <a class="nav-link px-3" style="color:#d75094;"  id="nav-environment-tab" data-toggle="tab" href="#nav-environment" role="tab" aria-controls="nav-environment" aria-selected="false">Environment Care</a>
+              <a class="nav-link px-3" style="color:#d75094;"  id="nav-livelihood-tab" data-toggle="tab" href="#nav-livelihood" role="tab" aria-controls="nav-livelihood" aria-selected="false">Livelihood & Entrepreneurship</a>
             </div>
           </nav>
           <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane f" id="nav-literacy" role="tabpanel" aria-labelledby="nav-literacy-tab">
+            <div class="tab-pane fade show active animated fadeInUp" id="nav-literacy" role="tabpanel" aria-labelledby="nav-literacy-tab">
               <?php
               require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/viewActivity.php';
               $view = new viewActivity;
@@ -126,8 +125,8 @@ background-attachment: fixed;
             </div>
           </div>
           </div>
-
-          <!-- Footer -->
+</body>
+<!-- Footer -->
           <footer>
             <div class="container row mb-5" >
               <div class="mt-2">
@@ -138,7 +137,6 @@ background-attachment: fixed;
             </div>
           </footer>
           <!-- Footer -->
-</body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="vendor/js/bootstrap.min.js"></script>
 </html>
