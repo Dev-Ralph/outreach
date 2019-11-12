@@ -67,7 +67,13 @@ if(isset($_POST['add'])){
                           <hr />
                           <div class="form-group">
                           <label for="title" class="col-form-label text-md-right">Title of Activity</label>
-                          <input id="title" type="text" class="form-control text-muted" name="title" placeholder="Title of Activity" required autocomplete="off">
+                          <select id="title" class="form-control mr-2 text-dark browser-default custom-select" name="title">
+                          <?php
+                          require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/edit.php';
+                          $edit = new edit;
+                          $edit->showTitle();
+                           ?>
+                         </select>
                           </div>
                           <hr />
                           <div class="form-group">
@@ -105,6 +111,7 @@ if(isset($_POST['add'])){
                               <option value="Audience" title="Title for Item 5">Audience</option>
                             </select>
                             </div>
+                            <hr />
                             <div class="form-group">
                             <label for="collegedepartment" class="col-form-label text-md-right">College Department</label>
                                   <select id="collegedepartment" class="form-control mr-2 text-dark browser-default custom-select" name="collegeDepartment">

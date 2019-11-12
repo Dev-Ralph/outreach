@@ -55,6 +55,17 @@ public function showEdit(){
               $this->image4 = $result->image4;
               $this->image5 = $result->image5;
               }
+}
+public function showTitle(){
+            $config = new config;
+            $pdo = $config->Con();
+            $s = $pdo->prepare("SELECT * FROM `outreach_activity` GROUP BY `date` DESC");
+            $s->execute();
+            $results = $s->fetchAll();
+            foreach ($results as $result) {
+                echo '<option value='.$this->title = $result->title.'>'.$this->title = $result->title.'</option>';
+
+              }
             }
           }
  ?>

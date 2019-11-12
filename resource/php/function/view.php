@@ -46,7 +46,7 @@ public function viewAllLiteracy(){
             echo '<ul>';
             for ($p=1; $p <= $total_pages; $p++) {
               echo '<li class="page-item" style="display: inline-block;margin-left:4px;">';
-              echo  '<a class="page-link" href="?page='.$p.'">'.$p;
+              echo  '<a class="page-link" href="?tab=literacy&page='.$p.'">'.$p;
               echo  '</a>';
               echo '</li>';
             }
@@ -79,25 +79,26 @@ public function viewAllHealth(){
 
             echo '<table style="width:100%" class="table">';
             echo '<tr>';
-            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Venue</th> <th class="text-center">Participant</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th> <th class="text-center">Action</th>';
+            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Venue</th> <th class="text-center">Participant</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th> <th class="text-center">Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
-              echo '<tr>';
-              echo '<td class="text-center">'.$result->title.'</td>';
-              echo '<td class="text-center">'.$result->date.'</td>';
-              echo '<td class="text-center">'.$result->venue.'</td>';
-              echo '<td class="text-center">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
-              echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
-              echo '<td class="text-center">'.$result->proponent.'</td>';
-              echo  '<td class="text-center"><a class="btn btn-outline-danger" href="?delete='.$result->outreach_id.'"><i class="far fa-trash-alt mr-1"></i>Delete</a></td>';
-              echo '</tr>';
+            echo '<tr>';
+            echo '<td class="text-center">'.$result->title.'</td>';
+            echo '<td class="text-center">'.$result->date.'</td>';
+            echo '<td class="text-center">'.$result->venue.'</td>';
+            echo '<td class="text-center">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
+            echo '<td class="text-center">'.$result->participation.'</td>';
+            echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
+            echo '<td class="text-center">'.$result->proponent.'</td>';
+            echo  '<td class="text-center"><a class="btn btn-outline-danger" href="?delete='.$result->outreach_id.'"><i class="far fa-trash-alt mr-1"></i>Delete</a></td>';
+            echo '</tr>';
             }
             echo '</table>';
 
             echo '<ul>';
             for ($p=1; $p <= $total_pages; $p++) {
               echo '<li class="page-item" style="display: inline-block;margin-left:4px;">';
-              echo  '<a class="page-link" href="?page='.$p.'">'.$p;
+              echo  '<a class="page-link" href="?tab=health&page='.$p.'">'.$p;
               echo  '</a>';
               echo '</li>';
             }
@@ -148,7 +149,7 @@ public function viewAllEnvironment(){
             echo '<ul>';
             for ($p=1; $p <= $total_pages; $p++) {
               echo '<li class="page-item" style="display: inline-block;margin-left:4px;">';
-              echo  '<a class="page-link" href="?page='.$p.'">'.$p;
+              echo  '<a class="page-link" href="?tab=environment&page='.$p.'">'.$p;
               echo  '</a>';
               echo '</li>';
             }
@@ -199,7 +200,7 @@ public function viewAllLivelihood(){
             echo '<ul>';
             for ($p=1; $p <= $total_pages; $p++) {
               echo '<li class="page-item" style="display: inline-block;margin-left:4px;">';
-              echo  '<a class="page-link" href="?page='.$p.'">'.$p;
+              echo  '<a class="page-link" href="?tab=livelihood&page='.$p.'">'.$p;
               echo  '</a>';
               echo '</li>';
             }
@@ -237,16 +238,19 @@ public function viewAllLivelihood(){
 
             echo '<table style="width:100%" class="table">';
             echo '<tr>';
-            echo '<th class="text-center">Date</th> <th class="text-center">School Name</th> <th class="text-center">Facilitator</th> <th class="text-center">College Department</th> <th class="text-center">Action</th>';
+            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Venue</th> <th class="text-center">Participant</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th> <th class="text-center">Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
-              echo '<tr>';
-              echo '<td class="text-center">'.$result->title.'</td>';
-              echo '<td class="text-center">'.$result->date.'</td>';
-              echo '<td class="text-center">'.$result->participation.'</td>';
-              echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
-              echo '<td class="text-center">'.$result->proponent.'</td>';
-              echo '</tr>';
+            echo '<tr>';
+            echo '<td class="text-center">'.$result->title.'</td>';
+            echo '<td class="text-center">'.$result->date.'</td>';
+            echo '<td class="text-center">'.$result->venue.'</td>';
+            echo '<td class="text-center">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
+            echo '<td class="text-center">'.$result->participation.'</td>';
+            echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
+            echo '<td class="text-center">'.$result->proponent.'</td>';
+            echo  '<td class="text-center"><a class="btn btn-outline-danger" href="?delete='.$result->outreach_id.'"><i class="far fa-trash-alt mr-1"></i>Delete</a></td>';
+            echo '</tr>';
             }
             echo '</table>';
 
