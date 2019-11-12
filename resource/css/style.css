@@ -12,4 +12,11 @@
 .custom-select {
   background-color: ;
 }
-.custom-button:focus { outline:0 !important; }
+.custom-button:focus { outline:0 !important;
+}
+.nav-link{
+  color:#d75094;
+}
+ a .nav-link:hover{
+  color:#d75094;
+}
