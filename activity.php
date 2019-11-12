@@ -60,7 +60,7 @@ background-attachment: fixed;
                               <i class="fas fa-search" style="color:white;"></i>
                       <input type="submit"name="submit"value="Search"style="background:none;border:0;color:white;">
                         </span>
-                      <li class="nav-item"><a class="nav-link text-dark mr-2" style="margin-top:15px;" href="add.php"><span>&#43;</span> New record</a></li>
+                      <li class="nav-item"><a class="nav-link text-dark mr-2" style="margin-top:15px;" href="addActivity.php"><span>&#43;</span> New record</a></li>
                       <li class="nav-item"><button class="btn text-dark mr-3 py-3" style="margin-top:15px; background-color: transparent;" name="logout"><i class="fas fa-sign-out-alt mr-1"></i>Logout</button></li>
                     </form>
                   </ul>
