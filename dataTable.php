@@ -34,10 +34,10 @@
         <div class="row">
         <div class="col-3">
           <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-            <a class="nav-link active" style="color:#d75094;" id="v-pills-literacy-tab" data-toggle="pill" href="#v-pills-literacy" role="tab" aria-controls="v-pills-literacy" aria-selected="true">Literacy & Numeracy</a>
-            <a class="nav-link" style="color:#d75094;" id="v-pills-health-tab" data-toggle="pill" href="#v-pills-health" role="tab" aria-controls="v-pills-health" aria-selected="false">Health & Wellness</a>
-            <a class="nav-link" style="color:#d75094;" id="v-pills-environment-tab" data-toggle="pill" href="#v-pills-environment" role="tab" aria-controls="v-pills-environment" aria-selected="false">Environment Care</a>
-            <a class="nav-link" style="color:#d75094;" id="v-pills-livelihood-tab" data-toggle="pill" href="#v-pills-livelihood" role="tab" aria-controls="v-pills-livelihood" aria-selected="false">Livelihood & Entrepreneurship</a>
+            <a class="nav-link active" id="v-pills-literacy-tab" data-toggle="pill" href="#v-pills-literacy" role="tab" aria-controls="v-pills-literacy" aria-selected="true">Literacy & Numeracy</a>
+            <a class="nav-link" id="v-pills-health-tab" data-toggle="pill" href="#v-pills-health" role="tab" aria-controls="v-pills-health" aria-selected="false">Health & Wellness</a>
+            <a class="nav-link" id="v-pills-environment-tab" data-toggle="pill" href="#v-pills-environment" role="tab" aria-controls="v-pills-environment" aria-selected="false">Environment Care</a>
+            <a class="nav-link" id="v-pills-livelihood-tab" data-toggle="pill" href="#v-pills-livelihood" role="tab" aria-controls="v-pills-livelihood" aria-selected="false">Livelihood & Entrepreneurship</a>
           </div>
         </div>
         <div class="col-9">
