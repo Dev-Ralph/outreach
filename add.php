@@ -125,8 +125,8 @@ if(isset($_POST['add'])){
                             </div>
                             <hr />
                             <div class="form-group">
-                            <label for="proponent" class="col-form-label text-md-right">Proponent</label>
-                            <input id="proponent" type="text" class="form-control " name="proponent" placeholder="Proponent" required autocomplete="off">
+                            <label for="proponent" class="col-form-label text-md-right">Council/Organization</label>
+                            <input id="proponent" type="text" class="form-control " name="proponent" placeholder="Council/Organization" required autocomplete="off">
                             </div>
                           </div>
                           </div>
