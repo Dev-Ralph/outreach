@@ -23,7 +23,7 @@ if(isset($username))
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Homepage</title>
+  <title>Homepage | Participant</title>
   <link href="vendor/css/bootstrap.min.css" rel="stylesheet">
   <link href="resource/css/style.css" rel="stylesheet">
   <link href="vendor/fonts/css/fontawesome.min.css" rel="stylesheet">
@@ -73,14 +73,15 @@ background-attachment: fixed;
             <div class="container-fluid px-0">
             <nav class="mt-3">
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
-              <a class="nav-link px-3 <?php if(empty($_GET['tab'])){echo "active";}elseif($_GET['tab']=="literacy"){echo "active";}?>" id="nav-literacy-tab" data-toggle="tab" href="#nav-literacy" role="tab" aria-controls="nav-literacy" aria-selected="true">Literacy & Numeracy</a>
-              <a class="nav-link px-3 <?php if(!empty($_GET['tab'])){if($_GET['tab']=="health"){echo "active";}} ?>" id="nav-health-tab" data-toggle="tab" href="#nav-health" role="tab" aria-controls="nav-health" aria-selected="false">Health & Wellness</a>
+              <a class="nav-link px-3  <?php if(empty($_GET['tab'])){echo "active";}elseif($_GET['tab']=="literacy"){echo "active";}?>" id="nav-literacy-tab" data-toggle="tab" href="#nav-literacy" role="tab" aria-controls="nav-literacy" aria-selected="true">Literacy & Numeracy</a>
+              <a class="nav-link px-3  <?php if(!empty($_GET['tab'])){if($_GET['tab']=="health"){echo "active";}} ?>" id="nav-health-tab" data-toggle="tab" href="#nav-health" role="tab" aria-controls="nav-health" aria-selected="false">Health & Wellness</a>
               <a class="nav-link px-3 <?php if(!empty($_GET['tab'])){if($_GET['tab']=="environment"){echo "active";}} ?>" id="nav-environment-tab" data-toggle="tab" href="#nav-environment" role="tab" aria-controls="nav-environment" aria-selected="false">Environment Care</a>
               <a class="nav-link px-3 <?php if(!empty($_GET['tab'])){if($_GET['tab']=="livelihood"){echo "active";}} ?>" id="nav-livelihood-tab" data-toggle="tab" href="#nav-livelihood" role="tab" aria-controls="nav-livelihood" aria-selected="false">Livelihood & Entrepreneurship</a>
             </div>
           </nav>
+
           <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active animated fadeInUp <?php if(empty($_GET['tab'])){echo "show active";}elseif($_GET['tab']=="literacy"){echo "show active";}?>" id="nav-literacy" role="tabpanel" aria-labelledby="nav-literacy-tab">
+            <div class="tab-pane fade animated fadeInUp <?php if(empty($_GET['tab'])){echo "active";}elseif($_GET['tab']=="literacy"){echo "active";}?>" id="nav-literacy" role="tabpanel" aria-labelledby="nav-literacy-tab">
               <?php
               require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/view.php';
               $view = new view;
@@ -91,7 +92,7 @@ background-attachment: fixed;
               }
               ?>
             </div>
-            <div class="tab-pane fade animated fadeInUp <?php if(!empty($_GET['tab'])){if($_GET['tab']=="health"){echo "active";}} ?>" id="nav-health" role="tabpanel" aria-labelledby="nav-health-tab">
+            <div class="tab-pane fade animated fadeInUp <?php if(!empty($_GET['tab'])){if($_GET['tab']=="health"){echo "show active";}} ?>" id="nav-health" role="tabpanel" aria-labelledby="nav-health-tab">
               <?php
               require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/view.php';
               $view = new view;

@@ -12,6 +12,18 @@ public function deleteData(){
               $data = $pdo->prepare($sql);
               $data->execute([$delete]);
               }
-            }
+}
+public function deleteDataActivity(){
+              $config = new config;
+              $pdo = $config->Con();
+              if(!isset($_GET['delete'])){
+              $delete = Null;
+              }else {
+              $delete = $_GET['delete'];
+              $sql = "DELETE FROM `outreach_activity` WHERE `outreach_activity_id` = ?";
+              $data = $pdo->prepare($sql);
+              $data->execute([$delete]);
+              }
+}
           }
  ?>

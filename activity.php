@@ -1,7 +1,7 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/delete.php';
-$remove = new delete();
-$remove->deleteData();
+$remove = new delete;
+$remove->deleteDataActivity();
 ?>
 <?php
 session_start();
