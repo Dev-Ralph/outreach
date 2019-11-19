@@ -1,3 +1,4 @@
+<!-- SELECT title, COUNT(schl_number) as Population FROM outreach WHERE title = 'Test 3' GROUP BY title -->
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/db/config.php';
 class dataTable extends config {
@@ -29,18 +30,28 @@ public function dataTableProponentLiteracy(){
             $pdo = $config->Con();
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            $sql = "SELECT COUNT(`outreach_activity_id`) AS `count` FROM `outreach_activity` WHERE `type` = 'Literacy & Numeracy'";
+            // $sql = "SELECT COUNT(`outreach_activity_id`) AS `count` FROM `outreach_activity` WHERE `type` = 'Literacy & Numeracy'";
+            $sql = "SELECT `title` FROM `outreach` WHERE `type` = 'Literacy & Numeracy' GROUP BY `title` DESC";
             $data = $pdo->prepare($sql);
             $data->execute();
-            $results = $data->fetchAll(PDO::FETCH_OBJ);
+            $rows = $data->fetchAll();
+            foreach ($rows as $row){
+              $row->title;
+            }
+
+            $sql = "SELECT `title`, COUNT(`title`) as `Population` FROM `outreach` WHERE `type` = 'Literacy & Numeracy' GROUP BY `title` DESC";
+            $data = $pdo->prepare($sql);
+            $data->execute();
+            $results = $data->fetchAll();
 
             echo '<table style="width:100%; background-color: white;" class="table table-bordered">';
             echo '<tr>';
-            echo '<th class="text-center">Total Number of Activity</th>';
+            echo '<th class="text-center">Activity</th> <th class="text-center">Total Number of Participants</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
-            echo '<td class="text-center py-3">'.$result->count.'<i class="fas fa-book ml-1"></i></td>';
+            echo '<td class="text-center py-3">'.$result->title.'</td>';
+            echo '<td class="text-center py-3">'.$result->Population.'<i class="fas fa-book ml-1"></i></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -94,20 +105,28 @@ public function dataTableDepartmentHealth(){
 public function dataTableProponentHealth(){
             $config = new config;
             $pdo = $config->Con();
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            $sql = "SELECT COUNT(`outreach_activity_id`) AS `count` FROM `outreach_activity` WHERE `type` = 'Health & Wellness'";
+            $sql = "SELECT `title` FROM `outreach` WHERE `type` = 'Health & Wellness' GROUP BY `title` DESC";
             $data = $pdo->prepare($sql);
             $data->execute();
-            $results = $data->fetchAll(PDO::FETCH_OBJ);
+            $rows = $data->fetchAll();
+            foreach ($rows as $row){
+              $row->title;
+            }
+
+            $sql = "SELECT `title`, COUNT(`title`) as `Population` FROM `outreach` WHERE `type` = 'Health & Wellness' GROUP BY `title` DESC";
+            $data = $pdo->prepare($sql);
+            $data->execute();
+            $results = $data->fetchAll();
 
             echo '<table style="width:100%; background-color: white;" class="table table-bordered">';
             echo '<tr>';
-            echo '<th class="text-center">Total Number of Activity</th>';
+            echo '<th class="text-center">Activity</th> <th class="text-center">Total Number of Participants</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
-            echo '<td class="text-center py-3">'.$result->count.'<i class="fas fa-book ml-1"></i></td>';
+            echo '<td class="text-center py-3">'.$result->title.'</td>';
+            echo '<td class="text-center py-3">'.$result->Population.'<i class="fas fa-book ml-1"></i></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -163,18 +182,27 @@ public function dataTableProponentEnvironment(){
             $pdo = $config->Con();
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            $sql = "SELECT COUNT(`outreach_activity_id`) AS `count` FROM `outreach_activity` WHERE `type` = 'Environment Care'";
+            $sql = "SELECT `title` FROM `outreach` WHERE `type` = 'Environment Care' GROUP BY `title` DESC";
             $data = $pdo->prepare($sql);
             $data->execute();
-            $results = $data->fetchAll(PDO::FETCH_OBJ);
+            $rows = $data->fetchAll();
+            foreach ($rows as $row){
+              $row->title;
+            }
+
+            $sql = "SELECT `title`, COUNT(`title`) as `Population` FROM `outreach` WHERE `type` = 'Environment Care' GROUP BY `title` DESC";
+            $data = $pdo->prepare($sql);
+            $data->execute();
+            $results = $data->fetchAll();
 
             echo '<table style="width:100%; background-color: white;" class="table table-bordered">';
             echo '<tr>';
-            echo '<th class="text-center">Total Number of Activity</th>';
+            echo '<th class="text-center">Activity</th> <th class="text-center">Total Number of Participants</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
-            echo '<td class="text-center py-3">'.$result->count.'<i class="fas fa-book ml-1"></i></td>';
+            echo '<td class="text-center py-3">'.$result->title.'</td>';
+            echo '<td class="text-center py-3">'.$result->Population.'<i class="fas fa-book ml-1"></i></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -230,18 +258,27 @@ public function dataTableProponentLivelihood(){
             $pdo = $config->Con();
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            $sql = "SELECT COUNT(`outreach_activity_id`) AS `count` FROM `outreach_activity` WHERE `type` =  'Livelihood & Entrepreneurship'";
+            $sql = "SELECT `title` FROM `outreach` WHERE `type` = 'Livelihood & Entrepreneurship' GROUP BY `title` DESC";
             $data = $pdo->prepare($sql);
             $data->execute();
-            $results = $data->fetchAll(PDO::FETCH_OBJ);
+            $rows = $data->fetchAll();
+            foreach ($rows as $row){
+              $row->title;
+            }
+
+            $sql = "SELECT `title`, COUNT(`title`) as `Population` FROM `outreach` WHERE `type` = 'Livelihood & Entrepreneurship' GROUP BY `title` DESC";
+            $data = $pdo->prepare($sql);
+            $data->execute();
+            $results = $data->fetchAll();
 
             echo '<table style="width:100%; background-color: white;" class="table table-bordered">';
             echo '<tr>';
-            echo '<th class="text-center">Total Number of Activity</th>';
+            echo '<th class="text-center">Activity</th> <th class="text-center">Total Number of Participants</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
-            echo '<td class="text-center py-3">'.$result->count.'<i class="fas fa-book ml-1"></i></td>';
+            echo '<td class="text-center py-3">'.$result->title.'</td>';
+            echo '<td class="text-center py-3">'.$result->Population.'<i class="fas fa-book ml-1"></i></td>';
             echo '</tr>';
             }
             echo '</table>';
