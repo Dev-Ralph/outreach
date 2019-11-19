@@ -20,13 +20,39 @@ if(isset($_GET['login'])){
   <link href="vendor/fonts/css/solid.css" rel="stylesheet">
   <link rel="stylesheet" href="resource/css/animate.min.css">
 </head>
+
 <style media="screen">
 body{
-background-image: url("resource/img/bg.png");
 height: 100vh;
+background-image: url("resource/img/bg.png");
 background-size: cover;
 background-position: center;
 background-attachment: fixed;
+}
+@media only screen and (max-width: 1000px) {
+  body {
+    height: 100vh;
+    background-image: url("resource/img/mobile.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    }
+  }
+  @media only screen and (max-width: 1000px) {
+    .navbar {
+    display: none;
+      }
+    }
+  @media only screen and (max-width: 1000px) {
+    .container {
+    display: none;
+      }
+    }
+  @media only screen and (max-width: 1000px) {
+    .container-fluid {
+    display: none;
+      }
+    }
 }
 </style>
 <body>
@@ -40,7 +66,7 @@ background-attachment: fixed;
           <div class="d-flex justify-content-center h-100">
             <div class="user_card animated zoomIn">
               <div class="d-flex justify-content-center">
-                <div class="brand_logo_container" style="margin-top:30px;">
+                <div class="brand_logo_container mt-5">
                   <img src="resource/img/logotrans3.png" class="brand_logo" alt="Logo">
                 </div>
               </div>
@@ -68,20 +94,13 @@ background-attachment: fixed;
       </div>
     </div>
   </div>
-  <!-- <footer class="footer bg-dark " style="height:45px">
-      <div class="container">
-        <div class="d-flex justify-content-center" style="padding-top:13px;">
-          <span class="text-light">CEU MALOLOS 2019 - 2020</span>
-        </div>
-        </div>
-    </footer> -->
 
     <!-- Footer -->
     <footer>
       <div class="container row mb-5" >
         <div class="mt-2">
           <div class="mb-4">
-            <div class="footer-copyright text-center py-3 text-white fixed-bottom"  style="background-color: #d75093;">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div>
+            <div class="footer-copyright text-center py-3 text-white fixed-bottom fade animated fadeInUp"  style="background-color: #d75093;">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div>
           </div>
         </div>
       </div>

@@ -43,7 +43,7 @@ if(isset($_POST['add'])){
             </div>
           </nav>
       <main class="py-4">
-        <div class="container-fluid ">
+        <div class="container-fluid">
           <div class="row justify-content-center">
             <div class="col-md-10">
               <div class="card animated fadeInUp" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -147,12 +147,13 @@ if(isset($_POST['add'])){
             <div class="container row mb-5" >
               <div class="mt-2">
                 <div class="mb-4">
-                  <div class="footer-copyright text-center py-3 text-white fixed-bottom"  style="background-color: #d75093;">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div>
+                  <div class="footer-copyright text-center py-3 text-white fixed-bottom fade animated fadeInUp"  style="background-color: #d75093;">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div>
                 </div>
               </div>
             </div>
           </footer>
           <!-- Footer -->
+          
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="vendor/js/bootstrap.min.js"></script>

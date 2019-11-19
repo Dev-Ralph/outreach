@@ -58,7 +58,7 @@ background-attachment: fixed;
                           <option value="proponent" title="Title for Item 5">Proponent</option>
                         </select>
                         <span class="btn btn-default mr-3 mt-3" style="background-color:#d75094;">
-                          <i class="fas fa-search" style="color:white;"></i>
+                          <i class="fas fa-search text-white"></i>
                             <input type="submit"name="submit"value="Search" style="background:none;border:0;color:white;">
                         </span>
                       <li class="nav-item"><a class="nav-link text-dark mr-2 mt-3" href="add.php"><span>&#43;</span> New record</a></li>
@@ -121,12 +121,13 @@ background-attachment: fixed;
             </div>
           </div>
           </div>
+          
           <!-- Footer -->
           <footer>
             <div class="container row mb-5" >
               <div class="mt-2">
                 <div class="mb-4">
-                  <div class="footer-copyright text-center py-3 text-white fixed-bottom"  style="background-color: #d75093;">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div>
+                  <div class="footer-copyright text-center py-3 text-white fixed-bottom fade animated fadeInUp"  style="background-color: #d75093;">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div>
                 </div>
               </div>
             </div>

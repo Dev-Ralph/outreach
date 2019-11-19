@@ -149,7 +149,7 @@ if(isset($_POST['add'])){
             <div class="container row mb-5" >
               <div class="mt-2">
                 <div class="mb-4">
-                  <div class="footer-copyright text-center py-3 text-white fixed-bottom"  style="background-color: #d75093;">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div>
+                  <div class="footer-copyright text-center py-3 text-white fixed-bottom fade animated fadeInUp"  style="background-color: #d75093;">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div>
                 </div>
               </div>
             </div>

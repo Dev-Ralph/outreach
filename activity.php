@@ -47,16 +47,16 @@ background-attachment: fixed;
                 <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav ml-auto">
                     <form action="" method="GET" class="form-inline my-2 my-lg-0">
-                      <input class="form-control mr-sm-5 text-dark" style="width:55vh; margin-top:15px;" type="search" name="search" value="" placeholder="Enter keyword..." autocomplete="off">
+                      <input class="form-control mr-sm-5 text-dark mt-3" style="width:55vh;" type="search" name="search" value="" placeholder="Enter keyword..." autocomplete="off">
                         <br>
-                      <label class="ml-1 text-muted mr-1" style="margin-top:15px;">Filter by:</label>
-                        <select class="form-control mr-2 text-dark browser-default custom-select" name="down" style="width:20vh; margin-top:15px;" id="select" name="criteria" style="width: 115px;">
+                      <label class="ml-1 text-muted mr-1 mt-3">Filter by:</label>
+                        <select class="form-control mr-2 mt-3 text-dark browser-default custom-select" name="down" style="width:20vh;" id="select" name="criteria">
                           <option value="date" title="Title for Item 1">Date</option>
                           <option value="schoolName" title="Title for Item 2">School</option>
                           <option value="facilitator" title="Title for Item 3">Facilitator</option>
                           <option value="collegeDepartment" title="Title for Item 4">Department</option>
                         </select>
-                        <span class="btn btn-default mr-3" style="background-color:#d75094;margin-top:13px">
+                        <span class="btn btn-default mr-3 mt-3">
                               <i class="fas fa-search" style="color:white;"></i>
                       <input type="submit"name="submit"value="Search"style="background:none;border:0;color:white;">
                         </span>
@@ -126,17 +126,19 @@ background-attachment: fixed;
           </div>
           </div>
 </body>
-<!-- Footer -->
+
+        <!-- Footer -->
           <footer>
             <div class="container row mb-5" >
               <div class="mt-2">
                 <div class="mb-4">
-                  <div class="footer-copyright text-center py-3 text-white fixed-bottom"  style="background-color: #d75093;">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div>
+                  <div class="footer-copyright text-center py-3 text-white fixed-bottom fade animated fadeInUp"  style="background-color: #d75093;">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div>
                 </div>
               </div>
             </div>
           </footer>
           <!-- Footer -->
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="vendor/js/bootstrap.min.js"></script>
 </html>
