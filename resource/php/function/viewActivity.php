@@ -46,7 +46,7 @@ public function viewAllLiteracy(){
             echo '<ul>';
             for ($p=1; $p <= $total_pages; $p++) {
               echo '<li class="page-item" style="display: inline-block;margin-left:4px;">';
-              echo  '<a class="page-link" href="?page='.$p.'">'.$p;
+              echo  '<a class="page-link" href="?tab=literacy&page='.$p.'">'.$p;
               echo  '</a>';
               echo '</li>';
             }
@@ -98,7 +98,7 @@ public function viewAllHealth(){
             echo '<ul>';
             for ($p=1; $p <= $total_pages; $p++) {
               echo '<li class="page-item" style="display: inline-block;margin-left:4px;">';
-              echo  '<a class="page-link" href="?page='.$p.'">'.$p;
+              echo  '<a class="page-link" href="?tab=health&page='.$p.'">'.$p;
               echo  '</a>';
               echo '</li>';
             }
@@ -150,7 +150,7 @@ public function viewAllEnvironment(){
             echo '<ul>';
             for ($p=1; $p <= $total_pages; $p++) {
               echo '<li class="page-item" style="display: inline-block;margin-left:4px;">';
-              echo  '<a class="page-link" href="?page='.$p.'">'.$p;
+              echo  '<a class="page-link" href="?tab=environment&page='.$p.'">'.$p;
               echo  '</a>';
               echo '</li>';
             }
@@ -202,7 +202,7 @@ public function viewAllLivelihood(){
             echo '<ul>';
             for ($p=1; $p <= $total_pages; $p++) {
               echo '<li class="page-item" style="display: inline-block;margin-left:4px;">';
-              echo  '<a class="page-link" href="?page='.$p.'">'.$p;
+              echo  '<a class="page-link" href="?tab=livelihood&page='.$p.'">'.$p;
               echo  '</a>';
               echo '</li>';
             }
@@ -211,7 +211,7 @@ public function viewAllLivelihood(){
 
 
 
-  public function viewAllCriteria(){
+  public function viewAllCriteriaActivity(){
     if(isset($_GET['search']) && isset($_GET['down'])){
             $config = new config;
             $pdo = $config->Con();

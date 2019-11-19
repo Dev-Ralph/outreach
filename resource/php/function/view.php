@@ -46,7 +46,7 @@ public function viewAllLiteracy(){
             echo '<ul>';
             for ($p=1; $p <= $total_pages; $p++) {
               echo '<li class="page-item" style="display: inline-block;margin-left:4px;">';
-              echo  '<a class="page-link" href="?tab=literacy&Hpage='.$p.'">'.$p;
+              echo  '<a class="page-link" href="?tab=literacy&page='.$p.'">'.$p;
               echo  '</a>';
               echo '</li>';
             }

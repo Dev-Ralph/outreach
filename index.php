@@ -32,7 +32,7 @@ background-attachment: fixed;
 <body>
   <nav class="navbar navbar-expand-sm navbar-light bg-white">
     <div class="container-fluid justify-content-center">
-        <a class="navbar-brand ml-1" href="participant.php"><IMG SRC="resource/img/transparent.png" ALT="Logo" WIDTH=250 HEIGHT=80></a>
+        <a class="navbar-brand ml-1" href="participant.php"><IMG SRC="resource/img/transparent.png" ALT=" " WIDTH=250 HEIGHT=80></a>
         </div>
       </nav>
   <div class="container-fluid justify-content-center">
