@@ -19,7 +19,7 @@ public function dataTableDepartmentLiteracy(){
             foreach ($results as $result) {
             echo '<tr>';
             echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
-            echo '<td class="text-center">'.$result->count.'</td>';
+            echo '<td class="text-center">'.$result->count.'<i class="fas fa-book ml-1"></i></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -51,7 +51,7 @@ public function dataTableProponentLiteracy(){
             foreach ($results as $result) {
             echo '<tr>';
             echo '<td class="text-center py-3">'.$result->title.'</td>';
-            echo '<td class="text-center py-3">'.$result->Population.'<i class="fas fa-book ml-1"></i></td>';
+            echo '<td class="text-center py-3">'.$result->Population.'<i class="fas fa-users ml-1"></i></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -96,7 +96,7 @@ public function dataTableDepartmentHealth(){
             foreach ($results as $result) {
             echo '<tr>';
             echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
-            echo '<td class="text-center">'.$result->count.'</td>';
+            echo '<td class="text-center">'.$result->count.'<i class="fas fa-book ml-1"></i></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -126,7 +126,7 @@ public function dataTableProponentHealth(){
             foreach ($results as $result) {
             echo '<tr>';
             echo '<td class="text-center py-3">'.$result->title.'</td>';
-            echo '<td class="text-center py-3">'.$result->Population.'<i class="fas fa-book ml-1"></i></td>';
+            echo '<td class="text-center py-3">'.$result->Population.'<i class="fas fa-users ml-1"></i></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -171,7 +171,7 @@ public function dataTableDepartmentEnvironment(){
             foreach ($results as $result) {
             echo '<tr>';
             echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
-            echo '<td class="text-center">'.$result->count.'</td>';
+            echo '<td class="text-center">'.$result->count.'<i class="fas fa-book ml-1"></i></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -202,7 +202,7 @@ public function dataTableProponentEnvironment(){
             foreach ($results as $result) {
             echo '<tr>';
             echo '<td class="text-center py-3">'.$result->title.'</td>';
-            echo '<td class="text-center py-3">'.$result->Population.'<i class="fas fa-book ml-1"></i></td>';
+            echo '<td class="text-center py-3">'.$result->Population.'<i class="fas fa-users ml-1"></i></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -247,7 +247,7 @@ public function dataTableDepartmentLivelihood(){
             foreach ($results as $result) {
             echo '<tr>';
             echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
-            echo '<td class="text-center">'.$result->count.'</td>';
+            echo '<td class="text-center">'.$result->count.'<i class="fas fa-book ml-1"></i></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -278,7 +278,7 @@ public function dataTableProponentLivelihood(){
             foreach ($results as $result) {
             echo '<tr>';
             echo '<td class="text-center py-3">'.$result->title.'</td>';
-            echo '<td class="text-center py-3">'.$result->Population.'<i class="fas fa-book ml-1"></i></td>';
+            echo '<td class="text-center py-3">'.$result->Population.'<i class="fas fa-users ml-1"></i></td>';
             echo '</tr>';
             }
             echo '</table>';
