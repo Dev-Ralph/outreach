@@ -1,11 +1,3 @@
-<?php
-require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/addActivity.php';
-if(isset($_POST['add'])){
-  $add = new addActivity($_POST['type'],$_POST['title'],$_POST['proponent'],$_POST['date'],$_POST['venue'],$_POST['target_p'],$_POST['mean'],$_POST['interpretation'],$_POST['documentation']);
-  $add->addRecord();
-  header("Location: activity.php");
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -44,6 +36,21 @@ if(isset($_POST['add'])){
           </nav>
       <main class="py-4">
         <div class="container-fluid ">
+          <?php
+          require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/addActivity.php';
+          if(isset($_POST['add'])){
+            $add = new addActivity($_POST['type'],$_POST['title'],$_POST['proponent'],$_POST['date'],$_POST['venue'],$_POST['target_p'],$_POST['mean'],$_POST['interpretation'],$_POST['documentation']);
+            $add->addRecord();
+            ?>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+            You added a new record successfully!
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <?php
+          }
+          ?>
           <div class="row justify-content-center">
             <div class="col-md-10">
               <div class="card animated fadeInUp" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);

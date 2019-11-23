@@ -1,5 +1,6 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/db/config.php';
+error_reporting (E_ALL ^ E_NOTICE);
 class login extends config{
 public function __construct($username=null,$password=null){
   $this->username = $username;
@@ -22,9 +23,19 @@ public function login(){
     }
     if ($username == $username2 && $password == $password2){
     $_SESSION['username'] = $username;
-    header('location: participant.php');
+    header('location: activity.php');
   }else {
-    header('location: index.php');
+    // header('location: index.php');
+    ?>
+    <div class="container">    
+    <div class="alert alert-danger alert-dismissible fade show mt-3 mb-0" role="alert">
+    Login failed! You entered invalid username or password.
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</div>
+  <?php
   }
 }
 }

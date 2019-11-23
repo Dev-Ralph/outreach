@@ -1,11 +1,3 @@
-<?php
-require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/login.php';
-session_start();
-if(isset($_GET['login'])){
-  $edit = new login($_GET['username'],$_GET['password']);
-  $edit->login();
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,6 +55,14 @@ background-attachment: fixed;
       </nav>
   <div class="container-fluid justify-content-center">
       <div class="col" >
+        <?php
+        require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/login.php';
+        session_start();
+        if(isset($_GET['login'])){
+          $edit = new login($_GET['username'],$_GET['password']);
+          $edit->login();
+        }
+        ?>
           <div class="d-flex justify-content-center h-100">
             <div class="user_card animated zoomIn">
               <div class="d-flex justify-content-center">
@@ -109,8 +109,9 @@ background-attachment: fixed;
 
 </body>
 </html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="vendor/js/jquery.min.js"></script>
   <script src="vendor/js/popper.min.js"></script>
   <script src="vendor/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js" integrity="sha256-jGAkJO3hvqIDc4nIY1sfh/FPbV+UK+1N+xJJg6zzr7A=" crossorigin="anonymous"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js" integrity="sha256-jGAkJO3hvqIDc4nIY1sfh/FPbV+UK+1N+xJJg6zzr7A=" crossorigin="anonymous"></script> -->
   <script src="vendor/js/main.js"></script>

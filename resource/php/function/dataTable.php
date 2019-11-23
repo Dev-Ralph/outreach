@@ -7,7 +7,7 @@ public function dataTableDepartmentLiteracy(){
             $pdo = $config->Con();
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            $sql = "SELECT `collegeDepartment`, COUNT(`collegeDepartment`) AS `count` FROM `outreach` WHERE `type` = 'Literacy & Numeracy' GROUP BY `collegeDepartment` DESC";
+            $sql = "SELECT `collegeDepartment`, `type`, COUNT(`collegeDepartment`) AS `count` FROM `outreach` WHERE `type` = 'Literacy & Numeracy' GROUP BY `collegeDepartment` DESC";
             $data = $pdo->prepare($sql);
             $data->execute();
             $results = $data->fetchAll(PDO::FETCH_OBJ);
@@ -19,7 +19,7 @@ public function dataTableDepartmentLiteracy(){
             foreach ($results as $result) {
             echo '<tr>';
             echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
-            echo '<td class="text-center">'.$result->count.'<i class="fas fa-book ml-1"></i></td>';
+            echo '<td class="text-center"><a class="text-dark" href="tableDepartment.php?department='.$result->collegeDepartment.'&type='.$result->type.'">'.$result->count.'<i class="fas fa-book ml-1"></i></a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -51,7 +51,7 @@ public function dataTableProponentLiteracy(){
             foreach ($results as $result) {
             echo '<tr>';
             echo '<td class="text-center py-3">'.$result->title.'</td>';
-            echo '<td class="text-center py-3">'.$result->Population.'<i class="fas fa-users ml-1"></i></td>';
+            echo '<td class="text-center py-3"><a class="text-dark" href="tableActivity.php?act_title='.$result->title.'">'.$result->Population.'<i class="fas fa-users ml-1"></i></a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -84,7 +84,7 @@ public function dataTableDepartmentHealth(){
             $pdo = $config->Con();
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            $sql = "SELECT `collegeDepartment`, COUNT(`collegeDepartment`) AS `count` FROM `outreach` WHERE `type` = 'Health & Wellness' GROUP BY `collegeDepartment` DESC";
+            $sql = "SELECT `collegeDepartment`,  `type`, COUNT(`collegeDepartment`) AS `count` FROM `outreach` WHERE `type` = 'Health & Wellness' GROUP BY `collegeDepartment` DESC";
             $data = $pdo->prepare($sql);
             $data->execute();
             $results = $data->fetchAll(PDO::FETCH_OBJ);
@@ -96,7 +96,7 @@ public function dataTableDepartmentHealth(){
             foreach ($results as $result) {
             echo '<tr>';
             echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
-            echo '<td class="text-center">'.$result->count.'<i class="fas fa-book ml-1"></i></td>';
+            echo '<td class="text-center"><a class="text-dark" href="tableDepartment.php?department='.$result->collegeDepartment.'&type='.$result->type.'">'.$result->count.'<i class="fas fa-book ml-1"></i></a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -126,7 +126,7 @@ public function dataTableProponentHealth(){
             foreach ($results as $result) {
             echo '<tr>';
             echo '<td class="text-center py-3">'.$result->title.'</td>';
-            echo '<td class="text-center py-3">'.$result->Population.'<i class="fas fa-users ml-1"></i></td>';
+            echo '<td class="text-center py-3"><a class="text-dark" href="tableActivity.php?act_title='.$result->title.'">'.$result->Population.'<i class="fas fa-users ml-1"></i></a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -159,7 +159,7 @@ public function dataTableDepartmentEnvironment(){
             $pdo = $config->Con();
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            $sql = "SELECT `collegeDepartment`, COUNT(`collegeDepartment`) AS `count` FROM `outreach` WHERE `type` = 'Environment Care' GROUP BY `collegeDepartment` DESC";
+            $sql = "SELECT `collegeDepartment`,  `type`, COUNT(`collegeDepartment`) AS `count` FROM `outreach` WHERE `type` = 'Environment Care' GROUP BY `collegeDepartment` DESC";
             $data = $pdo->prepare($sql);
             $data->execute();
             $results = $data->fetchAll(PDO::FETCH_OBJ);
@@ -171,7 +171,7 @@ public function dataTableDepartmentEnvironment(){
             foreach ($results as $result) {
             echo '<tr>';
             echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
-            echo '<td class="text-center">'.$result->count.'<i class="fas fa-book ml-1"></i></td>';
+            echo '<td class="text-center"><a class="text-dark" href="tableDepartment.php?department='.$result->collegeDepartment.'&type='.$result->type.'">'.$result->count.'<i class="fas fa-book ml-1"></i></a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -202,7 +202,7 @@ public function dataTableProponentEnvironment(){
             foreach ($results as $result) {
             echo '<tr>';
             echo '<td class="text-center py-3">'.$result->title.'</td>';
-            echo '<td class="text-center py-3">'.$result->Population.'<i class="fas fa-users ml-1"></i></td>';
+            echo '<td class="text-center py-3"><a class="text-dark" href="tableActivity.php?act_title='.$result->title.'">'.$result->Population.'<i class="fas fa-users ml-1"></i></a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -235,7 +235,7 @@ public function dataTableDepartmentLivelihood(){
             $pdo = $config->Con();
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            $sql = "SELECT `collegeDepartment`, COUNT(`collegeDepartment`) AS `count` FROM `outreach` WHERE `type` = 'Livelihood & Entrepreneurship' GROUP BY `collegeDepartment` DESC";
+            $sql = "SELECT `collegeDepartment`,  `type`, COUNT(`collegeDepartment`) AS `count` FROM `outreach` WHERE `type` = 'Livelihood & Entrepreneurship' GROUP BY `collegeDepartment` DESC";
             $data = $pdo->prepare($sql);
             $data->execute();
             $results = $data->fetchAll(PDO::FETCH_OBJ);
@@ -247,7 +247,7 @@ public function dataTableDepartmentLivelihood(){
             foreach ($results as $result) {
             echo '<tr>';
             echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
-            echo '<td class="text-center">'.$result->count.'<i class="fas fa-book ml-1"></i></td>';
+            echo '<td class="text-center"><a class="text-dark" href="tableDepartment.php?department='.$result->collegeDepartment.'&type='.$result->type.'">'.$result->count.'<i class="fas fa-book ml-1"></i></a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -278,7 +278,7 @@ public function dataTableProponentLivelihood(){
             foreach ($results as $result) {
             echo '<tr>';
             echo '<td class="text-center py-3">'.$result->title.'</td>';
-            echo '<td class="text-center py-3">'.$result->Population.'<i class="fas fa-users ml-1"></i></td>';
+            echo '<td class="text-center py-3"><a class="text-dark" href="tableActivity.php?act_title='.$result->title.'">'.$result->Population.'<i class="fas fa-users ml-1"></i></a></td>';
             echo '</tr>';
             }
             echo '</table>';

@@ -12,10 +12,10 @@ public function viewAllLiteracy(){
             $total_results = $s->rowCount();
             $total_pages = ceil($total_results/$limit);
 
-            if (!isset($_GET['Hpage'])) {
+            if (!isset($_GET['page'])) {
               $page = 1;
             } else{
-              $page = $_GET['Hpage'];
+              $page = $_GET['page'];
             }
 
             $start = ($page-1)*$limit;

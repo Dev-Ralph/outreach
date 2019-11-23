@@ -3,7 +3,14 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/add.php'
 if(isset($_POST['add'])){
   $add = new add($_POST['type'],$_POST['title'],$_POST['date'],$_POST['venue'],$_POST['schl_number'],$_POST['p_lastname'],$_POST['p_firstname'],$_POST['p_middlename'],$_POST['participation'],$_POST['collegeDepartment'],$_POST['proponent']);
   $add->addRecord();
-  header("Location: participant.php");
+  ?>
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+  You added a new record successfully!
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<?php
 }
 ?>
 <!DOCTYPE html>
@@ -153,7 +160,7 @@ if(isset($_POST['add'])){
             </div>
           </footer>
           <!-- Footer -->
-          
+
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="vendor/js/bootstrap.min.js"></script>
