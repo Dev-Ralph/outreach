@@ -6,8 +6,9 @@ public function tableActivityParticipant(){
             $pdo = $config->Con();
 
             $limit = 10;
+            $title = $_GET['act_title'];
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $s = $pdo->prepare("SELECT * FROM `outreach`");
+            $s = $pdo->prepare("SELECT * FROM `outreach` WHERE `title` LIKE '%$title%'");
             $s->execute();
             $all = $s->fetchAll(PDO::FETCH_ASSOC);
             $total_results = $s->rowCount();
@@ -21,7 +22,6 @@ public function tableActivityParticipant(){
 
             $start = ($page-1)*$limit;
 
-            $title = $_GET['act_title'];
             $sql = "SELECT * FROM `outreach` WHERE `title` LIKE '%$title%' LIMIT $start, $limit";
             $data = $pdo->prepare($sql);
             $data->execute();
@@ -57,8 +57,10 @@ public function tableCollegeParticipant(){
             $pdo = $config->Con();
 
             $limit = 10;
+            $department = $_GET['department'];
+            $type = $_GET['type'];
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $s = $pdo->prepare("SELECT * FROM `outreach`");
+            $s = $pdo->prepare("SELECT * FROM `outreach` WHERE `collegeDepartment` = '$department' AND `type` LIKE '%$type%'");
             $s->execute();
             $all = $s->fetchAll(PDO::FETCH_ASSOC);
             $total_results = $s->rowCount();
@@ -72,8 +74,6 @@ public function tableCollegeParticipant(){
 
             $start = ($page-1)*$limit;
 
-            $department = $_GET['department'];
-            $type = $_GET['type'];
             $sql = "SELECT * FROM `outreach` WHERE `collegeDepartment` = '$department' AND `type` LIKE '%$type%' LIMIT $start, $limit";
             $data = $pdo->prepare($sql);
             $data->execute();

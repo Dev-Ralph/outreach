@@ -6,7 +6,7 @@ public function viewAllLiteracy(){
             $pdo = $config->Con();
             $limit = 10;
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $s = $pdo->prepare("SELECT * FROM `outreach`");
+            $s = $pdo->prepare("SELECT * FROM `outreach` WHERE `type` = 'Literacy & Numeracy'");
             $s->execute();
             $all = $s->fetchAll(PDO::FETCH_ASSOC);
             $total_results = $s->rowCount();
@@ -58,7 +58,7 @@ public function viewAllHealth(){
             $pdo = $config->Con();
             $limit = 10;
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $s = $pdo->prepare("SELECT * FROM `outreach`");
+            $s = $pdo->prepare("SELECT * FROM `outreach` WHERE `type` = 'Health & Wellness'");
             $s->execute();
             $all = $s->fetchAll(PDO::FETCH_ASSOC);
             $total_results = $s->rowCount();
@@ -111,7 +111,7 @@ public function viewAllEnvironment(){
             $pdo = $config->Con();
             $limit = 10;
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $s = $pdo->prepare("SELECT * FROM `outreach`");
+            $s = $pdo->prepare("SELECT * FROM `outreach` WHERE `type` = 'Environment Care'");
             $s->execute();
             $all = $s->fetchAll(PDO::FETCH_ASSOC);
             $total_results = $s->rowCount();
@@ -162,7 +162,7 @@ public function viewAllLivelihood(){
             $pdo = $config->Con();
             $limit = 10;
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $s = $pdo->prepare("SELECT * FROM `outreach`");
+            $s = $pdo->prepare("SELECT * FROM `outreach` WHERE `type` = 'Livelihood & Entrepreneurship'");
             $s->execute();
             $all = $s->fetchAll(PDO::FETCH_ASSOC);
             $total_results = $s->rowCount();

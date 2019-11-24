@@ -62,6 +62,17 @@ background-attachment: fixed;
                         </span>
                       <li class="nav-item"><a class="nav-link text-dark mr-2" style="margin-top:15px;" href="addActivity.php"><span>&#43;</span> New record</a></li>
                       <li class="nav-item"><button class="btn text-dark mr-3 py-3" style="margin-top:15px; background-color: transparent;" name="logout"><i class="fas fa-sign-out-alt mr-1"></i>Logout</button></li>
+                      <li class="nav-item"><button class="btn text-dark mr-3 py-3" style="margin-top:15px; background-color: transparent;" name="logout">Edit Account</button></li>
+                      <!-- <li class="nav-item"><div class="dropdown">
+                      <button class="btn btn-secondary dropdown-toggle text-dark" style="margin-top:15px; background-color: transparent; border: none;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Account
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                      </div></li> -->
                     </form>
                   </ul>
                 </div>
