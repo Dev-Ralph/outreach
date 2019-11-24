@@ -127,7 +127,7 @@ background-attachment: fixed;
             <div class="container row mb-5" >
               <div class="mt-2">
                 <div class="mb-4">
-                  <div class="footer-copyright text-center py-3 text-white fixed-bottom fade animated fadeInUp"  style="background-color: #d75093;">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div>
+                  <div class="footer-copyright text-center py-3 text-white fixed-bottom fade animated fadeInUp"  style="background-color: #d75093;"><div style="float:left;margin-left:50px;padding-top:15px;">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div><div style="margin-left:67%;">Lopez Ralph, Sillo Kenneth, Johnroy Policarpio</div><div style="float:right;margin-right:90px;">Godoy Keith, Santos Robin, Sunga Vincent</div></div></div>
                 </div>
               </div>
             </div>
