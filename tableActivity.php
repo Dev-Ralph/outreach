@@ -28,14 +28,14 @@
           <button class="navbar-toggler bg-white" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ml-auto">
-                <form action="" method="GET" class="form-inline my-2 my-lg-0">
+                <form action="" method="GET" class="form-inline my-2 my-lg-0 ">
                   <li class="nav-item"><a class="nav-link text-dark mr-3 mt-3" href="dataTable.php"><i class="fas fa-arrow-left mr-1"></i>Return</a></li>
                 </form>
               </ul>
             </div>
           </div>
         </nav>
-      <div class="container mt-3">
+      <div class="container mt-3 animated pulse">
         <?php
         require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/tableActivity.php';
         $tableActivity = new tableActivity;
