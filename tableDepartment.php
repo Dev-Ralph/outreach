@@ -35,7 +35,7 @@
             </div>
           </div>
         </nav>
-      <div class="container mt-3  animated pulse">
+      <div class="container mt-3 animated pulse">
         <?php
         require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/tableActivity.php';
         $tableActivity = new tableActivity;

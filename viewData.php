@@ -46,24 +46,24 @@
             $results = $stmt->fetchAll();
             foreach ($results as $result) {
             ?>
-            <div class="mt-5 mb-4 row">
-              <div class="col">
-              <img src="uploads/<?php echo $result->image;?>" style="height: 50vh; width: auto;">
+            <div class="mt-5 mb-4 row text-center">
+              <div class="col mb-4">
+              <img src="uploads/<?php echo $result->image;?>" style="height:200px;; width:300px; border:1px solid pink;">
               </div>
-              <div class="col">
-              <img src="uploads/<?php echo $result->image1;?>" style="height: 50vh; width: auto;">
+              <div class="col mb-4">
+              <img src="uploads/<?php echo $result->image1;?>" style="height:200px;; width:300px; border:1px solid pink;">
               </div>
-              <div class="col">
-              <img src="uploads/<?php echo $result->image2;?>" style="height: 50vh; width: auto;">
-              </div>
-              <div class="col mt-4">
-              <img src="uploads/<?php echo $result->image3;?>" style="height: 50vh; width: auto;">
+              <div class="col mb-4">
+              <img src="uploads/<?php echo $result->image2;?>" style="height:200px;; width:300px; border:1px solid pink;">
               </div>
               <div class="col mt-4">
-              <img src="uploads/<?php echo $result->image4;?>" style="height: 50vh; width: auto;">
+              <img src="uploads/<?php echo $result->image3;?>" style="height:200px;; width:300px; border:1px solid pink;">
               </div>
               <div class="col mt-4">
-              <img src="uploads/<?php echo $result->image5;?>" style="height: 50vh; width: auto;">
+              <img src="uploads/<?php echo $result->image4;?>" style="height:200px;; width:300px; border:1px solid pink;">
+              </div>
+              <div class="col mt-4">
+              <img src="uploads/<?php echo $result->image5;?>" style="height:200px;; width:300px; border:1px solid pink;">
               </div>
             </div>
             <?php
