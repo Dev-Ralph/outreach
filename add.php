@@ -27,14 +27,65 @@ if(isset($_POST['add'])){
     <link rel="stylesheet" href="resource/css/animate.min.css">
   </head>
   <style media="screen">
-  body{
-  background-image: url("resource/img/bg.png");
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+body{
+height: 100vh;
+background-image: url("resource/img/bg.png");
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+}
+    /* ZOOM IN */
+@media only screen and (max-width: 1000px) {
+  body {
+    height: 100vh;
+    background-image: url("resource/img/mobile.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    }
   }
-  </style>
+  @media only screen and (max-width: 1000px) {
+    .navbar {
+    display: none;
+      }
+    }
+  @media only screen and (max-width: 1000px) {
+    .container {
+    display: none;
+      }
+    }
+  @media only screen and (max-width: 1000px) {
+    .container-fluid {
+    display: none;
+      }
+    }
+    /* ZOOM OUT */
+    @media only screen and (min-width: 2000px) {
+      body {
+        height: 100vh;
+        background-image: url("resource/img/mobile.png");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        }
+      }
+      @media only screen and (min-width: 2000px) {
+        .navbar {
+        display: none;
+          }
+        }
+      @media only screen and (min-width: 2000px) {
+        .container {
+        display: none;
+          }
+        }
+      @media only screen and (min-width: 2000px) {
+        .container-fluid {
+        display: none;
+          }
+        }
+}
+</style>
   <body >
       <nav class="navbar navbar-expand-sm navbar-light bg-white animated fadeInDown">
         <div class="container-fluid">

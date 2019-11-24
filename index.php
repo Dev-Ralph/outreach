@@ -21,6 +21,7 @@ background-size: cover;
 background-position: center;
 background-attachment: fixed;
 }
+    /* ZOOM IN */
 @media only screen and (max-width: 1000px) {
   body {
     height: 100vh;
@@ -45,6 +46,41 @@ background-attachment: fixed;
     display: none;
       }
     }
+    @media only screen and (max-width: 1000px) {
+      .btn {
+      display: none;
+        }
+      }
+    /* ZOOM OUT */
+    @media only screen and (min-width: 2000px) {
+      body {
+        height: 100vh;
+        background-image: url("resource/img/mobile.png");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        }
+      }
+      @media only screen and (min-width: 2000px) {
+        .navbar {
+        display: none;
+          }
+        }
+      @media only screen and (min-width: 2000px) {
+        .container {
+        display: none;
+          }
+        }
+      @media only screen and (min-width: 2000px) {
+        .container-fluid {
+        display: none;
+          }
+        }
+        @media only screen and (min-width: 2000px) {
+          .btn {
+          display: none;
+            }
+          }
 }
 </style>
 <body>

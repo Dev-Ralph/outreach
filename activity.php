@@ -32,11 +32,72 @@ if(isset($username))
 </head>
 <style media="screen">
 body{
-background-image: url("resource/img/bg.png");
 height: 100vh;
+background-image: url("resource/img/bg.png");
 background-size: cover;
 background-position: center;
 background-attachment: fixed;
+}
+    /* ZOOM IN */
+@media only screen and (max-width: 1000px) {
+  body {
+    height: 100vh;
+    background-image: url("resource/img/mobile.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    }
+  }
+  @media only screen and (max-width: 1000px) {
+    .navbar {
+    display: none;
+      }
+    }
+  @media only screen and (max-width: 1000px) {
+    .container {
+    display: none;
+      }
+    }
+  @media only screen and (max-width: 1000px) {
+    .container-fluid {
+    display: none;
+      }
+    }
+    @media only screen and (max-width: 1000px) {
+      .btn {
+      display: none;
+        }
+      }
+    /* ZOOM OUT */
+    @media only screen and (min-width: 2000px) {
+      body {
+        height: 100vh;
+        background-image: url("resource/img/mobile.png");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        }
+      }
+      @media only screen and (min-width: 2000px) {
+        .navbar {
+        display: none;
+          }
+        }
+      @media only screen and (min-width: 2000px) {
+        .container {
+        display: none;
+          }
+        }
+      @media only screen and (min-width: 2000px) {
+        .container-fluid {
+        display: none;
+          }
+        }
+        @media only screen and (min-width: 2000px) {
+          .btn {
+          display: none;
+            }
+          }
 }
 </style>
 <body>
@@ -56,15 +117,15 @@ background-attachment: fixed;
                           <option value="facilitator" title="Title for Item 3">Facilitator</option>
                           <option value="collegeDepartment" title="Title for Item 4">Department</option>
                         </select>
-                        <span class="btn btn-default mr-3 mt-3">
-                              <i class="fas fa-search" style="color:white;"></i>
+                        <span class="btn btn-default mr-3 mt-3" style="background-color:#d75094;">
+                              <i class="fas fa-search text-white"></i>
                       <input type="submit"name="submit"value="Search"style="background:none;border:0;color:white;">
                         </span>
-                      <li class="nav-item"><a class="nav-link text-dark mr-2" style="margin-top:15px;" href="addActivity.php"><span>&#43;</span> New record</a></li>
+                      <li class="nav-item"><a class="nav-link text-dark mr-2 mt-3" href="addActivity.php"><span>&#43;</span> New record</a></li>
                       <!-- <li class="nav-item"><button class="btn text-dark mr-3 py-3" style="margin-top:15px; background-color: transparent;" name="logout"><i class="fas fa-sign-out-alt mr-1"></i>Logout</button></li>
                       <li class="nav-item"><button class="btn text-dark mr-3 py-3" style="margin-top:15px; background-color: transparent;" name="logout">Edit Account</button></li> -->
                       <li class="nav-item"><div class="dropdown">
-                      <button class="btn btn-secondary dropdown-toggle text-dark" style="margin-top:15px; background-color: transparent; border: none;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <button class="btn btn-secondary dropdown-toggle text-dark mt-3" style="background-color: transparent; border: none;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           Account
                         </button>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
