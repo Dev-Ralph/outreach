@@ -47,11 +47,11 @@ INSERT INTO `account` (`account_id`, `username`, `password`, `account_status`) V
 -- --------------------------------------------------------
 
 --
--- Table structure for table `outreach`
+-- Table structure for table `outreach_participant`
 --
 
-DROP TABLE IF EXISTS `outreach`;
-CREATE TABLE IF NOT EXISTS `outreach` (
+DROP TABLE IF EXISTS `outreach_participant`;
+CREATE TABLE IF NOT EXISTS `outreach_participant` (
   `outreach_id` int(255) NOT NULL AUTO_INCREMENT,
   `type` varchar(255) NOT NULL,
   `title` varchar(255) NOT NULL,
@@ -68,10 +68,10 @@ CREATE TABLE IF NOT EXISTS `outreach` (
 ) ENGINE=MyISAM AUTO_INCREMENT=103 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `outreach`
+-- Dumping data for table `outreach_participant`
 --
 
-INSERT INTO `outreach` (`outreach_id`, `type`, `title`, `date`, `venue`, `schl_number`, `p_lastname`, `p_firstname`, `p_middlename`, `participation`, `collegeDepartment`, `proponent`) VALUES
+INSERT INTO `outreach_participant` (`outreach_id`, `type`, `title`, `date`, `venue`, `schl_number`, `p_lastname`, `p_firstname`, `p_middlename`, `participation`, `collegeDepartment`, `proponent`) VALUES
 (83, 'Literacy & Numeracy', 'Computer Training', '2019-11-02', 'BES', '2019-0001', 'Reyes', 'John', 'M.', 'Chairman', 'College of Accountancy, Management and Technology (CAMT)', 'CAMT SC'),
 (82, 'Literacy & Numeracy', 'JPCS Community Outreach L&N Training', '2019-11-01', 'CMIS', '2018-00412', 'Sillo', 'Kenneth', 'R.', 'Audience', 'College of Accountancy, Management and Technology (CAMT)', 'JPCS'),
 (84, 'Literacy & Numeracy', 'JPCS Community Outreach L&N Training', '2019-11-01', 'CMIS', '2018-00091', 'Lopez', 'Ralph', '', 'Chairman', 'College of Accountancy, Management and Technology (CAMT)', 'JPCS'),

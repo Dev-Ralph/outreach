@@ -42,7 +42,7 @@ public function addRecord(){
     $collegeDepartment = $this->collegeDepartment;
     $proponent = $this->proponent;
 
-    $sql = "INSERT INTO `outreach`(`type`, `title`, `date`, `venue`, `schl_number`, `p_lastname`, `p_firstname`, `p_middlename`, `participation`,`collegeDepartment`, `proponent`) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
+    $sql = "INSERT INTO `outreach_participant`(`type`, `title`, `date`, `venue`, `schl_number`, `p_lastname`, `p_firstname`, `p_middlename`, `participation`,`collegeDepartment`, `proponent`) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
     $data = $pdo->prepare($sql);
     $data->execute([$type,$title,$date,$venue,$schl_number,$p_lastname,$p_firstname,$p_middlename,$participation,$collegeDepartment,$proponent]);
   }

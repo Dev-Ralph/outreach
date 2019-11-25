@@ -12,7 +12,7 @@ public function searchProfileID(){
             $config = new config;
             $pdo = $config->Con();
             $search = $this->search;
-            $s = $pdo->prepare("SELECT * FROM `outreach` WHERE `schl_number` LIKE ?");
+            $s = $pdo->prepare("SELECT * FROM `outreach_participant` WHERE `schl_number` LIKE ?");
             $s->execute(["%$search%"]);
             $allResp = $s->fetchAll(PDO::FETCH_ASSOC);
 
@@ -28,7 +28,7 @@ public function searchProfileID(){
 
             $start = ($page-1)*$limit;
 
-            $sql = "SELECT DISTINCT `schl_number`,`p_lastname`,`p_firstname`,`p_middlename`,`collegeDepartment` FROM `outreach` WHERE `schl_number` = ?";
+            $sql = "SELECT DISTINCT `schl_number`,`p_lastname`,`p_firstname`,`p_middlename`,`collegeDepartment` FROM `outreach_participant` WHERE `schl_number` = ?";
             $data =$pdo->prepare($sql);
             $data->execute([$search]);
             $results = $data->fetchAll();
@@ -40,7 +40,7 @@ public function searchProfileID(){
               echo '</div>';
             }
 
-            $sql = "SELECT * FROM `outreach` where `schl_number` = ? GROUP BY `date` DESC  LIMIT $start, $limit";
+            $sql = "SELECT * FROM `outreach_participant` where `schl_number` = ? GROUP BY `date` DESC  LIMIT $start, $limit";
             $data =$pdo->prepare($sql);
             $data->execute([$search]);
             $results = $data->fetchAll();

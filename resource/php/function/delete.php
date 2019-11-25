@@ -8,7 +8,7 @@ public function deleteData(){
               $delete = Null;
               }else {
               $delete = $_GET['delete'];
-              $sql = "DELETE FROM `outreach` WHERE `outreach_id` = ?";
+              $sql = "DELETE FROM `outreach_participant` WHERE `outreach_id` = ?";
               $data = $pdo->prepare($sql);
               $data->execute([$delete]);
               }
@@ -26,7 +26,7 @@ public function deleteDataActivity(){
               $data = $pdo->prepare($sql);
               $data->execute([$delete]);
 
-              $sql2 = "DELETE FROM `outreach` WHERE `title` = ?";
+              $sql2 = "DELETE FROM `outreach_participant` WHERE `title` = ?";
               $data2 = $pdo->prepare($sql2);
               $data2->execute([$title]);
               }

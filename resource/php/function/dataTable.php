@@ -7,7 +7,7 @@ public function dataTableDepartmentLiteracy(){
             $pdo = $config->Con();
             $limit = 10;
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $s = $pdo->prepare("SELECT * FROM `outreach` WHERE `type` = 'Literacy & Numeracy'");
+            $s = $pdo->prepare("SELECT * FROM `outreach_participant` WHERE `type` = 'Literacy & Numeracy'");
             $s->execute();
             $all = $s->fetchAll(PDO::FETCH_ASSOC);
             $total_results = $s->rowCount();
@@ -21,7 +21,7 @@ public function dataTableDepartmentLiteracy(){
 
             $start = ($page-1)*$limit;
 
-            $sql = "SELECT `collegeDepartment`, `type`, COUNT(`collegeDepartment`) AS `count` FROM `outreach` WHERE `type` = 'Literacy & Numeracy' GROUP BY `collegeDepartment` DESC";
+            $sql = "SELECT `collegeDepartment`, `type`, COUNT(`collegeDepartment`) AS `count` FROM `outreach_participant` WHERE `type` = 'Literacy & Numeracy' GROUP BY `collegeDepartment` DESC";
             $data = $pdo->prepare($sql);
             $data->execute();
             $results = $data->fetchAll(PDO::FETCH_OBJ);
@@ -53,7 +53,7 @@ public function dataTableProponentLiteracy(){
             $pdo = $config->Con();
             $limit = 10;
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $s = $pdo->prepare("SELECT * FROM `outreach` WHERE `type` = 'Literacy & Numeracy'");
+            $s = $pdo->prepare("SELECT * FROM `outreach_participant` WHERE `type` = 'Literacy & Numeracy'");
             $s->execute();
             $all = $s->fetchAll(PDO::FETCH_ASSOC);
             $total_results = $s->rowCount();
@@ -66,7 +66,7 @@ public function dataTableProponentLiteracy(){
             }
 
             $start = ($page-1)*$limit;
-            $sql = "SELECT `title` FROM `outreach` WHERE `type` = 'Literacy & Numeracy' GROUP BY `title` DESC";
+            $sql = "SELECT `title` FROM `outreach_participant` WHERE `type` = 'Literacy & Numeracy' GROUP BY `title` DESC";
             $data = $pdo->prepare($sql);
             $data->execute();
             $rows = $data->fetchAll();
@@ -74,7 +74,7 @@ public function dataTableProponentLiteracy(){
               $row->title;
             }
 
-            $sql = "SELECT `title`, COUNT(`title`) as `Population` FROM `outreach` WHERE `type` = 'Literacy & Numeracy' GROUP BY `title` DESC";
+            $sql = "SELECT `title`, COUNT(`title`) as `Population` FROM `outreach_participant` WHERE `type` = 'Literacy & Numeracy' GROUP BY `title` DESC";
             $data = $pdo->prepare($sql);
             $data->execute();
             $results = $data->fetchAll();
@@ -106,7 +106,7 @@ public function dataTableAttendeesLiteracy(){
   $pdo = $config->Con();
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-  $sql = "SELECT COUNT(`outreach_id`) AS `count` FROM `outreach` WHERE `type` = 'Literacy & Numeracy'";
+  $sql = "SELECT COUNT(`outreach_id`) AS `count` FROM `outreach_participant` WHERE `type` = 'Literacy & Numeracy'";
   $data = $pdo->prepare($sql);
   $data->execute();
   $results = $data->fetchAll(PDO::FETCH_OBJ);
@@ -128,7 +128,7 @@ public function dataTableDepartmentHealth(){
             $pdo = $config->Con();
             $limit = 10;
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $s = $pdo->prepare("SELECT * FROM `outreach` WHERE `type` = 'Health & Wellness'");
+            $s = $pdo->prepare("SELECT * FROM `outreach_participant` WHERE `type` = 'Health & Wellness'");
             $s->execute();
             $all = $s->fetchAll(PDO::FETCH_ASSOC);
             $total_results = $s->rowCount();
@@ -142,7 +142,7 @@ public function dataTableDepartmentHealth(){
 
             $start = ($page-1)*$limit;
 
-            $sql = "SELECT `collegeDepartment`,  `type`, COUNT(`collegeDepartment`) AS `count` FROM `outreach` WHERE `type` = 'Health & Wellness' GROUP BY `collegeDepartment` DESC";
+            $sql = "SELECT `collegeDepartment`,  `type`, COUNT(`collegeDepartment`) AS `count` FROM `outreach_participant` WHERE `type` = 'Health & Wellness' GROUP BY `collegeDepartment` DESC";
             $data = $pdo->prepare($sql);
             $data->execute();
             $results = $data->fetchAll(PDO::FETCH_OBJ);
@@ -174,7 +174,7 @@ public function dataTableProponentHealth(){
             $pdo = $config->Con();
             $limit = 10;
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $s = $pdo->prepare("SELECT * FROM `outreach` WHERE `type` = 'Health & Wellness'");
+            $s = $pdo->prepare("SELECT * FROM `outreach_participant` WHERE `type` = 'Health & Wellness'");
             $s->execute();
             $all = $s->fetchAll(PDO::FETCH_ASSOC);
             $total_results = $s->rowCount();
@@ -188,7 +188,7 @@ public function dataTableProponentHealth(){
 
             $start = ($page-1)*$limit;
 
-            $sql = "SELECT `title` FROM `outreach` WHERE `type` = 'Health & Wellness' GROUP BY `title` DESC";
+            $sql = "SELECT `title` FROM `outreach_participant` WHERE `type` = 'Health & Wellness' GROUP BY `title` DESC";
             $data = $pdo->prepare($sql);
             $data->execute();
             $rows = $data->fetchAll();
@@ -196,7 +196,7 @@ public function dataTableProponentHealth(){
               $row->title;
             }
 
-            $sql = "SELECT `title`, COUNT(`title`) as `Population` FROM `outreach` WHERE `type` = 'Health & Wellness' GROUP BY `title` DESC";
+            $sql = "SELECT `title`, COUNT(`title`) as `Population` FROM `outreach_participant` WHERE `type` = 'Health & Wellness' GROUP BY `title` DESC";
             $data = $pdo->prepare($sql);
             $data->execute();
             $results = $data->fetchAll();
@@ -228,7 +228,7 @@ public function dataTableAttendeesHealth(){
   $pdo = $config->Con();
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-  $sql = "SELECT COUNT(`outreach_id`) AS `count` FROM `outreach` WHERE `type` = 'Health & Wellness'";
+  $sql = "SELECT COUNT(`outreach_id`) AS `count` FROM `outreach_participant` WHERE `type` = 'Health & Wellness'";
   $data = $pdo->prepare($sql);
   $data->execute();
   $results = $data->fetchAll(PDO::FETCH_OBJ);
@@ -250,7 +250,7 @@ public function dataTableDepartmentEnvironment(){
             $pdo = $config->Con();
             $limit = 10;
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $s = $pdo->prepare("SELECT * FROM `outreach` WHERE `type` = 'Environment Care'");
+            $s = $pdo->prepare("SELECT * FROM `outreach_participant` WHERE `type` = 'Environment Care'");
             $s->execute();
             $all = $s->fetchAll(PDO::FETCH_ASSOC);
             $total_results = $s->rowCount();
@@ -264,7 +264,7 @@ public function dataTableDepartmentEnvironment(){
 
             $start = ($page-1)*$limit;
 
-            $sql = "SELECT `collegeDepartment`,  `type`, COUNT(`collegeDepartment`) AS `count` FROM `outreach` WHERE `type` = 'Environment Care' GROUP BY `collegeDepartment` DESC";
+            $sql = "SELECT `collegeDepartment`,  `type`, COUNT(`collegeDepartment`) AS `count` FROM `outreach_participant` WHERE `type` = 'Environment Care' GROUP BY `collegeDepartment` DESC";
             $data = $pdo->prepare($sql);
             $data->execute();
             $results = $data->fetchAll(PDO::FETCH_OBJ);
@@ -296,7 +296,7 @@ public function dataTableProponentEnvironment(){
             $pdo = $config->Con();
             $limit = 10;
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $s = $pdo->prepare("SELECT * FROM `outreach` WHERE `type` = 'Environment Care'");
+            $s = $pdo->prepare("SELECT * FROM `outreach_participant` WHERE `type` = 'Environment Care'");
             $s->execute();
             $all = $s->fetchAll(PDO::FETCH_ASSOC);
             $total_results = $s->rowCount();
@@ -310,7 +310,7 @@ public function dataTableProponentEnvironment(){
 
             $start = ($page-1)*$limit;
 
-            $sql = "SELECT `title` FROM `outreach` WHERE `type` = 'Environment Care' GROUP BY `title` DESC";
+            $sql = "SELECT `title` FROM `outreach_participant` WHERE `type` = 'Environment Care' GROUP BY `title` DESC";
             $data = $pdo->prepare($sql);
             $data->execute();
             $rows = $data->fetchAll();
@@ -318,7 +318,7 @@ public function dataTableProponentEnvironment(){
               $row->title;
             }
 
-            $sql = "SELECT `title`, COUNT(`title`) as `Population` FROM `outreach` WHERE `type` = 'Environment Care' GROUP BY `title` DESC";
+            $sql = "SELECT `title`, COUNT(`title`) as `Population` FROM `outreach_participant` WHERE `type` = 'Environment Care' GROUP BY `title` DESC";
             $data = $pdo->prepare($sql);
             $data->execute();
             $results = $data->fetchAll();
@@ -350,7 +350,7 @@ public function dataTableAttendeesEnvironment(){
   $pdo = $config->Con();
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-  $sql = "SELECT COUNT(`outreach_id`) AS `count` FROM `outreach` WHERE `type` = 'Environment Care'";
+  $sql = "SELECT COUNT(`outreach_id`) AS `count` FROM `outreach_participant` WHERE `type` = 'Environment Care'";
   $data = $pdo->prepare($sql);
   $data->execute();
   $results = $data->fetchAll(PDO::FETCH_OBJ);
@@ -372,7 +372,7 @@ public function dataTableDepartmentLivelihood(){
             $pdo = $config->Con();
             $limit = 10;
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $s = $pdo->prepare("SELECT * FROM `outreach` WHERE `type` = 'Livelihood & Entrepreneurship'");
+            $s = $pdo->prepare("SELECT * FROM `outreach_participant` WHERE `type` = 'Livelihood & Entrepreneurship'");
             $s->execute();
             $all = $s->fetchAll(PDO::FETCH_ASSOC);
             $total_results = $s->rowCount();
@@ -386,7 +386,7 @@ public function dataTableDepartmentLivelihood(){
 
             $start = ($page-1)*$limit;
 
-            $sql = "SELECT `collegeDepartment`,  `type`, COUNT(`collegeDepartment`) AS `count` FROM `outreach` WHERE `type` = 'Livelihood & Entrepreneurship' GROUP BY `collegeDepartment` DESC";
+            $sql = "SELECT `collegeDepartment`,  `type`, COUNT(`collegeDepartment`) AS `count` FROM `outreach_participant` WHERE `type` = 'Livelihood & Entrepreneurship' GROUP BY `collegeDepartment` DESC";
             $data = $pdo->prepare($sql);
             $data->execute();
             $results = $data->fetchAll(PDO::FETCH_OBJ);
@@ -418,7 +418,7 @@ public function dataTableProponentLivelihood(){
             $pdo = $config->Con();
             $limit = 10;
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $s = $pdo->prepare("SELECT * FROM `outreach` WHERE `type` = 'Livelihood & Entrepreneurship'");
+            $s = $pdo->prepare("SELECT * FROM `outreach_participant` WHERE `type` = 'Livelihood & Entrepreneurship'");
             $s->execute();
             $all = $s->fetchAll(PDO::FETCH_ASSOC);
             $total_results = $s->rowCount();
@@ -432,7 +432,7 @@ public function dataTableProponentLivelihood(){
 
             $start = ($page-1)*$limit;
 
-            $sql = "SELECT `title` FROM `outreach` WHERE `type` = 'Livelihood & Entrepreneurship' GROUP BY `title` DESC";
+            $sql = "SELECT `title` FROM `outreach_participant` WHERE `type` = 'Livelihood & Entrepreneurship' GROUP BY `title` DESC";
             $data = $pdo->prepare($sql);
             $data->execute();
             $rows = $data->fetchAll();
@@ -440,7 +440,7 @@ public function dataTableProponentLivelihood(){
               $row->title;
             }
 
-            $sql = "SELECT `title`, COUNT(`title`) as `Population` FROM `outreach` WHERE `type` = 'Livelihood & Entrepreneurship' GROUP BY `title` DESC";
+            $sql = "SELECT `title`, COUNT(`title`) as `Population` FROM `outreach_participant` WHERE `type` = 'Livelihood & Entrepreneurship' GROUP BY `title` DESC";
             $data = $pdo->prepare($sql);
             $data->execute();
             $results = $data->fetchAll();
@@ -472,7 +472,7 @@ public function dataTableAttendeesLivelihood(){
   $pdo = $config->Con();
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-  $sql = "SELECT COUNT(`outreach_id`) AS `count` FROM `outreach` WHERE `type` = 'Livelihood & Entrepreneurship'";
+  $sql = "SELECT COUNT(`outreach_id`) AS `count` FROM `outreach_participant` WHERE `type` = 'Livelihood & Entrepreneurship'";
   $data = $pdo->prepare($sql);
   $data->execute();
   $results = $data->fetchAll(PDO::FETCH_OBJ);

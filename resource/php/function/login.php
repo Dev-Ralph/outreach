@@ -27,8 +27,8 @@ public function login(){
   }else {
     // header('location: index.php');
     ?>
-    <div class="container">    
-    <div class="alert alert-danger alert-dismissible fade show mt-3 mb-0" role="alert">
+    <div class="container">
+    <div class="alert alert-danger alert-dismissible fade show mt-3 mb-0 animated zoomIn" role="alert">
     Login failed! You entered invalid username or password.
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>

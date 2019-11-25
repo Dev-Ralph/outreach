@@ -20,7 +20,7 @@ public function viewAllLiteracy(){
 
             $start = ($page-1)*$limit;
 
-            $sql2 = "SELECT * FROM `outreach`";
+            $sql2 = "SELECT * FROM `outreach_participant`";
             $data2 = $pdo->prepare($sql2);
             $data2->execute();
             $rows = $data2->fetchAll(PDO::FETCH_OBJ);
@@ -81,6 +81,14 @@ public function viewAllHealth(){
 
             $start = ($page-1)*$limit;
 
+            $sql2 = "SELECT * FROM `outreach_participant`";
+            $data2 = $pdo->prepare($sql2);
+            $data2->execute();
+            $rows = $data2->fetchAll(PDO::FETCH_OBJ);
+            foreach ($rows as $row) {
+              $row->title;
+            }
+
             $sql = "SELECT * FROM `outreach_activity` WHERE `type` = 'Health & Wellness' ORDER BY `date` DESC LIMIT $start, $limit";
             $data = $pdo->prepare($sql);
             $data->execute();
@@ -99,7 +107,7 @@ public function viewAllHealth(){
             echo '<td class="text-center">'.$result->proponent.'</td>';
             echo '<td class="text-center">'.$result->mean.'</td>';
             echo '<td class="text-center">'.$result->interpretation.'</td>';
-            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-danger" href="?delete='.$result->outreach_activity_id.'"><i class="far fa-trash-alt mr-1"></i>Delete</a></td>';
+            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-danger" href="?delete='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="far fa-trash-alt mr-1"></i>Delete</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -133,6 +141,14 @@ public function viewAllEnvironment(){
 
             $start = ($page-1)*$limit;
 
+            $sql2 = "SELECT * FROM `outreach_participant`";
+            $data2 = $pdo->prepare($sql2);
+            $data2->execute();
+            $rows = $data2->fetchAll(PDO::FETCH_OBJ);
+            foreach ($rows as $row) {
+              $row->title;
+            }
+
             $sql = "SELECT * FROM `outreach_activity` WHERE `type` = 'Environment Care' ORDER BY `date` DESC LIMIT $start, $limit";
             $data = $pdo->prepare($sql);
             $data->execute();
@@ -151,7 +167,7 @@ public function viewAllEnvironment(){
             echo '<td class="text-center">'.$result->proponent.'</td>';
             echo '<td class="text-center">'.$result->mean.'</td>';
             echo '<td class="text-center">'.$result->interpretation.'</td>';
-            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-danger" href="?delete='.$result->outreach_activity_id.'"><i class="far fa-trash-alt mr-1"></i>Delete</a></td>';
+            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-danger" href="?delete='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="far fa-trash-alt mr-1"></i>Delete</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -185,6 +201,14 @@ public function viewAllLivelihood(){
 
             $start = ($page-1)*$limit;
 
+            $sql2 = "SELECT * FROM `outreach_participant`";
+            $data2 = $pdo->prepare($sql2);
+            $data2->execute();
+            $rows = $data2->fetchAll(PDO::FETCH_OBJ);
+            foreach ($rows as $row) {
+              $row->title;
+            }
+
             $sql = "SELECT * FROM `outreach_activity` WHERE `type` = 'Livelihood & Entrepreneurship' ORDER BY `date` DESC LIMIT $start, $limit";
             $data = $pdo->prepare($sql);
             $data->execute();
@@ -203,7 +227,7 @@ public function viewAllLivelihood(){
             echo '<td class="text-center">'.$result->proponent.'</td>';
             echo '<td class="text-center">'.$result->mean.'</td>';
             echo '<td class="text-center">'.$result->interpretation.'</td>';
-            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-danger" href="?delete='.$result->outreach_activity_id.'"><i class="far fa-trash-alt mr-1"></i>Delete</a></td>';
+            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-danger" href="?delete='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="far fa-trash-alt mr-1"></i>Delete</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -242,7 +266,7 @@ public function viewAllLivelihood(){
 
             $start = ($page-1)*$limit;
 
-            $sql = "SELECT * FROM `outreach_activity` where `$down` LIKE ?  LIMIT $start, $limit";
+            $sql = "SELECT * FROM `outreach_activity` WHERE `$down` LIKE ? AND `type` = 'Literacy & Numeracy'  LIMIT $start, $limit";
             $data =$pdo->prepare($sql);
             $data->execute(["%$search%"]);
             $results = $data->fetchAll();

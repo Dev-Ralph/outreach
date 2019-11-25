@@ -6,7 +6,6 @@
     <title>Register page</title>
     <link href="vendor/css/bootstrap.min.css" rel="stylesheet">
     <link href="resource/css/edit.css" rel="stylesheet">
-    <link rel="stylesheet" href="resource/css/animate.min.css">
     <link href="vendor/fonts/css/fontawesome.min.css" rel="stylesheet">
     <link href="vendor/fonts/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="resource/css/animate.min.css">

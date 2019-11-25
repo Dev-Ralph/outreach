@@ -6,7 +6,7 @@ public function viewAllLiteracy(){
             $pdo = $config->Con();
             $limit = 10;
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $s = $pdo->prepare("SELECT * FROM `outreach` WHERE `type` = 'Literacy & Numeracy'");
+            $s = $pdo->prepare("SELECT * FROM `outreach_participant` WHERE `type` = 'Literacy & Numeracy'");
             $s->execute();
             $all = $s->fetchAll(PDO::FETCH_ASSOC);
             $total_results = $s->rowCount();
@@ -20,7 +20,7 @@ public function viewAllLiteracy(){
 
             $start = ($page-1)*$limit;
 
-            $sql = "SELECT * FROM `outreach` WHERE `type` = 'Literacy & Numeracy' ORDER BY `date` DESC LIMIT $start, $limit";
+            $sql = "SELECT * FROM `outreach_participant` WHERE `type` = 'Literacy & Numeracy' ORDER BY `date` DESC LIMIT $start, $limit";
             $data = $pdo->prepare($sql);
             $data->execute();
             $results = $data->fetchAll(PDO::FETCH_OBJ);
@@ -58,7 +58,7 @@ public function viewAllHealth(){
             $pdo = $config->Con();
             $limit = 10;
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $s = $pdo->prepare("SELECT * FROM `outreach` WHERE `type` = 'Health & Wellness'");
+            $s = $pdo->prepare("SELECT * FROM `outreach_participant` WHERE `type` = 'Health & Wellness'");
             $s->execute();
             $all = $s->fetchAll(PDO::FETCH_ASSOC);
             $total_results = $s->rowCount();
@@ -73,7 +73,7 @@ public function viewAllHealth(){
 
             $start = ($page-1)*$limit;
 
-            $sql = "SELECT * FROM `outreach` WHERE `type` = 'Health & Wellness' ORDER BY `date` DESC LIMIT $start, $limit";
+            $sql = "SELECT * FROM `outreach_participant` WHERE `type` = 'Health & Wellness' ORDER BY `date` DESC LIMIT $start, $limit";
             $data = $pdo->prepare($sql);
             $data->execute();
             $results = $data->fetchAll(PDO::FETCH_OBJ);
@@ -111,7 +111,7 @@ public function viewAllEnvironment(){
             $pdo = $config->Con();
             $limit = 10;
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $s = $pdo->prepare("SELECT * FROM `outreach` WHERE `type` = 'Environment Care'");
+            $s = $pdo->prepare("SELECT * FROM `outreach_participant` WHERE `type` = 'Environment Care'");
             $s->execute();
             $all = $s->fetchAll(PDO::FETCH_ASSOC);
             $total_results = $s->rowCount();
@@ -125,7 +125,7 @@ public function viewAllEnvironment(){
 
             $start = ($page-1)*$limit;
 
-            $sql = "SELECT * FROM `outreach` WHERE `type` = 'Environment Care' ORDER BY `date` DESC LIMIT $start, $limit";
+            $sql = "SELECT * FROM `outreach_participant` WHERE `type` = 'Environment Care' ORDER BY `date` DESC LIMIT $start, $limit";
             $data = $pdo->prepare($sql);
             $data->execute();
             $results = $data->fetchAll(PDO::FETCH_OBJ);
@@ -162,7 +162,7 @@ public function viewAllLivelihood(){
             $pdo = $config->Con();
             $limit = 10;
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $s = $pdo->prepare("SELECT * FROM `outreach` WHERE `type` = 'Livelihood & Entrepreneurship'");
+            $s = $pdo->prepare("SELECT * FROM `outreach_participant` WHERE `type` = 'Livelihood & Entrepreneurship'");
             $s->execute();
             $all = $s->fetchAll(PDO::FETCH_ASSOC);
             $total_results = $s->rowCount();
@@ -176,7 +176,7 @@ public function viewAllLivelihood(){
 
             $start = ($page-1)*$limit;
 
-            $sql = "SELECT * FROM `outreach` WHERE `type` = 'Livelihood & Entrepreneurship' ORDER BY `date` DESC LIMIT $start, $limit";
+            $sql = "SELECT * FROM `outreach_participant` WHERE `type` = 'Livelihood & Entrepreneurship' ORDER BY `date` DESC LIMIT $start, $limit";
             $data = $pdo->prepare($sql);
             $data->execute();
             $results = $data->fetchAll(PDO::FETCH_OBJ);
@@ -216,7 +216,7 @@ public function viewAllLivelihood(){
             $pdo = $config->Con();
             $search = $_GET['search'];
             $down = $_GET['down'];
-            $s = $pdo->prepare("SELECT * FROM `outreach` WHERE `$down` LIKE ?");
+            $s = $pdo->prepare("SELECT * FROM `outreach_participant` WHERE `$down` LIKE ?");
             $s->execute(["%$search%"]);
             $allResp = $s->fetchAll(PDO::FETCH_ASSOC);
 
@@ -232,7 +232,7 @@ public function viewAllLivelihood(){
 
             $start = ($page-1)*$limit;
 
-            $sql = "SELECT * FROM `outreach` where `$down` LIKE ?  LIMIT $start, $limit";
+            $sql = "SELECT * FROM `outreach_participant` where `$down` LIKE ?  LIMIT $start, $limit";
             $data =$pdo->prepare($sql);
             $data->execute(["%$search%"]);
             $results = $data->fetchAll();

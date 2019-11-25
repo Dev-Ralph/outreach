@@ -20,7 +20,7 @@ public function edit(){
             $config = new config;
             $pdo = $config->Con();
             $id = $this->outreach_id;
-            $sql = "SELECT * FROM `outreach` WHERE `outreach_id`= '$id'";
+            $sql = "SELECT * FROM `outreach_participant` WHERE `outreach_id`= '$id'";
             $data= $pdo->prepare($sql);
             $data->execute();
             $result = $data->fetchAll();
@@ -30,7 +30,7 @@ public function edit(){
             // $collegeDepartment = $this->collegeDepartment;
             // $image = $this->image;
             $documentation = $this->documentation;
-            $sql = "UPDATE `outreach` SET `date`= ?,`schoolName`= ?,`facilitator`= ?,`documentation`= ? WHERE `outreach_id`= '$id'";
+            $sql = "UPDATE `outreach_participant` SET `date`= ?,`schoolName`= ?,`facilitator`= ?,`documentation`= ? WHERE `outreach_id`= '$id'";
             $data= $pdo->prepare($sql);
             $data->execute([$date, $schoolName, $facilitator, $documentation]);
           }
@@ -65,6 +65,6 @@ public function showTitle(){
             foreach ($results as $result) {
                 echo '<option value="'.$this->title = $result->title.'">'.$this->title = $result->title.'</option>';
               }
-            }
-          }
+}
+}
  ?>

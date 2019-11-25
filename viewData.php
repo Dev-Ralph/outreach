@@ -141,24 +141,23 @@ background-attachment: fixed;
           echo '<h6 class="text-center">'.$edit->date.'</h6>';
           echo '<h6 class="text-center">'.$edit->venue.'</h6>';
           echo '<h6 class="text-center">'.$edit->proponent.'</h6>';
-          echo '<p class="text-justify pt-4">'.$edit->documentation.'<p>';
+          echo '<p class="text-justify pt-4 pb-4">'.$edit->documentation.'<p>';
         }
          ?>
      </div>
 
      <!-- Footer -->
      <footer>
-       <div class="container-fluid mb-5" >
+       <div class="container-fluid" >
          <div class="row">
-             <div class="footer-copyright text-center py-4 text-white fixed-bottom fade animated fadeInUp"  style="background-color: #d75093;">
+           <div class="col-md-12 p-0">
+             <div class="footer-copyright text-center py-4 pb-5 text-white  fade animated fadeInUp"  style="background-color: #d75093;">
              <div class="col-md-6 float-left text-left">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div>
-             <div class="col-md-6 float-right text-right">Ralph Lopez, Kenneth Sillo, Johnroy Policarpio,Keith Godoy, Robin Santos, Vincent Sunga
-             </div>
-           </div>
+             <div class="col-md-6 float-right text-right">Ralph Lopez, Kenneth Sillo, Johnroy Policarpio,Keith Godoy, Robin Santos, Vincent Sunga</div>
            </div>
            </div>
          </div>
-       </div>
+           </div>
      </footer>
      <!-- Footer -->
 
