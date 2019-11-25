@@ -102,7 +102,7 @@
             $add = new addActivity($_POST['type'],$_POST['title'],$_POST['proponent'],$_POST['date'],$_POST['venue'],$_POST['target_p'],$_POST['mean'],$_POST['interpretation'],$_POST['documentation']);
             $add->addRecord();
             ?>
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <div class="alert alert-success alert-dismissible fade show animated fadeInDown" role="alert">
             You added a new record successfully!
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true">&times;</span>
@@ -213,10 +213,15 @@
 
           <!-- Footer -->
           <footer>
-            <div class="container row mb-5" >
-              <div class="mt-2">
-                <div class="mb-4">
-                  <div class="footer-copyright text-center py-3 text-white fixed-bottom fade animated fadeInUp"  style="background-color: #d75093;"><div style="float:left;margin-left:50px;padding-top:15px;">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div><div style="margin-left:67%;">Lopez Ralph, Sillo Kenneth, Johnroy Policarpio</div><div style="float:right;margin-right:90px;">Godoy Keith, Santos Robin, Sunga Vincent</div></div></div>
+            <div class="container-fluid mb-5" >
+              <div class="row">
+                  <div class="footer-copyright text-center py-4 text-white fixed-bottom fade animated fadeInUp"  style="background-color: #d75093;">
+                  <div class="col-md-6 float-left text-left">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div>
+                  <div class="col-md-6 float-right text-right">Ralph Lopez, Kenneth Sillo, Johnroy Policarpio,Keith Godoy, Robin Santos, Vincent Sunga
+                  </div>
+                </div>
+                </div>
+                </div>
               </div>
             </div>
           </footer>

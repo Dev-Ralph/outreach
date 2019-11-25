@@ -16,13 +16,19 @@ public function deleteData(){
 public function deleteDataActivity(){
               $config = new config;
               $pdo = $config->Con();
-              if(!isset($_GET['delete'])){
+              if(!isset($_GET['delete']) && !isset($_GET['title'])){
               $delete = Null;
+              $title = Null;
               }else {
               $delete = $_GET['delete'];
+              $title = $_GET['title'];
               $sql = "DELETE FROM `outreach_activity` WHERE `outreach_activity_id` = ?";
               $data = $pdo->prepare($sql);
               $data->execute([$delete]);
+
+              $sql2 = "DELETE FROM `outreach` WHERE `title` = ?";
+              $data2 = $pdo->prepare($sql2);
+              $data2->execute([$title]);
               }
 }
           }

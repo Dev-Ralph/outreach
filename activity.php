@@ -124,14 +124,14 @@ background-attachment: fixed;
                       <li class="nav-item"><a class="nav-link text-dark mr-2 mt-3" href="addActivity.php"><span>&#43;</span> New record</a></li>
                       <!-- <li class="nav-item"><button class="btn text-dark mr-3 py-3" style="margin-top:15px; background-color: transparent;" name="logout"><i class="fas fa-sign-out-alt mr-1"></i>Logout</button></li>
                       <li class="nav-item"><button class="btn text-dark mr-3 py-3" style="margin-top:15px; background-color: transparent;" name="logout">Edit Account</button></li> -->
-                      <li class="nav-item"><div class="dropdown">
+                      <li class="nav-item"><div class="dropdown py-2">
                       <button class="btn btn-secondary dropdown-toggle text-dark mt-3" style="background-color: transparent; border: none;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           Account
                         </button>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                           <a class="dropdown-item" href="#"><button class="btn text-dark" style="background-color:transparent;" name="logout"><i class="fas fa-sign-out-alt mr-1"></i>Logout</button>
                           <a class="dropdown-item" href="#"><button class="btn text-dark" style="background-color: transparent;" name="logout"><i class="fas fa-user-edit mr-1"></i>Edit Account</button>
-                          <a class="dropdown-item" href="#"></a>
+                          <a class="dropdown-item" href=""></a>
                         </div>
                       </div></li>
                     </form>
@@ -200,17 +200,20 @@ background-attachment: fixed;
 </body>
 
         <!-- Footer -->
-          <footer>
-            <div class="container row mb-5" >
-              <div class="mt-2">
-                <div class="mb-4">
-                  <div class="footer-copyright text-center py-3 text-white fixed-bottom fade animated fadeInUp"  style="background-color: #d75093;"><div style="float:left;margin-left:50px;padding-top:15px;">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div><div style="margin-left:67%;">Lopez Ralph, Sillo Kenneth, Johnroy Policarpio</div><div style="float:right;margin-right:90px;">Godoy Keith, Santos Robin, Sunga Vincent</div></div></div>
+        <footer>
+          <div class="container-fluid mb-5" >
+            <div class="row">
+                <div class="footer-copyright text-center py-4 text-white fixed-bottom fade animated fadeInUp"  style="background-color: #d75093;">
+                <div class="col-md-6 float-left text-left">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div>
+                <div class="col-md-6 float-right text-right">Ralph Lopez, Kenneth Sillo, Johnroy Policarpio,Keith Godoy, Robin Santos, Vincent Sunga
                 </div>
               </div>
+              </div>
+              </div>
             </div>
-          </footer>
+          </div>
+        </footer>
           <!-- Footer -->
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="vendor/js/bootstrap.min.js"></script>
 </html>

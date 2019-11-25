@@ -1,18 +1,4 @@
-<?php
-require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/add.php';
-if(isset($_POST['add'])){
-  $add = new add($_POST['type'],$_POST['title'],$_POST['date'],$_POST['venue'],$_POST['schl_number'],$_POST['p_lastname'],$_POST['p_firstname'],$_POST['p_middlename'],$_POST['participation'],$_POST['collegeDepartment'],$_POST['proponent']);
-  $add->addRecord();
-  ?>
-  <div class="alert alert-success alert-dismissible fade show" role="alert">
-  You added a new record successfully!
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
-<?php
-}
-?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -102,6 +88,21 @@ background-attachment: fixed;
           </nav>
       <main class="py-4">
         <div class="container-fluid">
+          <?php
+          require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/add.php';
+          if(isset($_POST['add'])){
+            $add = new add($_POST['type'],$_POST['title'],$_POST['date'],$_POST['venue'],$_POST['schl_number'],$_POST['p_lastname'],$_POST['p_firstname'],$_POST['p_middlename'],$_POST['participation'],$_POST['collegeDepartment'],$_POST['proponent']);
+            $add->addRecord();
+            ?>
+            <div class="alert alert-success alert-dismissible fade show animated fadeInDown" role="alert">
+            You added a new record successfully!
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <?php
+          }
+          ?>
           <div class="row justify-content-center">
             <div class="col-md-10">
               <div class="card animated fadeInDown" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -190,7 +191,7 @@ background-attachment: fixed;
                           </div>
                           <div class="col-md-12">
                           <div class="form-group mb-2 text-center">
-                              <button type="submit" class="card-btn btn text-light px-5" name="add">Submit</button>
+                              <button type="submit" class="card-btn btn text-light px-5" name="add">Add</button>
                           </div>
                       </div>
                     </form>
@@ -202,10 +203,14 @@ background-attachment: fixed;
 
           <!-- Footer -->
           <footer>
-            <div class="container row mb-5" >
-              <div class="mt-2">
-                <div class="mb-4">
-                  <div class="footer-copyright text-center py-3 text-white fixed-bottom fade animated fadeInUp"  style="background-color: #d75093;"><div style="float:left;margin-left:50px;padding-top:15px;">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div><div style="margin-left:67%;">Lopez Ralph, Sillo Kenneth, Johnroy Policarpio</div><div style="float:right;margin-right:90px;">Godoy Keith, Santos Robin, Sunga Vincent</div></div></div>
+            <div class="container-fluid mb-5" >
+              <div class="row">
+                  <div class="footer-copyright text-center py-4 text-white fixed-bottom fade animated fadeInUp"  style="background-color: #d75093;">
+                  <div class="col-md-6 float-left text-left">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div>
+                  <div class="col-md-6 float-right text-right">Ralph Lopez, Kenneth Sillo, Johnroy Policarpio,Keith Godoy, Robin Santos, Vincent Sunga
+                  </div>
+                </div>
+                </div>
                 </div>
               </div>
             </div>
