@@ -1,5 +1,6 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/db/config.php';
+error_reporting (E_ALL ^ E_NOTICE);
 class viewActivity extends config {
 public function viewAllLiteracy(){
             $config = new config;
