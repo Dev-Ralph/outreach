@@ -81,7 +81,7 @@ public function tableCollegeParticipant(){
             $data->execute();
             $results = $data->fetchAll(PDO::FETCH_OBJ);
 
-            echo '<div class="table-responsive" id="department">';
+            echo '<div class="table-responsive" id="collgeDepartment">';
             echo '<h1 class="text-center py-3">'.$department.'</h1>';
             echo '<table style="width:100%; background-color: white;" class="table table-bordered">';
             echo '<tr>';
@@ -91,7 +91,7 @@ public function tableCollegeParticipant(){
             echo '<tr>';
             echo '<td class="text-center">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
             echo '<td class="text-center">'.$result->schl_number.'</td>';
-            echo '<td class="text-center">'.$result->type.'</td>';
+            echo '<td class="text-center">'.$type.'</td>';
             echo '<td class="text-center">'.$result->title.'</td>';
             echo '<td class="text-center">'.$result->participation.'</td>';
             echo '<td class="text-center">'.$result->proponent.'</td>';

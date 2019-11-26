@@ -136,7 +136,7 @@ background-attachment: fixed;
 <script>
 $(document).ready(function(){
      $('#create_excel').click(function(){
-          var excel_data = $('#department').html();
+          var excel_data = $('#collgeDepartment').html();
           var page = "excel.php?data=" + excel_data;
           window.location = page;
      });
