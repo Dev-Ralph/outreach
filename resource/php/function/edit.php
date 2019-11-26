@@ -49,11 +49,6 @@ public function showEdit(){
               $this->proponent = $result->proponent;
               $this->documentation = $result->documentation;
               $this->image = $result->image;
-              $this->image1 = $result->image1;
-              $this->image2 = $result->image2;
-              $this->image3 = $result->image3;
-              $this->image4 = $result->image4;
-              $this->image5 = $result->image5;
               }
 }
 public function showTitle(){
