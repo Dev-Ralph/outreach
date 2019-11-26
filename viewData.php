@@ -3,9 +3,11 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register page</title>
+    <title>View | Activity</title>
     <link href="vendor/css/bootstrap.min.css" rel="stylesheet">
     <link href="resource/css/edit.css" rel="stylesheet">
+    <link href="vendor/fonts/css/fontawesome.min.css" rel="stylesheet">
+    <link href="vendor/fonts/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="resource/css/animate.min.css">
   </head>
   <style media="screen">
@@ -86,7 +88,7 @@ background-attachment: fixed;
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                   <form action="" method="GET" class="form-inline my-2 my-lg-0">
-                    <li class="nav-item"><a class="nav-link text-dark mr-3 mt-3" href="activity.php">Go back</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark mr-3 mt-3" href="participant.php"><i class="fas fa-arrow-left mr-1"></i>Return</a></li>
                   </form>
                 </ul>
               </div>
@@ -107,11 +109,11 @@ background-attachment: fixed;
             $results = $stmt->fetchAll();
             foreach ($results as $result) {
             ?>
-            <div class="mt-5 mb-4 row text-center">
-              <div class="col mb-4">
-              <img src="uploads/<?php echo $result->image;?>" style="height:200px;; width:300px; border:1px solid pink;">
+            <div class="mt-5 mb-2 container-fluid text-center">
+              <div class="col-md-12">
+              <img src="uploads/<?php echo $result->image;?>" style="height:350px;; width:auto;">
               </div>
-              <div class="col mb-4">
+              <!-- <div class="col mb-4">
               <img src="uploads/<?php echo $result->image1;?>" style="height:200px;; width:300px; border:1px solid pink;">
               </div>
               <div class="col mb-4">
@@ -125,7 +127,7 @@ background-attachment: fixed;
               </div>
               <div class="col mt-4">
               <img src="uploads/<?php echo $result->image5;?>" style="height:200px;; width:300px; border:1px solid pink;">
-              </div>
+              </div> -->
             </div>
             <?php
             }
@@ -133,7 +135,7 @@ background-attachment: fixed;
            </div>
         <?php
         require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/edit.php';
-        session_start();
+        // session_start();
         $edit = new edit;
         $edit->showEdit();
         if(isset($_GET['outreach_activity_id'])){

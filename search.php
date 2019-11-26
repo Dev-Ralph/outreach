@@ -102,7 +102,6 @@ background-attachment: fixed;
       </div>
       <div class="container-fluid mt-4 px-0 animated fadeInUp">
         <div class="row">
-
         <?php
         require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/searchProfile.php';
         if(isset($_POST['searchProfile'])){

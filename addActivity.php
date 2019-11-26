@@ -185,11 +185,11 @@
                           <div class="form-group">
                             <label for="image" class="col-form-label text-md-right">Images</label>
                               <input id="image" type="file" class="form-control" name="image" autocomplete="image" accept="*/image">
-                              <input id="image1" type="file" class="form-control mt-2" name="image1" autocomplete="image1" accept="*/image">
+                              <!-- <input id="image1" type="file" class="form-control mt-2" name="image1" autocomplete="image1" accept="*/image">
                               <input id="image2" type="file" class="form-control mt-2" name="image2" autocomplete="image2" accept="*/image">
                               <input id="image3" type="file" class="form-control mt-2" name="image3" autocomplete="image3" accept="*/image">
                               <input id="image4" type="file" class="form-control mt-2" name="image4" autocomplete="image4" accept="*/image">
-                              <input id="image5" type="file" class="form-control mt-2" name="image5" autocomplete="image5" accept="*/image">
+                              <input id="image5" type="file" class="form-control mt-2" name="image5" autocomplete="image5" accept="*/image"> -->
                             </div>
                             <hr />
                           <div class="form-group">

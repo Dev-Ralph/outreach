@@ -160,8 +160,8 @@ background-attachment: fixed;
               <?php
               require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/view.php';
               $view = new view;
-              if(isset($_GET['submit'])){
-              $view->viewAllCriteria();
+              if(isset($_GET['submit-literacy'])){
+              $view->viewAllLiteracySearch();
               }else{
               $view->viewAllLiteracy();
               }
@@ -169,8 +169,8 @@ background-attachment: fixed;
             </div>
             <div class="tab-pane fade animated fadeInUp <?php if(!empty($_GET['tab'])){if($_GET['tab']=="health"){echo "show active";}} ?>" id="nav-health" role="tabpanel" aria-labelledby="nav-health-tab">
               <?php
-              if(isset($_GET['submit'])){
-              $view->viewAllCriteria();
+              if(isset($_GET['submit-health'])){
+              $view->viewAllHealthSearch();
               }else{
               $view->viewAllHealth();
               }
@@ -178,8 +178,8 @@ background-attachment: fixed;
             </div>
             <div class="tab-pane fade animated fadeInUp <?php if(!empty($_GET['tab'])){if($_GET['tab']=="environment"){echo "show active";}} ?>" id="nav-environment" role="tabpanel" aria-labelledby="nav-environment-tab">
               <?php
-              if(isset($_GET['submit'])){
-              $view->viewAllCriteria();
+              if(isset($_GET['submit-environment'])){
+              $view->viewAllEnvironmentSearch();
               }else{
               $view->viewAllEnvironment();
               }
@@ -187,8 +187,8 @@ background-attachment: fixed;
             </div>
             <div class="tab-pane fade animated fadeInUp <?php if(!empty($_GET['tab'])){if($_GET['tab']=="livelihood"){echo "show active";}} ?>" id="nav-livelihood" role="tabpanel" aria-labelledby="nav-livelihood-tab">
               <?php
-              if(isset($_GET['submit'])){
-              $view->viewAllCriteria();
+              if(isset($_GET['submit-livelihood'])){
+              $view->viewAllLivelihoodSearch();
               }else{
               $view->viewAllLivelihood();
               }

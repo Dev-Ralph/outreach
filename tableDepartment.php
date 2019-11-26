@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Activity</title>
+    <title>College Department</title>
     <link href="vendor/css/bootstrap.min.css" rel="stylesheet">
     <link href="resource/css/edit.css" rel="stylesheet">
     <link href="resource/css/style.css" rel="stylesheet">
