@@ -1,3 +1,13 @@
+<?php
+session_start();
+$username = $_SESSION['username'];
+if(isset($username))
+{
+
+}else{
+  header("Location: index.php");
+}
+ ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -88,6 +98,7 @@ background-attachment: fixed;
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                   <form action="" method="GET" class="form-inline my-2 my-lg-0">
+                    <input type="button" class="btn btn-primary float-right mr-3 mt-3 px-3" value="Print" onClick="window.print()">
                     <li class="nav-item"><a class="nav-link text-dark mr-3 mt-3" href="participant.php"><i class="fas fa-arrow-left mr-1"></i>Return</a></li>
                   </form>
                 </ul>

@@ -27,6 +27,7 @@ public function tableActivityParticipant(){
             $data->execute();
             $results = $data->fetchAll(PDO::FETCH_OBJ);
 
+            echo '<div class="table-responsive" id="activity"> ';
             echo '<h1 class="text-center py-3">'.$title.'</h1>';
             echo '<table style="width:100%; background-color: white;" class="table table-bordered">';
             echo '<tr>';
@@ -42,6 +43,7 @@ public function tableActivityParticipant(){
             echo '</tr>';
             }
             echo '</table>';
+            echo '</div>';
 
             echo '<ul>';
             for ($p=1; $p <= $total_pages; $p++) {
@@ -79,6 +81,7 @@ public function tableCollegeParticipant(){
             $data->execute();
             $results = $data->fetchAll(PDO::FETCH_OBJ);
 
+            echo '<div class="table-responsive" id="department">';
             echo '<h1 class="text-center py-3">'.$department.'</h1>';
             echo '<table style="width:100%; background-color: white;" class="table table-bordered">';
             echo '<tr>';
@@ -95,6 +98,7 @@ public function tableCollegeParticipant(){
             echo '</tr>';
             }
             echo '</table>';
+            echo '</div>';
 
             echo '<ul>';
             for ($p=1; $p <= $total_pages; $p++) {

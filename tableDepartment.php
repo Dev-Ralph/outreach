@@ -1,3 +1,13 @@
+<?php
+session_start();
+$username = $_SESSION['username'];
+if(isset($username))
+{
+
+}else{
+  header("Location: index.php");
+}
+ ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -97,6 +107,7 @@ background-attachment: fixed;
           </div>
         </nav>
       <div class="container mt-3 animated pulse">
+        <button name="create_excel" id="create_excel" class="btn btn-success float-right">Create Excel File</button>
         <?php
         require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/tableActivity.php';
         $tableActivity = new tableActivity;
@@ -122,4 +133,13 @@ background-attachment: fixed;
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="vendor/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+     $('#create_excel').click(function(){
+          var excel_data = $('#department').html();
+          var page = "excel.php?data=" + excel_data;
+          window.location = page;
+     });
+});
+</script>
 </html>

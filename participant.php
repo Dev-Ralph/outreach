@@ -118,7 +118,7 @@ background-attachment: fixed;
                           require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/editAccount.php';
                           $editAccount = new editAccount;
                           $editAccount->accountId();
-                          echo '<a class="dropdown-item py-2" href="editParticipant.php?account_id='.$editAccount->account_id.'"><i class="fas fa-user-edit mr-1"></i>Edit Account</a>';
+                          echo '<a class="dropdown-item py-2" href="editParticipantAcc.php?account_id='.$editAccount->account_id.'"><i class="fas fa-user-edit mr-1"></i>Edit Account</a>';
                           ?>
                           <a class="dropdown-item" href="#"><button class="btn text-dark" style="background-color:transparent;" name="logout"><i class="fas fa-sign-out-alt mr-1"></i>Logout</button>
                           <a class="" href=""></a>
