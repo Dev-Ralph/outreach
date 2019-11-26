@@ -108,20 +108,6 @@ background-attachment: fixed;
                 <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav ml-auto">
                     <form action="" method="GET" class="form-inline my-2 my-lg-0">
-                      <input class="form-control mr-sm-5 mt-3 text-dark" style="width:55vh;" type="search" name="search" value="" placeholder="Enter keyword..." autocomplete="off">
-                        <br>
-                      <label class="ml-1 text-muted mr-1 mt-3">Filter by:</label>
-                        <select class="form-control mr-2 mt-3 text-dark browser-default custom-select" name="down" style="width:20vh;" id="select">
-                          <option value="title" title="Title for Item 1">Activity</option>
-                          <option value="date" title="Title for Item 2">Date</option>
-                          <option value="participation" title="Title for Item 3">Participation</option>
-                          <option value="collegeDepartment" title="Title for Item 4">Department</option>
-                          <option value="proponent" title="Title for Item 5">Proponent</option>
-                        </select>
-                        <span class="btn btn-default mr-3 mt-3" style="background-color:#d75094;">
-                          <i class="fas fa-search text-white"></i>
-                            <input type="submit" name="submit"value="Search" style="background:none;border:0;color:white;">
-                        </span>
                       <li class="nav-item"><a class="nav-link text-dark mr-2 mt-3" href="add.php"><span>&#43;</span> New record</a></li>
                       <li class="nav-item"><div class="dropdown py-2">
                       <button class="btn btn-secondary dropdown-toggle text-dark mt-3" style="background-color: transparent; border: none;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
