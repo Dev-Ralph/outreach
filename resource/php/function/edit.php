@@ -58,7 +58,7 @@ public function showTitle(){
             $s->execute();
             $results = $s->fetchAll();
             foreach ($results as $result) {
-                echo '<option value="'.$this->title = $result->title.'">'.$this->title = $result->title.'</option>';
+                echo '<option value="'.$this->title = $result->title.'">'.$this->title = $result->title.' ('.$this->date = $result->date.')'.'</option>';
               }
 }
 }

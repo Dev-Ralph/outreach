@@ -1,6 +1,76 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/db/config.php';
 class view extends config {
+  public function viewAll(){
+              $config = new config;
+              $pdo = $config->Con();
+              $limit = 10;
+              $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+              $s = $pdo->prepare("SELECT * FROM `outreach_participant`");
+              $s->execute();
+              $all = $s->fetchAll(PDO::FETCH_ASSOC);
+              $total_results = $s->rowCount();
+              $total_pages = ceil($total_results/$limit);
+
+              if (!isset($_GET['pageAll'])) {
+                $page = 1;
+              } else{
+                $page = $_GET['pageAll'];
+              }
+
+              $start = ($page-1)*$limit;
+
+              $sql = "SELECT * FROM `outreach_participant` ORDER BY `date` DESC LIMIT $start, $limit";
+              $data = $pdo->prepare($sql);
+              $data->execute();
+              $results = $data->fetchAll(PDO::FETCH_OBJ);
+
+              echo '<table style="width:100%" class="table">';
+              echo '<tr>';
+              echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Venue</th> <th class="text-center">Participant</th> <th class="text-center">ID Number</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th> <th class="text-center">Action</th>';
+              echo '</tr>';
+              foreach ($results as $result) {
+              echo '<tr>';
+              echo '<td class="text-center">'.$result->title.'</td>';
+              echo '<td class="text-center">'.$result->date.'</td>';
+              echo '<td class="text-center">'.$result->venue.'</td>';
+              echo '<td class="text-center">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
+              echo '<td class="text-center">'.$result->schl_number.'</td>';
+              echo '<td class="text-center">'.$result->participation.'</td>';
+              echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
+              echo '<td class="text-center">'.$result->proponent.'</td>';
+              echo  '<td class="text-center"><a class="btn btn-outline-danger" href="?delete='.$result->outreach_id.'"><i class="far fa-trash-alt"></i>Delete</a></td>';
+              echo '</tr>';
+              }
+              echo '</table>';
+
+              echo '<ul>';
+              for ($p=1; $p <= $total_pages; $p++) {
+                echo '<li class="page-item" style="display: inline-block;margin-left:4px;">';
+                echo  '<a class="page-link" href="?tab=all&pageAll='.$p.'">'.$p;
+                echo  '</a>';
+                echo '</li>';
+              }
+              echo '</ul>';
+
+              echo '<form action="" method="GET" class="form-inline my-2 my-lg-0 pb-5">
+              <input class="form-control ml-5 mr-3 text-dark mt-3" style="width:55vh;" type="search" name="search" value="" placeholder="Enter keyword..." autocomplete="off">
+                <br>
+              <label class="ml-1 text-muted mr-2 mt-3">Filter by:</label>
+              <select class="form-control mr-2 mt-3 text-dark browser-default custom-select" name="down" style="width:20vh;" id="select" name="criteria">
+                <option value="title">Activity</option>
+                <option value="date">Date</option>
+                <option value="venue">Venue</option>
+                <option value="participation">Participation</option>
+                <option value="collegeDepartment">College Department</option>
+              </select>
+
+                <span class="btn btn-default mr-3 mt-3" style="background-color:#d75094;">
+                      <i class="fas fa-search text-white"></i>
+              <input type="submit" name="submit-all"value="Search"style="background:none;border:0;color:white;background-color:#d75094;">
+                </span>
+                </form>';
+}
 public function viewAllLiteracy(){
             $config = new config;
             $pdo = $config->Con();
@@ -12,10 +82,10 @@ public function viewAllLiteracy(){
             $total_results = $s->rowCount();
             $total_pages = ceil($total_results/$limit);
 
-            if (!isset($_GET['page'])) {
+            if (!isset($_GET['pageLiteracy'])) {
               $page = 1;
             } else{
-              $page = $_GET['page'];
+              $page = $_GET['pageLiteracy'];
             }
 
             $start = ($page-1)*$limit;
@@ -47,7 +117,7 @@ public function viewAllLiteracy(){
             echo '<ul>';
             for ($p=1; $p <= $total_pages; $p++) {
               echo '<li class="page-item" style="display: inline-block;margin-left:4px;">';
-              echo  '<a class="page-link" href="?tab=literacy&page='.$p.'">'.$p;
+              echo  '<a class="page-link" href="?tab=literacy&pageLiteracy='.$p.'">'.$p;
               echo  '</a>';
               echo '</li>';
             }
@@ -58,11 +128,11 @@ public function viewAllLiteracy(){
               <br>
             <label class="ml-1 text-muted mr-2 mt-3">Filter by:</label>
             <select class="form-control mr-2 mt-3 text-dark browser-default custom-select" name="down" style="width:20vh;" id="select" name="criteria">
-              <option value="title" title="Title for Item 1">Activity</option>
-              <option value="date" title="Title for Item 2">Date</option>
-              <option value="venue" title="Title for Item 3">Venue</option>
-              <option value="participation" title="Title for Item 4">Participation/option>
-              <option value="collegeDepartment" title="Title for Item 4">College Department/option>
+              <option value="title">Activity</option>
+              <option value="date">Date</option>
+              <option value="venue">Venue</option>
+              <option value="participation">Participation</option>
+              <option value="collegeDepartment">College Department</option>
             </select>
 
               <span class="btn btn-default mr-3 mt-3" style="background-color:#d75094;">
@@ -83,10 +153,10 @@ public function viewAllHealth(){
             $total_results = $s->rowCount();
             $total_pages = ceil($total_results/$limit);
 
-            if (!isset($_GET['page'])) {
+            if (!isset($_GET['pageHealth'])) {
               $page = 1;
             } else{
-              $page = $_GET['page'];
+              $page = $_GET['pageHealth'];
             }
 
 
@@ -118,7 +188,7 @@ public function viewAllHealth(){
             echo '<ul>';
             for ($p=1; $p <= $total_pages; $p++) {
               echo '<li class="page-item" style="display: inline-block;margin-left:4px;">';
-              echo  '<a class="page-link" href="?tab=health&page='.$p.'">'.$p;
+              echo  '<a class="page-link" href="?tab=health&pageHealth='.$p.'">'.$p;
               echo  '</a>';
               echo '</li>';
             }
@@ -129,11 +199,11 @@ public function viewAllHealth(){
               <br>
             <label class="ml-1 text-muted mr-2 mt-3">Filter by:</label>
             <select class="form-control mr-2 mt-3 text-dark browser-default custom-select" name="down" style="width:20vh;" id="select" name="criteria">
-              <option value="title" title="Title for Item 1">Activity</option>
-              <option value="date" title="Title for Item 2">Date</option>
-              <option value="venue" title="Title for Item 3">Venue</option>
-              <option value="participation" title="Title for Item 4">Participation/option>
-              <option value="collegeDepartment" title="Title for Item 4">College Department/option>
+              <option value="title">Activity</option>
+              <option value="date">Date</option>
+              <option value="venue">Venue</option>
+              <option value="participation">Participation</option>
+              <option value="collegeDepartment">College Department</option>
             </select>
               <span class="btn btn-default mr-3 mt-3" style="background-color:#d75094;">
                     <i class="fas fa-search text-white"></i>
@@ -153,10 +223,10 @@ public function viewAllEnvironment(){
             $total_results = $s->rowCount();
             $total_pages = ceil($total_results/$limit);
 
-            if (!isset($_GET['page'])) {
+            if (!isset($_GET['pageEnvironment'])) {
               $page = 1;
             } else{
-              $page = $_GET['page'];
+              $page = $_GET['pageEnvironment'];
             }
 
             $start = ($page-1)*$limit;
@@ -188,7 +258,7 @@ public function viewAllEnvironment(){
             echo '<ul>';
             for ($p=1; $p <= $total_pages; $p++) {
               echo '<li class="page-item" style="display: inline-block;margin-left:4px;">';
-              echo  '<a class="page-link" href="?tab=environment&page='.$p.'">'.$p;
+              echo  '<a class="page-link" href="?tab=environment&pageEnvironment='.$p.'">'.$p;
               echo  '</a>';
               echo '</li>';
             }
@@ -199,11 +269,11 @@ public function viewAllEnvironment(){
               <br>
             <label class="ml-1 text-muted mr-2 mt-3">Filter by:</label>
             <select class="form-control mr-2 mt-3 text-dark browser-default custom-select" name="down" style="width:20vh;" id="select" name="criteria">
-              <option value="title" title="Title for Item 1">Activity</option>
-              <option value="date" title="Title for Item 2">Date</option>
-              <option value="venue" title="Title for Item 3">Venue</option>
-              <option value="participation" title="Title for Item 4">Participation/option>
-              <option value="collegeDepartment" title="Title for Item 4">College Department/option>
+              <option value="title">Activity</option>
+              <option value="date">Date</option>
+              <option value="venue">Venue</option>
+              <option value="participation">Participation</option>
+              <option value="collegeDepartment">College Department</option>
             </select>
 
               <span class="btn btn-default mr-3 mt-3" style="background-color:#d75094;">
@@ -224,10 +294,10 @@ public function viewAllLivelihood(){
             $total_results = $s->rowCount();
             $total_pages = ceil($total_results/$limit);
 
-            if (!isset($_GET['page'])) {
+            if (!isset($_GET['pageLivelihood'])) {
               $page = 1;
             } else{
-              $page = $_GET['page'];
+              $page = $_GET['pageLivelihood'];
             }
 
             $start = ($page-1)*$limit;
@@ -259,7 +329,7 @@ public function viewAllLivelihood(){
             echo '<ul>';
             for ($p=1; $p <= $total_pages; $p++) {
               echo '<li class="page-item" style="display: inline-block;margin-left:4px;">';
-              echo  '<a class="page-link" href="?tab=livelihood&page='.$p.'">'.$p;
+              echo  '<a class="page-link" href="?tab=livelihood&pageLivelihood='.$p.'">'.$p;
               echo  '</a>';
               echo '</li>';
             }
@@ -270,11 +340,11 @@ public function viewAllLivelihood(){
               <br>
             <label class="ml-1 text-muted mr-2 mt-3">Filter by:</label>
             <select class="form-control mr-2 mt-3 text-dark browser-default custom-select" name="down" style="width:20vh;" id="select" name="criteria">
-              <option value="title" title="Title for Item 1">Activity</option>
-              <option value="date" title="Title for Item 2">Date</option>
-              <option value="venue" title="Title for Item 3">Venue</option>
-              <option value="participation" title="Title for Item 4">Participation/option>
-              <option value="collegeDepartment" title="Title for Item 4">College Department/option>
+              <option value="title">Activity</option>
+              <option value="date">Date</option>
+              <option value="venue">Venue</option>
+              <option value="participation">Participation/option>
+              <option value="collegeDepartment">College Department</option>
             </select>
 
               <span class="btn btn-default mr-3 mt-3" style="background-color:#d75094;">
@@ -283,6 +353,80 @@ public function viewAllLivelihood(){
               </span>
               </form>';
 }
+public function viewAllSearch(){
+    if(isset($_GET['search']) && isset($_GET['down'])){
+            $config = new config;
+            $pdo = $config->Con();
+            $search = $_GET['search'];
+            $down = $_GET['down'];
+            $s = $pdo->prepare("SELECT * FROM `outreach_participant` WHERE `$down` LIKE ?");
+            $s->execute(["%$search%"]);
+            $allResp = $s->fetchAll(PDO::FETCH_ASSOC);
+
+            $limit = 10;
+            $total_results = $s->rowCount();
+            $total_pages = ceil($total_results/$limit);
+
+            if (!isset($_GET['page'])) {
+                $page = 1;
+            } else{
+                  $page = $_GET['page'];
+            }
+
+            $start = ($page-1)*$limit;
+
+            $sql = "SELECT * FROM `outreach_participant` where `$down` LIKE ? LIMIT $start, $limit";
+            $data =$pdo->prepare($sql);
+            $data->execute(["%$search%"]);
+            $results = $data->fetchAll();
+
+            echo '<table style="width:100%" class="table">';
+            echo '<tr>';
+            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Venue</th> <th class="text-center">Participant</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th> <th class="text-center">Action</th>';
+            echo '</tr>';
+            foreach ($results as $result) {
+            echo '<tr>';
+            echo '<td class="text-center">'.$result->title.'</td>';
+            echo '<td class="text-center">'.$result->date.'</td>';
+            echo '<td class="text-center">'.$result->venue.'</td>';
+            echo '<td class="text-center">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
+            echo '<td class="text-center">'.$result->participation.'</td>';
+            echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
+            echo '<td class="text-center">'.$result->proponent.'</td>';
+            echo  '<td class="text-center"><a class="btn btn-outline-danger" href="?delete='.$result->outreach_id.'"><i class="far fa-trash-alt"></i>Delete</a></td>';
+            echo '</tr>';
+            }
+            echo '</table>';
+
+            echo '<ul>';
+            for ($p=1; $p <= $total_pages; $p++) {
+                echo '<li class="page-item" style="display: inline-block;margin-left:4px;">';
+                echo  '<a class="page-link" href="?tab=all&search='.$search.'&down='.$down.'&submit-all=Search&page='.$p.'">'.$p;
+                echo  '</a>';
+                echo '</li>';
+            }
+            echo '</ul>';
+
+            echo '<form action="" method="GET" class="form-inline my-2 my-lg-0 pb-5">
+            <input class="form-control ml-5 mr-3 text-dark mt-3" style="width:55vh;" type="search" name="search" value="" placeholder="Enter keyword..." autocomplete="off">
+              <br>
+            <label class="ml-1 text-muted mr-2 mt-3">Filter by:</label>
+            <select class="form-control mr-2 mt-3 text-dark browser-default custom-select" name="down" style="width:20vh;" id="select" name="criteria">
+              <option value="title">Activity</option>
+              <option value="date">Date</option>
+              <option value="venue">Venue</option>
+              <option value="participation">Participation</option>
+              <option value="collegeDepartment">College Department</option>
+            </select>
+
+              <span class="btn btn-default mr-3 mt-3" style="background-color:#d75094;">
+                    <i class="fas fa-search text-white"></i>
+            <input type="submit" name="submit-all"value="Search"style="background:none;border:0;color:white;background-color:#d75094;">
+              </span>
+              </form>';
+            }
+}
+
 public function viewAllLiteracySearch(){
     if(isset($_GET['search']) && isset($_GET['down'])){
             $config = new config;
@@ -342,11 +486,11 @@ public function viewAllLiteracySearch(){
               <br>
             <label class="ml-1 text-muted mr-2 mt-3">Filter by:</label>
             <select class="form-control mr-2 mt-3 text-dark browser-default custom-select" name="down" style="width:20vh;" id="select" name="criteria">
-              <option value="title" title="Title for Item 1">Activity</option>
-              <option value="date" title="Title for Item 2">Date</option>
-              <option value="venue" title="Title for Item 3">Venue</option>
-              <option value="participation" title="Title for Item 4">Participation/option>
-              <option value="collegeDepartment" title="Title for Item 4">College Department/option>
+              <option value="title">Activity</option>
+              <option value="date">Date</option>
+              <option value="venue">Venue</option>
+              <option value="participation">Participation</option>
+              <option value="collegeDepartment">College Department</option>
             </select>
 
               <span class="btn btn-default mr-3 mt-3" style="background-color:#d75094;">
@@ -416,11 +560,11 @@ public function viewAllHealthSearch(){
               <br>
             <label class="ml-1 text-muted mr-2 mt-3">Filter by:</label>
             <select class="form-control mr-2 mt-3 text-dark browser-default custom-select" name="down" style="width:20vh;" id="select" name="criteria">
-              <option value="title" title="Title for Item 1">Activity</option>
-              <option value="date" title="Title for Item 2">Date</option>
-              <option value="venue" title="Title for Item 3">Venue</option>
-              <option value="participation" title="Title for Item 4">Participation/option>
-              <option value="collegeDepartment" title="Title for Item 4">College Department/option>
+              <option value="title">Activity</option>
+              <option value="date">Date</option>
+              <option value="venue">Venue</option>
+              <option value="participation">Participation</option>
+              <option value="collegeDepartment">College Department</option>
             </select>
 
               <span class="btn btn-default mr-3 mt-3" style="background-color:#d75094;">
@@ -490,11 +634,11 @@ public function viewAllEnvironmentSearch(){
               <br>
             <label class="ml-1 text-muted mr-2 mt-3">Filter by:</label>
             <select class="form-control mr-2 mt-3 text-dark browser-default custom-select" name="down" style="width:20vh;" id="select" name="criteria">
-              <option value="title" title="Title for Item 1">Activity</option>
-              <option value="date" title="Title for Item 2">Date</option>
-              <option value="venue" title="Title for Item 3">Venue</option>
-              <option value="participation" title="Title for Item 4">Participation/option>
-              <option value="collegeDepartment" title="Title for Item 4">College Department/option>
+              <option value="title">Activity</option>
+              <option value="date">Date</option>
+              <option value="venue">Venue</option>
+              <option value="participation">Participation</option>
+              <option value="collegeDepartment">College Department</option>
             </select>
 
               <span class="btn btn-default mr-3 mt-3" style="background-color:#d75094;">
@@ -563,11 +707,11 @@ public function viewAllLivelihoodSearch(){
               <br>
             <label class="ml-1 text-muted mr-2 mt-3">Filter by:</label>
             <select class="form-control mr-2 mt-3 text-dark browser-default custom-select" name="down" style="width:20vh;" id="select" name="criteria">
-              <option value="title" title="Title for Item 1">Activity</option>
-              <option value="date" title="Title for Item 2">Date</option>
-              <option value="venue" title="Title for Item 3">Venue</option>
-              <option value="participation" title="Title for Item 4">Participation/option>
-              <option value="collegeDepartment" title="Title for Item 4">College Department/option>
+              <option value="title">Activity</option>
+              <option value="date">Date</option>
+              <option value="venue">Venue</option>
+              <option value="participation">Participation</option>
+              <option value="collegeDepartment">College Department</option>
             </select>
 
               <span class="btn btn-default mr-3 mt-3" style="background-color:#d75094;">

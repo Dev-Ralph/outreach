@@ -122,7 +122,7 @@ background-attachment: fixed;
                               <i class="fas fa-search text-white"></i>
                       <input type="submit" name="submit"value="Search"style="background:none;border:0;color:white;background-color:#d75094;">
                         </span> -->
-                      <li class="nav-item"><a class="nav-link text-dark mr-2 mt-3" href="addActivity.php"><span>&#43;</span> New record</a></li>
+                      <li class="nav-item"><a class="nav-link text-dark mr-2 mt-3" href="addActivity.php"><span>&#43;</span> Add activity</a></li>
                       <li class="nav-item"><div class="dropdown py-2">
                       <button class="btn btn-secondary dropdown-toggle text-dark mt-3" style="background-color: transparent; border: none;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           Account
@@ -143,22 +143,37 @@ background-attachment: fixed;
                 </div>
               </div>
             </nav>
+            <div class="container">
+              <div class="row">
+                  <h1 class="col-md-12 text-center mt-4 mb-0" style="color:#d75093">Activity</h1>
+              </div>
+            </div>
             <a type="submit" name="activity" href="participant.php" class="btn btn-default my-3 mr-3 text-light float-right" style="background-color:#d75094"><i class="fas fa-users mr-2"></i>Participant</a>
-            <a type="submit" name="viewGraph" href="dataTable.php" class="btn btn-default my-3 mr-3 text-light float-right" style="background-color:#d75094"><i class="fas fa-chart-bar mr-2"></i>View Figures</a>
+            <a type="submit" name="viewGraph" href="dataTable.php" class="btn btn-default my-3 mr-3 text-light float-right" style="background-color:#d75094"><i class="fas fa-chart-bar mr-2"></i>Analytics</a>
             <div class="container-fluid px-0">
             <nav class="mt-3">
             <div class="nav nav-tabs"id="nav-tab" role="tablist">
-              <a class="nav-link px-3 <?php if(empty($_GET['tab'])){echo "active";}elseif($_GET['tab']=="literacy"){echo "active";}?>" id="nav-literacy-tab" data-toggle="tab" href="#nav-literacy" role="tab" aria-controls="nav-literacy" aria-selected="true">Literacy & Numeracy</a>
+              <a class="nav-link px-5 <?php if(empty($_GET['tab'])){echo "active";}elseif($_GET['tab']=="all"){echo "active";}?>" id="nav-all-tab" data-toggle="tab" href="#nav-all" role="tab" aria-controls="nav-all" aria-selected="true">All</a>
+              <a class="nav-link px-3 <?php if(!empty($_GET['tab'])){if($_GET['tab']=="literacy"){echo "active";}} ?>" id="nav-literacy-tab" data-toggle="tab" href="#nav-literacy" role="tab" aria-controls="nav-literacy" aria-selected="true">Literacy & Numeracy</a>
               <a class="nav-link px-3 <?php if(!empty($_GET['tab'])){if($_GET['tab']=="health"){echo "active";}} ?>" id="nav-health-tab" data-toggle="tab" href="#nav-health" role="tab" aria-controls="nav-health" aria-selected="false">Health & Wellness</a>
               <a class="nav-link px-3 <?php if(!empty($_GET['tab'])){if($_GET['tab']=="environment"){echo "active";}} ?>" id="nav-environment-tab" data-toggle="tab" href="#nav-environment" role="tab" aria-controls="nav-environment" aria-selected="false">Environment Care</a>
               <a class="nav-link px-3 <?php if(!empty($_GET['tab'])){if($_GET['tab']=="livelihood"){echo "active";}} ?>" id="nav-livelihood-tab" data-toggle="tab" href="#nav-livelihood" role="tab" aria-controls="nav-livelihood" aria-selected="false">Livelihood & Entrepreneurship</a>
             </div>
           </nav>
           <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade animated fadeInUp <?php if(empty($_GET['tab'])){echo "active";}elseif($_GET['tab']=="literacy"){echo "active";}?>" id="nav-literacy" role="tabpanel" aria-labelledby="nav-literacy-tab">
+            <div class="tab-pane fade animated fadeInUp <?php if(empty($_GET['tab'])){echo "active";}elseif($_GET['tab']=="all"){echo "active";}?>" id="nav-all" role="tabpanel" aria-labelledby="nav-all-tab">
               <?php
               require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/viewActivity.php';
               $view = new viewActivity;
+              if(isset($_GET['submit-all'])){
+              $view->viewAllSearch();
+              }else{
+              $view->viewAll();
+              }
+              ?>
+            </div>
+            <div class="tab-pane fade animated fadeInUp <?php if(!empty($_GET['tab'])){if($_GET['tab']=="literacy"){echo "show active";}} ?>" id="nav-literacy" role="tabpanel" aria-labelledby="nav-literacy-tab">
+              <?php
               if(isset($_GET['submit-literacy'])){
               $view->viewAllLiteracySearch();
               }else{
@@ -207,7 +222,7 @@ background-attachment: fixed;
         <footer>
           <div class="container-fluid mb-5" >
             <div class="row">
-                <div class="footer-copyright text-center py-4 text-white fixed-bottom fade animated fadeInUp"  style="background-color: #d75093;">
+                <div class="footer-copyright text-center py-3 text-white fixed-bottom fade animated fadeInUp"  style="background-color: #d75093;">
                 <div class="col-md-6 float-left text-left">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div>
                 <div class="col-md-6 float-right text-right">Ralph Lopez, Kenneth Sillo, Johnroy Policarpio,Keith Godoy, Robin Santos, Vincent Sunga
                 </div>

@@ -13,7 +13,7 @@ if(isset($username))
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Record | Activity</title>
+    <title>Add Activity</title>
     <link href="vendor/css/bootstrap.min.css" rel="stylesheet">
     <link href="resource/css/edit.css" rel="stylesheet">
     <link href="vendor/fonts/css/fontawesome.min.css" rel="stylesheet">
@@ -126,7 +126,7 @@ if(isset($username))
               <div class="card animated fadeInDown" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
               -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
               -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-                  <div class="card-header text-white bg-white"><h2 style="color:#d75093">New record</h2>
+                  <div class="card-header text-white bg-white"><h2 style="color:#d75093">Activity</h2>
                   </div>
                     <div class="card-body">
                       <form method="POST" action="" enctype="multipart/form-data">
@@ -225,7 +225,7 @@ if(isset($username))
           <footer>
             <div class="container-fluid mb-5" >
               <div class="row">
-                  <div class="footer-copyright text-center py-4 text-white fixed-bottom fade animated fadeInUp"  style="background-color: #d75093;">
+                  <div class="footer-copyright text-center py-3 text-white fixed-bottom fade animated fadeInUp"  style="background-color: #d75093;">
                   <div class="col-md-6 float-left text-left">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div>
                   <div class="col-md-6 float-right text-right">Ralph Lopez, Kenneth Sillo, Johnroy Policarpio,Keith Godoy, Robin Santos, Vincent Sunga
                   </div>

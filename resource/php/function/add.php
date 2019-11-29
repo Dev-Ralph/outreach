@@ -42,9 +42,19 @@ public function addRecord(){
     $collegeDepartment = $this->collegeDepartment;
     $proponent = $this->proponent;
 
+    $sql2 = "SELECT * FROM `outreach_activity` WHERE `title`= '$title'";
+    $data2= $pdo->prepare($sql2);
+    $data2->execute();
+    $rows = $data2->fetchAll();
+    foreach ($rows as $row) {
+      $type_a = $row->type;
+      $date_a = $row->date;
+      $venue_a = $row->venue;
+    }
+
     $sql = "INSERT INTO `outreach_participant`(`type`, `title`, `date`, `venue`, `schl_number`, `p_lastname`, `p_firstname`, `p_middlename`, `participation`,`collegeDepartment`, `proponent`) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
     $data = $pdo->prepare($sql);
-    $data->execute([$type,$title,$date,$venue,$schl_number,$p_lastname,$p_firstname,$p_middlename,$participation,$collegeDepartment,$proponent]);
+    $data->execute([$type_a,$title,$date_a,$venue_a,$schl_number,$p_lastname,$p_firstname,$p_middlename,$participation,$collegeDepartment,$proponent]);
   }
 }
 ?>
