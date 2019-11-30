@@ -28,18 +28,18 @@ public function tableActivityParticipant(){
             $results = $data->fetchAll(PDO::FETCH_OBJ);
 
             echo '<div class="table-responsive" id="activity"> ';
-            echo '<h1 class="text-center py-3">'.$title.'</h1>';
+            echo '<h1 class="text-center py-3" style="text-align: center">'.$title.'</h1>';
             echo '<table style="width:100%; background-color: white;" class="table table-bordered">';
             echo '<tr>';
             echo '<th class="text-center">Name of Participants</th> <th class="text-center">ID Number</th> <th class="text-center">Participation</th> <th class="text-center">Proponent</th> <th class="text-center">College Department</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
-            echo '<td class="text-center">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
-            echo '<td class="text-center">'.$result->schl_number.'</td>';
-            echo '<td class="text-center">'.$result->participation.'</td>';
-            echo '<td class="text-center">'.$result->proponent.'</td>';
-            echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
+            echo '<td class="text-center" style="text-align: center">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
+            echo '<td class="text-center" style="text-align: center">'.$result->schl_number.'</td>';
+            echo '<td class="text-center" style="text-align: center">'.$result->participation.'</td>';
+            echo '<td class="text-center" style="text-align: center">'.$result->proponent.'</td>';
+            echo '<td class="text-center" style="text-align: center">'.$result->collegeDepartment.'</td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -82,19 +82,19 @@ public function tableCollegeParticipant(){
             $results = $data->fetchAll(PDO::FETCH_OBJ);
 
             echo '<div class="table-responsive" id="collgeDepartment">';
-            echo '<h1 class="text-center py-3">'.$department.'</h1>';
+            echo '<h1 class="text-center py-3" style="text-align: center">'.$department.'</h1>';
             echo '<table style="width:100%; background-color: white;" class="table table-bordered">';
             echo '<tr>';
             echo '<th class="text-center">Name of Participants</th> <th class="text-center">ID Number</th> <th class="text-center">Outreach Program</th> <th class="text-center">Title of Activity</th> <th class="text-center">Participation</th> <th class="text-center">Proponent</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
-            echo '<td class="text-center">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
-            echo '<td class="text-center">'.$result->schl_number.'</td>';
-            echo '<td class="text-center">'.$type.'</td>';
-            echo '<td class="text-center">'.$result->title.'</td>';
-            echo '<td class="text-center">'.$result->participation.'</td>';
-            echo '<td class="text-center">'.$result->proponent.'</td>';
+            echo '<td class="text-center" style="text-align: center">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
+            echo '<td class="text-center" style="text-align: center">'.$result->schl_number.'</td>';
+            echo '<td class="text-center" style="text-align: center">'.$type.'</td>';
+            echo '<td class="text-center" style="text-align: center">'.$result->title.'</td>';
+            echo '<td class="text-center" style="text-align: center">'.$result->participation.'</td>';
+            echo '<td class="text-center" style="text-align: center">'.$result->proponent.'</td>';
             echo '</tr>';
             }
             echo '</table>';
