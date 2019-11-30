@@ -16,6 +16,11 @@
         color:white !important;
     }
 
+    select option:active{
+      background: linear-gradient(#d75093, #d75093);
+      background-color:#d75093!important; /* for IE */
+    }
+
 .card-btn{
 background-color: #d75093;
 
