@@ -48,7 +48,8 @@ public function viewAll(){
               echo '<td class="text-center">'.$result->proponent.'</td>';
               echo '<td class="text-center">'.$result->mean.'</td>';
               echo '<td class="text-center">'.$result->interpretation.'</td>';
-              echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-primary" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-eye mr-1"></i>Participants</a> <a class="btn btn-outline-danger" href="editActivity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="far fa-trash-alt mr-1"></i>Edit</a></td>';
+              echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-info" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-users mr-2"></i>Participants</a> <a class="btn btn-outline-success mt-1" href="
+              Activity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="fas fa-edit mr-2"></i>Edit</a></td>';
               echo '</tr>';
               }
               echo '</table>';
@@ -600,7 +601,7 @@ public function viewAllHealthSearch(){
               <option value="title">Activity</option>
               <option value="date">Date</option>
               <option value="venue">Venue</option>
-              <option value="target_p">Target Participants</option>
+              <option value="target_p">Target </option>
               <option value="proponent">Proponent</option>
             </select>
 

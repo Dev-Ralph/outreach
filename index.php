@@ -66,7 +66,7 @@ background-attachment: fixed;
             <div class="user_card animated zoomIn">
               <div class="d-flex justify-content-center">
                 <div class="brand_logo_container mt-5">
-                  <img src="resource/img/logotrans3.png" class="brand_logo" alt="Logo">
+                  <img src="resource/img/logo1 .png" class="brand_logo" alt="Logo">
                 </div>
               </div>
               <div class="d-flex justify-content-center form_container">
