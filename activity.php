@@ -26,6 +26,7 @@ if(isset($username))
   <title>Homepage | Activity</title>
   <link href="vendor/css/bootstrap.min.css" rel="stylesheet">
   <link href="resource/css/style.css" rel="stylesheet">
+  <link href="resource/css/edit.css" rel="stylesheet">
   <link href="vendor/fonts/css/fontawesome.min.css" rel="stylesheet">
   <link href="vendor/fonts/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="resource/css/animate.min.css">
@@ -83,7 +84,7 @@ background-attachment: fixed;
                               <i class="fas fa-search text-white"></i>
                       <input type="submit" name="submit"value="Search"style="background:none;border:0;color:white;background-color:#d75094;">
                         </span> -->
-                      <li class="nav-item"><a class="nav-link text-dark mr-2 mt-3" href="addActivity.php"><span>&#43;</span> Add activity</a></li>
+                      <li class="nav-item"><a class="nav-link text-dark mr-2 mt-3" href="addActivity.php"><span>&#43;</span> Add Activity</a></li>
                       <li class="nav-item"><div class="dropdown py-2">
                       <button class="btn btn-secondary dropdown-toggle text-dark mt-3" style="background-color: transparent; border: none;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           Account
