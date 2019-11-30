@@ -5,21 +5,7 @@ class dataTable extends config {
 public function dataTableDepartmentLiteracy(){
             $config = new config;
             $pdo = $config->Con();
-            $limit = 10;
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $s = $pdo->prepare("SELECT * FROM `outreach_participant` WHERE `type` = 'Literacy & Numeracy'");
-            $s->execute();
-            $all = $s->fetchAll(PDO::FETCH_ASSOC);
-            $total_results = $s->rowCount();
-            $total_pages = ceil($total_results/$limit);
 
-            if (!isset($_GET['page'])) {
-              $page = 1;
-            } else{
-              $page = $_GET['page'];
-            }
-
-            $start = ($page-1)*$limit;
 
             $sql = "SELECT `collegeDepartment`, `type`, COUNT(`collegeDepartment`) AS `count` FROM `outreach_participant` WHERE `type` = 'Literacy & Numeracy' GROUP BY `collegeDepartment` DESC";
             $data = $pdo->prepare($sql);
@@ -28,7 +14,7 @@ public function dataTableDepartmentLiteracy(){
 
             echo '<table style="width:100%; background-color: white;" class="table table-bordered">';
             echo '<tr>';
-            echo '<th class="text-center">College Department</th> <th class="text-center">Number of Records</th>';
+            echo '<th class="text-center">College Department</th> <th class="text-center">Total Number of Participants</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -37,15 +23,6 @@ public function dataTableDepartmentLiteracy(){
             echo '</tr>';
             }
             echo '</table>';
-
-            echo '<ul>';
-            for ($p=1; $p <= $total_pages; $p++) {
-              echo '<li class="page-item" style="display: inline-block;margin-left:4px;">';
-              echo  '<a class="page-link" href="?pill=literacy&tab=college&page='.$p.'">'.$p;
-              echo  '</a>';
-              echo '</li>';
-            }
-            echo '</ul>';
 }
 
 public function dataTableProponentLiteracy(){

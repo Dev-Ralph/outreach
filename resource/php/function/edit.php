@@ -15,6 +15,25 @@ public function __construct($outreach_id=null,$date=null,$schoolName=null,$facil
     $this->documentation = $documentation;
     $this->outreach_id = $outreach_id;
   }
+public function editActivity(){
+              $config = new config;
+              $pdo = $config->Con();
+              $id = $_GET['outreach_activity_id'];
+              $s = $pdo->prepare("SELECT * FROM `outreach_activity` WHERE `outreach_activity_id` = '$id'");
+              $s->execute();
+              $results = $s->fetchAll();
+              foreach ($results as $result) {
+                $this->type = $result->type;
+                $this->title = $result->title;
+                $this->date = $result->date;
+                $this->venue = $result->venue;
+                $this->proponent = $result->proponent;
+                $this->target_p = $result->target_p;
+                $this->mean = $result->mean;
+                $this->documentation = $result->documentation;
+                $this->image = $result->image;
+                }
+}
 
 public function edit(){
             $config = new config;

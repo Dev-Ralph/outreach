@@ -1,8 +1,8 @@
-<?php
+<!-- <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/delete.php';
 $remove = new delete;
 $remove->deleteDataActivity();
-?>
+?> -->
 <?php
 session_start();
 $username = $_SESSION['username'];
@@ -132,7 +132,7 @@ background-attachment: fixed;
                             require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/editAccount.php';
                             $editAccount = new editAccount;
                             $editAccount->accountId();
-                            echo '<a class="dropdown-item py-2" href="editActivity.php?account_id='.$editAccount->account_id.'"><i class="fas fa-user-edit mr-1"></i>Edit Account</a>';
+                            echo '<a class="dropdown-item py-2" href="editActivityAcc.php?account_id='.$editAccount->account_id.'"><i class="fas fa-user-edit mr-1"></i>Edit Account</a>';
                             ?>
                             <a class="dropdown-item"><button class="btn text-dark" style="background-color:transparent;" name="logout"><i class="fas fa-sign-out-alt mr-1"></i>Logout</button></a>
                           <a class="" href=""></a>

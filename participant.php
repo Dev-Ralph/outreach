@@ -216,4 +216,18 @@ background-attachment: fixed;
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="vendor/js/bootstrap.min.js"></script>
+<script>
+     $(document).ready(function() {
+      if (location.hash) {
+          $("a[href='" + location.hash + "']").tab("show");
+      }
+      $(document.body).on("click", "a[data-toggle='tab']", function(event) {
+          location.hash = this.getAttribute("href");
+      });
+    });
+    $(window).on("popstate", function() {
+      var anchor = location.hash || $("a[data-toggle='tab']").first().attr("href");
+      $("a[href='" + anchor + "']").tab("show");
+    });
+  </script>
 </html>

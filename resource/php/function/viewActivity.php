@@ -48,7 +48,7 @@ public function viewAll(){
               echo '<td class="text-center">'.$result->proponent.'</td>';
               echo '<td class="text-center">'.$result->mean.'</td>';
               echo '<td class="text-center">'.$result->interpretation.'</td>';
-              echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-danger" href="?delete='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="far fa-trash-alt mr-1"></i>Delete</a></td>';
+              echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-primary" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-eye mr-1"></i>Participants</a> <a class="btn btn-outline-danger" href="editActivity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="far fa-trash-alt mr-1"></i>Edit</a></td>';
               echo '</tr>';
               }
               echo '</table>';
@@ -406,10 +406,10 @@ public function viewAllSearch(){
             $total_results = $s->rowCount();
             $total_pages = ceil($total_results/$limit);
 
-            if (!isset($_GET['page'])) {
+            if (!isset($_GET['pageAll'])) {
                 $page = 1;
             } else{
-                  $page = $_GET['page'];
+                  $page = $_GET['pageAll'];
             }
 
             $start = ($page-1)*$limit;
@@ -440,7 +440,7 @@ public function viewAllSearch(){
             echo '<ul>';
             for ($p=1; $p <= $total_pages; $p++) {
                 echo '<li class="page-item" style="display: inline-block;margin-left:4px;">';
-                echo  '<a class="page-link" href="?tab=all&search='.$search.'&down='.$down.'&submit-all=Search&page='.$p.'">'.$p;
+                echo  '<a class="page-link" href="?tab=all&search='.$search.'&down='.$down.'&submit-all=Search&pageAll='.$p.'">'.$p;
                 echo  '</a>';
                 echo '</li>';
             }
@@ -479,10 +479,10 @@ public function viewAllLiteracySearch(){
             $total_results = $s->rowCount();
             $total_pages = ceil($total_results/$limit);
 
-            if (!isset($_GET['page'])) {
+            if (!isset($_GET['pageLiteracy'])) {
                 $page = 1;
             } else{
-                  $page = $_GET['page'];
+                  $page = $_GET['pageLiteracy'];
             }
 
             $start = ($page-1)*$limit;
@@ -513,7 +513,7 @@ public function viewAllLiteracySearch(){
             echo '<ul>';
             for ($p=1; $p <= $total_pages; $p++) {
                 echo '<li class="page-item" style="display: inline-block;margin-left:4px;">';
-                echo  '<a class="page-link" href="?tab=literacy&search='.$search.'&down='.$down.'&submit-literacy=Search&page='.$p.'">'.$p;
+                echo  '<a class="page-link" href="?tab=literacy&search='.$search.'&down='.$down.'&submit-literacy=Search&pageLiteracy='.$p.'">'.$p;
                 echo  '</a>';
                 echo '</li>';
             }
@@ -552,10 +552,10 @@ public function viewAllHealthSearch(){
             $total_results = $s->rowCount();
             $total_pages = ceil($total_results/$limit);
 
-            if (!isset($_GET['page'])) {
+            if (!isset($_GET['pageHealth'])) {
                 $page = 1;
             } else{
-                  $page = $_GET['page'];
+                  $page = $_GET['pageHealth'];
             }
 
             $start = ($page-1)*$limit;
@@ -586,7 +586,7 @@ public function viewAllHealthSearch(){
             echo '<ul>';
             for ($p=1; $p <= $total_pages; $p++) {
                 echo '<li class="page-item" style="display: inline-block;margin-left:4px;">';
-                echo  '<a class="page-link" href="?tab=health&search='.$search.'&down='.$down.'&submit-health=Search&page='.$p.'">'.$p;
+                echo  '<a class="page-link" href="?tab=health&search='.$search.'&down='.$down.'&submit-health=Search&pageHealth='.$p.'">'.$p;
                 echo  '</a>';
                 echo '</li>';
             }
@@ -626,10 +626,10 @@ public function viewAllEnvironmentSearch(){
             $total_results = $s->rowCount();
             $total_pages = ceil($total_results/$limit);
 
-            if (!isset($_GET['page'])) {
+            if (!isset($_GET['pageLivelihood'])) {
                 $page = 1;
             } else{
-                  $page = $_GET['page'];
+                  $page = $_GET['pageLivelihood'];
             }
 
             $start = ($page-1)*$limit;
@@ -660,7 +660,7 @@ public function viewAllEnvironmentSearch(){
             echo '<ul>';
             for ($p=1; $p <= $total_pages; $p++) {
                 echo '<li class="page-item" style="display: inline-block;margin-left:4px;">';
-                echo  '<a class="page-link" href="?tab=environment&search='.$search.'&down='.$down.'&submit-environment=Search&page='.$p.'">'.$p;
+                echo  '<a class="page-link" href="?tab=environment&search='.$search.'&down='.$down.'&submit-environment=Search&pageLivelihood='.$p.'">'.$p;
                 echo  '</a>';
                 echo '</li>';
             }
