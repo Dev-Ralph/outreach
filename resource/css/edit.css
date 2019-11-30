@@ -21,19 +21,19 @@ background-color: #d75093;
 
 }
 #v-pills-literacy-tab:hover {
-    background-color:#d75093;
+    background-color:#e882b5;
     color:white;
 }
 #v-pills-health-tab:hover {
-    background-color:#d75093;
+    background-color:#e882b5;
     color:white;
 }
 #v-pills-environment-tab:hover {
-    background-color:#d75093;
+    background-color:#e882b5;
     color:white;
 }
 #v-pills-livelihood-tab:hover {
-    background-color:#d75093;
+    background-color:#e882b5;
     color:white;
 }
 #v-pills-literacy-tab.active {
