@@ -39,7 +39,7 @@ class view extends config {
               echo '<td class="text-center">'.$result->participation.'</td>';
               echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
               echo '<td class="text-center">'.$result->proponent.'</td>';
-              echo  '<td class="text-center"><a class="btn btn-outline-danger" href="editParticipantRecord.php?outreach_id='.$result->outreach_id.'"><i class="far fa-trash-alt"></i>Edit</a></td>';
+              echo  '<td class="text-center"><a class="btn btn-outline-danger" href="editParticipantRecord.php?outreach_id='.$result->outreach_id.'&title='.$result->title.'&date='.$result->date.'"><i class="far fa-trash-alt"></i>Edit</a></td>';
               echo '</tr>';
               }
               echo '</table>';

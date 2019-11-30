@@ -136,16 +136,10 @@ background-attachment: fixed;
                           <div class="form-group">
                           <label for="title" class="col-form-label text-md-right">Title of Activity</label>
                           <select id="title" class="form-control mr-2 text-dark browser-default custom-select selectpicker" name="title" data-live-search="true">
-                          <!-- <?php
+                          <?php
                           require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/edit.php';
                           $edit = new edit;
-                          $edit->showTitle();
-                           ?> -->
-                           <?php
-                           require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/editParticipant.php';
-                           $edit = new editParticipant;
-                           $edit->editParticipant();
-                           echo "$edit->title";
+                          $edit->showTitleEdit();
                            ?>
                          </select>
                           </div>
@@ -164,6 +158,8 @@ background-attachment: fixed;
                           <label for="participants" class="col-form-label text-md-right">Participant</label>
                           <div class="form-inline justify-content-center">
                           <input id="participants" type="text" class="form-control col mr-2" name="p_lastname" placeholder="Last Name" value="<?php
+                          require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/editParticipant.php';
+                          $edit = new editParticipant;
                           $edit->editParticipant();
                           echo "$edit->p_lastname";
                           ?>" required autocomplete="off">

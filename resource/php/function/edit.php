@@ -80,5 +80,30 @@ public function showTitle(){
                 echo '<option value="'.$this->title = $result->title.'">'.$this->title = $result->title.' ('.$this->date = $result->date.')'.'</option>';
               }
 }
+public function showTitleEdit(){
+            $config = new config;
+            $pdo = $config->Con();
+            $id = $_GET['outreach_id'];
+            $title2 = $_GET['title'];
+            $date2 = $_GET['date'];
+            $s2 = $pdo->prepare("SELECT * FROM `outreach_participant` WHERE `outreach_id` = '$id'");
+            $s2->execute();
+            $rows = $s2->fetchAll();
+            foreach ($rows as $row) {
+              echo '<option value="'.$title2.'">'.$title2.' ('.$date2.')'.'</option>';
+            }
+            $s = $pdo->prepare("SELECT * FROM `outreach_activity` GROUP BY `date` DESC");
+            $s->execute();
+            $results = $s->fetchAll();
+            foreach ($results as $result) {
+                $title = $result->title;
+                $date = $result->date;
+                if ($title2 == $title) {
+
+                }else {
+                  echo '<option value="'.$title.'">'.$title.' ('.$date.')'.'</option>';
+                }
+              }
+}
 }
  ?>
