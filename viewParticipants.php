@@ -68,19 +68,40 @@ background-attachment: fixed;
           </div>
         </nav>
       <div class="container-fluid mt-4 ">
-        <form action="" method="POST" class="form-inline my-2 my-lg-0">
-          <input class="form-control text-dark mr-3 " type="search" name="schl_numberSearch" value="" placeholder="Enter ID Number" autocomplete="off">
-          <input class="btn text-white" style="background-color:#d75094;" type="submit" name="searchProfile" value="Search">
-        </form>
+        <form action="" method="GET" class="form-inline pb-0">
+        <input class="form-control mr-3" style="width:55vh;" type="search" name="search" value="" placeholder="Enter keyword..." autocomplete="off">
+          <br>
+        <label class="ml-1 text-muted mr-2">Filter by:</label>
+        <select class="form-control mr-2 text-dark browser-default custom-select" name="down" style="width:25vh;" id="select" name="criteria">
+          <option value="title">Activity</option>
+          <option value="date">Date</option>
+          <option value="venue">Venue</option>
+          <option value="p_lastname">Last Name</option>
+          <option value="p_firstname">First Name</option>
+          <option value="p_middlename">Middle Name</option>
+          <option value="schl_number">ID Number</option>
+          <option value="participation">Participation</option>
+          <option value="collegeDepartment">College Department</option>
+          <option value="Proponent">Proponent</option>
+        </select>
+
+          <span class="btn btn-default mr-3" style="background-color:#d75094;">
+                <i class="fas fa-search text-white"></i>
+        <input type="submit" name="submit"value="Search"style="background:none;border:0;color:white;background-color:#d75094;">
+          </span>
+          </form>'
       </div>
-      <div class="container-fluid mt-4 px-0 animated fadeInUp">
+      <div class="container-fluid px-0 animated fadeInUp">
         <div class="row container-fluid">
 
         <?php
         require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/searchProfile.php';
-        if(isset($_POST['searchProfile'])){
-          $searchProfile = new searchProfile($_POST['schl_numberSearch']);
+        if(isset($_GET['submit'])){
+          $searchProfile = new searchProfile($_GET['search'],$_GET['down']);
           $searchProfile->searchProfileID();
+        }else {
+          $searchProfile = new searchProfile;
+          $searchProfile->viewAll();
         }
          ?>
        </div>
@@ -91,8 +112,8 @@ background-attachment: fixed;
   <footer>
     <div class="container-fluid mb-5" >
       <div class="row">
-          <div class="footer-copyright text-center py-3 text-white fixed-bottom fade animated fadeInUp"  style="background-color: #d75093;">
-          <div class="col-md-6 float-left text-left">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div>
+          <div class="footer-copyright text-center py-1 text-white fixed-bottom fade animated fadeInUp"  style="background-color: #d75093;">
+          <div class="col-md-6 float-left text-left mt-3">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div>
           <div class="col-md-6 float-right text-right">Ralph Edwin E. Lopez, Kenneth R. Sillo, Johnroy V. Policarpio, Keith B. Godoy, Robin G. Santos, Vincent Redell A. Suñga
           </div>
         </div>

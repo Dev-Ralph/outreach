@@ -57,12 +57,17 @@ class view extends config {
               <input class="form-control ml-5 mr-3 text-dark mt-3" style="width:55vh;" type="search" name="search" value="" placeholder="Enter keyword..." autocomplete="off">
                 <br>
               <label class="ml-1 text-muted mr-2 mt-3">Filter by:</label>
-              <select class="form-control mr-2 mt-3 text-dark browser-default custom-select" name="down" style="width:20vh;" id="select" name="criteria">
+              <select class="form-control mr-2 mt-3 text-dark browser-default custom-select" name="down" style="width:25vh;" id="select" name="criteria">
                 <option value="title">Activity</option>
                 <option value="date">Date</option>
                 <option value="venue">Venue</option>
+                <option value="p_lastname">Last Name</option>
+                <option value="p_firstname">First Name</option>
+                <option value="p_middlename">Middle Name</option>
+                <option value="schl_number">ID Number</option>
                 <option value="participation">Participation</option>
                 <option value="collegeDepartment">College Department</option>
+                <option value="Proponent">Proponent</option>
               </select>
 
                 <span class="btn btn-default mr-3 mt-3" style="background-color:#d75094;">
@@ -127,12 +132,17 @@ public function viewAllLiteracy(){
             <input class="form-control ml-5 mr-3 text-dark mt-3" style="width:55vh;" type="search" name="search" value="" placeholder="Enter keyword..." autocomplete="off">
               <br>
             <label class="ml-1 text-muted mr-2 mt-3">Filter by:</label>
-            <select class="form-control mr-2 mt-3 text-dark browser-default custom-select" name="down" style="width:20vh;" id="select" name="criteria">
+            <select class="form-control mr-2 mt-3 text-dark browser-default custom-select" name="down" style="width:25vh;" id="select" name="criteria">
               <option value="title">Activity</option>
               <option value="date">Date</option>
               <option value="venue">Venue</option>
+              <option value="p_lastname">Last Name</option>
+              <option value="p_firstname">First Name</option>
+              <option value="p_middlename">Middle Name</option>
+              <option value="schl_number">ID Number</option>
               <option value="participation">Participation</option>
               <option value="collegeDepartment">College Department</option>
+              <option value="Proponent">Proponent</option>
             </select>
 
               <span class="btn btn-default mr-3 mt-3" style="background-color:#d75094;">
@@ -198,12 +208,17 @@ public function viewAllHealth(){
             <input class="form-control ml-5 mr-3 text-dark mt-3" style="width:55vh;" type="search" name="search" value="" placeholder="Enter keyword..." autocomplete="off">
               <br>
             <label class="ml-1 text-muted mr-2 mt-3">Filter by:</label>
-            <select class="form-control mr-2 mt-3 text-dark browser-default custom-select" name="down" style="width:20vh;" id="select" name="criteria">
+            <select class="form-control mr-2 mt-3 text-dark browser-default custom-select" name="down" style="width:25vh;" id="select" name="criteria">
               <option value="title">Activity</option>
               <option value="date">Date</option>
               <option value="venue">Venue</option>
+              <option value="p_lastname">Last Name</option>
+              <option value="p_firstname">First Name</option>
+              <option value="p_middlename">Middle Name</option>
+              <option value="schl_number">ID Number</option>
               <option value="participation">Participation</option>
               <option value="collegeDepartment">College Department</option>
+              <option value="Proponent">Proponent</option>
             </select>
               <span class="btn btn-default mr-3 mt-3" style="background-color:#d75094;">
                     <i class="fas fa-search text-white"></i>
@@ -268,12 +283,17 @@ public function viewAllEnvironment(){
             <input class="form-control ml-5 mr-3 text-dark mt-3" style="width:55vh;" type="search" name="search" value="" placeholder="Enter keyword..." autocomplete="off">
               <br>
             <label class="ml-1 text-muted mr-2 mt-3">Filter by:</label>
-            <select class="form-control mr-2 mt-3 text-dark browser-default custom-select" name="down" style="width:20vh;" id="select" name="criteria">
+            <select class="form-control mr-2 mt-3 text-dark browser-default custom-select" name="down" style="width:25vh;" id="select" name="criteria">
               <option value="title">Activity</option>
               <option value="date">Date</option>
               <option value="venue">Venue</option>
+              <option value="p_lastname">Last Name</option>
+              <option value="p_firstname">First Name</option>
+              <option value="p_middlename">Middle Name</option>
+              <option value="schl_number">ID Number</option>
               <option value="participation">Participation</option>
               <option value="collegeDepartment">College Department</option>
+              <option value="Proponent">Proponent</option>
             </select>
 
               <span class="btn btn-default mr-3 mt-3" style="background-color:#d75094;">
@@ -339,12 +359,17 @@ public function viewAllLivelihood(){
             <input class="form-control ml-5 mr-3 text-dark mt-3" style="width:55vh;" type="search" name="search" value="" placeholder="Enter keyword..." autocomplete="off">
               <br>
             <label class="ml-1 text-muted mr-2 mt-3">Filter by:</label>
-            <select class="form-control mr-2 mt-3 text-dark browser-default custom-select" name="down" style="width:20vh;" id="select" name="criteria">
+            <select class="form-control mr-2 mt-3 text-dark browser-default custom-select" name="down" style="width:25vh;" id="select" name="criteria">
               <option value="title">Activity</option>
               <option value="date">Date</option>
               <option value="venue">Venue</option>
-              <option value="participation">Participation/option>
+              <option value="p_lastname">Last Name</option>
+              <option value="p_firstname">First Name</option>
+              <option value="p_middlename">Middle Name</option>
+              <option value="schl_number">ID Number</option>
+              <option value="participation">Participation</option>
               <option value="collegeDepartment">College Department</option>
+              <option value="Proponent">Proponent</option>
             </select>
 
               <span class="btn btn-default mr-3 mt-3" style="background-color:#d75094;">
@@ -411,12 +436,17 @@ public function viewAllSearch(){
             <input class="form-control ml-5 mr-3 text-dark mt-3" style="width:55vh;" type="search" name="search" value="" placeholder="Enter keyword..." autocomplete="off">
               <br>
             <label class="ml-1 text-muted mr-2 mt-3">Filter by:</label>
-            <select class="form-control mr-2 mt-3 text-dark browser-default custom-select" name="down" style="width:20vh;" id="select" name="criteria">
+            <select class="form-control mr-2 mt-3 text-dark browser-default custom-select" name="down" style="width:25vh;" id="select" name="criteria">
               <option value="title">Activity</option>
               <option value="date">Date</option>
               <option value="venue">Venue</option>
+              <option value="p_lastname">Last Name</option>
+              <option value="p_firstname">First Name</option>
+              <option value="p_middlename">Middle Name</option>
+              <option value="schl_number">ID Number</option>
               <option value="participation">Participation</option>
               <option value="collegeDepartment">College Department</option>
+              <option value="Proponent">Proponent</option>
             </select>
 
               <span class="btn btn-default mr-3 mt-3" style="background-color:#d75094;">
@@ -485,12 +515,17 @@ public function viewAllLiteracySearch(){
             <input class="form-control ml-5 mr-3 text-dark mt-3" style="width:55vh;" type="search" name="search" value="" placeholder="Enter keyword..." autocomplete="off">
               <br>
             <label class="ml-1 text-muted mr-2 mt-3">Filter by:</label>
-            <select class="form-control mr-2 mt-3 text-dark browser-default custom-select" name="down" style="width:20vh;" id="select" name="criteria">
+            <select class="form-control mr-2 mt-3 text-dark browser-default custom-select" name="down" style="width:25vh;" id="select" name="criteria">
               <option value="title">Activity</option>
               <option value="date">Date</option>
               <option value="venue">Venue</option>
+              <option value="p_lastname">Last Name</option>
+              <option value="p_firstname">First Name</option>
+              <option value="p_middlename">Middle Name</option>
+              <option value="schl_number">ID Number</option>
               <option value="participation">Participation</option>
               <option value="collegeDepartment">College Department</option>
+              <option value="Proponent">Proponent</option>
             </select>
 
               <span class="btn btn-default mr-3 mt-3" style="background-color:#d75094;">
@@ -559,12 +594,17 @@ public function viewAllHealthSearch(){
             <input class="form-control ml-5 mr-3 text-dark mt-3" style="width:55vh;" type="search" name="search" value="" placeholder="Enter keyword..." autocomplete="off">
               <br>
             <label class="ml-1 text-muted mr-2 mt-3">Filter by:</label>
-            <select class="form-control mr-2 mt-3 text-dark browser-default custom-select" name="down" style="width:20vh;" id="select" name="criteria">
+            <select class="form-control mr-2 mt-3 text-dark browser-default custom-select" name="down" style="width:25vh;" id="select" name="criteria">
               <option value="title">Activity</option>
               <option value="date">Date</option>
               <option value="venue">Venue</option>
+              <option value="p_lastname">Last Name</option>
+              <option value="p_firstname">First Name</option>
+              <option value="p_middlename">Middle Name</option>
+              <option value="schl_number">ID Number</option>
               <option value="participation">Participation</option>
               <option value="collegeDepartment">College Department</option>
+              <option value="Proponent">Proponent</option>
             </select>
 
               <span class="btn btn-default mr-3 mt-3" style="background-color:#d75094;">
@@ -633,12 +673,17 @@ public function viewAllEnvironmentSearch(){
             <input class="form-control ml-5 mr-3 text-dark mt-3" style="width:55vh;" type="search" name="search" value="" placeholder="Enter keyword..." autocomplete="off">
               <br>
             <label class="ml-1 text-muted mr-2 mt-3">Filter by:</label>
-            <select class="form-control mr-2 mt-3 text-dark browser-default custom-select" name="down" style="width:20vh;" id="select" name="criteria">
+            <select class="form-control mr-2 mt-3 text-dark browser-default custom-select" name="down" style="width:25vh;" id="select" name="criteria">
               <option value="title">Activity</option>
               <option value="date">Date</option>
               <option value="venue">Venue</option>
+              <option value="p_lastname">Last Name</option>
+              <option value="p_firstname">First Name</option>
+              <option value="p_middlename">Middle Name</option>
+              <option value="schl_number">ID Number</option>
               <option value="participation">Participation</option>
               <option value="collegeDepartment">College Department</option>
+              <option value="Proponent">Proponent</option>
             </select>
 
               <span class="btn btn-default mr-3 mt-3" style="background-color:#d75094;">
@@ -706,12 +751,17 @@ public function viewAllLivelihoodSearch(){
             <input class="form-control ml-5 mr-3 text-dark mt-3" style="width:55vh;" type="search" name="search" value="" placeholder="Enter keyword..." autocomplete="off">
               <br>
             <label class="ml-1 text-muted mr-2 mt-3">Filter by:</label>
-            <select class="form-control mr-2 mt-3 text-dark browser-default custom-select" name="down" style="width:20vh;" id="select" name="criteria">
+            <select class="form-control mr-2 mt-3 text-dark browser-default custom-select" name="down" style="width:25vh;" id="select" name="criteria">
               <option value="title">Activity</option>
               <option value="date">Date</option>
               <option value="venue">Venue</option>
+              <option value="p_lastname">Last Name</option>
+              <option value="p_firstname">First Name</option>
+              <option value="p_middlename">Middle Name</option>
+              <option value="schl_number">ID Number</option>
               <option value="participation">Participation</option>
               <option value="collegeDepartment">College Department</option>
+              <option value="Proponent">Proponent</option>
             </select>
 
               <span class="btn btn-default mr-3 mt-3" style="background-color:#d75094;">

@@ -81,8 +81,8 @@ background-attachment: fixed;
   <footer>
     <div class="container-fluid mb-5" >
       <div class="row">
-          <div class="footer-copyright text-center py-3 text-white fixed-bottom fade animated fadeInUp"  style="background-color: #d75093;">
-          <div class="col-md-6 float-left text-left">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div>
+          <div class="footer-copyright text-center py-1 text-white fixed-bottom fade animated fadeInUp"  style="background-color: #d75093;">
+          <div class="col-md-6 float-left text-left mt-3">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div>
           <div class="col-md-6 float-right text-right">Ralph Edwin E. Lopez, Kenneth R. Sillo, Johnroy V. Policarpio, Keith B. Godoy, Robin G. Santos, Vincent Redell A. Suñga
           </div>
         </div>

@@ -17,6 +17,7 @@ if(isset($username))
     <link href="vendor/css/bootstrap.min.css" rel="stylesheet">
     <link href="resource/css/edit.css" rel="stylesheet">
     <link href="resource/css/style.css" rel="stylesheet">
+    <link href="resource/css/custom-drop.css" rel="stylesheet">
     <link href="vendor/fonts/css/fontawesome.min.css" rel="stylesheet">
     <link href="vendor/fonts/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="resource/css/animate.min.css">
@@ -107,7 +108,7 @@ background-attachment: fixed;
                           <hr /> -->
                           <div class="form-group">
                           <label for="title" class="col-form-label text-md-right">Title of Activity</label>
-                          <select id="title" class="form-control mr-2 text-dark browser-default custom-select selectpicker" name="title" data-live-search="true">
+                          <select id="title" class="form-control mr-2 browser-default custom-select selectpicker" name="title" data-live-search="true">
                           <?php
                           require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/edit.php';
                           $edit = new edit;
@@ -143,24 +144,24 @@ background-attachment: fixed;
                           <div class="col-md-6">
                             <div class="form-group">
                             <label for="participation" class="col-form-label text-md-right">Participation</label>
-                            <select id="participation" class="form-control mr-2 text-dark browser-default custom-select" name="participation">
-                              <option value="Chairman" title="Title for Item 1">Chairman</option>
-                              <option value="Co-Chairman" title="Title for Item 2">Co-Chairman</option>
-                              <option value="Committee Chairman" title="Title for Item 3">Committee Chairman</option>
-                              <option value="Committee Member" title="Title for Item 4">Committee Member</option>
-                              <option value="Audience" title="Title for Item 5">Audience</option>
+                            <select id="participation" class="form-control mr-2 browser-default custom-select" name="participation">
+                              <option value="Chairman">Chairman</option>
+                              <option value="Co-Chairman">Co-Chairman</option>
+                              <option value="Committee Chairman">Committee Chairman</option>
+                              <option value="Committee Member">Committee Member</option>
+                              <option value="Audience">Audience</option>
                             </select>
                             </div>
                             <hr />
                             <div class="form-group">
                             <label for="collegedepartment" class="col-form-label text-md-right">College Department</label>
-                                  <select id="collegedepartment" class="form-control mr-2 text-dark browser-default custom-select" name="collegeDepartment">
-                                    <option value="Dentistry Department" title="Title for Item 1">Dentistry Department</option>
-                                    <option value="Nursing Department" title="Title for Item 2">Nursing Department</option>
-                                    <option value="Pharmacy and Medical Technology Department" title="Title for Item 3">Pharmacy and Medical Technology Department</option>
-                                    <option value="College of Accountancy, Management and Technology (CAMT)" title="Title for Item 4">College of Accountancy, Management and Technology (CAMT)</option>
-                                    <option value="College of Education, Liberal Arts and Science (CELAS)" title="Title for Item 5">College of Education, Liberal Arts and Science (CELAS)</option>
-                                    <option value="College of Hospitality Management (CHM)" title="Title for Item 6">College of Hospitality Management (CHM)</option>
+                                  <select id="collegedepartment" class="form-control mr-2 browser-default custom-select" name="collegeDepartment">
+                                    <option value="Dentistry Department">Dentistry Department</option>
+                                    <option value="Nursing Department">Nursing Department</option>
+                                    <option value="Pharmacy and Medical Technology Department">Pharmacy and Medical Technology Department</option>
+                                    <option value="College of Accountancy, Management and Technology (CAMT)">College of Accountancy, Management and Technology (CAMT)</option>
+                                    <option value="College of Education, Liberal Arts and Science (CELAS)">College of Education, Liberal Arts and Science (CELAS)</option>
+                                    <option value="College of Hospitality Management (CHM)">College of Hospitality Management (CHM)</option>
                                   </select>
                             </div>
                             <hr />
@@ -186,8 +187,8 @@ background-attachment: fixed;
           <footer>
             <div class="container-fluid mb-5" >
               <div class="row">
-                  <div class="footer-copyright text-center py-3 text-white fixed-bottom fade animated fadeInUp"  style="background-color: #d75093;">
-                  <div class="col-md-6 float-left text-left">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div>
+                  <div class="footer-copyright text-center py-1 text-white fixed-bottom fade animated fadeInUp"  style="background-color: #d75093;">
+                  <div class="col-md-6 float-left text-left mt-3">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div>
                   <div class="col-md-6 float-right text-right">Ralph Edwin E. Lopez, Kenneth R. Sillo, Johnroy V. Policarpio, Keith B. Godoy, Robin G. Santos, Vincent Redell A. Suñga
                   </div>
                 </div>

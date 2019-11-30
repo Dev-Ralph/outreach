@@ -99,7 +99,7 @@ background-attachment: fixed;
               </div>
             </div>
             <a type="submit" name="activity" href="activity.php" class="btn btn-default my-3 mr-3 text-light float-right" style="background-color:#d75094"><i class="fas fa-book mr-2"></i>Activity</a>
-            <a type="submit" name="viewProfile" href="profile.php" class="btn btn-default my-3 mr-3 float-right text-light" style="background-color:#d75094"><i class="fas fa-user mr-2"></i>View Profile</a>
+            <a type="submit" name="viewProfile" href="viewParticipants.php" class="btn btn-default my-3 mr-3 float-right text-light" style="background-color:#d75094"><i class="fas fa-user mr-2"></i>View Participants</a>
             <div class="container-fluid px-0">
             <nav class="mt-3">
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -166,8 +166,8 @@ background-attachment: fixed;
           <footer>
             <div class="container-fluid mb-5" >
               <div class="row">
-                  <div class="footer-copyright text-center py-3 text-white fixed-bottom fade animated fadeInUp"  style="background-color: #d75093;">
-                  <div class="col-md-6 float-left text-left">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div>
+                  <div class="footer-copyright text-center py-1 text-white fixed-bottom fade animated fadeInUp"  style="background-color: #d75093;">
+                  <div class="col-md-6 float-left text-left mt-3">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div>
                   <div class="col-md-6 float-right text-right"> Ralph Edwin E. Lopez, Kenneth R. Sillo, Johnroy V. Policarpio, Keith B. Godoy, Robin G. Santos, Vincent Redell A. Suñga
                   </div>
                 </div>
