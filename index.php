@@ -12,7 +12,7 @@
   <link href="vendor/fonts/css/brands.css" rel="stylesheet">
   <link href="vendor/fonts/css/solid.css" rel="stylesheet">
   <link rel="stylesheet" href="resource/css/animate.min.css">
-  <link rel="icon" href="resource/img/icon-tab.png">
+  <link rel="icon" href="resource/img/icon-tabs.png">
 </head>
 
 
