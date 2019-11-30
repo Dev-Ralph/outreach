@@ -29,6 +29,7 @@ if(isset($username))
   <link href="vendor/fonts/css/fontawesome.min.css" rel="stylesheet">
   <link href="vendor/fonts/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="resource/css/animate.min.css">
+  <link href="resource/css/edit.css" rel="stylesheet">
   <link rel="icon" href="resource/img/icon-tab.png">
 </head>
 

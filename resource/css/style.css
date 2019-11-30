@@ -1,10 +1,10 @@
 /* NAV BAR */
 .nav-item::after{content:'';display:block;width:0px;height:2px;background:#d75093;transition: 0.2s;}
 .nav-item:hover::after{width:100%;}
-.navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show > .nav-link,.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover{color:#d75093;}
+.navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show > .nav-link,.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover{color:white;}
 .nav-link{padding:15px 5px;transition:0.2s;}
-.dropdown-item.active, .dropdown-item:active{color:#212529;}
-.dropdown-item:focus, .dropdown-item:hover{background:#fec400;}
+.dropdown-item.active, .dropdown-item:active{color:#FFFFFF;}
+.dropdown-item:focus, .dropdown-item:hover{background:#d75093;}
 
 .navbar {
     box-shadow: 0px 0px 3px 0px rgb(77, 77, 77);
