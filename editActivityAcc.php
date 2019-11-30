@@ -16,81 +16,58 @@ if(isset($username))
     <title>Edit Account</title>
     <link href="vendor/css/bootstrap.min.css" rel="stylesheet">
     <link href="vendor/fonts/css/fontawesome.min.css" rel="stylesheet">
+    <link href="resource/css/style.css" rel="stylesheet">
     <link href="vendor/fonts/css/all.css" rel="stylesheet">
     <link href="resource/css/edit.css" rel="stylesheet">
     <link rel="stylesheet" href="resource/css/animate.min.css">
+    <link rel="icon" href="resource/img/icon-tab.png">
   </head>
-  <style media="screen">
-  body{
-  height: 100vh;
-  background-image: url("resource/img/bg.png");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  }
-      /* ZOOM IN */
-  @media only screen and (max-width: 1000px) {
-    body {
-      height: 100vh;
-      background-image: url("resource/img/mobile.png");
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      }
+
+<style media="screen">
+body{
+height: 100vh;
+background-image: url("resource/img/bg.png");
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+}
+    /* ZOOM IN */
+@media only screen and (max-width: 1200px) {
+  body {
+    height: 100vh;
+    background-image: url("resource/img/mobile.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     }
-    @media only screen and (max-width: 1000px) {
-      .navbar {
-      display: none;
-        }
-      }
-    @media only screen and (max-width: 1000px) {
-      .container {
-      display: none;
-        }
-      }
-    @media only screen and (max-width: 1000px) {
-      .container-fluid {
-      display: none;
-        }
-      }
-      @media only screen and (max-width: 1000px) {
-        .btn {
-        display: none;
-          }
-        }
-      /* ZOOM OUT */
-      @media only screen and (min-width: 2000px) {
-        body {
-          height: 100vh;
-          background-image: url("resource/img/mobile.png");
-          background-size: cover;
-          background-position: center;
-          background-attachment: fixed;
-          }
-        }
-        @media only screen and (min-width: 2000px) {
-          .navbar {
-          display: none;
-            }
-          }
-        @media only screen and (min-width: 2000px) {
-          .container {
-          display: none;
-            }
-          }
-        @media only screen and (min-width: 2000px) {
-          .container-fluid {
-          display: none;
-            }
-          }
-          @media only screen and (min-width: 2000px) {
-            .btn {
-            display: none;
-              }
-            }
   }
-  </style>
-  <body >
+    /* ZOOM OUT */
+@media only screen and (min-width: 1800px) {
+  body {
+    height: 100vh;
+    background-image: url("resource/img/mobile.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    }
+  }
+</style>
+
+  <script type="text/javascript">
+
+    window.onload=function(){
+
+/**
+ * @author Abdo-Hamoud <abdo.host@gmail.com>
+ * https://github.com/Abdo-Hamoud/bootstrap-show-password
+ * version: 1.0
+ */
+
+!function(a){a(function(){a('[data-toggle="password"]').each(function(){var b = a(this); var c = a(this).parent().find(".input-group-text"); c.css("cursor", "pointer").addClass("input-password-hide"); c.on("click", function(){if (c.hasClass("input-password-hide")){c.removeClass("input-password-hide").addClass("input-password-show"); c.find(".fa").removeClass("fa-eye").addClass("fa-eye-slash"); b.attr("type", "text")} else{c.removeClass("input-password-show").addClass("input-password-hide"); c.find(".fa").removeClass("fa-eye-slash").addClass("fa-eye"); b.attr("type", "password")}})})})}(window.jQuery);
+    }
+</script>
+
+  <body>
       <nav class="navbar navbar-expand-sm navbar-light bg-white">
         <div class="container-fluid">
             <a class="navbar-brand" href="activity.php"><IMG SRC="resource/img/logo.png" ALT="Logo" WIDTH=250 HEIGHT=80></a>
@@ -136,17 +113,21 @@ if(isset($username))
                           echo "$edit->username";
                           ?>" required autocomplete="off">
                         </div>
-                        <div class="form-group">
                         <label for="password" class="col-form-label text-md-right">Password</label>
-                        <input id="password" type="text" class="form-control " name="password" placeholder="Password" value="<?php
+                        <div class="input-group">
+                          <input type="password" name="password" id="password" class="form-control" data-toggle="password" placeholder="Password"
+                          value="<?php
                           $edit = new editAccount;
                           $edit->accountId();
                           echo "$edit->password";
                           ?>" required autocomplete="off">
+                          <div class="input-group-append">
+                            <span class="input-group-text"><i class="fa fa-eye"></i></span>
+                          </div>
                         </div>
                           <div class="form-group row justify-content-center">
                             <div class="col-md-12 text-center">
-                              <button type="submit" class="card-btn btn text-light" name="save">Save</button>
+                              <button type="submit" class="card-btn btn text-light mt-3" name="save">Save</button>
                             </div>
                           </div>
                         </form>
@@ -156,13 +137,26 @@ if(isset($username))
                 </div>
               </div>
 
+
+<script>
+// tell the embed parent frame the height of the content
+if (window.parent && window.parent.parent){
+  window.parent.parent.postMessage(["resultsFrame", {
+    height: document.body.getBoundingClientRect().height,
+    slug: "zkou4dej"
+  }], "*")
+}
+
+  // always overwrite window.name, in case users try to set it manually
+  window.name = "result"
+</script>
       <!-- Footer -->
       <footer>
         <div class="container-fluid mb-5" >
           <div class="row">
               <div class="footer-copyright text-center py-3 text-white fixed-bottom fade animated fadeInUp"  style="background-color: #d75093;">
               <div class="col-md-6 float-left text-left">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div>
-              <div class="col-md-6 float-right text-right">Ralph Lopez, Kenneth Sillo, Johnroy Policarpio,Keith Godoy, Robin Santos, Vincent Sunga
+              <div class="col-md-6 float-right text-right">Ralph Edwin E. Lopez, Kenneth R. Sillo, Johnroy V. Policarpio, Keith B. Godoy, Robin G. Santos, Vincent Redell A. Suñga
               </div>
             </div>
             </div>

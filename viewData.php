@@ -16,11 +16,14 @@ if(isset($username))
     <title>View | Activity</title>
     <link href="vendor/css/bootstrap.min.css" rel="stylesheet">
     <link href="resource/css/edit.css" rel="stylesheet">
+    <link href="resource/css/style.css" rel="stylesheet">
     <link href="vendor/fonts/css/fontawesome.min.css" rel="stylesheet">
     <link href="vendor/fonts/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="resource/css/animate.min.css">
+    <link rel="icon" href="resource/img/icon-tab.png">
   </head>
-  <style media="screen">
+
+<style media="screen">
 body{
 height: 100vh;
 background-image: url("resource/img/bg.png");
@@ -29,7 +32,7 @@ background-position: center;
 background-attachment: fixed;
 }
     /* ZOOM IN */
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1200px) {
   body {
     height: 100vh;
     background-image: url("resource/img/mobile.png");
@@ -38,57 +41,16 @@ background-attachment: fixed;
     background-attachment: fixed;
     }
   }
-  @media only screen and (max-width: 1000px) {
-    .navbar {
-    display: none;
-      }
-    }
-  @media only screen and (max-width: 1000px) {
-    .container {
-    display: none;
-      }
-    }
-  @media only screen and (max-width: 1000px) {
-    .container-fluid {
-    display: none;
-      }
-    }
-    @media only screen and (max-width: 1000px) {
-      .btn {
-      display: none;
-        }
-      }
     /* ZOOM OUT */
-    @media only screen and (min-width: 2000px) {
-      body {
-        height: 100vh;
-        background-image: url("resource/img/mobile.png");
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        }
-      }
-      @media only screen and (min-width: 2000px) {
-        .navbar {
-        display: none;
-          }
-        }
-      @media only screen and (min-width: 2000px) {
-        .container {
-        display: none;
-          }
-        }
-      @media only screen and (min-width: 2000px) {
-        .container-fluid {
-        display: none;
-          }
-        }
-        @media only screen and (min-width: 2000px) {
-          .btn {
-          display: none;
-            }
-          }
-}
+@media only screen and (min-width: 1800px) {
+  body {
+    height: 100vh;
+    background-image: url("resource/img/mobile.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    }
+  }
 </style>
   <body >
       <nav class="navbar navbar-expand-sm navbar-light bg-white">
@@ -166,7 +128,7 @@ background-attachment: fixed;
            <div class="col-md-12 p-0">
              <div class="footer-copyright text-center py-3 pb-5 text-white  fade animated fadeInUp"  style="background-color: #d75093;">
              <div class="col-md-6 float-left text-left">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div>
-             <div class="col-md-6 float-right text-right">Ralph Lopez, Kenneth Sillo, Johnroy Policarpio,Keith Godoy, Robin Santos, Vincent Sunga</div>
+             <div class="col-md-6 float-right text-right">Ralph Edwin E. Lopez, Kenneth R. Sillo, Johnroy V. Policarpio, Keith B. Godoy, Robin G. Santos, Vincent Redell A. Suñga
            </div>
            </div>
          </div>

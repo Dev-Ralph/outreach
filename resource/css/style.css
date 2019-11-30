@@ -20,3 +20,46 @@
  a .nav-link:hover{
   color:#d75094;
 }
+/* ZOOM IN */
+@media only screen and (max-width: 1200px) {
+  .navbar {
+  display: none;
+    }
+  }
+@media only screen and (max-width: 1200px) {
+  .container {
+  display: none;
+    }
+  }
+@media only screen and (max-width: 1200px) {
+  .container-fluid {
+  display: none;
+    }
+  }
+@media only screen and (max-width: 1200px) {
+  .btn {
+  display: none;
+    }
+  }
+/* ZOOM OUT */
+
+@media only screen and (min-width: 1800px) {
+  .navbar {
+  display: none;
+    }
+  }
+@media only screen and (min-width: 1800px) {
+  .container {
+  display: none;
+    }
+  }
+@media only screen and (min-width: 1800px) {
+.container-fluid {
+display: none;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .btn {
+  display: none;
+    }
+  }
