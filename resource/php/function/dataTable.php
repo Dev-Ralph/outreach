@@ -14,7 +14,7 @@ public function dataTableDepartmentLiteracy(){
 
             echo '<table style="width:100%; background-color: white;" class="table table-bordered">';
             echo '<tr>';
-            echo '<th class="text-center">College Department</th> <th class="text-center">Total Number of Participants</th>';
+            echo '<th class="text-center" style="color:#d74f95">College Department</th> <th class="text-center" style="color:#d74f95">Total Number of Participants</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -58,7 +58,7 @@ public function dataTableProponentLiteracy(){
 
             echo '<table style="width:100%; background-color: white;" class="table table-bordered">';
             echo '<tr>';
-            echo '<th class="text-center">Activity</th> <th class="text-center">Total Number of Participants</th>';
+            echo '<th class="text-center" style="color:#d74f95">Activity</th> <th class="text-center" style="color:#d74f95">Total Number of Participants</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -90,7 +90,7 @@ public function dataTableAttendeesLiteracy(){
 
   echo '<table style="width:100%; background-color: white;" class="table table-bordered">';
   echo '<tr>';
-  echo '<th class="text-center">Total Number of Attendees</th>';
+  echo '<th class="text-center" style="color:#d74f95">Total Number of Attendees</th>';
   echo '</tr>';
   foreach ($results as $result) {
   echo '<tr">';
@@ -126,7 +126,7 @@ public function dataTableDepartmentHealth(){
 
             echo '<table style="width:100%; background-color: white;" class="table table-bordered">';
             echo '<tr>';
-            echo '<th class="text-center">College Department</th> <th class="text-center">Number of Records</th>';
+            echo '<th class="text-center" style="color:#d74f95">College Department</th> <th class="text-center" style="color:#d74f95">Number of Records</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -180,7 +180,7 @@ public function dataTableProponentHealth(){
 
             echo '<table style="width:100%; background-color: white;" class="table table-bordered">';
             echo '<tr>';
-            echo '<th class="text-center">Activity</th> <th class="text-center">Total Number of Participants</th>';
+            echo '<th class="text-center" style="color:#d74f95">Activity</th> <th class="text-center" style="color:#d74f95">Total Number of Participants</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -212,7 +212,7 @@ public function dataTableAttendeesHealth(){
 
   echo '<table style="width:100%; background-color: white;" class="table table-bordered">';
   echo '<tr>';
-  echo '<th class="text-center">Total Number of Attendees</th>';
+  echo '<th class="text-center" style="color:#d74f95">Total Number of Attendees</th>';
   echo '</tr>';
   foreach ($results as $result) {
   echo '<tr">';
@@ -248,7 +248,7 @@ public function dataTableDepartmentEnvironment(){
 
             echo '<table style="width:100%; background-color: white;" class="table table-bordered">';
             echo '<tr>';
-            echo '<th class="text-center">College Department</th> <th class="text-center">Number of Records</th>';
+            echo '<th class="text-center" style="color:#d74f95">College Department</th> <th class="text-center" style="color:#d74f95">Number of Records</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -302,7 +302,7 @@ public function dataTableProponentEnvironment(){
 
             echo '<table style="width:100%; background-color: white;" class="table table-bordered">';
             echo '<tr>';
-            echo '<th class="text-center">Activity</th> <th class="text-center">Total Number of Participants</th>';
+            echo '<th class="text-center" style="color:#d74f95">Activity</th> <th class="text-center" style="color:#d74f95">Total Number of Participants</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -334,7 +334,7 @@ public function dataTableAttendeesEnvironment(){
 
   echo '<table style="width:100%; background-color: white;" class="table table-bordered">';
   echo '<tr>';
-  echo '<th class="text-center">Total Number of Attendees</th>';
+  echo '<th class="text-center" style="color:#d74f95">Total Number of Attendees</th>';
   echo '</tr>';
   foreach ($results as $result) {
   echo '<tr">';
@@ -370,7 +370,7 @@ public function dataTableDepartmentLivelihood(){
 
             echo '<table style="width:100%; background-color: white;" class="table table-bordered">';
             echo '<tr>';
-            echo '<th class="text-center">College Department</th> <th class="text-center">Number of Records</th>';
+            echo '<th class="text-center" style="color:#d74f95">College Department</th> <th class="text-center" style="color:#d74f95">Number of Records</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -424,7 +424,7 @@ public function dataTableProponentLivelihood(){
 
             echo '<table style="width:100%; background-color: white;" class="table table-bordered">';
             echo '<tr>';
-            echo '<th class="text-center">Activity</th> <th class="text-center">Total Number of Participants</th>';
+            echo '<th class="text-center" style="color:#d74f95">Activity</th> <th class="text-center" style="color:#d74f95">Total Number of Participants</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -456,7 +456,7 @@ public function dataTableAttendeesLivelihood(){
 
   echo '<table style="width:100%; background-color: white;" class="table table-bordered">';
   echo '<tr>';
-  echo '<th class="text-center">Total Number of Attendees</th>';
+  echo '<th class="text-center" style="color:#d74f95">Total Number of Attendees</th>';
   echo '</tr>';
   foreach ($results as $result) {
   echo '<tr">';

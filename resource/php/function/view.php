@@ -25,9 +25,9 @@ class view extends config {
               $data->execute();
               $results = $data->fetchAll(PDO::FETCH_OBJ);
 
-              echo '<table style="width:100%" class="table">';
-              echo '<tr>';
-              echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Venue</th> <th class="text-center">Participant</th> <th class="text-center">ID Number</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th> <th class="text-center">Action</th>';
+              echo '<table style="width:100%;" class="table">';
+              echo '<tr style="color:#d74f95">';
+              echo '<th class="text-center"><i class="fas fa-book mr-1"></i>Activity</th> <th class="text-center"><i class="fas fa-table mr-1"></i>Date</th> <th class="text-center"><i class="fas fa-map-marker-alt mr-1"></i>Venue</th> <th class="text-center"><i class="fas fa-user mr-1"></i>Participant</th> <th class="text-center"><i class="fas fa-id-badge mr-1"></i>ID#</th> <th class="text-center"><i class="fas fa-handshake mr-1"></i>Participation</th> <th class="text-center"><i class="fas fa-university mr-1"></i> College Department</th> <th class="text-center"><i class="fas fa-users mr-1" style="margin-left:-30px"></i>Proponent</th><th class="text-center"><i class="fas fa-tasks mr-1"></i>Action</th>';
               echo '</tr>';
               foreach ($results as $result) {
               echo '<tr>';
@@ -103,7 +103,8 @@ public function viewAllLiteracy(){
 
             echo '<table style="width:100%" class="table">';
             echo '<tr>';
-            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Venue</th> <th class="text-center">Participant</th> <th class="text-center">ID Number</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th> <th class="text-center">Action</th>';
+          echo '<tr style="color:#d74f95">';
+echo '<th class="text-center"><i class="fas fa-book mr-1"></i>Activity</th> <th class="text-center"><i class="fas fa-table mr-1"></i>Date</th> <th class="text-center"><i class="fas fa-map-marker-alt mr-1"></i>Venue</th> <th class="text-center"><i class="fas fa-user mr-1"></i>Participant</th> <th class="text-center"><i class="fas fa-id-badge mr-1"></i>ID#</th> <th class="text-center"><i class="fas fa-handshake mr-1"></i>Participation</th> <th class="text-center"><i class="fas fa-university mr-1"></i> College Department</th> <th class="text-center"><i class="fas fa-users mr-1" style="margin-left:-30px"></i>Proponent</th><th class="text-center"><i class="fas fa-tasks mr-1"></i>Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -180,7 +181,8 @@ public function viewAllHealth(){
             $results = $data->fetchAll(PDO::FETCH_OBJ);
             echo '<table style="width:100%" class="table">';
             echo '<tr>';
-            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Venue</th> <th class="text-center">Participant</th> <th class="text-center">ID Number</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th> <th class="text-center">Action</th>';
+          echo '<tr style="color:#d74f95">';
+echo '<th class="text-center"><i class="fas fa-book mr-1"></i>Activity</th> <th class="text-center"><i class="fas fa-table mr-1"></i>Date</th> <th class="text-center"><i class="fas fa-map-marker-alt mr-1"></i>Venue</th> <th class="text-center"><i class="fas fa-user mr-1"></i>Participant</th> <th class="text-center"><i class="fas fa-id-badge mr-1"></i>ID#</th> <th class="text-center"><i class="fas fa-handshake mr-1"></i>Participation</th> <th class="text-center"><i class="fas fa-university mr-1"></i> College Department</th> <th class="text-center"><i class="fas fa-users mr-1" style="margin-left:-30px"></i>Proponent</th><th class="text-center"><i class="fas fa-tasks mr-1"></i>Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -256,7 +258,8 @@ public function viewAllEnvironment(){
 
             echo '<table style="width:100%" class="table">';
             echo '<tr>';
-            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Venue</th> <th class="text-center">Participant</th> <th class="text-center">ID Number</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th> <th class="text-center">Action</th>';
+          echo '<tr style="color:#d74f95">';
+echo '<th class="text-center"><i class="fas fa-book mr-1"></i>Activity</th> <th class="text-center"><i class="fas fa-table mr-1"></i>Date</th> <th class="text-center"><i class="fas fa-map-marker-alt mr-1"></i>Venue</th> <th class="text-center"><i class="fas fa-user mr-1"></i>Participant</th> <th class="text-center"><i class="fas fa-id-badge mr-1"></i>ID#</th> <th class="text-center"><i class="fas fa-handshake mr-1"></i>Participation</th> <th class="text-center"><i class="fas fa-university mr-1"></i> College Department</th> <th class="text-center"><i class="fas fa-users mr-1" style="margin-left:-30px"></i>Proponent</th><th class="text-center"><i class="fas fa-tasks mr-1"></i>Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
               echo '<tr>';
@@ -333,7 +336,8 @@ public function viewAllLivelihood(){
 
             echo '<table style="width:100%" class="table">';
             echo '<tr>';
-            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Venue</th> <th class="text-center">Participant</th> <th class="text-center">ID Number</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th> <th class="text-center">Action</th>';
+          echo '<tr style="color:#d74f95">';
+echo '<th class="text-center"><i class="fas fa-book mr-1"></i>Activity</th> <th class="text-center"><i class="fas fa-table mr-1"></i>Date</th> <th class="text-center"><i class="fas fa-map-marker-alt mr-1"></i>Venue</th> <th class="text-center"><i class="fas fa-user mr-1"></i>Participant</th> <th class="text-center"><i class="fas fa-id-badge mr-1"></i>ID#</th> <th class="text-center"><i class="fas fa-handshake mr-1"></i>Participation</th> <th class="text-center"><i class="fas fa-university mr-1"></i> College Department</th> <th class="text-center"><i class="fas fa-users mr-1" style="margin-left:-30px"></i>Proponent</th><th class="text-center"><i class="fas fa-tasks mr-1"></i>Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
               echo '<tr>';
@@ -412,7 +416,8 @@ public function viewAllSearch(){
 
             echo '<table style="width:100%" class="table">';
             echo '<tr>';
-            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Venue</th> <th class="text-center">Participant</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th> <th class="text-center">Action</th>';
+echo '<tr style="color:#d74f95">';
+echo '<th class="text-center"><i class="fas fa-book mr-1"></i>Activity</th> <th class="text-center"><i class="fas fa-table mr-1"></i>Date</th> <th class="text-center"><i class="fas fa-map-marker-alt mr-1"></i>Venue</th> <th class="text-center"><i class="fas fa-user mr-1"></i>Participant</th> <th class="text-center"><i class="fas fa-id-badge mr-1"></i>ID#</th> <th class="text-center"><i class="fas fa-handshake mr-1"></i>Participation</th> <th class="text-center"><i class="fas fa-university mr-1"></i> College Department</th> <th class="text-center"><i class="fas fa-users mr-1" style="margin-left:-30px"></i>Proponent</th><th class="text-center"><i class="fas fa-tasks mr-1"></i>Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -492,7 +497,8 @@ public function viewAllLiteracySearch(){
 
             echo '<table style="width:100%" class="table">';
             echo '<tr>';
-            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Venue</th> <th class="text-center">Participant</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th> <th class="text-center">Action</th>';
+echo '<tr style="color:#d74f95">';
+echo '<th class="text-center"><i class="fas fa-book mr-1"></i>Activity</th> <th class="text-center"><i class="fas fa-table mr-1"></i>Date</th> <th class="text-center"><i class="fas fa-map-marker-alt mr-1"></i>Venue</th> <th class="text-center"><i class="fas fa-user mr-1"></i>Participant</th> <th class="text-center"><i class="fas fa-id-badge mr-1"></i>ID#</th> <th class="text-center"><i class="fas fa-handshake mr-1"></i>Participation</th> <th class="text-center"><i class="fas fa-university mr-1"></i> College Department</th> <th class="text-center"><i class="fas fa-users mr-1" style="margin-left:-30px"></i>Proponent</th><th class="text-center"><i class="fas fa-tasks mr-1"></i>Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -572,7 +578,8 @@ public function viewAllHealthSearch(){
 
             echo '<table style="width:100%" class="table">';
             echo '<tr>';
-            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Venue</th> <th class="text-center">Participant</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th> <th class="text-center">Action</th>';
+echo '<tr style="color:#d74f95">';
+echo '<th class="text-center"><i class="fas fa-book mr-1"></i>Activity</th> <th class="text-center"><i class="fas fa-table mr-1"></i>Date</th> <th class="text-center"><i class="fas fa-map-marker-alt mr-1"></i>Venue</th> <th class="text-center"><i class="fas fa-user mr-1"></i>Participant</th> <th class="text-center"><i class="fas fa-id-badge mr-1"></i>ID#</th> <th class="text-center"><i class="fas fa-handshake mr-1"></i>Participation</th> <th class="text-center"><i class="fas fa-university mr-1"></i> College Department</th> <th class="text-center"><i class="fas fa-users mr-1" style="margin-left:-30px"></i>Proponent</th><th class="text-center"><i class="fas fa-tasks mr-1"></i>Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -652,7 +659,8 @@ public function viewAllEnvironmentSearch(){
 
             echo '<table style="width:100%" class="table">';
             echo '<tr>';
-            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Venue</th> <th class="text-center">Participant</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th> <th class="text-center">Action</th>';
+echo '<tr style="color:#d74f95">';
+echo '<th class="text-center"><i class="fas fa-book mr-1"></i>Activity</th> <th class="text-center"><i class="fas fa-table mr-1"></i>Date</th> <th class="text-center"><i class="fas fa-map-marker-alt mr-1"></i>Venue</th> <th class="text-center"><i class="fas fa-user mr-1"></i>Participant</th> <th class="text-center"><i class="fas fa-id-badge mr-1"></i>ID#</th> <th class="text-center"><i class="fas fa-handshake mr-1"></i>Participation</th> <th class="text-center"><i class="fas fa-university mr-1"></i> College Department</th> <th class="text-center"><i class="fas fa-users mr-1" style="margin-left:-30px"></i>Proponent</th><th class="text-center"><i class="fas fa-tasks mr-1"></i>Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -731,7 +739,8 @@ public function viewAllLivelihoodSearch(){
 
             echo '<table style="width:100%" class="table">';
             echo '<tr>';
-            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Venue</th> <th class="text-center">Participant</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th> <th class="text-center">Action</th>';
+echo '<tr style="color:#d74f95">';
+echo '<th class="text-center"><i class="fas fa-book mr-1"></i>Activity</th> <th class="text-center"><i class="fas fa-table mr-1"></i>Date</th> <th class="text-center"><i class="fas fa-map-marker-alt mr-1"></i>Venue</th> <th class="text-center"><i class="fas fa-user mr-1"></i>Participant</th> <th class="text-center"><i class="fas fa-id-badge mr-1"></i>ID#</th> <th class="text-center"><i class="fas fa-handshake mr-1"></i>Participation</th> <th class="text-center"><i class="fas fa-university mr-1"></i> College Department</th> <th class="text-center"><i class="fas fa-users mr-1" style="margin-left:-30px"></i>Proponent</th><th class="text-center"><i class="fas fa-tasks mr-1"></i>Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
