@@ -111,7 +111,7 @@ background-attachment: fixed;
                           </div>
                           <hr />
                           <div class="form-group">
-                          <label for="proponent" class="col-form-label text-md-right">Proponent</label>
+                          <label for="proponent" class="col-form-label text-md-right">Proponents</label>
                           <input id="proponent" type="text" class="form-control " name="proponent" placeholder="Proponent" required autocomplete="off">
                           </div>
                           <hr />

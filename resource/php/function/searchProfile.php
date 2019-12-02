@@ -27,7 +27,7 @@ public function viewAll(){
 
             $start = ($page-1)*$limit;
 
-            $sql = "SELECT * FROM `outreach_participant` ORDER BY `date` DESC LIMIT $start, $limit";
+            $sql = "SELECT DISTINCT `schl_number`, `p_lastname`, `p_firstname`, `p_middlename`,`collegeDepartment` FROM `outreach_participant` ORDER BY `schl_number`  DESC LIMIT $start, $limit";
             $data = $pdo->prepare($sql);
             $data->execute();
             $results = $data->fetchAll(PDO::FETCH_OBJ);
@@ -41,7 +41,7 @@ public function viewAll(){
             echo '<td class="text-center">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
             echo '<td class="text-center">'.$result->schl_number.'</td>';
             echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
-            echo '<td class="text-center"> <a class="btn btn-outline-primary" href="viewProfile.php?outreach_id='.$result->outreach_id.'""><i class="fas fa-eye mr-1"></i>View</a></td>';
+            echo '<td class="text-center"> <a class="btn btn-outline-primary" href="viewProfile.php?schl_number='.$result->schl_number.'""><i class="fas fa-eye mr-1"></i>View</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -61,7 +61,7 @@ public function searchProfileID(){
             $pdo = $config->Con();
             $search = $_GET['search'];
             $down = $_GET['down'];
-            $s = $pdo->prepare("SELECT * FROM `outreach_participant` WHERE `$down` LIKE ?");
+            $s = $pdo->prepare("SELECT * FROM `outreach_participant` WHERE `$down` LIKE ? ORDER BY `schl_number`");
             $s->execute(["%$search%"]);
             $allResp = $s->fetchAll(PDO::FETCH_ASSOC);
 
@@ -89,7 +89,7 @@ public function searchProfileID(){
             //   echo '</div>';
             // }
 
-            $sql = "SELECT * FROM `outreach_participant` WHERE `$down` LIKE ? GROUP BY `date` DESC  LIMIT $start, $limit";
+            $sql = "SELECT DISTINCT `schl_number`, `p_lastname`, `p_firstname`, `p_middlename`,`collegeDepartment` FROM `outreach_participant` WHERE `$down` LIKE ? ORDER BY `schl_number`  DESC  LIMIT $start, $limit";
             $data =$pdo->prepare($sql);
             $data->execute(["%$search%"]);
             $results = $data->fetchAll();
@@ -102,7 +102,7 @@ public function searchProfileID(){
             echo '<td class="text-center">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
             echo '<td class="text-center">'.$result->schl_number.'</td>';
             echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
-            echo '<td class="text-center"> <a class="btn btn-outline-primary" href="viewProfile.php?outreach_id='.$result->outreach_id.'""><i class="fas fa-eye mr-1"></i>View</a></td>';
+            echo '<td class="text-center"> <a class="btn btn-outline-primary" href="viewProfile.php?schl_number='.$result->schl_number.'""><i class="fas fa-eye mr-1"></i>View</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -120,8 +120,8 @@ public function searchProfileID(){
 public function searchProfileOutput(){
             $config = new config;
             $pdo = $config->Con();
-            $outreach_id = $_GET['outreach_id'];
-            $s = $pdo->prepare("SELECT * FROM `outreach_participant` WHERE `outreach_id` = $outreach_id");
+            $schl_number = $_GET['schl_number'];
+            $s = $pdo->prepare("SELECT * FROM `outreach_participant` WHERE `schl_number` = '$schl_number'");
             $s->execute();
             $allResp = $s->fetchAll(PDO::FETCH_ASSOC);
 
@@ -137,7 +137,7 @@ public function searchProfileOutput(){
 
             $start = ($page-1)*$limit;
 
-            $sql = "SELECT DISTINCT `schl_number`,`p_lastname`,`p_firstname`,`p_middlename`,`collegeDepartment` FROM `outreach_participant` WHERE `outreach_id` = $outreach_id";
+            $sql = "SELECT DISTINCT `schl_number`,`p_lastname`,`p_firstname`,`p_middlename`,`collegeDepartment` FROM `outreach_participant` WHERE `schl_number` = '$schl_number'";
             $data =$pdo->prepare($sql);
             $data->execute();
             $results = $data->fetchAll();
@@ -150,7 +150,7 @@ public function searchProfileOutput(){
               echo '</div>';
             }
 
-            $sql = "SELECT * FROM `outreach_participant`WHERE `outreach_id` = $outreach_id GROUP BY `date` DESC  LIMIT $start, $limit";
+            $sql = "SELECT * FROM `outreach_participant`WHERE `schl_number` = '$schl_number' GROUP BY `date` DESC  LIMIT $start, $limit";
             $data =$pdo->prepare($sql);
             $data->execute();
             $results = $data->fetchAll();
