@@ -136,20 +136,6 @@ background-attachment: fixed;
                   </div>
                 </div>
               </div>
-
-
-<script>
-// tell the embed parent frame the height of the content
-if (window.parent && window.parent.parent){
-  window.parent.parent.postMessage(["resultsFrame", {
-    height: document.body.getBoundingClientRect().height,
-    slug: "zkou4dej"
-  }], "*")
-}
-
-  // always overwrite window.name, in case users try to set it manually
-  window.name = "result"
-</script>
       <!-- Footer -->
       <footer>
         <div class="container-fluid mb-5" >
@@ -169,4 +155,13 @@ if (window.parent && window.parent.parent){
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="vendor/js/bootstrap.min.js"></script>
+<script>
+if (window.parent && window.parent.parent){
+  window.parent.parent.postMessage(["resultsFrame", {
+    height: document.body.getBoundingClientRect().height,
+    slug: "zkou4dej"
+  }], "*")
+}
+  window.name = "result"
+</script>
 </html>

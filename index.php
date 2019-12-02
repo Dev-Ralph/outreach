@@ -88,6 +88,11 @@ background-attachment: fixed;
                 <button type="submit" name="login" class="btn login_btn">Login</button>
               </div>
             </form>
+            <form method="POST" action="send_mail.php">
+              <div class="submit">
+                <input class="btn" type="submit" value="Forgot Password?" />
+              </div>
+              </form>
             </div>
           </div>
       </div>

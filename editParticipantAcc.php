@@ -16,8 +16,8 @@ if(isset($username))
     <title>Edit Account</title>
     <link href="vendor/css/bootstrap.min.css" rel="stylesheet">
     <link href="vendor/fonts/css/fontawesome.min.css" rel="stylesheet">
-    <link href="vendor/fonts/css/all.css" rel="stylesheet">
     <link href="resource/css/style.css" rel="stylesheet">
+    <link href="vendor/fonts/css/all.css" rel="stylesheet">
     <link href="resource/css/edit.css" rel="stylesheet">
     <link rel="stylesheet" href="resource/css/animate.min.css">
     <link rel="icon" href="resource/img/icon-tabs.png">
@@ -42,16 +42,30 @@ background-attachment: fixed;
     }
   }
     /* ZOOM OUT */
-    @media only screen and (min-width: 1800px) {
-      body {
-        height: 100vh;
-        background-image: url("resource/img/mobile.png");
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        }
-      }
+@media only screen and (min-width: 1800px) {
+  body {
+    height: 100vh;
+    background-image: url("resource/img/mobile.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    }
+  }
 </style>
+
+  <script type="text/javascript">
+
+    window.onload=function(){
+
+/**
+ * @author Abdo-Hamoud <abdo.host@gmail.com>
+ * https://github.com/Abdo-Hamoud/bootstrap-show-password
+ * version: 1.0
+ */
+
+!function(a){a(function(){a('[data-toggle="password"]').each(function(){var b = a(this); var c = a(this).parent().find(".input-group-text"); c.css("cursor", "pointer").addClass("input-password-hide"); c.on("click", function(){if (c.hasClass("input-password-hide")){c.removeClass("input-password-hide").addClass("input-password-show"); c.find(".fa").removeClass("fa-eye").addClass("fa-eye-slash"); b.attr("type", "text")} else{c.removeClass("input-password-show").addClass("input-password-hide"); c.find(".fa").removeClass("fa-eye-slash").addClass("fa-eye"); b.attr("type", "password")}})})})}(window.jQuery);
+    }
+</script>
 
   <body>
       <nav class="navbar navbar-expand-sm navbar-light bg-white">
@@ -99,17 +113,21 @@ background-attachment: fixed;
                           echo "$edit->username";
                           ?>" required autocomplete="off">
                         </div>
-                        <div class="form-group">
                         <label for="password" class="col-form-label text-md-right">Password</label>
-                        <input id="password" type="text" class="form-control " name="password" placeholder="Password" value="<?php
+                        <div class="input-group">
+                          <input type="password" name="password" id="password" class="form-control" data-toggle="password" placeholder="Password"
+                          value="<?php
                           $edit = new editAccount;
                           $edit->accountId();
                           echo "$edit->password";
                           ?>" required autocomplete="off">
+                          <div class="input-group-append">
+                            <span class="input-group-text"><i class="fa fa-eye"></i></span>
+                          </div>
                         </div>
                           <div class="form-group row justify-content-center">
                             <div class="col-md-12 text-center">
-                              <button type="submit" class="card-btn btn text-light" name="save">Save</button>
+                              <button type="submit" class="card-btn btn text-light mt-3" name="save">Save</button>
                             </div>
                           </div>
                         </form>
@@ -118,7 +136,6 @@ background-attachment: fixed;
                   </div>
                 </div>
               </div>
-
       <!-- Footer -->
       <footer>
         <div class="container-fluid mb-5" >
@@ -138,4 +155,13 @@ background-attachment: fixed;
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="vendor/js/bootstrap.min.js"></script>
+<script>
+if (window.parent && window.parent.parent){
+  window.parent.parent.postMessage(["resultsFrame", {
+    height: document.body.getBoundingClientRect().height,
+    slug: "zkou4dej"
+  }], "*")
+}
+  window.name = "result"
+</script>
 </html>
