@@ -33,8 +33,8 @@ public function viewAll(){
             $results = $data->fetchAll(PDO::FETCH_OBJ);
 
             echo '<table style="width:100%" class="table table-bordered bg-white">';
-            echo '<tr>';
-            echo '<th class="text-center">Participant</th> <th class="text-center">ID Number</th> <th class="text-center">College Department</th> <th class="text-center">Action</th>';
+            echo '<tr style="color:#d75094">';
+            echo '<th class="text-center"><i class="fas fa-user mr-1"></i>Participant</th> <th class="text-center"><i class="fas fa-portrait mr-1"></i>ID Number</th> <th class="text-center"><i class="fas fa-university mr-1"></i>College Department</th> <th class="text-center"><i class="fas fa-tasks mr-1"></i>Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -94,8 +94,8 @@ public function searchProfileID(){
             $data->execute(["%$search%"]);
             $results = $data->fetchAll();
             echo '<table style="width:100%" class="table table-bordered bg-white">';
-            echo '<tr>';
-            echo '<th class="text-center">Participant</th> <th class="text-center">ID Number</th> <th class="text-center">College Department</th> <th class="text-center">Action</th>';
+            echo '<tr style="color:#d75094">';
+            echo '<th class="text-center"><i class="fas fa-user mr-1"></i>Participant</th> <th class="text-center"><i class="fas fa-portrait mr-1"></i>ID Number</th> <th class="text-center"><i class="fas fa-university mr-1"></i>College Department</th> <th class="text-center"><i class="fas fa-tasks mr-1"></i>Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -156,8 +156,8 @@ public function searchProfileOutput(){
             $results = $data->fetchAll();
             echo '<div class="px-0">';
             echo '<table style="width:100%" class="table table-bordered bg-white">';
-            echo '<tr>';
-            echo '<th class="text-center">Outreach Program</th> <th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Venue</th> <th class="text-center">Participation</th> <th class="text-center">Proponent</th>';
+            echo '<tr style="color:#d75094">';
+            echo '<th class="text-center"><i class="fas fa-hand-holding-heart mr-1"></i>Outreach Program</th> <th class="text-center"><i class="fas fa-book mr-1"></i>Activity</th> <th class="text-center"><i class="fas fa-table mr-1"></i>Date</th> <th class="text-center"><i class="fas fa-map-marker-alt mr-1"></i>Venue</th> <th class="text-center"><i class="fas fa-handshake mr-1"></i>Participation</th> <th class="text-center"><i class="fas fa-users mr-1"></i>Proponent</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';

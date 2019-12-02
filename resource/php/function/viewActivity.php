@@ -36,8 +36,8 @@ public function viewAll(){
               $results = $data->fetchAll(PDO::FETCH_OBJ);
 
               echo '<table style="width:100%" class="table">';
-              echo '<tr>';
-              echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Venue</th> <th class="text-center">Target Participants</th> <th class="text-center">Proponent</th> <th class="text-center">Mean</th> <th class="text-center">Interpretation</th> <th class="text-center">Action</th>';
+              echo '<tr style="color:#d74f95">';
+              echo '<th class="text-center"><i class="fas fa-book mr-1"></i>Activity</th> <th class="text-center"><i class="fas fa-table mr-1"></i>Date</th><th class="text-center"><i class="fas fa-map-marker-alt mr-1"></i>Venue</th> <th class="text-center"><i class="fas fa-user mr-1"></i>Target Participants</th> <th class="text-center"><i class="fas fa-users mr-1"></i>Proponent</th> <th class="text-center"><i class="fas fa-chart-line mr-1"></i>Mean</th> <th class="text-center"><i class="fas fa-star mr-1"></i>Interpretation</th> <th class="text-center"><i class="fas fa-tasks mr-1"></i>Action</th>';
               echo '</tr>';
               foreach ($results as $result) {
               echo '<tr>';
@@ -117,7 +117,8 @@ public function viewAllLiteracy(){
 
             echo '<table style="width:100%" class="table">';
             echo '<tr>';
-            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Venue</th> <th class="text-center">Target Participants</th> <th class="text-center">Proponent</th> <th class="text-center">Mean</th> <th class="text-center">Interpretation</th> <th class="text-center">Action</th>';
+echo '<tr style="color:#d74f95">';
+echo '<th class="text-center"><i class="fas fa-book mr-1"></i>Activity</th> <th class="text-center"><i class="fas fa-table mr-1"></i>Date</th><th class="text-center"><i class="fas fa-map-marker-alt mr-1"></i>Venue</th> <th class="text-center"><i class="fas fa-user mr-1"></i>Target Participants</th> <th class="text-center"><i class="fas fa-users mr-1"></i>Proponent</th> <th class="text-center"><i class="fas fa-chart-line mr-1"></i>Mean</th> <th class="text-center"><i class="fas fa-star mr-1"></i>Interpretation</th> <th class="text-center"><i class="fas fa-tasks mr-1"></i>Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -196,8 +197,8 @@ public function viewAllHealth(){
             $results = $data->fetchAll(PDO::FETCH_OBJ);
 
             echo '<table style="width:100%" class="table">';
-            echo '<tr>';
-            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Venue</th> <th class="text-center">Target Participants</th> <th class="text-center">Proponent</th> <th class="text-center">Mean</th> <th class="text-center">Interpretation</th> <th class="text-center">Action</th>';
+echo '<tr style="color:#d74f95">';
+echo '<th class="text-center"><i class="fas fa-book mr-1"></i>Activity</th> <th class="text-center"><i class="fas fa-table mr-1"></i>Date</th><th class="text-center"><i class="fas fa-map-marker-alt mr-1"></i>Venue</th> <th class="text-center"><i class="fas fa-user mr-1"></i>Target Participants</th> <th class="text-center"><i class="fas fa-users mr-1"></i>Proponent</th> <th class="text-center"><i class="fas fa-chart-line mr-1"></i>Mean</th> <th class="text-center"><i class="fas fa-star mr-1"></i>Interpretation</th> <th class="text-center"><i class="fas fa-tasks mr-1"></i>Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -276,8 +277,8 @@ public function viewAllEnvironment(){
             $results = $data->fetchAll(PDO::FETCH_OBJ);
 
             echo '<table style="width:100%" class="table">';
-            echo '<tr>';
-            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Venue</th> <th class="text-center">Target Participants</th> <th class="text-center">Proponent</th> <th class="text-center">Mean</th> <th class="text-center">Interpretation</th> <th class="text-center">Action</th>';
+echo '<tr style="color:#d74f95">';
+echo '<th class="text-center"><i class="fas fa-book mr-1"></i>Activity</th> <th class="text-center"><i class="fas fa-table mr-1"></i>Date</th><th class="text-center"><i class="fas fa-map-marker-alt mr-1"></i>Venue</th> <th class="text-center"><i class="fas fa-user mr-1"></i>Target Participants</th> <th class="text-center"><i class="fas fa-users mr-1"></i>Proponent</th> <th class="text-center"><i class="fas fa-chart-line mr-1"></i>Mean</th> <th class="text-center"><i class="fas fa-star mr-1"></i>Interpretation</th> <th class="text-center"><i class="fas fa-tasks mr-1"></i>Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -356,8 +357,8 @@ public function viewAllLivelihood(){
             $results = $data->fetchAll(PDO::FETCH_OBJ);
 
             echo '<table style="width:100%" class="table">';
-            echo '<tr>';
-            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Venue</th> <th class="text-center">Target Participants</th> <th class="text-center">Proponent</th> <th class="text-center">Mean</th> <th class="text-center">Interpretation</th> <th class="text-center">Action</th>';
+echo '<tr style="color:#d74f95">';
+echo '<th class="text-center"><i class="fas fa-book mr-1"></i>Activity</th> <th class="text-center"><i class="fas fa-table mr-1"></i>Date</th><th class="text-center"><i class="fas fa-map-marker-alt mr-1"></i>Venue</th> <th class="text-center"><i class="fas fa-user mr-1"></i>Target Participants</th> <th class="text-center"><i class="fas fa-users mr-1"></i>Proponent</th> <th class="text-center"><i class="fas fa-chart-line mr-1"></i>Mean</th> <th class="text-center"><i class="fas fa-star mr-1"></i>Interpretation</th> <th class="text-center"><i class="fas fa-tasks mr-1"></i>Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -430,8 +431,8 @@ public function viewAllSearch(){
             $results = $data->fetchAll();
 
             echo '<table style="width:100%" class="table">';
-            echo '<tr>';
-            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Venue</th> <th class="text-center">Target Participants</th> <th class="text-center">Proponent</th> <th class="text-center">Mean</th> <th class="text-center">Interpretation</th> <th class="text-center">Action</th>';
+echo '<tr style="color:#d74f95">';
+echo '<th class="text-center"><i class="fas fa-book mr-1"></i>Activity</th> <th class="text-center"><i class="fas fa-table mr-1"></i>Date</th><th class="text-center"><i class="fas fa-map-marker-alt mr-1"></i>Venue</th> <th class="text-center"><i class="fas fa-user mr-1"></i>Target Participants</th> <th class="text-center"><i class="fas fa-users mr-1"></i>Proponent</th> <th class="text-center"><i class="fas fa-chart-line mr-1"></i>Mean</th> <th class="text-center"><i class="fas fa-star mr-1"></i>Interpretation</th> <th class="text-center"><i class="fas fa-tasks mr-1"></i>Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -505,8 +506,8 @@ public function viewAllLiteracySearch(){
             $results = $data->fetchAll();
 
             echo '<table style="width:100%" class="table">';
-            echo '<tr>';
-            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Venue</th> <th class="text-center">Target Participants</th> <th class="text-center">Proponent</th> <th class="text-center">Mean</th> <th class="text-center">Interpretation</th> <th class="text-center">Action</th>';
+echo '<tr style="color:#d74f95">';
+echo '<th class="text-center"><i class="fas fa-book mr-1"></i>Activity</th> <th class="text-center"><i class="fas fa-table mr-1"></i>Date</th><th class="text-center"><i class="fas fa-map-marker-alt mr-1"></i>Venue</th> <th class="text-center"><i class="fas fa-user mr-1"></i>Target Participants</th> <th class="text-center"><i class="fas fa-users mr-1"></i>Proponent</th> <th class="text-center"><i class="fas fa-chart-line mr-1"></i>Mean</th> <th class="text-center"><i class="fas fa-star mr-1"></i>Interpretation</th> <th class="text-center"><i class="fas fa-tasks mr-1"></i>Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -580,8 +581,8 @@ public function viewAllHealthSearch(){
             $results = $data->fetchAll();
 
             echo '<table style="width:100%" class="table">';
-            echo '<tr>';
-            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Venue</th> <th class="text-center">Target Participants</th> <th class="text-center">Proponent</th> <th class="text-center">Mean</th> <th class="text-center">Interpretation</th> <th class="text-center">Action</th>';
+echo '<tr style="color:#d74f95">';
+echo '<th class="text-center"><i class="fas fa-book mr-1"></i>Activity</th> <th class="text-center"><i class="fas fa-table mr-1"></i>Date</th><th class="text-center"><i class="fas fa-map-marker-alt mr-1"></i>Venue</th> <th class="text-center"><i class="fas fa-user mr-1"></i>Target Participants</th> <th class="text-center"><i class="fas fa-users mr-1"></i>Proponent</th> <th class="text-center"><i class="fas fa-chart-line mr-1"></i>Mean</th> <th class="text-center"><i class="fas fa-star mr-1"></i>Interpretation</th> <th class="text-center"><i class="fas fa-tasks mr-1"></i>Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -656,8 +657,8 @@ public function viewAllEnvironmentSearch(){
             $results = $data->fetchAll();
 
             echo '<table style="width:100%" class="table">';
-            echo '<tr>';
-            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Venue</th> <th class="text-center">Target Participants</th> <th class="text-center">Proponent</th> <th class="text-center">Mean</th> <th class="text-center">Interpretation</th> <th class="text-center">Action</th>';
+echo '<tr style="color:#d74f95">';
+echo '<th class="text-center"><i class="fas fa-book mr-1"></i>Activity</th> <th class="text-center"><i class="fas fa-table mr-1"></i>Date</th><th class="text-center"><i class="fas fa-map-marker-alt mr-1"></i>Venue</th> <th class="text-center"><i class="fas fa-user mr-1"></i>Target Participants</th> <th class="text-center"><i class="fas fa-users mr-1"></i>Proponent</th> <th class="text-center"><i class="fas fa-chart-line mr-1"></i>Mean</th> <th class="text-center"><i class="fas fa-star mr-1"></i>Interpretation</th> <th class="text-center"><i class="fas fa-tasks mr-1"></i>Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -732,8 +733,8 @@ public function viewAllLivelihoodSearch(){
             $results = $data->fetchAll();
 
             echo '<table style="width:100%" class="table">';
-            echo '<tr>';
-            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Venue</th> <th class="text-center">Target Participants</th> <th class="text-center">Proponent</th> <th class="text-center">Mean</th> <th class="text-center">Interpretation</th> <th class="text-center">Action</th>';
+echo '<tr style="color:#d74f95">';
+echo '<th class="text-center"><i class="fas fa-book mr-1"></i>Activity</th> <th class="text-center"><i class="fas fa-table mr-1"></i>Date</th><th class="text-center"><i class="fas fa-map-marker-alt mr-1"></i>Venue</th> <th class="text-center"><i class="fas fa-user mr-1"></i>Target Participants</th> <th class="text-center"><i class="fas fa-users mr-1"></i>Proponent</th> <th class="text-center"><i class="fas fa-chart-line mr-1"></i>Mean</th> <th class="text-center"><i class="fas fa-star mr-1"></i>Interpretation</th> <th class="text-center"><i class="fas fa-tasks mr-1"></i>Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';

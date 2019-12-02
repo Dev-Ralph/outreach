@@ -30,8 +30,8 @@ public function tableActivityParticipant(){
             echo '<div class="table-responsive" id="activity"> ';
             echo '<h1 class="text-center py-3" style="text-align: center">'.$title.'</h1>';
             echo '<table style="width:100%; background-color: white;" class="table table-bordered">';
-            echo '<tr>';
-            echo '<th class="text-center">Name of Participants</th> <th class="text-center">ID Number</th> <th class="text-center">Participation</th> <th class="text-center">Proponent</th> <th class="text-center">College Department</th>';
+            echo '<tr style="color:#d75094">';
+            echo '<th class="text-center"><i class="fas fa-user mr-1"></i>Name of Participants</th> <th class="text-center"><i class="fas fa-portrait mr-1"></i>ID Number</th> <th class="text-center"><i class="fas fa-handshake mr-1"></i>Participation</th> <th class="text-center"><i class="fas fa-users mr-1"></i>Proponent</th> <th class="text-center"><i class="fas fa-university mr-1"></i>College Department</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
