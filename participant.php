@@ -72,19 +72,22 @@ background-attachment: fixed;
                 <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav ml-auto">
                     <form action="" method="GET" class="form-inline my-2 my-lg-0">
-                      <li class="nav-item"><a class="nav-link text-dark mr-2 mt-3" href="add.php"><span>&#43;</span> Add participant</a></li>
+                      <li class="nav-item"><a class="nav-link text-dark mr-2 mt-3" href="dataTable.php"><span style="color:#d75093"><i class="fas fa-chart-bar" ></i> Analytics</span></a></li>
+                      <li class="nav-item"><a class="nav-link text-dark mr-2 mt-3" href="viewParticipants.php"><span style="color:#d75093"><i class="fas fa-user-friends"></i> View Participants</span></a></li>
+                      <li class="nav-item"><a class="nav-link text-dark mr-2 mt-3" href="addActivity.php"><span style="color:#d75093"><i class="fas fa-pen-nib"></i> Add activity</span></a></li>
+                      <li class="nav-item"><a class="nav-link text-dark mr-2 mt-3" href="add.php"><span style="color:#d75093"><i class="fas fa-user"></i> Add participant</span></a></li>
                       <li class="nav-item"><div class="dropdown py-2">
                       <button class="btn btn-secondary dropdown-toggle text-dark mt-3" style="background-color: transparent; border: none;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Account
+                          <span style="color:#d75093">Account</span>
                         </button>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                           <?php
                           require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/editAccount.php';
                           $editAccount = new editAccount;
                           $editAccount->accountId();
-                          echo '<a class="dropdown-item py-2" href="editParticipantAcc.php?account_id='.$editAccount->account_id.'"><i class="fas fa-user-edit mr-1"></i>Edit Account</a>';
+                          echo '<a class="dropdown-item py-2" href="editParticipantAcc.php?account_id='.$editAccount->account_id.'"><span style="color:#d75093"><i class="fas fa-user-edit mr-1"></i>Edit Account</span></a>';
                           ?>
-                          <a class="dropdown-item" href="#"><button class="btn text-dark" style="background-color:transparent;" name="logout"><i class="fas fa-sign-out-alt mr-1"></i>Logout</button>
+                          <a class="dropdown-item" href="#"><button class="btn text-dark" style="background-color:transparent;" name="logout"><span style="color:#d75093"><i class="fas fa-sign-out-alt mr-1"></i>Logout</span></button>
                           <a class="" href=""></a>
                         </div>
                       </div></li>
@@ -99,7 +102,6 @@ background-attachment: fixed;
               </div>
             </div>
             <a type="submit" name="activity" href="activity.php" class="btn btn-default my-3 mr-3 text-light float-right" style="background-color:#d75094"><i class="fas fa-book mr-2"></i>Activity</a>
-            <a type="submit" name="viewProfile" href="viewParticipants.php" class="btn btn-default my-3 mr-3 float-right text-light" style="background-color:#d75094"><i class="fas fa-user mr-2"></i>View Participants</a>
             <div class="container-fluid px-0">
             <nav class="mt-3">
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
