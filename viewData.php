@@ -122,18 +122,18 @@ background-attachment: fixed;
      </div>
 
      <!-- Footer -->
-     <footer>
-       <div class="container-fluid" >
-         <div class="row">
-           <div class="col-md-12 p-0">
-             <div class="footer-copyright text-center py-3 pb-5 text-white  fade animated fadeInUp"  style="background-color: #d75093;">
-             <div class="col-md-6 float-left text-left mt-3">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div>
-             <div class="col-md-6 float-right text-right">Ralph Edwin E. Lopez, Kenneth R. Sillo, Johnroy V. Policarpio, Keith B. Godoy, Robin G. Santos, Vincent Redell A. Suñga
-           </div>
+       <footer>
+         <div class="container mb-5">
+           <div class="row">
+             <div class="footer-copyright text-center py-3 text-white fixed-bottom fade animated fadeInUp" style="background-color: #d75093;">
+               <div class="col-md-6 float-left text-left mt-2">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div>
+               <div class="col-md-6 float-right text-right">Ralph Edwin E. Lopez, Kenneth R. Sillo, Johnroy V. Policarpio
+               <div class="col-md-12 float-right text-right mr-2">Keith B. Godoy, Robin G. Santos, Vincent Redell A. Suñga</div>
+               </div>
+             </div>
            </div>
          </div>
-           </div>
-     </footer>
+       </footer>
      <!-- Footer -->
 
 </body>

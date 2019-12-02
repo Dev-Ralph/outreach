@@ -77,21 +77,21 @@ background-attachment: fixed;
         ?>
       </div>
   </body>
-  <!-- Footer -->
+
+<!-- Footer -->
   <footer>
-    <div class="container-fluid mb-5" >
+    <div class="container mb-5">
       <div class="row">
-          <div class="footer-copyright text-center py-1 text-white fixed-bottom fade animated fadeInUp"  style="background-color: #d75093;">
-          <div class="col-md-6 float-left text-left mt-3">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div>
-          <div class="col-md-6 float-right text-right">Ralph Edwin E. Lopez, Kenneth R. Sillo, Johnroy V. Policarpio, Keith B. Godoy, Robin G. Santos, Vincent Redell A. Suñga
+        <div class="footer-copyright text-center py-3 text-white fixed-bottom fade animated fadeInUp" style="background-color: #d75093;">
+          <div class="col-md-6 float-left text-left mt-2">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div>
+          <div class="col-md-6 float-right text-right">Ralph Edwin E. Lopez, Kenneth R. Sillo, Johnroy V. Policarpio
+          <div class="col-md-12 float-right text-right mr-2">Keith B. Godoy, Robin G. Santos, Vincent Redell A. Suñga</div>
           </div>
-        </div>
-        </div>
         </div>
       </div>
     </div>
   </footer>
-  <!-- Footer -->
+<!-- Footer -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="vendor/js/bootstrap.min.js"></script>
