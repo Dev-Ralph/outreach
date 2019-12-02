@@ -48,8 +48,7 @@ public function viewAll(){
               echo '<td class="text-center">'.$result->proponent.'</td>';
               echo '<td class="text-center">'.$result->mean.'</td>';
               echo '<td class="text-center">'.$result->interpretation.'</td>';
-              echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-info" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-users mr-2"></i>Participants</a> <a class="btn btn-outline-success mt-1" href="
-              Activity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
+              echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-info" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-users mr-2"></i>Participants</a> <a class="btn btn-outline-success mt-1" href="editActivity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
               echo '</tr>';
               }
               echo '</table>';
@@ -80,6 +79,7 @@ public function viewAll(){
                       <i class="fas fa-search text-white"></i>
               <input type="submit" name="submit-all"value="Search"style="background:none;border:0;color:white;background-color:#d75094;">
                 </span>
+                <a class="btn text-white mt-3" style="background-color:#d75094;" href="activity.php">Clear</a>
                 </form>';
 }
 public function viewAllLiteracy(){
@@ -128,8 +128,7 @@ public function viewAllLiteracy(){
             echo '<td class="text-center">'.$result->proponent.'</td>';
             echo '<td class="text-center">'.$result->mean.'</td>';
             echo '<td class="text-center">'.$result->interpretation.'</td>';
-            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-info" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-users mr-2"></i>Participants</a> <a class="btn btn-outline-success mt-1" href="
-            Activity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
+            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-info" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-users mr-2"></i>Participants</a> <a class="btn btn-outline-success mt-1" href="editActivity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -160,6 +159,7 @@ public function viewAllLiteracy(){
                     <i class="fas fa-search text-white"></i>
             <input type="submit" name="submit-literacy"value="Search"style="background:none;border:0;color:white;background-color:#d75094;">
               </span>
+              <a class="btn text-white mt-3" style="background-color:#d75094;" href="activity.php">Clear</a>
               </form>';
 }
 
@@ -208,8 +208,7 @@ public function viewAllHealth(){
             echo '<td class="text-center">'.$result->proponent.'</td>';
             echo '<td class="text-center">'.$result->mean.'</td>';
             echo '<td class="text-center">'.$result->interpretation.'</td>';
-            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-info" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-users mr-2"></i>Participants</a> <a class="btn btn-outline-success mt-1" href="
-            Activity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
+            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-info" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-users mr-2"></i>Participants</a> <a class="btn btn-outline-success mt-1" href="editActivity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -240,6 +239,7 @@ public function viewAllHealth(){
                     <i class="fas fa-search text-white"></i>
             <input type="submit" name="submit-health"value="Search"style="background:none;border:0;color:white;background-color:#d75094;">
               </span>
+              <a class="btn text-white mt-3" style="background-color:#d75094;" href="activity.php">Clear</a>
               </form>';
 }
 
@@ -288,8 +288,7 @@ public function viewAllEnvironment(){
             echo '<td class="text-center">'.$result->proponent.'</td>';
             echo '<td class="text-center">'.$result->mean.'</td>';
             echo '<td class="text-center">'.$result->interpretation.'</td>';
-            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-info" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-users mr-2"></i>Participants</a> <a class="btn btn-outline-success mt-1" href="
-            Activity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
+            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-info" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-users mr-2"></i>Participants</a> <a class="btn btn-outline-success mt-1" href="editActivity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -320,6 +319,7 @@ public function viewAllEnvironment(){
                     <i class="fas fa-search text-white"></i>
             <input type="submit" name="submit-environment"value="Search"style="background:none;border:0;color:white;background-color:#d75094;">
               </span>
+              <a class="btn text-white mt-3" style="background-color:#d75094;" href="activity.php">Clear</a>
               </form>';
 }
 
@@ -368,8 +368,7 @@ public function viewAllLivelihood(){
             echo '<td class="text-center">'.$result->proponent.'</td>';
             echo '<td class="text-center">'.$result->mean.'</td>';
             echo '<td class="text-center">'.$result->interpretation.'</td>';
-            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-info" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-users mr-2"></i>Participants</a> <a class="btn btn-outline-success mt-1" href="
-            Activity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
+            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-info" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-users mr-2"></i>Participants</a> <a class="btn btn-outline-success mt-1" href="editActivity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -400,6 +399,7 @@ public function viewAllLivelihood(){
                     <i class="fas fa-search text-white"></i>
             <input type="submit" name="submit-livelihood"value="Search"style="background:none;border:0;color:white;background-color:#d75094;">
               </span>
+              <a class="btn text-white mt-3" style="background-color:#d75094;" href="activity.php">Clear</a>
               </form>';
 }
 public function viewAllSearch(){
@@ -442,8 +442,7 @@ public function viewAllSearch(){
             echo '<td class="text-center">'.$result->proponent.'</td>';
             echo '<td class="text-center">'.$result->mean.'</td>';
             echo '<td class="text-center">'.$result->interpretation.'</td>';
-            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-info" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-users mr-2"></i>Participants</a> <a class="btn btn-outline-success mt-1" href="
-            Activity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
+            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-info" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-users mr-2"></i>Participants</a> <a class="btn btn-outline-success mt-1" href="editActivity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -474,6 +473,7 @@ public function viewAllSearch(){
                     <i class="fas fa-search text-white"></i>
             <input type="submit" name="submit-all"value="Search"style="background:none;border:0;color:white;background-color:#d75094;">
               </span>
+              <a class="btn text-white mt-3" style="background-color:#d75094;" href="activity.php">Clear</a>
               </form>';
             }
 }
@@ -517,8 +517,7 @@ public function viewAllLiteracySearch(){
             echo '<td class="text-center">'.$result->proponent.'</td>';
             echo '<td class="text-center">'.$result->mean.'</td>';
             echo '<td class="text-center">'.$result->interpretation.'</td>';
-            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-info" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-users mr-2"></i>Participants</a> <a class="btn btn-outline-success mt-1" href="
-            Activity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
+            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-info" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-users mr-2"></i>Participants</a> <a class="btn btn-outline-success mt-1" href="editActivity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -549,6 +548,7 @@ public function viewAllLiteracySearch(){
                     <i class="fas fa-search text-white"></i>
             <input type="submit" name="submit-literacy"value="Search"style="background:none;border:0;color:white;background-color:#d75094;">
               </span>
+              <a class="btn text-white mt-3" style="background-color:#d75094;" href="activity.php">Clear</a>
               </form>';
             }
 }
@@ -592,8 +592,7 @@ public function viewAllHealthSearch(){
             echo '<td class="text-center">'.$result->proponent.'</td>';
             echo '<td class="text-center">'.$result->mean.'</td>';
             echo '<td class="text-center">'.$result->interpretation.'</td>';
-            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-info" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-users mr-2"></i>Participants</a> <a class="btn btn-outline-success mt-1" href="
-            Activity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
+            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-info" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-users mr-2"></i>Participants</a> <a class="btn btn-outline-success mt-1" href="editActivity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -624,6 +623,7 @@ public function viewAllHealthSearch(){
                     <i class="fas fa-search text-white"></i>
             <input type="submit" name="submit-health"value="Search"style="background:none;border:0;color:white;background-color:#d75094;">
               </span>
+              <a class="btn text-white mt-3" style="background-color:#d75094;" href="activity.php">Clear</a>
               </form>';
             }
 }
@@ -668,8 +668,7 @@ public function viewAllEnvironmentSearch(){
             echo '<td class="text-center">'.$result->proponent.'</td>';
             echo '<td class="text-center">'.$result->mean.'</td>';
             echo '<td class="text-center">'.$result->interpretation.'</td>';
-            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-info" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-users mr-2"></i>Participants</a> <a class="btn btn-outline-success mt-1" href="
-            Activity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
+            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-info" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-users mr-2"></i>Participants</a> <a class="btn btn-outline-success mt-1" href="editActivity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -700,6 +699,7 @@ public function viewAllEnvironmentSearch(){
                     <i class="fas fa-search text-white"></i>
             <input type="submit" name="submit-environment"value="Search"style="background:none;border:0;color:white;background-color:#d75094;">
               </span>
+              <a class="btn text-white mt-3" style="background-color:#d75094;" href="activity.php">Clear</a>
               </form>';
             }
 }
@@ -744,8 +744,7 @@ public function viewAllLivelihoodSearch(){
             echo '<td class="text-center">'.$result->proponent.'</td>';
             echo '<td class="text-center">'.$result->mean.'</td>';
             echo '<td class="text-center">'.$result->interpretation.'</td>';
-            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-info" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-users mr-2"></i>Participants</a> <a class="btn btn-outline-success mt-1" href="
-            Activity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
+            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-info" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-users mr-2"></i>Participants</a> <a class="btn btn-outline-success mt-1" href="editActivity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -776,6 +775,7 @@ public function viewAllLivelihoodSearch(){
                     <i class="fas fa-search text-white"></i>
             <input type="submit" name="submit-livelihood"value="Search"style="background:none;border:0;color:white;background-color:#d75094;">
               </span>
+              <a class="btn text-white mt-3" style="background-color:#d75094;" href="activity.php">Clear</a>
               </form>';
             }
 }

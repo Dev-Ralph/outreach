@@ -13,7 +13,7 @@ if(isset($username))
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Participant</title>
+    <title>Profile | Participant</title>
     <link href="vendor/css/bootstrap.min.css" rel="stylesheet">
     <link href="resource/css/edit.css" rel="stylesheet">
     <link href="resource/css/style.css" rel="stylesheet">
@@ -61,45 +61,20 @@ background-attachment: fixed;
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ml-auto">
                 <form action="" method="GET" class="form-inline my-2 my-lg-0">
-                  <li class="nav-item"><a class="nav-link text-dark mr-3 mt-3" href="participant.php"><i class="fas fa-arrow-left mr-1"></i>Return</a></li>
+                  <li class="nav-item"><a class="nav-link text-dark mr-3 mt-3" href="viewParticipants.php"><i class="fas fa-arrow-left mr-1"></i>Return</a></li>
                 </form>
               </ul>
             </div>
           </div>
         </nav>
-      <div class="container-fluid mt-4 ">
-        <form action="" method="GET" class="form-inline pb-0">
-        <input class="form-control mr-3" style="width:55vh;" type="search" name="search" value="" placeholder="Enter keyword..." autocomplete="off">
-          <br>
-        <label class="ml-1 text-muted mr-2">Filter by:</label>
-        <select class="form-control mr-2 text-dark browser-default custom-select" name="down" style="width:25vh;" id="select" name="criteria">
-          <option value="schl_number">ID Number</option>
-          <option value="p_lastname">Last Name</option>
-          <option value="p_firstname">First Name</option>
-          <option value="p_middlename">Middle Name</option>
-          <option value="collegeDepartment">College Department</option>
-        </select>
-
-          <span class="btn btn-default mr-3" style="background-color:#d75094;">
-                <i class="fas fa-search text-white"></i>
-        <input type="submit" name="submit"value="Search"style="background:none;border:0;color:white;background-color:#d75094;">
-          </span>
-
-          <a class="btn text-white" style="background-color:#d75094;" href="viewParticipants.php">Clear</a>
-          </form>'
-      </div>
       <div class="container animated fadeInUp">
+        <button name="create_excel" id="create_excel" class="btn btn-success float-right mt-4">Export to Excel</button>
         <div class="row">
 
         <?php
         require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/searchProfile.php';
-        if(isset($_GET['submit'])){
           $searchProfile = new searchProfile;
-          $searchProfile->searchProfileID();
-        }else {
-          $searchProfile = new searchProfile;
-          $searchProfile->viewAll();
-        }
+          $searchProfile->searchProfileOutput();
          ?>
        </div>
        </div>
@@ -123,4 +98,13 @@ background-attachment: fixed;
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="vendor/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+     $('#create_excel').click(function(){
+          var excel_data = $('#list').html();
+          var page = "excel.php?data=" + excel_data;
+          window.location = page;
+     });
+});
+</script>
 </html>

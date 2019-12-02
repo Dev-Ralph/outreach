@@ -74,6 +74,7 @@ class view extends config {
                       <i class="fas fa-search text-white"></i>
               <input type="submit" name="submit-all"value="Search"style="background:none;border:0;color:white;background-color:#d75094;">
                 </span>
+                <a class="btn text-white mt-3" style="background-color:#d75094;" href="participant.php">Clear</a>
                 </form>';
 }
 public function viewAllLiteracy(){
@@ -149,6 +150,7 @@ public function viewAllLiteracy(){
                     <i class="fas fa-search text-white"></i>
             <input type="submit" name="submit-literacy"value="Search"style="background:none;border:0;color:white;background-color:#d75094;">
               </span>
+              <a class="btn text-white mt-3" style="background-color:#d75094;" href="participant.php">Clear</a>
               </form>';
 }
 
@@ -224,6 +226,7 @@ public function viewAllHealth(){
                     <i class="fas fa-search text-white"></i>
             <input type="submit" name="submit-health"value="Search"style="background:none;border:0;color:white;background-color:#d75094;">
               </span>
+              <a class="btn text-white mt-3" style="background-color:#d75094;" href="participant.php">Clear</a>
               </form>';
 }
 
@@ -300,6 +303,7 @@ public function viewAllEnvironment(){
                     <i class="fas fa-search text-white"></i>
             <input type="submit" name="submit-environment"value="Search"style="background:none;border:0;color:white;background-color:#d75094;">
               </span>
+              <a class="btn text-white mt-3" style="background-color:#d75094;" href="participant.php">Clear</a>
               </form>';
 }
 
@@ -376,6 +380,7 @@ public function viewAllLivelihood(){
                     <i class="fas fa-search text-white"></i>
             <input type="submit" name="submit-livelihood"value="Search"style="background:none;border:0;color:white;background-color:#d75094;">
               </span>
+              <a class="btn text-white mt-3" style="background-color:#d75094;" href="participant.php">Clear</a>
               </form>';
 }
 public function viewAllSearch(){
@@ -453,6 +458,7 @@ public function viewAllSearch(){
                     <i class="fas fa-search text-white"></i>
             <input type="submit" name="submit-all"value="Search"style="background:none;border:0;color:white;background-color:#d75094;">
               </span>
+              <a class="btn text-white mt-3" style="background-color:#d75094;" href="participant.php">Clear</a>
               </form>';
             }
 }
@@ -532,6 +538,7 @@ public function viewAllLiteracySearch(){
                     <i class="fas fa-search text-white"></i>
             <input type="submit" name="submit-literacy"value="Search"style="background:none;border:0;color:white;background-color:#d75094;">
               </span>
+              <a class="btn text-white mt-3" style="background-color:#d75094;" href="participant.php">Clear</a>
               </form>';
             }
 }
@@ -611,6 +618,7 @@ public function viewAllHealthSearch(){
                     <i class="fas fa-search text-white"></i>
             <input type="submit" name="submit-health"value="Search"style="background:none;border:0;color:white;background-color:#d75094;">
               </span>
+              <a class="btn text-white mt-3" style="background-color:#d75094;" href="participant.php">Clear</a>
               </form>';
             }
 }
@@ -690,6 +698,7 @@ public function viewAllEnvironmentSearch(){
                     <i class="fas fa-search text-white"></i>
             <input type="submit" name="submit-environment"value="Search"style="background:none;border:0;color:white;background-color:#d75094;">
               </span>
+              <a class="btn text-white mt-3" style="background-color:#d75094;" href="participant.php">Clear</a>
               </form>';
             }
 }
@@ -768,6 +777,7 @@ public function viewAllLivelihoodSearch(){
                     <i class="fas fa-search text-white"></i>
             <input type="submit" name="submit-livelihood"value="Search"style="background:none;border:0;color:white;background-color:#d75094;">
               </span>
+              <a class="btn text-white mt-3" style="background-color:#d75094;" href="participant.php">Clear</a>
               </form>';
             }
 }

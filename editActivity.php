@@ -223,7 +223,7 @@ background-attachment: fixed;
                           </div>
                           <div class="col-md-12">
                           <div class="form-group mb-2 text-center">
-                              <button type="submit" class="card-btn btn text-light px-5" name="add">Add</button>
+                              <button type="submit" class="card-btn btn text-light px-5" name="add" style="background-color:#d75093">Add</button>
                           </div>
                       </div>
                     </form>
