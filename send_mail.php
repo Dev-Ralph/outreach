@@ -1,13 +1,23 @@
 <?php
+require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/db/config.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 require 'vendor\autoload.php';
 
-$email = $_POST['email'];
+  $config = new config;
+  $pdo = $config->Con();
+  $s = $pdo->prepare("SELECT * FROM `account`");
+  $s->execute();
+  $results = $s->fetchAll();
+  foreach ($results as $result) {
+      $username = $result->username;
+      $password = $result->password;
+      $email = $result->email;
+    }
 // Validation (para hindi mag send ng blank info yung user)
 if(empty($email)){
-    header("location: index.php?nomessage");
+    header("location: index.php?sent=false");
     exit();
 }
 $mail = new PHPMailer();
@@ -31,9 +41,9 @@ $mail->SMTPDebug = 1;
     We have received a notice that you are encountering problems when loging in.</p><p>
     Don't worry here is your login credentials.
     </p><p>
-    Username:
+    Username: <strong>".$username."</strong>
     </p><p>
-    Password:
+    Password: <strong>".$password."</strong>
     </p>";
     //Content
     $mail->isHTML(true);
@@ -42,7 +52,7 @@ $mail->SMTPDebug = 1;
     $mail->AltBody = strip_tags($email);
 
     $mail->send();
-    // header("location: sent.php");
+    header("location: index.php?sent=true");
 
 
 } catch (Exception $e) {

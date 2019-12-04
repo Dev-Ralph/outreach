@@ -72,7 +72,7 @@ background-attachment: fixed;
           <?php
           require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/addActivity.php';
           if(isset($_POST['add'])){
-            $add = new addActivity($_POST['type'],$_POST['title'],$_POST['proponent'],$_POST['date'],$_POST['venue'],$_POST['target_p'],$_POST['mean'],$_POST['interpretation'],$_POST['documentation']);
+            $add = new addActivity($_POST['type'],$_POST['title'],$_POST['proponent'],$_POST['date'],$_POST['venue'],$_POST['target_p'],$_POST['mean'],$_POST['documentation']);
             $add->addRecord();
             ?>
             <div class="alert alert-success alert-dismissible fade show animated fadeInDown" role="alert">
@@ -97,7 +97,8 @@ background-attachment: fixed;
                           <div class="col-md-6">
                           <div class="form-group">
                           <label for="type" class="col-form-label text-md-right">Outreach Program</label>
-                          <select id="type" class="form-control mr-2 text-dark browser-default custom-select" name="type" autofocus>
+                          <select id="type" class="form-control mr-2 text-dark browser-default custom-select" name="type" autofocus required>
+                            <option disabled selected style="display: none;">Outreach Program</option>
                             <option value="Literacy & Numeracy" title="Title for Item 1">Literacy & Numeracy</option>
                             <option value="Health & Wellness" title="Title for Item 2">Health & Wellness</option>
                             <option value="Environment Care" title="Title for Item 3">Environment Care</option>
@@ -124,40 +125,61 @@ background-attachment: fixed;
                           <label for="venue" class="col-form-label text-md-right">Venue</label>
                           <input id="venue" type="text" class="form-control " name="venue" placeholder="Venue" required autocomplete="off">
                           </div>
-                          <hr />
                           <div class="form-group">
-                          <label for="target_p" class="col-form-label text-md-right">Target Participants</label>
-                          <input id="target_p" type="text" class="form-control " name="target_p" placeholder="Target Participants" required autocomplete="off">
+                            <label for="target_p" class="col-form-label text-md-right">Target Participants</label>
+                            <input id="target_p" type="text" class="form-control " name="target_p" placeholder="Target Participants" required autocomplete="off">
                           </div>
                           </div>
                           <div class="col-md-6">
-                          <div class="card">
-                          <div class="card-header bg-white">
-                            Present Evaluation
-                          </div>
-                          <div class="card-body">
-                            <div class="form-inline">
-                              <div class="col-md-6">
+                            <div class="form-group">
                               <label for="mean" class="col-form-label float-left">Over-all Mean</label>
                               <input id="mean" type="text" class="form-control " name="mean" placeholder="Over-all Mean" required autocomplete="off">
-                              </div>
-                              <div class="col-md-6">
-                              <label for="interpretation" class="col-form-label float-left">Verbal Interpretation</label>
-                              <select id="interpretation" class="form-control mr-2 text-dark browser-default custom-select" name="interpretation" autofocus>
-                                <option value="Excellent" title="Title for Item 1">Excellent</option>
-                                <option value="Superior" title="Title for Item 2">Superior</option>
-                                <option value="Very Satisfactory" title="Title for Item 3">Very Satisfactory</option>
-                                <option value="Satisfactory" title="Title for Item 4">Satisfactory</option>
-                                <option value="Minimally Satisfactory" title="Title for Item 4">Minimally Satisfactory</option>
-                              </select>
-                            </div>
-                            </div>
-                          </div>
                           </div>
                           <hr />
                           <div class="form-group">
-                            <label for="image" class="col-form-label text-md-right">Images</label>
-                              <input id="image" type="file" class="form-control" name="image" autocomplete="image" accept="*/image">
+                            <label for="image_selector" class="col-form-label text-md-right">Images</label>
+                            <select id="image_selector" class="form-control mr-2 text-dark browser-default custom-select" name="image_selector" autofocus required>
+                              <option value="one">1 Image</option>
+                              <option value="two">2 Images</option>
+                              <option value="three">3 Images</option>
+                              <option value="four">4 Images</option>
+                              <option value="five">5 Images</option>
+                              <option value="six">6 Images</option>
+                            </select>
+                            <div class="one box">
+                              <input id="image" type="file" class="form-control mt-2" name="image" autocomplete="image" accept="*/image">
+                            </div>
+                            <div class="two box">
+                              <input id="image" type="file" class="form-control mt-2" name="image" autocomplete="image" accept="*/image">
+                              <input id="image1" type="file" class="form-control mt-2" name="image1" autocomplete="image1" accept="*/image">
+                            </div>
+                            <div class="three box">
+                              <input id="image" type="file" class="form-control mt-2" name="image" autocomplete="image" accept="*/image">
+                              <input id="image1" type="file" class="form-control mt-2" name="image1" autocomplete="image1" accept="*/image">
+                              <input id="image2" type="file" class="form-control mt-2" name="image2" autocomplete="image2" accept="*/image">
+                            </div>
+                            <div class="four box">
+                              <input id="image" type="file" class="form-control mt-2" name="image" autocomplete="image" accept="*/image">
+                              <input id="image1" type="file" class="form-control mt-2" name="image1" autocomplete="image1" accept="*/image">
+                              <input id="image2" type="file" class="form-control mt-2" name="image2" autocomplete="image2" accept="*/image">
+                              <input id="image3" type="file" class="form-control mt-2" name="image3" autocomplete="image3" accept="*/image">
+                            </div>
+                            <div class="five box">
+                              <input id="image" type="file" class="form-control mt-2" name="image" autocomplete="image" accept="*/image">
+                              <input id="image1" type="file" class="form-control mt-2" name="image1" autocomplete="image1" accept="*/image">
+                              <input id="image2" type="file" class="form-control mt-2" name="image2" autocomplete="image2" accept="*/image">
+                              <input id="image3" type="file" class="form-control mt-2" name="image3" autocomplete="image3" accept="*/image">
+                              <input id="image4" type="file" class="form-control mt-2" name="image4" autocomplete="image4" accept="*/image">
+                            </div>
+                            <div class="six box">
+                              <input id="image" type="file" class="form-control mt-2" name="image" autocomplete="image" accept="*/image">
+                              <input id="image1" type="file" class="form-control mt-2" name="image1" autocomplete="image1" accept="*/image">
+                              <input id="image2" type="file" class="form-control mt-2" name="image2" autocomplete="image2" accept="*/image">
+                              <input id="image3" type="file" class="form-control mt-2" name="image3" autocomplete="image3" accept="*/image">
+                              <input id="image4" type="file" class="form-control mt-2" name="image4" autocomplete="image4" accept="*/image">
+                              <input id="image5" type="file" class="form-control mt-2" name="image5" autocomplete="image5" accept="*/image">
+                            </div>
+
                               <!-- <input id="image1" type="file" class="form-control mt-2" name="image1" autocomplete="image1" accept="*/image">
                               <input id="image2" type="file" class="form-control mt-2" name="image2" autocomplete="image2" accept="*/image">
                               <input id="image3" type="file" class="form-control mt-2" name="image3" autocomplete="image3" accept="*/image">
@@ -201,4 +223,33 @@ background-attachment: fixed;
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="vendor/js/bootstrap.min.js"></script>
+<script>
+
+$(document).ready(function(){
+
+    $("select").change(function(){
+
+        $(this).find("option:selected").each(function(){
+
+            var optionValue = $(this).attr("value");
+
+            if(optionValue){
+
+                $(".box").not("." + optionValue).hide();
+
+                $("." + optionValue).show();
+
+            } else{
+
+                $(".box").hide();
+
+            }
+
+        });
+
+    }).change();
+
+});
+
+</script>
 </html>

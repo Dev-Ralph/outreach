@@ -144,7 +144,8 @@ background-attachment: fixed;
                           <div class="col-md-6">
                             <div class="form-group">
                             <label for="participation" class="col-form-label text-md-right">Participation</label>
-                            <select id="participation" class="form-control mr-2 browser-default custom-select" name="participation">
+                            <select id="participation" class="form-control mr-2 browser-default custom-select" name="participation" required>
+                              <option disabled selected style="display: none;">Participation</option>
                               <option value="Chairman">Chairman</option>
                               <option value="Co-Chairman">Co-Chairman</option>
                               <option value="Committee Chairman">Committee Chairman</option>
@@ -155,7 +156,8 @@ background-attachment: fixed;
                             <hr />
                             <div class="form-group">
                             <label for="collegedepartment" class="col-form-label text-md-right">College Department</label>
-                                  <select id="collegedepartment" class="form-control mr-2 browser-default custom-select" name="collegeDepartment">
+                                  <select id="collegedepartment" class="form-control mr-2 browser-default custom-select" name="collegeDepartment" required>
+                                    <option disabled selected style="display: none;">College Department</option>
                                     <option value="Dentistry Department">Dentistry Department</option>
                                     <option value="Nursing Department">Nursing Department</option>
                                     <option value="Pharmacy and Medical Technology Department">Pharmacy and Medical Technology Department</option>

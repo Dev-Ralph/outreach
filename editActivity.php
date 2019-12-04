@@ -72,8 +72,8 @@ background-attachment: fixed;
           <?php
           require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/addActivity.php';
           if(isset($_POST['add'])){
-            $add = new addActivity($_POST['type'],$_POST['title'],$_POST['proponent'],$_POST['date'],$_POST['venue'],$_POST['target_p'],$_POST['mean'],$_POST['interpretation'],$_POST['documentation']);
-            $add->addRecord();
+            $add = new addActivity($_POST['type'],$_POST['title'],$_POST['proponent'],$_POST['date'],$_POST['venue'],$_POST['target_p'],$_POST['mean'],$_POST['documentation']);
+            $add->editRecord();
             ?>
             <div class="alert alert-success alert-dismissible fade show animated fadeInDown" role="alert">
             You added a new record successfully!
@@ -159,41 +159,20 @@ background-attachment: fixed;
                           ?>" required autocomplete="off">
                           </div>
                           <hr />
-                          <div class="form-group">
-                          <label for="target_p" class="col-form-label text-md-right">Target Participants</label>
-                          <input id="target_p" type="text" class="form-control " name="target_p" placeholder="Target Participants" value="<?php
-                          $edit->editActivity();
-                          echo "$edit->target_p";
-                          ?>" required autocomplete="off">
-                          </div>
                           </div>
                           <div class="col-md-6">
-                          <div class="card">
-                          <div class="card-header bg-white">
-                            Present Evaluation
-                          </div>
-                          <div class="card-body">
-                            <div class="form-inline">
-                              <div class="col-md-6">
+                            <div class="form-group">
+                              <label for="target_p" class="col-form-label text-md-right">Target Participants</label>
+                              <input id="target_p" type="text" class="form-control " name="target_p" placeholder="Target Participants" value="<?php
+                              $edit->editActivity();
+                              echo "$edit->target_p";
+                              ?>" required autocomplete="off">
+                            </div>
                               <label for="mean" class="col-form-label float-left">Over-all Mean</label>
                               <input id="mean" type="text" class="form-control " name="mean" placeholder="Over-all Mean" value="<?php
                               $edit->editActivity();
                               echo "$edit->mean";
                               ?>" required autocomplete="off">
-                              </div>
-                              <div class="col-md-6">
-                              <label for="interpretation" class="col-form-label float-left">Verbal Interpretation</label>
-                              <select id="interpretation" class="form-control mr-2 browser-default custom-select" name="interpretation" autofocus>
-                                <option value="Excellent" title="Title for Item 1">Excellent</option>
-                                <option value="Superior" title="Title for Item 2">Superior</option>
-                                <option value="Very Satisfactory" title="Title for Item 3">Very Satisfactory</option>
-                                <option value="Satisfactory" title="Title for Item 4">Satisfactory</option>
-                                <option value="Minimally Satisfactory" title="Title for Item 4">Minimally Satisfactory</option>
-                              </select>
-                            </div>
-                            </div>
-                          </div>
-                          </div>
                           <hr />
                           <div class="form-group">
                             <div class="alert alert-dismissible text-dark my-0" role="alert">

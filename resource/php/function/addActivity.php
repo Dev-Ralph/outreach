@@ -8,10 +8,9 @@ class addActivity extends config{
     public $venue;
     public $target_p;
     public $mean;
-    public $interpretation;
     public $documentation;
 
-public function __construct($type=null,$title=null,$proponent=null,$date=null,$venue=null,$target_p=null,$mean=null,$interpretation=null,$documentation=null){
+public function __construct($type=null,$title=null,$proponent=null,$date=null,$venue=null,$target_p=null,$mean=null,$documentation=null){
   $this->type = $type;
   $this->title = $title;
   $this->proponent = $proponent;
@@ -19,7 +18,6 @@ public function __construct($type=null,$title=null,$proponent=null,$date=null,$v
   $this->venue = $venue;
   $this->target_p = $target_p;
   $this->mean = $mean;
-  $this->interpretation = $interpretation;
   $this->documentation = $documentation;
 }
 
@@ -33,7 +31,17 @@ public function addRecord(){
     $venue = $this->venue;
     $target_p = $this->target_p;
     $mean = $this->mean;
-    $interpretation = $this->interpretation;
+    if ($mean >= 4.50) {
+      $interpretation = "Excellent";
+    }elseif ($mean >= 3.50) {
+      $interpretation = "Superior";
+    }elseif ($mean >= 2.50) {
+      $interpretation = "Very Satisfactory";
+    }elseif ($mean >= 1.50) {
+      $interpretation = "Satisfactory";
+    }elseif ($mean >= 0.50) {
+      $interpretation = "Minimally Satisfactory";
+    };
     $documentation = $this->documentation;
 
 
@@ -48,6 +56,44 @@ public function addRecord(){
 
 
     $sql = "INSERT INTO `outreach_activity`(`type`,`title`, `proponent`, `date`, `venue`, `target_p`, `mean`, `interpretation`, `documentation`, `image`) VALUES (?,?,?,?,?,?,?,?,?,?)";
+    $data = $pdo->prepare($sql);
+    $data->execute([$type,$title,$proponent,$date,$venue,$target_p,$mean,$interpretation,$documentation,$documentationImage]);
+}
+public function editRecord(){
+    $config = new config;
+    $pdo = $config ->Con();
+    $outreach_activity_id = $_GET['outreach_activity_id'];
+    $type = $this->type;
+    $title = $this->title;
+    $proponent = $this->proponent;
+    $date = $this->date;
+    $venue = $this->venue;
+    $target_p = $this->target_p;
+    $mean = $this->mean;
+    if ($mean >= 4.50) {
+      $interpretation = "Excellent";
+    }elseif ($mean >= 3.50) {
+      $interpretation = "Superior";
+    }elseif ($mean >= 2.50) {
+      $interpretation = "Very Satisfactory";
+    }elseif ($mean >= 1.50) {
+      $interpretation = "Satisfactory";
+    }elseif ($mean >= 0.50) {
+      $interpretation = "Minimally Satisfactory";
+    };
+    $documentation = $this->documentation;
+
+
+    $images=$_FILES['image']['name'];
+    $tmp_dir=$_FILES['image']['tmp_name'];
+    $imageSize=$_FILES['image']['size'];
+    $upload_dir='uploads/';
+    $imgExt=strtolower(pathinfo($images,PATHINFO_EXTENSION));
+    $valid_extensions=array('jpeg', 'jpg', 'png');
+    $documentationImage=rand(1000, 1000000).".".$imgExt;
+    move_uploaded_file($tmp_dir, $upload_dir.$documentationImage);
+
+    $sql = "UPDATE `outreach_activity` SET `type`= ?,`title`= ?,`proponent`= ?,`date`= ?,`venue`= ?,`target_p`= ?,`mean`= ?,`interpretation`= ?,`documentation`= ?,`image`= ? WHERE `outreach_activity_id` = '$outreach_activity_id'";
     $data = $pdo->prepare($sql);
     $data->execute([$type,$title,$proponent,$date,$venue,$target_p,$mean,$interpretation,$documentation,$documentationImage]);
   }

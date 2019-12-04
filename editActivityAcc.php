@@ -85,7 +85,7 @@ background-attachment: fixed;
           <?php
           require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/editAccount.php';
           if(isset($_POST['save'])){
-            $edit = new editAccount($_POST['username'],$_POST['password']);
+            $edit = new editAccount($_POST['username'],$_POST['password'],$_POST['email']);
             $edit->changeAccount();
             ?>
             <div class="alert alert-success alert-dismissible fade show animated fadeInDown mt-4 mb-0" role="alert">
@@ -124,6 +124,14 @@ background-attachment: fixed;
                           <div class="input-group-append">
                             <span class="input-group-text"><i class="fa fa-eye"></i></span>
                           </div>
+                        </div>
+                        <div class="form-group mt-3">
+                        <label for="email" class="col-form-label text-md-right">Email</label>
+                        <input id="email" type="text" class="form-control " name="email" placeholder="Email" value="<?php
+                          $edit = new editAccount;
+                          $edit->accountId();
+                          echo "$edit->email";
+                          ?>" required autocomplete="off">
                         </div>
                           <div class="form-group row justify-content-center">
                             <div class="col-md-12 text-center">

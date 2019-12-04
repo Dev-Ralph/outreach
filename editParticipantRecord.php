@@ -74,7 +74,7 @@ background-attachment: fixed;
           require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/add.php';
           if(isset($_POST['add'])){
             $add = new add(null,$_POST['title'],null,null,$_POST['schl_number'],$_POST['p_lastname'],$_POST['p_firstname'],$_POST['p_middlename'],$_POST['participation'],$_POST['collegeDepartment'],$_POST['proponent']);
-            $add->addRecord();
+            $add->editRecord();
             ?>
             <div class="alert alert-success alert-dismissible fade show animated fadeInDown" role="alert">
             You added a new record successfully!

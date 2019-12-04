@@ -62,6 +62,21 @@ background-attachment: fixed;
           $edit->login();
         }
         ?>
+        <?php
+        $sent = $_GET['sent'];
+        if ($sent == "true") {
+          ?>
+          <div class="container">
+          <div class="alert alert-success alert-dismissible fade show mt-3 mb-0 animated zoomIn" role="alert">
+          Account details has been sent to your email.
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      </div>
+      <?php
+        }
+         ?>
           <div class="d-flex justify-content-center h-100">
             <div class="user_card animated zoomIn">
               <div class="d-flex justify-content-center">
@@ -87,12 +102,10 @@ background-attachment: fixed;
               <div class="d-flex justify-content-center mt-3 login_container">
                 <button type="submit" name="login" class="btn login_btn">Login</button>
               </div>
-            </form>
-            <form method="POST" action="send_mail.php">
-              <div class="submit">
-                <input class="btn" type="submit" value="Forgot Password?" />
+              <div class="d-flex justify-content-center mt-3">
+              <a href="send_mail.php">Retrive Account</a>
               </div>
-              </form>
+            </form>
             </div>
           </div>
       </div>
