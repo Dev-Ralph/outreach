@@ -86,7 +86,7 @@ background-attachment: fixed;
                         </span> -->
 
                         <li class="nav-item"><a class="nav-link text-dark mr-2 mt-3" href="dataTable.php"><span style="color:#d75093"><i class="fas fa-chart-bar" ></i> Analytics</span></a></li>
-                        <li class="nav-item"><a class="nav-link text-dark mr-2 mt-3" href="viewParticipants.php"><span style="color:#d75093"><i class="fas fa-user-friends"></i> View Participants</span></a></li>
+                        <li class="nav-item"><a class="nav-link text-dark mr-2 mt-3" href="viewParticipants.php?pg=activity"><span style="color:#d75093"><i class="fas fa-user-friends"></i> View Participants</span></a></li>
                         <li class="nav-item"><a class="nav-link text-dark mr-2 mt-3" href="addActivity.php"><span style="color:#d75093"><i class="fas fa-pen-nib"></i> Add activity</span></a></li>
                         <li class="nav-item"><a class="nav-link text-dark mr-2 mt-3" href="add.php"><span style="color:#d75093"><i class="fas fa-user"></i> Add participant</span></a></li>
                       <li class="nav-item"><div class="dropdown py-2">

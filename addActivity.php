@@ -99,10 +99,10 @@ background-attachment: fixed;
                           <label for="type" class="col-form-label text-md-right">Outreach Program</label>
                           <select id="type" class="form-control mr-2 text-dark browser-default custom-select" name="type" autofocus required>
                             <option disabled selected style="display: none;">Outreach Program</option>
-                            <option value="Literacy & Numeracy" title="Title for Item 1">Literacy & Numeracy</option>
-                            <option value="Health & Wellness" title="Title for Item 2">Health & Wellness</option>
-                            <option value="Environment Care" title="Title for Item 3">Environment Care</option>
-                            <option value="Livelihood & Entrepreneurship" title="Title for Item 4">Livelihood & Entrepreneurship</option>
+                            <option value="Literacy & Numeracy">Literacy & Numeracy</option>
+                            <option value="Health & Wellness">Health & Wellness</option>
+                            <option value="Environment Care">Environment Care</option>
+                            <option value="Livelihood & Entrepreneurship">Livelihood & Entrepreneurship</option>
                           </select>
                           </div>
                           <hr />

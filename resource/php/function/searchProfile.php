@@ -11,6 +11,7 @@ public function __construct($search=null,$down=null){
 public function viewAll(){
             $config = new config;
             $pdo = $config->Con();
+            $pg = $_GET['pg'];
             $limit = 10;
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $s = $pdo->prepare("SELECT * FROM `outreach_participant`");
@@ -41,7 +42,7 @@ public function viewAll(){
             echo '<td class="text-center">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
             echo '<td class="text-center">'.$result->schl_number.'</td>';
             echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
-            echo '<td class="text-center"> <a class="btn btn-outline-primary" href="viewProfile.php?schl_number='.$result->schl_number.'""><i class="fas fa-eye mr-1"></i>View</a></td>';
+            echo '<td class="text-center"> <a class="btn btn-outline-primary" href="viewProfile.php?pg='.$pg.'&schl_number='.$result->schl_number.'""><i class="fas fa-eye mr-1"></i>View</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -61,6 +62,7 @@ public function searchProfileID(){
             $pdo = $config->Con();
             $search = $_GET['search'];
             $down = $_GET['down'];
+            $pg = $_GET['pg'];
             $s = $pdo->prepare("SELECT * FROM `outreach_participant` WHERE `$down` LIKE ? ORDER BY `schl_number`");
             $s->execute(["%$search%"]);
             $allResp = $s->fetchAll(PDO::FETCH_ASSOC);
@@ -102,7 +104,7 @@ public function searchProfileID(){
             echo '<td class="text-center">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
             echo '<td class="text-center">'.$result->schl_number.'</td>';
             echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
-            echo '<td class="text-center"> <a class="btn btn-outline-primary" href="viewProfile.php?schl_number='.$result->schl_number.'""><i class="fas fa-eye mr-1"></i>View</a></td>';
+            echo '<td class="text-center"> <a class="btn btn-outline-primary" href="viewProfile.php?pg='.$pg.'&schl_number='.$result->schl_number.'""><i class="fas fa-eye mr-1"></i>View</a></td>';
             echo '</tr>';
             }
             echo '</table>';
