@@ -41,6 +41,8 @@ public function addRecord(){
       $interpretation = "Satisfactory";
     }elseif ($mean >= 0.50) {
       $interpretation = "Minimally Satisfactory";
+    }else {
+      $interpretation = "Invalid input!";
     };
     $documentation = $this->documentation;
 
@@ -54,10 +56,55 @@ public function addRecord(){
     $documentationImage=rand(1000, 1000000).".".$imgExt;
     move_uploaded_file($tmp_dir, $upload_dir.$documentationImage);
 
+    $images=$_FILES['image1']['name'];
+    $tmp_dir=$_FILES['image1']['tmp_name'];
+    $imageSize=$_FILES['image1']['size'];
+    $upload_dir='uploads/';
+    $imgExt=strtolower(pathinfo($images,PATHINFO_EXTENSION));
+    $valid_extensions=array('jpeg', 'jpg', 'png');
+    $documentationImage1=rand(1000, 1000000).".".$imgExt;
+    move_uploaded_file($tmp_dir, $upload_dir.$documentationImage1);
 
-    $sql = "INSERT INTO `outreach_activity`(`type`,`title`, `proponent`, `date`, `venue`, `target_p`, `mean`, `interpretation`, `documentation`, `image`) VALUES (?,?,?,?,?,?,?,?,?,?)";
+    $images=$_FILES['image2']['name'];
+    $tmp_dir=$_FILES['image2']['tmp_name'];
+    $imageSize=$_FILES['image2']['size'];
+    $upload_dir='uploads/';
+    $imgExt=strtolower(pathinfo($images,PATHINFO_EXTENSION));
+    $valid_extensions=array('jpeg', 'jpg', 'png');
+    $documentationImage2=rand(1000, 1000000).".".$imgExt;
+    move_uploaded_file($tmp_dir, $upload_dir.$documentationImage2);
+
+    $images=$_FILES['image3']['name'];
+    $tmp_dir=$_FILES['image3']['tmp_name'];
+    $imageSize=$_FILES['image3']['size'];
+    $upload_dir='uploads/';
+    $imgExt=strtolower(pathinfo($images,PATHINFO_EXTENSION));
+    $valid_extensions=array('jpeg', 'jpg', 'png');
+    $documentationImage3=rand(1000, 1000000).".".$imgExt;
+    move_uploaded_file($tmp_dir, $upload_dir.$documentationImage3);
+
+    $images=$_FILES['image4']['name'];
+    $tmp_dir=$_FILES['image4']['tmp_name'];
+    $imageSize=$_FILES['image4']['size'];
+    $upload_dir='uploads/';
+    $imgExt=strtolower(pathinfo($images,PATHINFO_EXTENSION));
+    $valid_extensions=array('jpeg', 'jpg', 'png');
+    $documentationImage4=rand(1000, 1000000).".".$imgExt;
+    move_uploaded_file($tmp_dir, $upload_dir.$documentationImage4);
+
+    $images=$_FILES['image5']['name'];
+    $tmp_dir=$_FILES['image5']['tmp_name'];
+    $imageSize=$_FILES['image5']['size'];
+    $upload_dir='uploads/';
+    $imgExt=strtolower(pathinfo($images,PATHINFO_EXTENSION));
+    $valid_extensions=array('jpeg', 'jpg', 'png');
+    $documentationImage5=rand(1000, 1000000).".".$imgExt;
+    move_uploaded_file($tmp_dir, $upload_dir.$documentationImage5);
+
+
+    $sql = "INSERT INTO `outreach_activity`(`type`,`title`, `proponent`, `date`, `venue`, `target_p`, `mean`, `interpretation`, `documentation`, `image` ,`image1`, `image2`, `image3`, `image4`, `image5`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
     $data = $pdo->prepare($sql);
-    $data->execute([$type,$title,$proponent,$date,$venue,$target_p,$mean,$interpretation,$documentation,$documentationImage]);
+    $data->execute([$type,$title,$proponent,$date,$venue,$target_p,$mean,$interpretation,$documentation,$documentationImage,$documentationImage1,$documentationImage2,$documentationImage3,$documentationImage4,$documentationImage5]);
 }
 public function editRecord(){
     $config = new config;
@@ -80,6 +127,8 @@ public function editRecord(){
       $interpretation = "Satisfactory";
     }elseif ($mean >= 0.50) {
       $interpretation = "Minimally Satisfactory";
+    }else {
+      $interpretation = "Invalid input!";
     };
     $documentation = $this->documentation;
 
@@ -93,9 +142,54 @@ public function editRecord(){
     $documentationImage=rand(1000, 1000000).".".$imgExt;
     move_uploaded_file($tmp_dir, $upload_dir.$documentationImage);
 
-    $sql = "UPDATE `outreach_activity` SET `type`= ?,`title`= ?,`proponent`= ?,`date`= ?,`venue`= ?,`target_p`= ?,`mean`= ?,`interpretation`= ?,`documentation`= ?,`image`= ? WHERE `outreach_activity_id` = '$outreach_activity_id'";
+    $images=$_FILES['image1']['name'];
+    $tmp_dir=$_FILES['image1']['tmp_name'];
+    $imageSize=$_FILES['image1']['size'];
+    $upload_dir='uploads/';
+    $imgExt=strtolower(pathinfo($images,PATHINFO_EXTENSION));
+    $valid_extensions=array('jpeg', 'jpg', 'png');
+    $documentationImage1=rand(1000, 1000000).".".$imgExt;
+    move_uploaded_file($tmp_dir, $upload_dir.$documentationImage1);
+
+    $images=$_FILES['image2']['name'];
+    $tmp_dir=$_FILES['image2']['tmp_name'];
+    $imageSize=$_FILES['image2']['size'];
+    $upload_dir='uploads/';
+    $imgExt=strtolower(pathinfo($images,PATHINFO_EXTENSION));
+    $valid_extensions=array('jpeg', 'jpg', 'png');
+    $documentationImage2=rand(1000, 1000000).".".$imgExt;
+    move_uploaded_file($tmp_dir, $upload_dir.$documentationImage2);
+
+    $images=$_FILES['image3']['name'];
+    $tmp_dir=$_FILES['image3']['tmp_name'];
+    $imageSize=$_FILES['image3']['size'];
+    $upload_dir='uploads/';
+    $imgExt=strtolower(pathinfo($images,PATHINFO_EXTENSION));
+    $valid_extensions=array('jpeg', 'jpg', 'png');
+    $documentationImage3=rand(1000, 1000000).".".$imgExt;
+    move_uploaded_file($tmp_dir, $upload_dir.$documentationImage3);
+
+    $images=$_FILES['image4']['name'];
+    $tmp_dir=$_FILES['image4']['tmp_name'];
+    $imageSize=$_FILES['image4']['size'];
+    $upload_dir='uploads/';
+    $imgExt=strtolower(pathinfo($images,PATHINFO_EXTENSION));
+    $valid_extensions=array('jpeg', 'jpg', 'png');
+    $documentationImage4=rand(1000, 1000000).".".$imgExt;
+    move_uploaded_file($tmp_dir, $upload_dir.$documentationImage4);
+
+    $images=$_FILES['image5']['name'];
+    $tmp_dir=$_FILES['image5']['tmp_name'];
+    $imageSize=$_FILES['image5']['size'];
+    $upload_dir='uploads/';
+    $imgExt=strtolower(pathinfo($images,PATHINFO_EXTENSION));
+    $valid_extensions=array('jpeg', 'jpg', 'png');
+    $documentationImage5=rand(1000, 1000000).".".$imgExt;
+    move_uploaded_file($tmp_dir, $upload_dir.$documentationImage5);
+
+    $sql = "UPDATE `outreach_activity` SET `type`= ?,`title`= ?,`proponent`= ?,`date`= ?,`venue`= ?,`target_p`= ?,`mean`= ?,`interpretation`= ?,`documentation`= ?,`image`= ?, `image1`= ?,`image2`= ?,`image3`= ?,`image4`= ?,`image5`= ? WHERE `outreach_activity_id` = '$outreach_activity_id'";
     $data = $pdo->prepare($sql);
-    $data->execute([$type,$title,$proponent,$date,$venue,$target_p,$mean,$interpretation,$documentation,$documentationImage]);
+    $data->execute([$type,$title,$proponent,$date,$venue,$target_p,$mean,$interpretation,$documentation,$documentationImage,$documentationImage1,$documentationImage2,$documentationImage3,$documentationImage4,$documentationImage5]);
   }
 }
 ?>

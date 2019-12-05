@@ -36,8 +36,8 @@ public function viewAll(){
               $results = $data->fetchAll(PDO::FETCH_OBJ);
 
               echo '<table style="width:100%" class="table">';
-              echo '<tr style="color:#d74f95">';
-              echo '<th class="text-center"><i class="fas fa-book mr-1"></i>Activity</th> <th class="text-center"><i class="fas fa-table mr-1"></i>Date</th><th class="text-center"><i class="fas fa-map-marker-alt mr-1"></i>Venue</th> <th class="text-center"><i class="fas fa-user mr-1"></i>Target Participants</th> <th class="text-center"><i class="fas fa-users mr-1"></i>Proponent</th> <th class="text-center"><i class="fas fa-chart-line mr-1"></i>Mean</th> <th class="text-center"><i class="fas fa-star mr-1"></i>Interpretation</th> <th class="text-center"><i class="fas fa-tasks mr-1"></i>Action</th>';
+              echo '<tr style="color:#d75093">';
+              echo '<th class="text-center"></i>Activity</th> <th class="text-center">Date</th><th class="text-center">Venue</th> <th class="text-center">Target Participants</th> <th class="text-center">Proponent</th> <th class="text-center">Mean</th> <th class="text-center">Interpretation</th> <th class="text-center">Action</th>';
               echo '</tr>';
               foreach ($results as $result) {
               echo '<tr>';
@@ -48,7 +48,7 @@ public function viewAll(){
               echo '<td class="text-center">'.$result->proponent.'</td>';
               echo '<td class="text-center">'.$result->mean.'</td>';
               echo '<td class="text-center">'.$result->interpretation.'</td>';
-              echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-info" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-users mr-2"></i>Participants</a> <a class="btn btn-outline-primary mt-1" href="editActivity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
+              echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-primary" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-users mr-2"></i>Participants</a> <a class="btn btn-outline-primary mt-1" href="editActivity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
               echo '</tr>';
               }
               echo '</table>';
@@ -117,8 +117,8 @@ public function viewAllLiteracy(){
 
             echo '<table style="width:100%" class="table">';
             echo '<tr>';
-echo '<tr style="color:#d74f95">';
-echo '<th class="text-center"><i class="fas fa-book mr-1"></i>Activity</th> <th class="text-center"><i class="fas fa-table mr-1"></i>Date</th><th class="text-center"><i class="fas fa-map-marker-alt mr-1"></i>Venue</th> <th class="text-center"><i class="fas fa-user mr-1"></i>Target Participants</th> <th class="text-center"><i class="fas fa-users mr-1"></i>Proponent</th> <th class="text-center"><i class="fas fa-chart-line mr-1"></i>Mean</th> <th class="text-center"><i class="fas fa-star mr-1"></i>Interpretation</th> <th class="text-center"><i class="fas fa-tasks mr-1"></i>Action</th>';
+echo '<tr style="color:#d75093">';
+echo '<th class="text-center"></i>Activity</th> <th class="text-center">Date</th><th class="text-center">Venue</th> <th class="text-center">Target Participants</th> <th class="text-center">Proponent</th> <th class="text-center">Mean</th> <th class="text-center">Interpretation</th> <th class="text-center">Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -129,7 +129,7 @@ echo '<th class="text-center"><i class="fas fa-book mr-1"></i>Activity</th> <th 
             echo '<td class="text-center">'.$result->proponent.'</td>';
             echo '<td class="text-center">'.$result->mean.'</td>';
             echo '<td class="text-center">'.$result->interpretation.'</td>';
-            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-info" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-users mr-2"></i>Participants</a> <a class="btn btn-outline-success mt-1" href="editActivity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
+            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-primary" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-users mr-2"></i>Participants</a> <a class="btn btn-outline-primary mt-1" href="editActivity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -197,8 +197,8 @@ public function viewAllHealth(){
             $results = $data->fetchAll(PDO::FETCH_OBJ);
 
             echo '<table style="width:100%" class="table">';
-echo '<tr style="color:#d74f95">';
-echo '<th class="text-center"><i class="fas fa-book mr-1"></i>Activity</th> <th class="text-center"><i class="fas fa-table mr-1"></i>Date</th><th class="text-center"><i class="fas fa-map-marker-alt mr-1"></i>Venue</th> <th class="text-center"><i class="fas fa-user mr-1"></i>Target Participants</th> <th class="text-center"><i class="fas fa-users mr-1"></i>Proponent</th> <th class="text-center"><i class="fas fa-chart-line mr-1"></i>Mean</th> <th class="text-center"><i class="fas fa-star mr-1"></i>Interpretation</th> <th class="text-center"><i class="fas fa-tasks mr-1"></i>Action</th>';
+echo '<tr style="color:#d75093">';
+echo '<th class="text-center"></i>Activity</th> <th class="text-center">Date</th><th class="text-center">Venue</th> <th class="text-center">Target Participants</th> <th class="text-center">Proponent</th> <th class="text-center">Mean</th> <th class="text-center">Interpretation</th> <th class="text-center">Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -209,7 +209,7 @@ echo '<th class="text-center"><i class="fas fa-book mr-1"></i>Activity</th> <th 
             echo '<td class="text-center">'.$result->proponent.'</td>';
             echo '<td class="text-center">'.$result->mean.'</td>';
             echo '<td class="text-center">'.$result->interpretation.'</td>';
-            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-info" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-users mr-2"></i>Participants</a> <a class="btn btn-outline-success mt-1" href="editActivity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
+            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-primary" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-users mr-2"></i>Participants</a> <a class="btn btn-outline-primary mt-1" href="editActivity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -277,8 +277,8 @@ public function viewAllEnvironment(){
             $results = $data->fetchAll(PDO::FETCH_OBJ);
 
             echo '<table style="width:100%" class="table">';
-echo '<tr style="color:#d74f95">';
-echo '<th class="text-center"><i class="fas fa-book mr-1"></i>Activity</th> <th class="text-center"><i class="fas fa-table mr-1"></i>Date</th><th class="text-center"><i class="fas fa-map-marker-alt mr-1"></i>Venue</th> <th class="text-center"><i class="fas fa-user mr-1"></i>Target Participants</th> <th class="text-center"><i class="fas fa-users mr-1"></i>Proponent</th> <th class="text-center"><i class="fas fa-chart-line mr-1"></i>Mean</th> <th class="text-center"><i class="fas fa-star mr-1"></i>Interpretation</th> <th class="text-center"><i class="fas fa-tasks mr-1"></i>Action</th>';
+echo '<tr style="color:#d75093">';
+echo '<th class="text-center"></i>Activity</th> <th class="text-center">Date</th><th class="text-center">Venue</th> <th class="text-center">Target Participants</th> <th class="text-center">Proponent</th> <th class="text-center">Mean</th> <th class="text-center">Interpretation</th> <th class="text-center">Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -289,7 +289,7 @@ echo '<th class="text-center"><i class="fas fa-book mr-1"></i>Activity</th> <th 
             echo '<td class="text-center">'.$result->proponent.'</td>';
             echo '<td class="text-center">'.$result->mean.'</td>';
             echo '<td class="text-center">'.$result->interpretation.'</td>';
-            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-info" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-users mr-2"></i>Participants</a> <a class="btn btn-outline-success mt-1" href="editActivity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
+            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-primary" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-users mr-2"></i>Participants</a> <a class="btn btn-outline-primary mt-1" href="editActivity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -357,8 +357,8 @@ public function viewAllLivelihood(){
             $results = $data->fetchAll(PDO::FETCH_OBJ);
 
             echo '<table style="width:100%" class="table">';
-echo '<tr style="color:#d74f95">';
-echo '<th class="text-center"><i class="fas fa-book mr-1"></i>Activity</th> <th class="text-center"><i class="fas fa-table mr-1"></i>Date</th><th class="text-center"><i class="fas fa-map-marker-alt mr-1"></i>Venue</th> <th class="text-center"><i class="fas fa-user mr-1"></i>Target Participants</th> <th class="text-center"><i class="fas fa-users mr-1"></i>Proponent</th> <th class="text-center"><i class="fas fa-chart-line mr-1"></i>Mean</th> <th class="text-center"><i class="fas fa-star mr-1"></i>Interpretation</th> <th class="text-center"><i class="fas fa-tasks mr-1"></i>Action</th>';
+echo '<tr style="color:#d75093">';
+echo '<th class="text-center"></i>Activity</th> <th class="text-center">Date</th><th class="text-center">Venue</th> <th class="text-center">Target Participants</th> <th class="text-center">Proponent</th> <th class="text-center">Mean</th> <th class="text-center">Interpretation</th> <th class="text-center">Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -369,7 +369,7 @@ echo '<th class="text-center"><i class="fas fa-book mr-1"></i>Activity</th> <th 
             echo '<td class="text-center">'.$result->proponent.'</td>';
             echo '<td class="text-center">'.$result->mean.'</td>';
             echo '<td class="text-center">'.$result->interpretation.'</td>';
-            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-info" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-users mr-2"></i>Participants</a> <a class="btn btn-outline-success mt-1" href="editActivity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
+            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-primary" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-users mr-2"></i>Participants</a> <a class="btn btn-outline-primary mt-1" href="editActivity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -431,8 +431,8 @@ public function viewAllSearch(){
             $results = $data->fetchAll();
 
             echo '<table style="width:100%" class="table">';
-echo '<tr style="color:#d74f95">';
-echo '<th class="text-center"><i class="fas fa-book mr-1"></i>Activity</th> <th class="text-center"><i class="fas fa-table mr-1"></i>Date</th><th class="text-center"><i class="fas fa-map-marker-alt mr-1"></i>Venue</th> <th class="text-center"><i class="fas fa-user mr-1"></i>Target Participants</th> <th class="text-center"><i class="fas fa-users mr-1"></i>Proponent</th> <th class="text-center"><i class="fas fa-chart-line mr-1"></i>Mean</th> <th class="text-center"><i class="fas fa-star mr-1"></i>Interpretation</th> <th class="text-center"><i class="fas fa-tasks mr-1"></i>Action</th>';
+echo '<tr style="color:#d75093">';
+echo '<th class="text-center"></i>Activity</th> <th class="text-center">Date</th><th class="text-center">Venue</th> <th class="text-center">Target Participants</th> <th class="text-center">Proponent</th> <th class="text-center">Mean</th> <th class="text-center">Interpretation</th> <th class="text-center">Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -443,7 +443,7 @@ echo '<th class="text-center"><i class="fas fa-book mr-1"></i>Activity</th> <th 
             echo '<td class="text-center">'.$result->proponent.'</td>';
             echo '<td class="text-center">'.$result->mean.'</td>';
             echo '<td class="text-center">'.$result->interpretation.'</td>';
-            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-info" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-users mr-2"></i>Participants</a> <a class="btn btn-outline-success mt-1" href="editActivity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
+            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-primary" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-users mr-2"></i>Participants</a> <a class="btn btn-outline-primary mt-1" href="editActivity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -506,8 +506,8 @@ public function viewAllLiteracySearch(){
             $results = $data->fetchAll();
 
             echo '<table style="width:100%" class="table">';
-echo '<tr style="color:#d74f95">';
-echo '<th class="text-center"><i class="fas fa-book mr-1"></i>Activity</th> <th class="text-center"><i class="fas fa-table mr-1"></i>Date</th><th class="text-center"><i class="fas fa-map-marker-alt mr-1"></i>Venue</th> <th class="text-center"><i class="fas fa-user mr-1"></i>Target Participants</th> <th class="text-center"><i class="fas fa-users mr-1"></i>Proponent</th> <th class="text-center"><i class="fas fa-chart-line mr-1"></i>Mean</th> <th class="text-center"><i class="fas fa-star mr-1"></i>Interpretation</th> <th class="text-center"><i class="fas fa-tasks mr-1"></i>Action</th>';
+echo '<tr style="color:#d75093">';
+echo '<th class="text-center"></i>Activity</th> <th class="text-center">Date</th><th class="text-center">Venue</th> <th class="text-center">Target Participants</th> <th class="text-center">Proponent</th> <th class="text-center">Mean</th> <th class="text-center">Interpretation</th> <th class="text-center">Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -518,7 +518,7 @@ echo '<th class="text-center"><i class="fas fa-book mr-1"></i>Activity</th> <th 
             echo '<td class="text-center">'.$result->proponent.'</td>';
             echo '<td class="text-center">'.$result->mean.'</td>';
             echo '<td class="text-center">'.$result->interpretation.'</td>';
-            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-info" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-users mr-2"></i>Participants</a> <a class="btn btn-outline-success mt-1" href="editActivity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
+            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-primary" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-users mr-2"></i>Participants</a> <a class="btn btn-outline-primary mt-1" href="editActivity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -581,8 +581,8 @@ public function viewAllHealthSearch(){
             $results = $data->fetchAll();
 
             echo '<table style="width:100%" class="table">';
-echo '<tr style="color:#d74f95">';
-echo '<th class="text-center"><i class="fas fa-book mr-1"></i>Activity</th> <th class="text-center"><i class="fas fa-table mr-1"></i>Date</th><th class="text-center"><i class="fas fa-map-marker-alt mr-1"></i>Venue</th> <th class="text-center"><i class="fas fa-user mr-1"></i>Target Participants</th> <th class="text-center"><i class="fas fa-users mr-1"></i>Proponent</th> <th class="text-center"><i class="fas fa-chart-line mr-1"></i>Mean</th> <th class="text-center"><i class="fas fa-star mr-1"></i>Interpretation</th> <th class="text-center"><i class="fas fa-tasks mr-1"></i>Action</th>';
+echo '<tr style="color:#d75093">';
+echo '<th class="text-center"></i>Activity</th> <th class="text-center">Date</th><th class="text-center">Venue</th> <th class="text-center">Target Participants</th> <th class="text-center">Proponent</th> <th class="text-center">Mean</th> <th class="text-center">Interpretation</th> <th class="text-center">Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -593,7 +593,7 @@ echo '<th class="text-center"><i class="fas fa-book mr-1"></i>Activity</th> <th 
             echo '<td class="text-center">'.$result->proponent.'</td>';
             echo '<td class="text-center">'.$result->mean.'</td>';
             echo '<td class="text-center">'.$result->interpretation.'</td>';
-            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-info" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-users mr-2"></i>Participants</a> <a class="btn btn-outline-success mt-1" href="editActivity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
+            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-primary" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-users mr-2"></i>Participants</a> <a class="btn btn-outline-primary mt-1" href="editActivity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -657,8 +657,8 @@ public function viewAllEnvironmentSearch(){
             $results = $data->fetchAll();
 
             echo '<table style="width:100%" class="table">';
-echo '<tr style="color:#d74f95">';
-echo '<th class="text-center"><i class="fas fa-book mr-1"></i>Activity</th> <th class="text-center"><i class="fas fa-table mr-1"></i>Date</th><th class="text-center"><i class="fas fa-map-marker-alt mr-1"></i>Venue</th> <th class="text-center"><i class="fas fa-user mr-1"></i>Target Participants</th> <th class="text-center"><i class="fas fa-users mr-1"></i>Proponent</th> <th class="text-center"><i class="fas fa-chart-line mr-1"></i>Mean</th> <th class="text-center"><i class="fas fa-star mr-1"></i>Interpretation</th> <th class="text-center"><i class="fas fa-tasks mr-1"></i>Action</th>';
+echo '<tr style="color:#d75093">';
+echo '<th class="text-center"></i>Activity</th> <th class="text-center">Date</th><th class="text-center">Venue</th> <th class="text-center">Target Participants</th> <th class="text-center">Proponent</th> <th class="text-center">Mean</th> <th class="text-center">Interpretation</th> <th class="text-center">Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -669,7 +669,7 @@ echo '<th class="text-center"><i class="fas fa-book mr-1"></i>Activity</th> <th 
             echo '<td class="text-center">'.$result->proponent.'</td>';
             echo '<td class="text-center">'.$result->mean.'</td>';
             echo '<td class="text-center">'.$result->interpretation.'</td>';
-            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-info" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-users mr-2"></i>Participants</a> <a class="btn btn-outline-success mt-1" href="editActivity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
+            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-primary" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-users mr-2"></i>Participants</a> <a class="btn btn-outline-primary mt-1" href="editActivity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -733,8 +733,8 @@ public function viewAllLivelihoodSearch(){
             $results = $data->fetchAll();
 
             echo '<table style="width:100%" class="table">';
-echo '<tr style="color:#d74f95">';
-echo '<th class="text-center"><i class="fas fa-book mr-1"></i>Activity</th> <th class="text-center"><i class="fas fa-table mr-1"></i>Date</th><th class="text-center"><i class="fas fa-map-marker-alt mr-1"></i>Venue</th> <th class="text-center"><i class="fas fa-user mr-1"></i>Target Participants</th> <th class="text-center"><i class="fas fa-users mr-1"></i>Proponent</th> <th class="text-center"><i class="fas fa-chart-line mr-1"></i>Mean</th> <th class="text-center"><i class="fas fa-star mr-1"></i>Interpretation</th> <th class="text-center"><i class="fas fa-tasks mr-1"></i>Action</th>';
+echo '<tr style="color:#d75093">';
+echo '<th class="text-center"></i>Activity</th> <th class="text-center">Date</th><th class="text-center">Venue</th> <th class="text-center">Target Participants</th> <th class="text-center">Proponent</th> <th class="text-center">Mean</th> <th class="text-center">Interpretation</th> <th class="text-center">Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -745,7 +745,7 @@ echo '<th class="text-center"><i class="fas fa-book mr-1"></i>Activity</th> <th 
             echo '<td class="text-center">'.$result->proponent.'</td>';
             echo '<td class="text-center">'.$result->mean.'</td>';
             echo '<td class="text-center">'.$result->interpretation.'</td>';
-            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-info" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-users mr-2"></i>Participants</a> <a class="btn btn-outline-success mt-1" href="editActivity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
+            echo  '<td class="text-center"> <a class="btn btn-outline-primary" href="viewData.php?outreach_activity_id='.$result->outreach_activity_id.'""><i class="fas fa-eye mr-1"></i>View</a> <a class="btn btn-outline-primary" href="tableActivity2.php?act_title='.$result->title.'""><i class="fas fa-users mr-2"></i>Participants</a> <a class="btn btn-outline-primary mt-1" href="editActivity.php?outreach_activity_id='.$result->outreach_activity_id.'&title='.$row->title.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
             echo '</tr>';
             }
             echo '</table>';

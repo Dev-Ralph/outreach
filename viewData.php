@@ -61,7 +61,7 @@ background-attachment: fixed;
                 <ul class="navbar-nav ml-auto">
                   <form action="" method="GET" class="form-inline my-2 my-lg-0">
                     <input  type="button" class="btn btn-primary float-right mr-3 mt-3 px-3" value="Print" onClick="window.print()">
-                    <li class="nav-item"><a class="nav-link text-dark mr-3 mt-3" href="participant.php"><i class="fas fa-arrow-left mr-1"></i>Return</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark mr-3 mt-3" href="activity.php"><i class="fas fa-arrow-left mr-1"></i>Return</a></li>
                   </form>
                 </ul>
               </div>
@@ -83,9 +83,108 @@ background-attachment: fixed;
             foreach ($results as $result) {
             ?>
             <div class="mt-5 mb-2 container-fluid text-center">
-              <div class="col-md-12">
-              <img src="uploads/<?php echo $result->image;?>" style="height:350px;; width:auto;">
-              </div>
+              <?php
+              $image = $result->image;
+              $image1 = $result->image1;
+              $image2 = $result->image2;
+              $image3 = $result->image3;
+              $image4 = $result->image4;
+              $image5 = $result->image5;
+              if (empty($image5) && empty($image4) && empty($image3) && empty($image2) && empty($image1) && !empty($image)) {
+                ?>
+                <div class="row">
+                <div class="col-md-12">
+                <img src="uploads/<?php echo $result->image;?>" style="height:350px; width:auto;">
+                </div>
+                </div>
+                <?php
+              }elseif (empty($image5) && empty($image4) && empty($image3) && empty($image2) && !empty($image1) && !empty($image)) {
+                ?>
+                <div class="row">
+                <div class="col">
+                <img src="uploads/<?php echo $result->image;?>" style="height:350px; width:auto;">
+                </div>
+                <div class="col">
+                <img src="uploads/<?php echo $result->image1;?>" style="height:350px;; width:auto;">
+                </div>
+                </div>
+                <?php
+              }elseif (empty($image5) && empty($image4) && empty($image3) && !empty($image2) && !empty($image1) && !empty($image)) {
+                ?>
+                <div class="row">
+                <div class="col">
+                <img src="uploads/<?php echo $result->image;?>" style="height:350px; width:auto;">
+                </div>
+                <div class="col">
+                <img src="uploads/<?php echo $result->image1;?>" style="height:350px;; width:auto;">
+                </div>
+                <div class="col">
+                <img src="uploads/<?php echo $result->image2;?>" style="height:350px;; width:auto;">
+                </div>
+                </div>
+                <?php
+              }elseif (empty($image5) && empty($image4) && !empty($image3) && !empty($image2) && !empty($image1) && !empty($image)) {
+                ?>
+                <div class="row">
+                <div class="col">
+                <img src="uploads/<?php echo $result->image;?>" style="height:350px; width:auto;">
+                </div>
+                <div class="col">
+                <img src="uploads/<?php echo $result->image1;?>" style="height:350px;; width:auto;">
+                </div>
+                <div class="col">
+                <img src="uploads/<?php echo $result->image2;?>" style="height:350px;; width:auto;">
+                </div>
+                <div class="col">
+                <img src="uploads/<?php echo $result->image3;?>" style="height:350px;; width:auto;">
+                </div>
+                </div>
+                <?php
+              }elseif (empty($image5) && !empty($image4) && !empty($image3) && !empty($image2) && !empty($image1) && !empty($image)) {
+                ?>
+                <div class="row">
+                <div class="col">
+                <img src="uploads/<?php echo $result->image;?>" style="height:350px; width:auto;">
+                </div>
+                <div class="col">
+                <img src="uploads/<?php echo $result->image1;?>" style="height:350px;; width:auto;">
+                </div>
+                <div class="col">
+                <img src="uploads/<?php echo $result->image2;?>" style="height:350px;; width:auto;">
+                </div>
+                <div class="col">
+                <img src="uploads/<?php echo $result->image3;?>" style="height:350px;; width:auto;">
+                </div>
+                <div class="col">
+                <img src="uploads/<?php echo $result->image4;?>" style="height:350px;; width:auto;">
+                </div>
+                </div>
+                <?php
+              }elseif (!empty($image5) && !empty($image4) && !empty($image3) && !empty($image2) && !empty($image1) && !empty($image)) {
+                ?>
+                <div class="row">
+                <div class="col">
+                <img src="uploads/<?php echo $result->image;?>" style="height:350px; width:auto;">
+                </div>
+                <div class="col">
+                <img src="uploads/<?php echo $result->image1;?>" style="height:350px;; width:auto;">
+                </div>
+                <div class="col">
+                <img src="uploads/<?php echo $result->image2;?>" style="height:350px;; width:auto;">
+                </div>
+                <div class="col">
+                <img src="uploads/<?php echo $result->image3;?>" style="height:350px;; width:auto;">
+                </div>
+                <div class="col">
+                <img src="uploads/<?php echo $result->image4;?>" style="height:350px;; width:auto;">
+                </div>
+                <div class="col">
+                <img src="uploads/<?php echo $result->image5;?>" style="height:350px;; width:auto;">
+                </div>
+                </div>
+                <?php
+              }
+              ?>
               <!-- <div class="col mb-4">
               <img src="uploads/<?php echo $result->image1;?>" style="height:200px;; width:300px; border:1px solid pink;">
               </div>

@@ -62,7 +62,7 @@ background-attachment: fixed;
               <ul class="navbar-nav ml-auto">
                 <form action="" method="GET" class="form-inline my-2 my-lg-0">
                   <li class="nav-item"><a class="nav-link text-dark mr-3 mt-3" <?php
-                  $pg = $_GET['pg'];
+                  $pg = $_SESSION['pg'];
                    if ($pg == 'activity') {
                     ?>
                     href="activity.php"
@@ -97,7 +97,17 @@ background-attachment: fixed;
         <input type="submit" name="submit"value="Search"style="background:none;border:0;color:white;background-color:#d75094;">
           </span>
 
-          <a class="btn text-white" style="background-color:#d75094;" href="viewParticipants.php">Clear</a>
+          <a class="btn text-white" style="background-color:#d75094;" <?php
+           if ($pg == 'activity') {
+            ?>
+            href="viewParticipants.php?pg=activity"
+            <?php
+          }elseif ($pg == 'participant') {
+            ?>
+            href="viewParticipants.php?pg=participant"
+            <?php
+          }
+          ?>>Clear</a>
           </form>'
       </div>
       <div class="container animated fadeInUp">

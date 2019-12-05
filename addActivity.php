@@ -125,6 +125,7 @@ background-attachment: fixed;
                           <label for="venue" class="col-form-label text-md-right">Venue</label>
                           <input id="venue" type="text" class="form-control " name="venue" placeholder="Venue" required autocomplete="off">
                           </div>
+                          <hr />
                           <div class="form-group">
                             <label for="target_p" class="col-form-label text-md-right">Target Participants</label>
                             <input id="target_p" type="text" class="form-control " name="target_p" placeholder="Target Participants" required autocomplete="off">
@@ -137,16 +138,28 @@ background-attachment: fixed;
                           </div>
                           <hr />
                           <div class="form-group">
-                            <label for="image_selector" class="col-form-label text-md-right">Images</label>
-                            <select id="image_selector" class="form-control mr-2 text-dark browser-default custom-select" name="image_selector" autofocus required>
+                            <div class="alert alert-dismissible text-dark bg-light my-0" role="alert">
+                            <span class="ml-0">Select 1-6 images.</span>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                            <label for="image" class="col-form-label text-md-right">Images</label>
+                            <!-- <select id="image_selector" class="form-control mr-2 text-dark browser-default custom-select" name="image_selector" autofocus required>
                               <option value="one">1 Image</option>
                               <option value="two">2 Images</option>
                               <option value="three">3 Images</option>
                               <option value="four">4 Images</option>
                               <option value="five">5 Images</option>
                               <option value="six">6 Images</option>
-                            </select>
-                            <div class="one box">
+                            </select> -->
+                            <input id="image" type="file" class="form-control mt-2" name="image" autocomplete="image" accept="*/image">
+                            <input id="image1" type="file" class="form-control mt-2" name="image1" autocomplete="image1" accept="*/image">
+                            <input id="image2" type="file" class="form-control mt-2" name="image2" autocomplete="image2" accept="*/image">
+                            <input id="image3" type="file" class="form-control mt-2" name="image3" autocomplete="image3" accept="*/image">
+                            <input id="image4" type="file" class="form-control mt-2" name="image4" autocomplete="image4" accept="*/image">
+                            <input id="image5" type="file" class="form-control mt-2" name="image5" autocomplete="image5" accept="*/image">
+                            <!-- <div class="one box">
                               <input id="image" type="file" class="form-control mt-2" name="image" autocomplete="image" accept="*/image">
                             </div>
                             <div class="two box">
@@ -178,13 +191,8 @@ background-attachment: fixed;
                               <input id="image3" type="file" class="form-control mt-2" name="image3" autocomplete="image3" accept="*/image">
                               <input id="image4" type="file" class="form-control mt-2" name="image4" autocomplete="image4" accept="*/image">
                               <input id="image5" type="file" class="form-control mt-2" name="image5" autocomplete="image5" accept="*/image">
-                            </div>
+                            </div> -->
 
-                              <!-- <input id="image1" type="file" class="form-control mt-2" name="image1" autocomplete="image1" accept="*/image">
-                              <input id="image2" type="file" class="form-control mt-2" name="image2" autocomplete="image2" accept="*/image">
-                              <input id="image3" type="file" class="form-control mt-2" name="image3" autocomplete="image3" accept="*/image">
-                              <input id="image4" type="file" class="form-control mt-2" name="image4" autocomplete="image4" accept="*/image">
-                              <input id="image5" type="file" class="form-control mt-2" name="image5" autocomplete="image5" accept="*/image"> -->
                             </div>
                             <hr />
                           <div class="form-group">
@@ -223,7 +231,7 @@ background-attachment: fixed;
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="vendor/js/bootstrap.min.js"></script>
-<script>
+<!-- <script>
 
 $(document).ready(function(){
 
@@ -251,5 +259,5 @@ $(document).ready(function(){
 
 });
 
-</script>
+</script> -->
 </html>

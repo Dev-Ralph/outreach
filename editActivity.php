@@ -159,15 +159,15 @@ background-attachment: fixed;
                           ?>" required autocomplete="off">
                           </div>
                           <hr />
+                          <div class="form-group">
+                            <label for="target_p" class="col-form-label text-md-right">Target Participants</label>
+                            <input id="target_p" type="text" class="form-control " name="target_p" placeholder="Target Participants" value="<?php
+                            $edit->editActivity();
+                            echo "$edit->target_p";
+                            ?>" required autocomplete="off">
+                          </div>
                           </div>
                           <div class="col-md-6">
-                            <div class="form-group">
-                              <label for="target_p" class="col-form-label text-md-right">Target Participants</label>
-                              <input id="target_p" type="text" class="form-control " name="target_p" placeholder="Target Participants" value="<?php
-                              $edit->editActivity();
-                              echo "$edit->target_p";
-                              ?>" required autocomplete="off">
-                            </div>
                               <label for="mean" class="col-form-label float-left">Over-all Mean</label>
                               <input id="mean" type="text" class="form-control " name="mean" placeholder="Over-all Mean" value="<?php
                               $edit->editActivity();
@@ -175,19 +175,19 @@ background-attachment: fixed;
                               ?>" required autocomplete="off">
                           <hr />
                           <div class="form-group">
-                            <div class="alert alert-dismissible text-dark my-0" role="alert">
+                            <div class="alert alert-dismissible text-dark bg-light my-0" role="alert">
                             <span class="ml-0">Please re-select image.</span>
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                               <span aria-hidden="true">&times;</span>
                             </button>
                             </div>
                             <label for="image" class="col-form-label text-md-right">Images</label>
-                              <input id="image" type="file" class="form-control" name="image" accept="*/image">
-                              <!-- <input id="image1" type="file" class="form-control mt-2" name="image1" autocomplete="image1" accept="*/image">
-                              <input id="image2" type="file" class="form-control mt-2" name="image2" autocomplete="image2" accept="*/image">
-                              <input id="image3" type="file" class="form-control mt-2" name="image3" autocomplete="image3" accept="*/image">
-                              <input id="image4" type="file" class="form-control mt-2" name="image4" autocomplete="image4" accept="*/image">
-                              <input id="image5" type="file" class="form-control mt-2" name="image5" autocomplete="image5" accept="*/image"> -->
+                            <input id="image" type="file" class="form-control mt-2" name="image" autocomplete="image" accept="*/image">
+                            <input id="image1" type="file" class="form-control mt-2" name="image1" autocomplete="image1" accept="*/image">
+                            <input id="image2" type="file" class="form-control mt-2" name="image2" autocomplete="image2" accept="*/image">
+                            <input id="image3" type="file" class="form-control mt-2" name="image3" autocomplete="image3" accept="*/image">
+                            <input id="image4" type="file" class="form-control mt-2" name="image4" autocomplete="image4" accept="*/image">
+                            <input id="image5" type="file" class="form-control mt-2" name="image5" autocomplete="image5" accept="*/image">
                             </div>
                             <hr />
                           <div class="form-group">

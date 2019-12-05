@@ -12,6 +12,7 @@ public function viewAll(){
             $config = new config;
             $pdo = $config->Con();
             $pg = $_GET['pg'];
+            $_SESSION['pg'] = $pg;
             $limit = 10;
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $s = $pdo->prepare("SELECT * FROM `outreach_participant`");
@@ -35,7 +36,7 @@ public function viewAll(){
 
             echo '<table style="width:100%" class="table table-bordered bg-white">';
             echo '<tr style="color:#d75094">';
-            echo '<th class="text-center"><i class="fas fa-user mr-1"></i>Participant</th> <th class="text-center"><i class="fas fa-portrait mr-1"></i>ID Number</th> <th class="text-center"><i class="fas fa-university mr-1"></i>College Department</th> <th class="text-center"><i class="fas fa-tasks mr-1"></i>Action</th>';
+            echo '<th class="text-center">Participant</th> <th class="text-center">ID Number</th> <th class="text-center">College Department</th> <th class="text-center">Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -50,7 +51,7 @@ public function viewAll(){
             echo '<ul class="pb-5">';
             for ($p=1; $p <= $total_pages; $p++) {
               echo '<li class="page-item" style="display: inline-block;margin-left:4px;">';
-              echo  '<a class="page-link" href="?tab=all&pageAll='.$p.'">'.$p;
+              echo  '<a class="page-link" href="?pg='.$pg.'&tab=all&pageAll='.$p.'">'.$p;
               echo  '</a>';
               echo '</li>';
             }
@@ -62,7 +63,7 @@ public function searchProfileID(){
             $pdo = $config->Con();
             $search = $_GET['search'];
             $down = $_GET['down'];
-            $pg = $_GET['pg'];
+            $pg = $_SESSION['pg'];
             $s = $pdo->prepare("SELECT * FROM `outreach_participant` WHERE `$down` LIKE ? ORDER BY `schl_number`");
             $s->execute(["%$search%"]);
             $allResp = $s->fetchAll(PDO::FETCH_ASSOC);
@@ -97,7 +98,7 @@ public function searchProfileID(){
             $results = $data->fetchAll();
             echo '<table style="width:100%" class="table table-bordered bg-white">';
             echo '<tr style="color:#d75094">';
-            echo '<th class="text-center"><i class="fas fa-user mr-1"></i>Participant</th> <th class="text-center"><i class="fas fa-portrait mr-1"></i>ID Number</th> <th class="text-center"><i class="fas fa-university mr-1"></i>College Department</th> <th class="text-center"><i class="fas fa-tasks mr-1"></i>Action</th>';
+            echo '<th class="text-center">Participant</th> <th class="text-center">ID Number</th> <th class="text-center">College Department</th> <th class="text-center">Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -112,7 +113,7 @@ public function searchProfileID(){
             echo '<ul>';
             for ($p=1; $p <= $total_pages; $p++) {
                 echo '<li class="page-item" style="display: inline-block;margin-left:4px;">';
-                echo  '<a class="page-link" href="?search='.$search.'&down='.$down.'&submit=Search&page='.$p.'">'.$p;
+                echo  '<a class="page-link" href="?pg='.$pg.'&search='.$search.'&down='.$down.'&submit=Search&page='.$p.'">'.$p;
                 echo  '</a>';
                 echo '</li>';
             }

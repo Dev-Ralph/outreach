@@ -14,12 +14,13 @@ public function dataTableDepartmentLiteracy(){
 
             echo '<table style="width:100%; background-color: white;" class="table table-bordered">';
             echo '<tr>';
-            echo '<th class="text-center" style="color:#d74f95">College Department</th> <th class="text-center" style="color:#d74f95">Total Number of Participants</th>';
+            echo '<th class="text-center" style="color:#d74f95">College Department</th> <th class="text-center" style="color:#d74f95">Total Number of Participants</th> <th class="text-center" style="color:#d74f95">Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
             echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
-            echo '<td class="text-center"><a class="text-dark" href="tableDepartment.php?department='.$result->collegeDepartment.'&type='.$result->type.'">'.$result->count.'<i class="fas fa-book ml-1"></i></a></td>';
+            echo '<td class="text-center">'.$result->count.'<i class="fas fa-users ml-1"></i></td>';
+            echo '<td class="text-center"><a class="btn btn-outline-primary" href="tableDepartment.php?department='.$result->collegeDepartment.'&type='.$result->type.'"><i class="fas fa-eye mr-1"></i>View</td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -58,12 +59,13 @@ public function dataTableProponentLiteracy(){
 
             echo '<table style="width:100%; background-color: white;" class="table table-bordered">';
             echo '<tr>';
-            echo '<th class="text-center" style="color:#d74f95">Activity</th> <th class="text-center" style="color:#d74f95">Total Number of Participants</th>';
+            echo '<th class="text-center" style="color:#d74f95">Activity</th> <th class="text-center" style="color:#d74f95">Total Number of Participants</th> <th class="text-center" style="color:#d74f95">Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
             echo '<td class="text-center py-3">'.$result->title.'</td>';
-            echo '<td class="text-center py-3"><a class="text-dark" href="tableActivity.php?act_title='.$result->title.'">'.$result->Population.'<i class="fas fa-users ml-1"></i></a></td>';
+            echo '<td class="text-center py-3">'.$result->Population.'<i class="fas fa-users ml-1"></i></td>';
+            echo '<td class="text-center py-3"><a class="btn btn-outline-primary" href="tableActivity.php?act_title='.$result->title.'"><i class="fas fa-eye mr-1"></i>View</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -126,12 +128,13 @@ public function dataTableDepartmentHealth(){
 
             echo '<table style="width:100%; background-color: white;" class="table table-bordered">';
             echo '<tr>';
-            echo '<th class="text-center" style="color:#d74f95">College Department</th> <th class="text-center" style="color:#d74f95">Number of Records</th>';
+            echo '<th class="text-center" style="color:#d74f95">College Department</th> <th class="text-center" style="color:#d74f95">Total Number of Participants</th> <th class="text-center" style="color:#d74f95">Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
             echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
-            echo '<td class="text-center"><a class="text-dark" href="tableDepartment.php?department='.$result->collegeDepartment.'&type='.$result->type.'">'.$result->count.'<i class="fas fa-book ml-1"></i></a></td>';
+            echo '<td class="text-center">'.$result->count.'<i class="fas fa-users ml-1"></i></td>';
+            echo '<td class="text-center"><a class="btn btn-outline-primary" href="tableDepartment.php?department='.$result->collegeDepartment.'&type='.$result->type.'"><i class="fas fa-eye mr-1"></i>View</td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -180,12 +183,13 @@ public function dataTableProponentHealth(){
 
             echo '<table style="width:100%; background-color: white;" class="table table-bordered">';
             echo '<tr>';
-            echo '<th class="text-center" style="color:#d74f95">Activity</th> <th class="text-center" style="color:#d74f95">Total Number of Participants</th>';
+            echo '<th class="text-center" style="color:#d74f95">Activity</th> <th class="text-center" style="color:#d74f95">Total Number of Participants</th> <th class="text-center" style="color:#d74f95">Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
             echo '<td class="text-center py-3">'.$result->title.'</td>';
-            echo '<td class="text-center py-3"><a class="text-dark" href="tableActivity.php?act_title='.$result->title.'">'.$result->Population.'<i class="fas fa-users ml-1"></i></a></td>';
+            echo '<td class="text-center py-3">'.$result->Population.'<i class="fas fa-users ml-1"></i></td>';
+            echo '<td class="text-center py-3"><a class="btn btn-outline-primary" href="tableActivity.php?act_title='.$result->title.'"><i class="fas fa-eye mr-1"></i>View</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -248,13 +252,13 @@ public function dataTableDepartmentEnvironment(){
 
             echo '<table style="width:100%; background-color: white;" class="table table-bordered">';
             echo '<tr>';
-            echo '<th class="text-center" style="color:#d74f95">College Department</th> <th class="text-center" style="color:#d74f95">Number of Records</th>';
+            echo '<th class="text-center" style="color:#d74f95">College Department</th> <th class="text-center" style="color:#d74f95">Total Number of Participants</th> <th class="text-center" style="color:#d74f95">Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
             echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
-            echo '<td class="text-center"><a class="text-dark" href="tableDepartment.php?department='.$result->collegeDepartment.'&type='.$result->type.'">'.$result->count.'<i class="fas fa-book ml-1"></i></a></td>';
-            echo '</tr>';
+            echo '<td class="text-center">'.$result->count.'<i class="fas fa-users ml-1"></i></td>';
+            echo '<td class="text-center"><a class="btn btn-outline-primary" href="tableDepartment.php?department='.$result->collegeDepartment.'&type='.$result->type.'"><i class="fas fa-eye mr-1"></i>View</td>';
             }
             echo '</table>';
 
@@ -302,12 +306,13 @@ public function dataTableProponentEnvironment(){
 
             echo '<table style="width:100%; background-color: white;" class="table table-bordered">';
             echo '<tr>';
-            echo '<th class="text-center" style="color:#d74f95">Activity</th> <th class="text-center" style="color:#d74f95">Total Number of Participants</th>';
+            echo '<th class="text-center" style="color:#d74f95">Activity</th> <th class="text-center" style="color:#d74f95">Total Number of Participants</th> <th class="text-center" style="color:#d74f95">Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
             echo '<td class="text-center py-3">'.$result->title.'</td>';
-            echo '<td class="text-center py-3"><a class="text-dark" href="tableActivity.php?act_title='.$result->title.'">'.$result->Population.'<i class="fas fa-users ml-1"></i></a></td>';
+            echo '<td class="text-center py-3">'.$result->Population.'<i class="fas fa-users ml-1"></i></td>';
+            echo '<td class="text-center py-3"><a class="btn btn-outline-primary" href="tableActivity.php?act_title='.$result->title.'"><i class="fas fa-eye mr-1"></i>View</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -370,12 +375,13 @@ public function dataTableDepartmentLivelihood(){
 
             echo '<table style="width:100%; background-color: white;" class="table table-bordered">';
             echo '<tr>';
-            echo '<th class="text-center" style="color:#d74f95">College Department</th> <th class="text-center" style="color:#d74f95">Number of Records</th>';
+            echo '<th class="text-center" style="color:#d74f95">College Department</th> <th class="text-center" style="color:#d74f95">Total Number of Participants</th> <th class="text-center" style="color:#d74f95">Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
             echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
-            echo '<td class="text-center"><a class="text-dark" href="tableDepartment.php?department='.$result->collegeDepartment.'&type='.$result->type.'">'.$result->count.'<i class="fas fa-book ml-1"></i></a></td>';
+            echo '<td class="text-center">'.$result->count.'<i class="fas fa-users ml-1"></i></td>';
+            echo '<td class="text-center"><a class="btn btn-outline-primary" href="tableDepartment.php?department='.$result->collegeDepartment.'&type='.$result->type.'"><i class="fas fa-eye mr-1"></i>View</td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -424,12 +430,13 @@ public function dataTableProponentLivelihood(){
 
             echo '<table style="width:100%; background-color: white;" class="table table-bordered">';
             echo '<tr>';
-            echo '<th class="text-center" style="color:#d74f95">Activity</th> <th class="text-center" style="color:#d74f95">Total Number of Participants</th>';
+            echo '<th class="text-center" style="color:#d74f95">Activity</th> <th class="text-center" style="color:#d74f95">Total Number of Participants</th> <th class="text-center" style="color:#d74f95">Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
             echo '<td class="text-center py-3">'.$result->title.'</td>';
-            echo '<td class="text-center py-3"><a class="text-dark" href="tableActivity.php?act_title='.$result->title.'">'.$result->Population.'<i class="fas fa-users ml-1"></i></a></td>';
+            echo '<td class="text-center py-3">'.$result->Population.'<i class="fas fa-users ml-1"></i></td>';
+            echo '<td class="text-center py-3"><a class="btn btn-outline-primary" href="tableActivity.php?act_title='.$result->title.'"><i class="fas fa-eye mr-1"></i>View</a></td>';
             echo '</tr>';
             }
             echo '</table>';
