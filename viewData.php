@@ -84,6 +84,18 @@ background-attachment: fixed;
             ?>
             <div class="mt-5 mb-2 container-fluid text-center">
               <?php
+              require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/edit.php';
+              // session_start();
+              $edit = new edit;
+              $edit->showEdit();
+              if(isset($_GET['outreach_activity_id'])){
+                echo '<h4 class="text-center font-weight-bold">'.$edit->title.'</h5>';
+                echo '<h6 class="text-center pt-0">'.$edit->date.'</h6>';
+                // echo '<h6 class="text-center">'.$edit->venue.'</h6>';
+                // echo '<p class="text-justify pt-4 pb-4">'.$edit->documentation.'<p>';
+              }
+               ?>
+              <?php
               $image = $result->image;
               $image1 = $result->image1;
               $image2 = $result->image2;
@@ -93,7 +105,7 @@ background-attachment: fixed;
               if (empty($image5) && empty($image4) && empty($image3) && empty($image2) && empty($image1) && !empty($image)) {
                 ?>
                 <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 pt-2">
                 <img src="uploads/<?php echo $result->image;?>" style="height:350px; width:auto;">
                 </div>
                 </div>
@@ -101,10 +113,10 @@ background-attachment: fixed;
               }elseif (empty($image5) && empty($image4) && empty($image3) && empty($image2) && !empty($image1) && !empty($image)) {
                 ?>
                 <div class="row">
-                <div class="col">
+                <div class="col pt-2">
                 <img src="uploads/<?php echo $result->image;?>" style="height:350px; width:auto;">
                 </div>
-                <div class="col">
+                <div class="col pt-2">
                 <img src="uploads/<?php echo $result->image1;?>" style="height:350px;; width:auto;">
                 </div>
                 </div>
@@ -112,13 +124,13 @@ background-attachment: fixed;
               }elseif (empty($image5) && empty($image4) && empty($image3) && !empty($image2) && !empty($image1) && !empty($image)) {
                 ?>
                 <div class="row">
-                <div class="col">
+                <div class="col pt-2">
                 <img src="uploads/<?php echo $result->image;?>" style="height:350px; width:auto;">
                 </div>
-                <div class="col">
+                <div class="col pt-2">
                 <img src="uploads/<?php echo $result->image1;?>" style="height:350px;; width:auto;">
                 </div>
-                <div class="col">
+                <div class="col pt-2">
                 <img src="uploads/<?php echo $result->image2;?>" style="height:350px;; width:auto;">
                 </div>
                 </div>
@@ -126,16 +138,16 @@ background-attachment: fixed;
               }elseif (empty($image5) && empty($image4) && !empty($image3) && !empty($image2) && !empty($image1) && !empty($image)) {
                 ?>
                 <div class="row">
-                <div class="col">
+                <div class="col pt-2">
                 <img src="uploads/<?php echo $result->image;?>" style="height:350px; width:auto;">
                 </div>
-                <div class="col">
+                <div class="col pt-2">
                 <img src="uploads/<?php echo $result->image1;?>" style="height:350px;; width:auto;">
                 </div>
-                <div class="col">
+                <div class="col pt-2">
                 <img src="uploads/<?php echo $result->image2;?>" style="height:350px;; width:auto;">
                 </div>
-                <div class="col">
+                <div class="col pt-2">
                 <img src="uploads/<?php echo $result->image3;?>" style="height:350px;; width:auto;">
                 </div>
                 </div>
@@ -143,19 +155,19 @@ background-attachment: fixed;
               }elseif (empty($image5) && !empty($image4) && !empty($image3) && !empty($image2) && !empty($image1) && !empty($image)) {
                 ?>
                 <div class="row">
-                <div class="col">
+                <div class="col pt-2">
                 <img src="uploads/<?php echo $result->image;?>" style="height:350px; width:auto;">
                 </div>
-                <div class="col">
+                <div class="col pt-2">
                 <img src="uploads/<?php echo $result->image1;?>" style="height:350px;; width:auto;">
                 </div>
-                <div class="col">
+                <div class="col pt-2">
                 <img src="uploads/<?php echo $result->image2;?>" style="height:350px;; width:auto;">
                 </div>
-                <div class="col">
+                <div class="col pt-2">
                 <img src="uploads/<?php echo $result->image3;?>" style="height:350px;; width:auto;">
                 </div>
-                <div class="col">
+                <div class="col pt-2">
                 <img src="uploads/<?php echo $result->image4;?>" style="height:350px;; width:auto;">
                 </div>
                 </div>
@@ -163,22 +175,22 @@ background-attachment: fixed;
               }elseif (!empty($image5) && !empty($image4) && !empty($image3) && !empty($image2) && !empty($image1) && !empty($image)) {
                 ?>
                 <div class="row">
-                <div class="col">
+                <div class="col pt-2">
                 <img src="uploads/<?php echo $result->image;?>" style="height:350px; width:auto;">
                 </div>
-                <div class="col">
+                <div class="col pt-2">
                 <img src="uploads/<?php echo $result->image1;?>" style="height:350px;; width:auto;">
                 </div>
-                <div class="col">
+                <div class="col pt-2">
                 <img src="uploads/<?php echo $result->image2;?>" style="height:350px;; width:auto;">
                 </div>
-                <div class="col">
+                <div class="col pt-2">
                 <img src="uploads/<?php echo $result->image3;?>" style="height:350px;; width:auto;">
                 </div>
-                <div class="col">
+                <div class="col pt-2">
                 <img src="uploads/<?php echo $result->image4;?>" style="height:350px;; width:auto;">
                 </div>
-                <div class="col">
+                <div class="col pt-2">
                 <img src="uploads/<?php echo $result->image5;?>" style="height:350px;; width:auto;">
                 </div>
                 </div>
@@ -211,11 +223,10 @@ background-attachment: fixed;
         $edit = new edit;
         $edit->showEdit();
         if(isset($_GET['outreach_activity_id'])){
-          echo '<h5 class="text-center">'.$edit->title.'</h5>';
-          echo '<h6 class="text-center">'.$edit->date.'</h6>';
+          // echo '<h5 class="text-center">'.$edit->title.'</h5>';
+          // echo '<h6 class="text-center">'.$edit->date.'</h6>';
           echo '<h6 class="text-center">'.$edit->venue.'</h6>';
-          echo '<h6 class="text-center">'.$edit->proponent.'</h6>';
-          echo '<p class="text-justify pt-4 pb-4">'.$edit->documentation.'<p>';
+          echo '<p class="text-justify pt-3 pb-5">'.$edit->documentation.'<p>';
         }
          ?>
      </div>
@@ -224,8 +235,8 @@ background-attachment: fixed;
        <footer>
          <div class="container mb-5">
            <div class="row">
-             <div class="footer-copyright text-center py-3 text-white fixed-bottom fade animated fadeInUp" style="background-color: #d75093;">
-               <div class="col-md-6 float-left text-left mt-2">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div>
+             <div class="footer-copyright text-center py-2 text-white fixed-bottom fade animated fadeInUp" style="background-color: #d75093;">
+               <div class="col-md-6 float-left text-left mt-3">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div>
                <div class="col-md-6 float-right text-right">Ralph Edwin E. Lopez, Kenneth R. Sillo, Johnroy V. Policarpio
                <div class="col-md-12 float-right text-right mr-2">Keith B. Godoy, Robin G. Santos, Vincent Redell A. Suñga</div>
                </div>

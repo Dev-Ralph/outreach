@@ -70,7 +70,7 @@ background-attachment: fixed;
         </nav>
       <div class="container animated fadeInUp">
         <button name="create_excel" id="create_excel" class="btn btn-success float-right mt-4">Export to Excel</button>
-        <div class="row">
+        <div class="row px-0">
 
         <?php
         require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/searchProfile.php';
@@ -85,8 +85,8 @@ background-attachment: fixed;
   <footer>
     <div class="container mb-5">
       <div class="row">
-        <div class="footer-copyright text-center py-3 text-white fixed-bottom fade animated fadeInUp" style="background-color: #d75093;">
-          <div class="col-md-6 float-left text-left mt-2">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div>
+        <div class="footer-copyright text-center py-2 text-white fixed-bottom fade animated fadeInUp" style="background-color: #d75093;">
+          <div class="col-md-6 float-left text-left mt-3">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div>
           <div class="col-md-6 float-right text-right">Ralph Edwin E. Lopez, Kenneth R. Sillo, Johnroy V. Policarpio
           <div class="col-md-12 float-right text-right mr-2">Keith B. Godoy, Robin G. Santos, Vincent Redell A. Suñga</div>
           </div>

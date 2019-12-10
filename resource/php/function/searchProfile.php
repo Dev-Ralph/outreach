@@ -29,7 +29,7 @@ public function viewAll(){
 
             $start = ($page-1)*$limit;
 
-            $sql = "SELECT DISTINCT `schl_number`, `p_lastname`, `p_firstname`, `p_middlename`,`collegeDepartment` FROM `outreach_participant` ORDER BY `schl_number`  DESC LIMIT $start, $limit";
+            $sql = "SELECT DISTINCT `schl_number`, `p_lastname`, `p_firstname`, `p_middlename`,`collegeDepartment`, `type` FROM `outreach_participant` GROUP BY `schl_number` ORDER BY `schl_number`  DESC LIMIT $start, $limit";
             $data = $pdo->prepare($sql);
             $data->execute();
             $results = $data->fetchAll(PDO::FETCH_OBJ);
@@ -43,7 +43,7 @@ public function viewAll(){
             echo '<td class="text-center">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
             echo '<td class="text-center">'.$result->schl_number.'</td>';
             echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
-            echo '<td class="text-center"> <a class="btn btn-outline-primary" href="viewProfile.php?pg='.$pg.'&schl_number='.$result->schl_number.'""><i class="fas fa-eye mr-1"></i>View</a></td>';
+            echo '<td class="text-center"> <a class="btn btn-outline-primary" href="viewProfile.php?pg='.$pg.'&schl_number='.$result->schl_number.'&type='.$result->type.'""><i class="fas fa-eye mr-1"></i>View</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -124,6 +124,7 @@ public function searchProfileOutput(){
             $config = new config;
             $pdo = $config->Con();
             $schl_number = $_GET['schl_number'];
+            $type = $_GET['type'];
             $s = $pdo->prepare("SELECT * FROM `outreach_participant` WHERE `schl_number` = '$schl_number'");
             $s->execute();
             $allResp = $s->fetchAll(PDO::FETCH_ASSOC);
@@ -157,14 +158,14 @@ public function searchProfileOutput(){
             $data =$pdo->prepare($sql);
             $data->execute();
             $results = $data->fetchAll();
-            echo '<div class="px-0">';
+            // echo '<div class="px-0">';
             echo '<table style="width:100%" class="table table-bordered bg-white">';
-            echo '<tr style="color:#d75094">';
-            echo '<th class="text-center"><i class="fas fa-hand-holding-heart mr-1"></i>Outreach Program</th> <th class="text-center"><i class="fas fa-book mr-1"></i>Activity</th> <th class="text-center"><i class="fas fa-table mr-1"></i>Date</th> <th class="text-center"><i class="fas fa-map-marker-alt mr-1"></i>Venue</th> <th class="text-center"><i class="fas fa-handshake mr-1"></i>Participation</th> <th class="text-center"><i class="fas fa-users mr-1"></i>Proponent</th>';
+            echo '<tr>';
+            echo '<th class="text-center">Outreach Program</th> <th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Venue</th> <th class="text-center">Participation</th> <th class="text-center">Proponent</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
-            echo '<td class="text-center" style="text-align: center">'.$result->type.'</td>';
+            echo '<td class="text-center" style="text-align: center">'.$type.'</td>';
             echo '<td class="text-center" style="text-align: center">'.$result->title.'</td>';
             echo '<td class="text-center" style="text-align: center">'.$result->date.'</td>';
             echo '<td class="text-center" style="text-align: center">'.$result->venue.'</td>';
@@ -174,7 +175,7 @@ public function searchProfileOutput(){
             }
             echo '</table>';
             echo '</div>';
-            echo '</div>';
+            // echo '</div>';
 
             echo '<ul class="pb-5">';
             for ($p=1; $p <= $total_pages; $p++) {

@@ -89,7 +89,7 @@ background-attachment: fixed;
               <div class="card animated fadeInDown" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
               -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
               -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-                  <div class="card-header text-white bg-white"><h2 style="color:#d75093">Activity</h2>
+                  <div class="card-header text-white bg-white"><h2 class="d-inline" style="color:#d75093">Activity</h2> <h2 class="float-right text-dark d-inline"><span aria-hidden="true">&times;</span></h2>
                   </div>
                     <div class="card-body">
                       <form method="POST" action="" enctype="multipart/form-data">
@@ -204,7 +204,7 @@ background-attachment: fixed;
                           </div>
                           <div class="col-md-12">
                           <div class="form-group mb-2 text-center">
-                              <button type="submit" class="card-btn btn text-light px-5" name="add">Add</button>
+                              <button type="submit" class="card-btn btn text-light px-5" name="add" style="background-color: #d75093;">Add</button>
                           </div>
                       </div>
                     </form>
@@ -218,8 +218,8 @@ background-attachment: fixed;
   <footer>
     <div class="container mb-5">
       <div class="row">
-        <div class="footer-copyright text-center py-3 text-white fixed-bottom fade animated fadeInUp" style="background-color: #d75093;">
-          <div class="col-md-6 float-left text-left mt-2">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div>
+        <div class="footer-copyright text-center py-2 text-white fixed-bottom fade animated fadeInUp" style="background-color: #d75093;">
+          <div class="col-md-6 float-left text-left mt-3">© Copyright 2019. Centro Escolar University Malolos. All Rights Reserved</div>
           <div class="col-md-6 float-right text-right">Ralph Edwin E. Lopez, Kenneth R. Sillo, Johnroy V. Policarpio
           <div class="col-md-12 float-right text-right mr-2">Keith B. Godoy, Robin G. Santos, Vincent Redell A. Suñga</div>
           </div>
@@ -231,7 +231,7 @@ background-attachment: fixed;
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="vendor/js/bootstrap.min.js"></script>
-<!-- <script>
+<script>
 
 $(document).ready(function(){
 
@@ -259,5 +259,5 @@ $(document).ready(function(){
 
 });
 
-</script> -->
+</script>
 </html>
