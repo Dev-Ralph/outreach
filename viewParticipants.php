@@ -62,7 +62,7 @@ background-attachment: fixed;
               <ul class="navbar-nav ml-auto">
                 <form action="" method="GET" class="form-inline my-2 my-lg-0">
                   <li class="nav-item"><a class="nav-link text-dark mr-3 mt-3" <?php
-                  $pg = $_SESSION['pg'];
+                  $pg = $_GET['pg'];
                    if ($pg == 'activity') {
                     ?>
                     href="activity.php"
