@@ -31,7 +31,7 @@ public function tableActivityParticipant(){
             echo '<h1 class="text-center py-3" style="text-align: center">'.$title.'</h1>';
             echo '<table style="width:100%; background-color: white;" class="table table-bordered" style="border-collapse:collape;">';
             echo '<tr>';
-            echo '<th class="text-center">Name of Participants</th> <th class="text-center">ID #</th> <th class="text-center"></i>Participation</th> <th class="text-center">Proponent</th> <th class="text-center"></i>College Department</th>';
+            echo '<th class="text-center">Name of Participants</th> <th class="text-center">ID Number</th> <th class="text-center"></i>Participation</th> <th class="text-center">Proponent</th> <th class="text-center"></i>College Department</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';

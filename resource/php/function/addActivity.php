@@ -129,12 +129,12 @@ public function addRecord(){
       move_uploaded_file($tmp_dir, $upload_dir.$documentationImage);
       move_uploaded_file($tmp_dir1, $upload_dir.$documentationImage1);
       move_uploaded_file($tmp_dir2, $upload_dir.$documentationImage2);
-    }elseif (!empty($imgExt) && empty($imgExt1) && empty($imgExt2) && empty($imgExt3) && empty($imgExt4) && empty($imgExt5)) {
+    }elseif (!empty($imgExt) && !empty($imgExt1) && empty($imgExt2) && empty($imgExt3) && empty($imgExt4) && empty($imgExt5)) {
       $documentationImage=rand(1000, 1000000).".".$imgExt;
       $documentationImage1=rand(1000, 1000000).".".$imgExt1;
       move_uploaded_file($tmp_dir, $upload_dir.$documentationImage);
       move_uploaded_file($tmp_dir1, $upload_dir.$documentationImage1);
-    }elseif (empty($imgExt) && empty($imgExt1) && empty($imgExt2) && empty($imgExt3) && empty($imgExt4) && empty($imgExt5)) {
+    }elseif (!empty($imgExt) && empty($imgExt1) && empty($imgExt2) && empty($imgExt3) && empty($imgExt4) && empty($imgExt5)) {
       $documentationImage=rand(1000, 1000000).".".$imgExt;
       move_uploaded_file($tmp_dir, $upload_dir.$documentationImage);
     }
@@ -249,16 +249,16 @@ public function editRecord(){
       move_uploaded_file($tmp_dir, $upload_dir.$documentationImage);
       move_uploaded_file($tmp_dir1, $upload_dir.$documentationImage1);
       move_uploaded_file($tmp_dir2, $upload_dir.$documentationImage2);
-    }elseif (!empty($imgExt) && empty($imgExt1) && empty($imgExt2) && empty($imgExt3) && empty($imgExt4) && empty($imgExt5)) {
+    }elseif (!empty($imgExt) && !empty($imgExt1) && empty($imgExt2) && empty($imgExt3) && empty($imgExt4) && empty($imgExt5)) {
       $documentationImage=rand(1000, 1000000).".".$imgExt;
       $documentationImage1=rand(1000, 1000000).".".$imgExt1;
       move_uploaded_file($tmp_dir, $upload_dir.$documentationImage);
       move_uploaded_file($tmp_dir1, $upload_dir.$documentationImage1);
-    }elseif (empty($imgExt) && empty($imgExt1) && empty($imgExt2) && empty($imgExt3) && empty($imgExt4) && empty($imgExt5)) {
+    }elseif (!empty($imgExt) && empty($imgExt1) && empty($imgExt2) && empty($imgExt3) && empty($imgExt4) && empty($imgExt5)) {
       $documentationImage=rand(1000, 1000000).".".$imgExt;
       move_uploaded_file($tmp_dir, $upload_dir.$documentationImage);
     }
-    
+
     $sql = "UPDATE `outreach_activity` SET `type`= ?,`title`= ?,`proponent`= ?,`date`= ?,`venue`= ?,`target_p`= ?,`mean`= ?,`interpretation`= ?,`documentation`= ?,`image`= ?, `image1`= ?,`image2`= ?,`image3`= ?,`image4`= ?,`image5`= ? WHERE `outreach_activity_id` = '$outreach_activity_id'";
     $data = $pdo->prepare($sql);
     $data->execute([$type,$title,$proponent,$date,$venue,$target_p,$mean,$interpretation,$documentation,$documentationImage,$documentationImage1,$documentationImage2,$documentationImage3,$documentationImage4,$documentationImage5]);
