@@ -103,7 +103,7 @@ background-attachment: fixed;
                 <button type="submit" name="login" class="btn login_btn">Login</button>
               </div>
               <div class="d-flex justify-content-center mt-3">
-              <a href="send_mail.php">Retrive Account</a>
+              <a href="send_mail.php">Retrieve Account</a>
               </div>
             </form>
             </div>
