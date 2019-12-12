@@ -85,7 +85,7 @@ public function tableCollegeParticipant(){
             echo '<h1 class="text-center py-3" style="text-align: center">'.$department.'</h1>';
             echo '<table style="width:100%; background-color: white;" class="table table-bordered">';
             echo '<tr>';
-            echo '<th class="text-center">Name of Participants</th> <th class="text-center">ID #</th> <th class="text-center">Outreach Program</th> <th class="text-center">Title of Activity</th> <th class="text-center">Participation</th> <th class="text-center">Proponent</th>';
+            echo '<th class="text-center">Name of Participants</th> <th class="text-center">ID Number</th> <th class="text-center">Outreach Program</th> <th class="text-center">Title of Activity</th> <th class="text-center">Participation</th> <th class="text-center">Proponent</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';

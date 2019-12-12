@@ -27,7 +27,7 @@ class view extends config {
 
               echo '<table style="width:100%;" class="table">';
               echo '<tr style="color:#d75093">';
-              echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Participant</th> <th class="text-center">ID #</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th><th class="text-center">Action</th>';
+              echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Participant</th> <th class="text-center">ID Number</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th><th class="text-center">Action</th>';
               echo '</tr>';
               foreach ($results as $result) {
               echo '<tr>';
@@ -104,7 +104,7 @@ public function viewAllLiteracy(){
             echo '<table style="width:100%" class="table">';
             echo '<tr>';
             echo '<tr style="color:#d75093">';
-            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Participant</th> <th class="text-center">ID #</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th><th class="text-center">Action</th>';
+            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Participant</th> <th class="text-center">ID Number</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th><th class="text-center">Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -182,7 +182,7 @@ public function viewAllHealth(){
             echo '<table style="width:100%" class="table">';
             echo '<tr>';
             echo '<tr style="color:#d75093">';
-            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Participant</th> <th class="text-center">ID #</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th><th class="text-center">Action</th>';
+            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Participant</th> <th class="text-center">ID Number</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th><th class="text-center">Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -259,7 +259,7 @@ public function viewAllEnvironment(){
             echo '<table style="width:100%" class="table">';
             echo '<tr>';
             echo '<tr style="color:#d75093">';
-            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Participant</th> <th class="text-center">ID #</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th><th class="text-center">Action</th>';
+            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Participant</th> <th class="text-center">ID Number</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th><th class="text-center">Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
               echo '<tr>';
@@ -337,7 +337,7 @@ public function viewAllLivelihood(){
             echo '<table style="width:100%" class="table">';
             echo '<tr>';
             echo '<tr style="color:#d75093">';
-            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Participant</th> <th class="text-center">ID #</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th><th class="text-center">Action</th>';
+            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Participant</th> <th class="text-center">ID Number</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th><th class="text-center">Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
               echo '<tr>';
@@ -417,7 +417,7 @@ public function viewAllSearch(){
             echo '<table style="width:100%" class="table">';
             echo '<tr>';
             echo '<tr style="color:#d75093">';
-            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Participant</th> <th class="text-center">ID #</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th><th class="text-center">Action</th>';
+            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Participant</th> <th class="text-center">ID Number</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th><th class="text-center">Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -498,7 +498,7 @@ public function viewAllLiteracySearch(){
             echo '<table style="width:100%" class="table">';
             echo '<tr>';
             echo '<tr style="color:#d75093">';
-            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Participant</th> <th class="text-center">ID #</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th><th class="text-center">Action</th>';
+            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Participant</th> <th class="text-center">ID Number</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th><th class="text-center">Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -579,7 +579,7 @@ public function viewAllHealthSearch(){
             echo '<table style="width:100%" class="table">';
             echo '<tr>';
             echo '<tr style="color:#d75093">';
-            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Participant</th> <th class="text-center">ID #</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th><th class="text-center">Action</th>';
+            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Participant</th> <th class="text-center">ID Number</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th><th class="text-center">Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -660,7 +660,7 @@ public function viewAllEnvironmentSearch(){
             echo '<table style="width:100%" class="table">';
             echo '<tr>';
             echo '<tr style="color:#d75093">';
-            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Participant</th> <th class="text-center">ID #</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th><th class="text-center">Action</th>';
+            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Participant</th> <th class="text-center">ID Number</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th><th class="text-center">Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
@@ -740,7 +740,7 @@ public function viewAllLivelihoodSearch(){
             echo '<table style="width:100%" class="table">';
             echo '<tr>';
             echo '<tr style="color:#d75093">';
-            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Participant</th> <th class="text-center">ID #</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th><th class="text-center">Action</th>';
+            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Participant</th> <th class="text-center">ID Number</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th><th class="text-center">Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';

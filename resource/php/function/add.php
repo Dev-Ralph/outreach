@@ -30,6 +30,8 @@ public function __construct($type=null,$title=null,$date=null,$venue=null,$schl_
 public function addRecord(){
     $config = new config;
     $pdo = $config ->Con();
+    $pg = $_GET['pg'];
+    $_SESSION['pg'] = $pg;
     $type = $this->type;
     $title = $this->title;
     $date = $this->date;

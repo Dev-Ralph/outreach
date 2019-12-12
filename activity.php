@@ -85,10 +85,10 @@ background-attachment: fixed;
                       <input type="submit" name="submit"value="Search"style="background:none;border:0;color:white;background-color:#d75094;">
                         </span> -->
 
-                        <li class="nav-item"><a class="nav-link text-dark mr-2 mt-3" href="dataTable.php"><span style="color:#d75093"><i class="fas fa-chart-bar" ></i> Analytics</span></a></li>
+                        <li class="nav-item"><a class="nav-link text-dark mr-2 mt-3" href="dataTable.php?pg=activity"><span style="color:#d75093"><i class="fas fa-chart-bar" ></i> Analytics</span></a></li>
                         <li class="nav-item"><a class="nav-link text-dark mr-2 mt-3" href="viewParticipants.php?pg=activity"><span style="color:#d75093"><i class="fas fa-user-friends"></i> View Participants</span></a></li>
-                        <li class="nav-item"><a class="nav-link text-dark mr-2 mt-3" href="addActivity.php"><span style="color:#d75093"><i class="fas fa-pen-nib"></i> Add activity</span></a></li>
-                        <li class="nav-item"><a class="nav-link text-dark mr-2 mt-3" href="add.php"><span style="color:#d75093"><i class="fas fa-user"></i> Add participant</span></a></li>
+                        <li class="nav-item"><a class="nav-link text-dark mr-2 mt-3" href="addActivity.php?pg=activity"><span style="color:#d75093"><i class="fas fa-pen-nib"></i> Add activity</span></a></li>
+                        <li class="nav-item"><a class="nav-link text-dark mr-2 mt-3" href="add.php?pg=activity"><span style="color:#d75093"><i class="fas fa-user"></i> Add participant</span></a></li>
                       <li class="nav-item"><div class="dropdown py-2">
                       <button class="btn btn-secondary dropdown-toggle text-dark mt-3" style="background-color: transparent; border: none;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <span style="color:#d75093">Account</span>

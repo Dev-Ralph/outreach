@@ -225,8 +225,8 @@ background-attachment: fixed;
         if(isset($_GET['outreach_activity_id'])){
           // echo '<h5 class="text-center">'.$edit->title.'</h5>';
           // echo '<h6 class="text-center">'.$edit->date.'</h6>';
-          echo '<h6 class="text-center">'.$edit->venue.'</h6>';
-          echo '<p class="text-justify pt-3 pb-5">'.$edit->documentation.'<p>';
+          echo '<h6 class="text-center animated zoomIn">'.$edit->venue.'</h6>';
+          echo '<p class="text-justify pt-3 pb-5 animated zoomIn">'.$edit->documentation.'<p>';
         }
          ?>
      </div>

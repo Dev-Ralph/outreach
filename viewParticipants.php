@@ -80,7 +80,7 @@ background-attachment: fixed;
           </div>
         </nav>
       <div class="container-fluid mt-4 ">
-        <form action="" method="GET" class="form-inline pb-0">
+        <form action="" method="GET" class="form-inline pb-4">
         <input class="form-control mr-3" style="width:55vh;" type="search" name="search" value="" placeholder="Enter keyword..." autocomplete="off">
           <br>
         <label class="ml-1 text-muted mr-2">Filter by:</label>
@@ -108,7 +108,7 @@ background-attachment: fixed;
             <?php
           }
           ?>>Clear</a>
-          </form>'
+          </form>
       </div>
       <div class="container animated fadeInUp">
         <div class="row">
