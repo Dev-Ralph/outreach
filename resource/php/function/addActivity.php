@@ -88,6 +88,7 @@ public function addRecord(){
     $documentationImage3=null;
     $documentationImage4=null;
     $documentationImage5=null;
+    
     if (!empty($imgExt) && !empty($imgExt1) && !empty($imgExt2) && !empty($imgExt3) && !empty($imgExt4) && !empty($imgExt5)) {
       // code...
       $documentationImage=rand(1000, 1000000).".".$imgExt;

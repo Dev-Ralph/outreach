@@ -55,7 +55,7 @@ public function dataTableProponentLiteracy(){
               $row->title;
             }
 
-            $sql = "SELECT `title`, COUNT(`title`) as `Population` FROM `outreach_participant` WHERE `type` = 'Literacy & Numeracy' GROUP BY `title` ORDER BY `Population` DESC";
+            $sql = "SELECT `title`, COUNT(`title`) as `Population`, `date` FROM `outreach_participant` WHERE `type` = 'Literacy & Numeracy' GROUP BY `title` ORDER BY `Population` DESC";
             $data = $pdo->prepare($sql);
             $data->execute();
             $results = $data->fetchAll();
@@ -68,7 +68,7 @@ public function dataTableProponentLiteracy(){
             echo '<tr>';
             echo '<td class="text-center py-3">'.$result->title.'</td>';
             echo '<td class="text-center py-3">'.$result->Population.'<i class="fas fa-users ml-1"></i></td>';
-            echo '<td class="text-center py-3"><a class="btn btn-outline-primary" href="tableActivity.php?pg='.$pg.'&act_title='.$result->title.'"><i class="fas fa-eye mr-1"></i>View</a></td>';
+            echo '<td class="text-center py-3"><a class="btn btn-outline-primary" href="tableActivity.php?pg='.$pg.'&act_title='.$result->title.'&act_date='.$result->date.'"><i class="fas fa-eye mr-1"></i>View</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -81,6 +81,14 @@ public function dataTableProponentLiteracy(){
               echo '</li>';
             }
             echo '</ul>';
+
+            echo '<form method="GET">
+            <div class="form-group">
+            <input type="date" class="form-control text-muted d-inline" name="dateFrom" required autocomplete="off" style="WIDTH: 200px; HEIGHT: 42px;">
+            <input type="date" class="form-control text-muted d-inline" name="dateTo" required autocomplete="off" style="WIDTH: 200px; HEIGHT: 42px;">
+            <button type="submit" class="card-btn btn text-light" name="searchDate-Literacy" style="background-color: #d75093;">Search</button>
+            </div>
+            </form>';
 }
 
 public function dataTableAttendeesLiteracy(){
@@ -183,7 +191,7 @@ public function dataTableProponentHealth(){
               $row->title;
             }
 
-            $sql = "SELECT `title`, COUNT(`title`) as `Population` FROM `outreach_participant` WHERE `type` = 'Health & Wellness' GROUP BY `title` ORDER BY `Population` DESC";
+            $sql = "SELECT `title`, COUNT(`title`) as `Population`, `date` FROM `outreach_participant` WHERE `type` = 'Health & Wellness' GROUP BY `title` ORDER BY `Population` DESC";
             $data = $pdo->prepare($sql);
             $data->execute();
             $results = $data->fetchAll();
@@ -196,7 +204,7 @@ public function dataTableProponentHealth(){
             echo '<tr>';
             echo '<td class="text-center py-3">'.$result->title.'</td>';
             echo '<td class="text-center py-3">'.$result->Population.'<i class="fas fa-users ml-1"></i></td>';
-            echo '<td class="text-center py-3"><a class="btn btn-outline-primary" href="tableActivity.php?pg='.$pg.'&act_title='.$result->title.'"><i class="fas fa-eye mr-1"></i>View</a></td>';
+            echo '<td class="text-center py-3"><a class="btn btn-outline-primary" href="tableActivity.php?pg='.$pg.'&act_title='.$result->title.'&act_date='.$result->date.'"><i class="fas fa-eye mr-1"></i>View</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -209,6 +217,14 @@ public function dataTableProponentHealth(){
               echo '</li>';
             }
             echo '</ul>';
+
+            echo '<form method="GET">
+            <div class="form-group">
+            <input type="date" class="form-control text-muted d-inline" name="dateFrom" required autocomplete="off" style="WIDTH: 200px;">
+            <input type="date" class="form-control text-muted d-inline" name="dateTo" required autocomplete="off" style="WIDTH: 200px;">
+            <button type="submit" class="card-btn btn text-light" name="searchDate-Health" style="background-color: #d75093;">Search</button>
+            </div>
+            </form>';
 }
 
 public function dataTableAttendeesHealth(){
@@ -310,7 +326,7 @@ public function dataTableProponentEnvironment(){
               $row->title;
             }
 
-            $sql = "SELECT `title`, COUNT(`title`) as `Population` FROM `outreach_participant` WHERE `type` = 'Environment Care' GROUP BY `title` ORDER BY `Population` DESC";
+            $sql = "SELECT `title`, COUNT(`title`) as `Population`, `date` FROM `outreach_participant` WHERE `type` = 'Environment Care' GROUP BY `title` ORDER BY `Population` DESC";
             $data = $pdo->prepare($sql);
             $data->execute();
             $results = $data->fetchAll();
@@ -323,7 +339,7 @@ public function dataTableProponentEnvironment(){
             echo '<tr>';
             echo '<td class="text-center py-3">'.$result->title.'</td>';
             echo '<td class="text-center py-3">'.$result->Population.'<i class="fas fa-users ml-1"></i></td>';
-            echo '<td class="text-center py-3"><a class="btn btn-outline-primary" href="tableActivity.php?pg='.$pg.'&act_title='.$result->title.'"><i class="fas fa-eye mr-1"></i>View</a></td>';
+            echo '<td class="text-center py-3"><a class="btn btn-outline-primary" href="tableActivity.php?pg='.$pg.'&act_title='.$result->title.'&act_date='.$result->date.'"><i class="fas fa-eye mr-1"></i>View</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -336,6 +352,14 @@ public function dataTableProponentEnvironment(){
               echo '</li>';
             }
             echo '</ul>';
+
+            echo '<form method="GET">
+            <div class="form-group">
+            <input type="date" class="form-control text-muted d-inline" name="dateFrom" required autocomplete="off" style="WIDTH: 200px;">
+            <input type="date" class="form-control text-muted d-inline" name="dateTo" required autocomplete="off" style="WIDTH: 200px;">
+            <button type="submit" class="card-btn btn text-light" name="searchDate-Environment" style="background-color: #d75093;">Search</button>
+            </div>
+            </form>';
 }
 
 public function dataTableAttendeesEnvironment(){
@@ -438,7 +462,7 @@ public function dataTableProponentLivelihood(){
               $row->title;
             }
 
-            $sql = "SELECT `title`, COUNT(`title`) as `Population` FROM `outreach_participant` WHERE `type` = 'Livelihood & Entrepreneurship' GROUP BY `title` ORDER BY `Population` DESC";
+            $sql = "SELECT `title`, COUNT(`title`) as `Population`, `date` FROM `outreach_participant` WHERE `type` = 'Livelihood & Entrepreneurship' GROUP BY `title` ORDER BY `Population` DESC";
             $data = $pdo->prepare($sql);
             $data->execute();
             $results = $data->fetchAll();
@@ -451,7 +475,7 @@ public function dataTableProponentLivelihood(){
             echo '<tr>';
             echo '<td class="text-center py-3">'.$result->title.'</td>';
             echo '<td class="text-center py-3">'.$result->Population.'<i class="fas fa-users ml-1"></i></td>';
-            echo '<td class="text-center py-3"><a class="btn btn-outline-primary" href="tableActivity.php?pg='.$pg.'&act_title='.$result->title.'"><i class="fas fa-eye mr-1"></i>View</a></td>';
+            echo '<td class="text-center py-3"><a class="btn btn-outline-primary" href="tableActivity.php?pg='.$pg.'&act_title='.$result->title.'&act_date='.$result->date.'"><i class="fas fa-eye mr-1"></i>View</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -464,6 +488,14 @@ public function dataTableProponentLivelihood(){
               echo '</li>';
             }
             echo '</ul>';
+
+            echo '<form method="GET">
+            <div class="form-group">
+            <input type="date" class="form-control text-muted d-inline" name="dateFrom" required autocomplete="off" style="WIDTH: 200px;">
+            <input type="date" class="form-control text-muted d-inline" name="dateTo" required autocomplete="off" style="WIDTH: 200px;">
+            <button type="submit" class="card-btn btn text-light" name="searchDate-Livelihood" style="background-color: #d75093;">Search</button>
+            </div>
+            </form>';
 }
 
 public function dataTableAttendeesLivelihood(){

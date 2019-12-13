@@ -7,6 +7,7 @@ public function tableActivityParticipant(){
 
             $limit = 10;
             $title = $_GET['act_title'];
+            $date = $_GET['act_date'];
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $s = $pdo->prepare("SELECT * FROM `outreach_participant` WHERE `title` LIKE '%$title%'");
             $s->execute();
@@ -22,24 +23,28 @@ public function tableActivityParticipant(){
 
             $start = ($page-1)*$limit;
 
-            $sql = "SELECT * FROM `outreach_participant` WHERE `title` LIKE '%$title%' LIMIT $start, $limit";
+            $sql = "SELECT * FROM `outreach_participant` WHERE `title` LIKE '%$title%' ORDER BY `p_lastname` LIMIT $start, $limit";
             $data = $pdo->prepare($sql);
             $data->execute();
             $results = $data->fetchAll(PDO::FETCH_OBJ);
 
-            echo '<div class="table-responsive" id="activity"> ';
-            echo '<h1 class="text-center py-3" style="text-align: center">'.$title.'</h1>';
-            echo '<table style="width:100%; background-color: white;" class="table table-bordered" style="border-collapse:collape;">';
+            echo '<div class="table-responsive">';
+            echo '<h1 class="text-center pt-3">'.$title.'</h1>';
+            echo '<h3 class="text-center pb-3">'.$date.'</h3>';
+            echo '</div>';
+            echo '<div class="table-responsive" id="activity">';
+            echo '<h1 class="text-center pt-3" style="text-align: center; display:none;">'.$title.'<span style="display: none;"> ('.$date.')</span></h1>';
+            echo '<table class="table table-bordered" style="width:100%; background-color: white; border-collapse: collapse;">';
             echo '<tr>';
-            echo '<th class="text-center">Name of Participants</th> <th class="text-center">ID Number</th> <th class="text-center"></i>Participation</th> <th class="text-center">Proponent</th> <th class="text-center"></i>College Department</th>';
+            echo '<th class="text-center;" style="text-align: center;border: 1px solid black;">Name of Participants</th> <th class="text-center;" style="text-align: center;border: 1px solid black;">ID Number</th> <th class="text-center;" style="text-align: center;border: 1px solid black;"></i>Participation</th> <th class="text-center;" style="text-align: center;border: 1px solid black;">Proponent</th> <th class="text-center;" style="text-align: center;border: 1px solid black;"></i>College Department</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
-            echo '<td class="text-center" style="text-align: center">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
-            echo '<td class="text-center" style="text-align: center">'.$result->schl_number.'</td>';
-            echo '<td class="text-center" style="text-align: center">'.$result->participation.'</td>';
-            echo '<td class="text-center" style="text-align: center">'.$result->proponent.'</td>';
-            echo '<td class="text-center" style="text-align: center">'.$result->collegeDepartment.'</td>';
+            echo '<td class="text-center" style="text-align: center;border: 1px solid black;">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
+            echo '<td class="text-center" style="text-align: center;border: 1px solid black;">'.$result->schl_number.'</td>';
+            echo '<td class="text-center" style="text-align: center;border: 1px solid black;">'.$result->participation.'</td>';
+            echo '<td class="text-center" style="text-align: center;border: 1px solid black;">'.$result->proponent.'</td>';
+            echo '<td class="text-center" style="text-align: center;border: 1px solid black;">'.$result->collegeDepartment.'</td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -76,7 +81,7 @@ public function tableCollegeParticipant(){
 
             $start = ($page-1)*$limit;
 
-            $sql = "SELECT * FROM `outreach_participant` WHERE `collegeDepartment` = '$department' AND `type` LIKE '%$type%' LIMIT $start, $limit";
+            $sql = "SELECT * FROM `outreach_participant` WHERE `collegeDepartment` = '$department' AND `type` LIKE '%$type%' ORDER BY `p_lastname` LIMIT $start, $limit";
             $data = $pdo->prepare($sql);
             $data->execute();
             $results = $data->fetchAll(PDO::FETCH_OBJ);
@@ -85,16 +90,16 @@ public function tableCollegeParticipant(){
             echo '<h1 class="text-center py-3" style="text-align: center">'.$department.'</h1>';
             echo '<table style="width:100%; background-color: white;" class="table table-bordered">';
             echo '<tr>';
-            echo '<th class="text-center">Name of Participants</th> <th class="text-center">ID Number</th> <th class="text-center">Outreach Program</th> <th class="text-center">Title of Activity</th> <th class="text-center">Participation</th> <th class="text-center">Proponent</th>';
+            echo '<th class="text-center" style="border: 1px solid black;">Name of Participants</th> <th class="text-center" style="border: 1px solid black;">ID Number</th> <th class="text-center" style="border: 1px solid black;">Title of Activity</th> <th class="text-center" style="border: 1px solid black;">Participation</th> <th class="text-center" style="border: 1px solid black;">Proponent</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
-            echo '<td class="text-center" style="text-align: center">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
-            echo '<td class="text-center" style="text-align: center">'.$result->schl_number.'</td>';
-            echo '<td class="text-center" style="text-align: center">'.$type.'</td>';
-            echo '<td class="text-center" style="text-align: center">'.$result->title.'</td>';
-            echo '<td class="text-center" style="text-align: center">'.$result->participation.'</td>';
-            echo '<td class="text-center" style="text-align: center">'.$result->proponent.'</td>';
+            echo '<td class="text-center" style="text-align: center;border: 1px solid black;">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
+            echo '<td class="text-center" style="text-align: center;border: 1px solid black;">'.$result->schl_number.'</td>';
+            // echo '<td class="text-center" style="text-align: center;border: 1px solid black;">'.$result->type.'</td>';
+            echo '<td class="text-center" style="text-align: center;border: 1px solid black;">'.$result->title.'</td>';
+            echo '<td class="text-center" style="text-align: center;border: 1px solid black;">'.$result->participation.'</td>';
+            echo '<td class="text-center" style="text-align: center;border: 1px solid black;">'.$result->proponent.'</td>';
             echo '</tr>';
             }
             echo '</table>';

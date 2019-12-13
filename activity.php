@@ -70,21 +70,6 @@ background-attachment: fixed;
                 <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav ml-auto">
                     <form action="" method="GET" class="form-inline my-2 my-lg-0">
-                      <!-- <input class="form-control mr-3 text-dark mt-3" style="width:55vh;" type="search" name="search" value="" placeholder="Enter keyword..." autocomplete="off">
-                        <br>
-                      <label class="ml-1 text-muted mr-1 mt-3">Filter by:</label>
-                        <select class="form-control mr-2 mt-3 text-dark browser-default custom-select" name="down" style="width:20vh;" id="select" name="criteria">
-                          <option value="date" title="Title for Item 1">Date</option>
-                          <option value="schoolName" title="Title for Item 2">School</option>
-                          <option value="facilitator" title="Title for Item 3">Facilitator</option>
-                          <option value="collegeDepartment" title="Title for Item 4">Department</option>
-                        </select>
-
-                        <span class="btn btn-default mr-3 mt-3" style="background-color:#d75094;">
-                              <i class="fas fa-search text-white"></i>
-                      <input type="submit" name="submit"value="Search"style="background:none;border:0;color:white;background-color:#d75094;">
-                        </span> -->
-
                         <li class="nav-item"><a class="nav-link text-dark mr-2 mt-3" href="dataTable.php?pg=activity"><span style="color:#d75093"><i class="fas fa-chart-bar" ></i> Analytics</span></a></li>
                         <li class="nav-item"><a class="nav-link text-dark mr-2 mt-3" href="viewParticipants.php?pg=activity"><span style="color:#d75093"><i class="fas fa-user-friends"></i> View Participants</span></a></li>
                         <li class="nav-item"><a class="nav-link text-dark mr-2 mt-3" href="addActivity.php?pg=activity"><span style="color:#d75093"><i class="fas fa-pen-nib"></i> Add activity</span></a></li>

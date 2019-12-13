@@ -69,7 +69,7 @@ background-attachment: fixed;
           </div>
         </nav>
       <div class="container mt-3 animated pulse">
-        <button name="create_excel" id="create_excel" class="btn btn-success float-right">Create Excel File</button>
+        <button name="create_excel" id="create_excel" class="btn btn-success float-right">Export to Excel</button>
         <?php
         require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/tableActivity.php';
         $tableActivity = new tableActivity;

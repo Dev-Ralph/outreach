@@ -117,9 +117,15 @@ background-attachment: fixed;
               </div>
               <div class="tab-pane fade animated fadeInUp <?php if(!empty($_GET['tab'])){if($_GET['tab']=="activity"){echo "show active";}} ?>" id="nav-proponents" role="tabpanel" aria-labelledby="nav-proponents-tab">
                 <?php
-                require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTable.php';
-                $dataTable = new dataTable;
-                $dataTable->dataTableProponentLiteracy();
+                if (isset($_POST['searchDate-Literacy'])) {
+                  require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/filterDate.php';
+                  $add = new filterDate($_GET['dateFrom'],$_GET['dateTo']);
+                  $add->filterActivityLiteracy();
+                }else {
+                  require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTable.php';
+                  $dataTable = new dataTable;
+                  $dataTable->dataTableProponentLiteracy();
+              }
                 ?>
               </div>
             </div>

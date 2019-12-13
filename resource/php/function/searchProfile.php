@@ -150,9 +150,9 @@ public function searchProfileOutput(){
             foreach ($results as $result) {
               echo '<div class="table-responsive" id="list"> ';
               echo '<div class="col py-4">';
-              echo '<h4 class="ml-4" style="text-align: center">'.$result->schl_number.'</h4>';
-              echo '<h5 class="ml-4" style="text-align: center">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</h5>';
-              echo '<h5 class="ml-4" style="text-align: center">'.$result->collegeDepartment.'</h5>';
+              echo '<h3 class="ml-4" style="text-align: center">'.$result->schl_number.'</h3>';
+              echo '<h3 class="ml-4" style="text-align: center">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</h3>';
+              echo '<h3 class="ml-4" style="text-align: center">'.$result->collegeDepartment.'</h3>';
               echo '</div>';
             }
 
@@ -163,16 +163,16 @@ public function searchProfileOutput(){
             // echo '<div class="px-0">';
             echo '<table style="width:100%" class="table table-bordered bg-white">';
             echo '<tr>';
-            echo '<th class="text-center">Outreach Program</th> <th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Venue</th> <th class="text-center">Participation</th> <th class="text-center">Proponent</th>';
+            echo '<th class="text-center" style="border: 1px solid black;">Activity</th> <th class="text-center" style="border: 1px solid black;">Date</th> <th class="text-center" style="border: 1px solid black;">Venue</th> <th class="text-center" style="border: 1px solid black;">Participation</th> <th class="text-center" style="border: 1px solid black;">Proponent</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
-            echo '<td class="text-center" style="text-align: center">'.$type.'</td>';
-            echo '<td class="text-center" style="text-align: center">'.$result->title.'</td>';
-            echo '<td class="text-center" style="text-align: center">'.$result->date.'</td>';
-            echo '<td class="text-center" style="text-align: center">'.$result->venue.'</td>';
-            echo '<td class="text-center" style="text-align: center">'.$result->participation.'</td>';
-            echo '<td class="text-center" style="text-align: center">'.$result->proponent.'</td>';
+            // echo '<td class="text-center" style="text-align: center; border: 1px solid black;">'.$result->type.'</td>';
+            echo '<td class="text-center" style="text-align: center; border: 1px solid black;">'.$result->title.'</td>';
+            echo '<td class="text-center" style="text-align: center; border: 1px solid black;">'.$result->date.'</td>';
+            echo '<td class="text-center" style="text-align: center; border: 1px solid black;">'.$result->venue.'</td>';
+            echo '<td class="text-center" style="text-align: center; border: 1px solid black;">'.$result->participation.'</td>';
+            echo '<td class="text-center" style="text-align: center; border: 1px solid black;">'.$result->proponent.'</td>';
             echo '</tr>';
             }
             echo '</table>';

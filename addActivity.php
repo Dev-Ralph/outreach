@@ -81,6 +81,7 @@ background-attachment: fixed;
       <main class="py-4">
         <div class="container-fluid ">
           <?php
+          error_reporting (E_ALL ^ E_NOTICE);
           require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/addActivity.php';
           if(isset($_POST['add'])){
             $add = new addActivity($_POST['type'],$_POST['title'],$_POST['proponent'],$_POST['date'],$_POST['venue'],$_POST['target_p'],$_POST['mean'],$_POST['documentation']);
@@ -160,153 +161,13 @@ background-attachment: fixed;
                           </div>
                           <hr />
                           <div class="form-group">
-                            <div class="alert alert-dismissible text-dark bg-light my-0" role="alert">
-                            <span class="ml-0">Select 1-6 images.</span>
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                            </div>
                             <label for="image" class="col-form-label text-md-right">Images</label>
-                            <!-- <select id="image_selector" class="form-control mr-2 text-dark browser-default custom-select" name="image_selector" autofocus required>
-                              <option value="one">1 Image</option>
-                              <option value="two">2 Images</option>
-                              <option value="three">3 Images</option>
-                              <option value="four">4 Images</option>
-                              <option value="five">5 Images</option>
-                              <option value="six">6 Images</option>
-                            </select> -->
-                            <input id="image" type="file" class="form-control mt-2" name="image" autocomplete="image" accept="*/image">
-                            <input id="image1" type="file" class="form-control mt-2" name="image1" autocomplete="image1" accept="*/image">
-                            <input id="image2" type="file" class="form-control mt-2" name="image2" autocomplete="image2" accept="*/image">
-                            <input id="image3" type="file" class="form-control mt-2" name="image3" autocomplete="image3" accept="*/image">
-                            <input id="image4" type="file" class="form-control mt-2" name="image4" autocomplete="image4" accept="*/image">
-                            <input id="image5" type="file" class="form-control mt-2" name="image5" autocomplete="image5" accept="*/image">
-
-                            <!-- <?php
-                            if (isset($_POST['add'])) {
-                            $image_selector = $_POST['image_selector'];
-                            if ($image_selector == "one") {
-
-                              echo '<div class="one box">
-                              <input id="image" type="file" class="form-control mt-2" name="image" autocomplete="image" accept="*/image">
-                              </div>';
-                            }elseif ($image_selector == "two") {
-                              ?>
-                              <input id="image" type="file" class="form-control mt-2" name="image" autocomplete="image" accept="*/image">
-                              <input id="image1" type="file" class="form-control mt-2" name="image1" autocomplete="image1" accept="*/image">
-                              <?php
-                            }else {
-                              ?>
-                              <div class="one box">
-                              <input id="image" type="file" class="form-control mt-2" name="image" autocomplete="image" accept="*/image">
-                              </div>
-                              <div class="two box">
-                              <input id="image" type="file" class="form-control mt-2" name="image" autocomplete="image" accept="*/image">
-                              <input id="image1" type="file" class="form-control mt-2" name="image1" autocomplete="image1" accept="*/image">
-                              </div>
-                              <div class="three box">
-                                <input id="image" type="file" class="form-control mt-2" name="image" autocomplete="image" accept="*/image">
-                                <input id="image1" type="file" class="form-control mt-2" name="image1" autocomplete="image1" accept="*/image">
-                                <input id="image2" type="file" class="form-control mt-2" name="image2" autocomplete="image2" accept="*/image">
-                              </div>
-                              <div class="four box">
-                                <input id="image" type="file" class="form-control mt-2" name="image" autocomplete="image" accept="*/image">
-                                <input id="image1" type="file" class="form-control mt-2" name="image1" autocomplete="image1" accept="*/image">
-                                <input id="image2" type="file" class="form-control mt-2" name="image2" autocomplete="image2" accept="*/image">
-                                <input id="image3" type="file" class="form-control mt-2" name="image3" autocomplete="image3" accept="*/image">
-                              </div>
-                              <div class="five box">
-                                <input id="image" type="file" class="form-control mt-2" name="image" autocomplete="image" accept="*/image">
-                                <input id="image1" type="file" class="form-control mt-2" name="image1" autocomplete="image1" accept="*/image">
-                                <input id="image2" type="file" class="form-control mt-2" name="image2" autocomplete="image2" accept="*/image">
-                                <input id="image3" type="file" class="form-control mt-2" name="image3" autocomplete="image3" accept="*/image">
-                                <input id="image4" type="file" class="form-control mt-2" name="image4" autocomplete="image4" accept="*/image">
-                              </div>
-                              <div class="six box">
-                                <input id="image" type="file" class="form-control mt-2" name="image" autocomplete="image" accept="*/image">
-                                <input id="image1" type="file" class="form-control mt-2" name="image1" autocomplete="image1" accept="*/image">
-                                <input id="image2" type="file" class="form-control mt-2" name="image2" autocomplete="image2" accept="*/image">
-                                <input id="image3" type="file" class="form-control mt-2" name="image3" autocomplete="image3" accept="*/image">
-                                <input id="image4" type="file" class="form-control mt-2" name="image4" autocomplete="image4" accept="*/image">
-                                <input id="image5" type="file" class="form-control mt-2" name="image5" autocomplete="image5" accept="*/image">
-                              </div>
-                              <?php
-                            }
-                            }else {
-                              echo'
-                              <div class="one box">
-                              <input id="image" type="file" class="form-control mt-2" name="image" autocomplete="image" accept="*/image">
-                              </div>
-                              <div class="two box">
-                              <input id="image" type="file" class="form-control mt-2" name="image" autocomplete="image" accept="*/image">
-                              <input id="image1" type="file" class="form-control mt-2" name="image1" autocomplete="image1" accept="*/image">
-                              </div>
-                              <div class="three box">
-                                <input id="image" type="file" class="form-control mt-2" name="image" autocomplete="image" accept="*/image">
-                                <input id="image1" type="file" class="form-control mt-2" name="image1" autocomplete="image1" accept="*/image">
-                                <input id="image2" type="file" class="form-control mt-2" name="image2" autocomplete="image2" accept="*/image">
-                              </div>
-                              <div class="four box">
-                                <input id="image" type="file" class="form-control mt-2" name="image" autocomplete="image" accept="*/image">
-                                <input id="image1" type="file" class="form-control mt-2" name="image1" autocomplete="image1" accept="*/image">
-                                <input id="image2" type="file" class="form-control mt-2" name="image2" autocomplete="image2" accept="*/image">
-                                <input id="image3" type="file" class="form-control mt-2" name="image3" autocomplete="image3" accept="*/image">
-                              </div>
-                              <div class="five box">
-                                <input id="image" type="file" class="form-control mt-2" name="image" autocomplete="image" accept="*/image">
-                                <input id="image1" type="file" class="form-control mt-2" name="image1" autocomplete="image1" accept="*/image">
-                                <input id="image2" type="file" class="form-control mt-2" name="image2" autocomplete="image2" accept="*/image">
-                                <input id="image3" type="file" class="form-control mt-2" name="image3" autocomplete="image3" accept="*/image">
-                                <input id="image4" type="file" class="form-control mt-2" name="image4" autocomplete="image4" accept="*/image">
-                              </div>
-                              <div class="six box">
-                                <input id="image" type="file" class="form-control mt-2" name="image" autocomplete="image" accept="*/image">
-                                <input id="image1" type="file" class="form-control mt-2" name="image1" autocomplete="image1" accept="*/image">
-                                <input id="image2" type="file" class="form-control mt-2" name="image2" autocomplete="image2" accept="*/image">
-                                <input id="image3" type="file" class="form-control mt-2" name="image3" autocomplete="image3" accept="*/image">
-                                <input id="image4" type="file" class="form-control mt-2" name="image4" autocomplete="image4" accept="*/image">
-                                <input id="image5" type="file" class="form-control mt-2" name="image5" autocomplete="image5" accept="*/image">
-                              </div>';
-                            }
-
-                              ?> -->
-                              <!-- <div class="one box">
-                              <input id="image" type="file" class="form-control mt-2" name="image" autocomplete="image" accept="*/image">
-                              </div>
-                              <div class="two box">
-                              <input id="image" type="file" class="form-control mt-2" name="image" autocomplete="image" accept="*/image">
-                              <input id="image1" type="file" class="form-control mt-2" name="image1" autocomplete="image1" accept="*/image">
-                              </div>
-                              <div class="three box">
-                                <input id="image" type="file" class="form-control mt-2" name="image" autocomplete="image" accept="*/image">
-                                <input id="image1" type="file" class="form-control mt-2" name="image1" autocomplete="image1" accept="*/image">
-                                <input id="image2" type="file" class="form-control mt-2" name="image2" autocomplete="image2" accept="*/image">
-                              </div>
-                              <div class="four box">
-                                <input id="image" type="file" class="form-control mt-2" name="image" autocomplete="image" accept="*/image">
-                                <input id="image1" type="file" class="form-control mt-2" name="image1" autocomplete="image1" accept="*/image">
-                                <input id="image2" type="file" class="form-control mt-2" name="image2" autocomplete="image2" accept="*/image">
-                                <input id="image3" type="file" class="form-control mt-2" name="image3" autocomplete="image3" accept="*/image">
-                              </div>
-                              <div class="five box">
-                                <input id="image" type="file" class="form-control mt-2" name="image" autocomplete="image" accept="*/image">
-                                <input id="image1" type="file" class="form-control mt-2" name="image1" autocomplete="image1" accept="*/image">
-                                <input id="image2" type="file" class="form-control mt-2" name="image2" autocomplete="image2" accept="*/image">
-                                <input id="image3" type="file" class="form-control mt-2" name="image3" autocomplete="image3" accept="*/image">
-                                <input id="image4" type="file" class="form-control mt-2" name="image4" autocomplete="image4" accept="*/image">
-                              </div>
-                              <div class="six box">
-                                <input id="image" type="file" class="form-control mt-2" name="image" autocomplete="image" accept="*/image">
-                                <input id="image1" type="file" class="form-control mt-2" name="image1" autocomplete="image1" accept="*/image">
-                                <input id="image2" type="file" class="form-control mt-2" name="image2" autocomplete="image2" accept="*/image">
-                                <input id="image3" type="file" class="form-control mt-2" name="image3" autocomplete="image3" accept="*/image">
-                                <input id="image4" type="file" class="form-control mt-2" name="image4" autocomplete="image4" accept="*/image">
-                                <input id="image5" type="file" class="form-control mt-2" name="image5" autocomplete="image5" accept="*/image">
-                              </div> -->
-                              <?php
-                            // }
-                            ?>
-
+                            <br>
+                            <input type="button" class="btn btn-primary" id="Add" value="Add">
+                            <input type="button" class="btn btn-danger ml-1" id="Remove" value="Remove">
+                            <div id="textboxDiv">
+                              <input type='file' class='form-control mt-2' name='image' autocomplete='image' accept='*/image'>
+                            </div>
                             </div>
                             <hr />
                           <div class="form-group">
@@ -346,32 +207,34 @@ background-attachment: fixed;
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="vendor/js/bootstrap.min.js"></script>
 <script>
-
-$(document).ready(function(){
-
-    $("select").change(function(){
-
-        $(this).find("option:selected").each(function(){
-
-            var optionValue = $(this).attr("value");
-
-            if(optionValue){
-
-                $(".box").not("." + optionValue).hide();
-
-                $("." + optionValue).show();
-
-            } else{
-
-                $(".box").hide();
-
-            }
-
+    var counter = 2;
+        $(document).ready(function() {
+            $("#Add").on("click", function() {
+              if(counter>6){
+                        alert("Only 6 images allowed.");
+                        return 0;
+              }
+              if (counter == 2) {
+                $("#textboxDiv").append("<input type='file' class='form-control mt-2' name='image1' autocomplete='image1' accept='*/image'>");
+              }else if (counter == 3) {
+                $("#textboxDiv").append("<input type='file' class='form-control mt-2' name='image2' autocomplete='image2' accept='*/image'>");
+              }else if (counter == 4) {
+                $("#textboxDiv").append("<input type='file' class='form-control mt-2' name='image3' autocomplete='image3' accept='*/image'>");
+              }else if (counter == 5) {
+                $("#textboxDiv").append("<input type='file' class='form-control mt-2' name='image4' autocomplete='image4' accept='*/image'>");
+              }else if (counter == 6) {
+                $("#textboxDiv").append("<input type='file' class='form-control mt-2' name='image5' autocomplete='image5' accept='*/image'>");
+              }
+                counter++;
+            });
+            $("#Remove").on("click", function() {
+              if(counter==2){
+                      alert("No more images to be removed.");
+                      return 0;
+                   }
+                $("#textboxDiv").children().last().remove();
+                counter--;
+            });
         });
-
-    }).change();
-
-});
-
-</script>
+    </script>
 </html>
