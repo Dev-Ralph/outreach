@@ -71,6 +71,7 @@ background-attachment: fixed;
         <div class="container-fluid ">
           <?php
           require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/addActivity.php';
+          error_reporting (E_ALL ^ E_NOTICE);
           if(isset($_POST['add'])){
             $add = new addActivity($_POST['type'],$_POST['title'],$_POST['proponent'],$_POST['date'],$_POST['venue'],$_POST['target_p'],$_POST['mean'],$_POST['documentation']);
             $add->editRecord();
@@ -181,13 +182,13 @@ background-attachment: fixed;
                               <span aria-hidden="true">&times;</span>
                             </button>
                             </div>
-                            <label for="image" class="col-form-label text-md-right">Images</label>
-                            <input id="image" type="file" class="form-control mt-2" name="image" autocomplete="image" accept="*/image">
-                            <input id="image1" type="file" class="form-control mt-2" name="image1" autocomplete="image1" accept="*/image">
-                            <input id="image2" type="file" class="form-control mt-2" name="image2" autocomplete="image2" accept="*/image">
-                            <input id="image3" type="file" class="form-control mt-2" name="image3" autocomplete="image3" accept="*/image">
-                            <input id="image4" type="file" class="form-control mt-2" name="image4" autocomplete="image4" accept="*/image">
-                            <input id="image5" type="file" class="form-control mt-2" name="image5" autocomplete="image5" accept="*/image">
+                              <label for="image" class="col-form-label text-md-right">Images</label>
+                              <br>
+                              <input type="button" class="btn btn-primary" id="Add" value="Add">
+                              <input type="button" class="btn btn-danger ml-1" id="Remove" value="Remove">
+                              <div id="textboxDiv">
+                                <input type='file' class='form-control mt-2' name='image' autocomplete='image' accept='*/image'>
+                              </div>
                             </div>
                             <hr />
                           <div class="form-group">
@@ -230,4 +231,35 @@ background-attachment: fixed;
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="vendor/js/bootstrap.min.js"></script>
+<script>
+    var counter = 2;
+        $(document).ready(function() {
+            $("#Add").on("click", function() {
+              if(counter>6){
+                        alert("Only 6 images allowed.");
+                        return 0;
+              }
+              if (counter == 2) {
+                $("#textboxDiv").append("<input type='file' class='form-control mt-2' name='image1' autocomplete='image1' accept='*/image'>");
+              }else if (counter == 3) {
+                $("#textboxDiv").append("<input type='file' class='form-control mt-2' name='image2' autocomplete='image2' accept='*/image'>");
+              }else if (counter == 4) {
+                $("#textboxDiv").append("<input type='file' class='form-control mt-2' name='image3' autocomplete='image3' accept='*/image'>");
+              }else if (counter == 5) {
+                $("#textboxDiv").append("<input type='file' class='form-control mt-2' name='image4' autocomplete='image4' accept='*/image'>");
+              }else if (counter == 6) {
+                $("#textboxDiv").append("<input type='file' class='form-control mt-2' name='image5' autocomplete='image5' accept='*/image'>");
+              }
+                counter++;
+            });
+            $("#Remove").on("click", function() {
+              if(counter==2){
+                      alert("No more images to be removed.");
+                      return 0;
+                   }
+                $("#textboxDiv").children().last().remove();
+                counter--;
+            });
+        });
+    </script>
 </html>
