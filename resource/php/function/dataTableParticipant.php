@@ -1,7 +1,7 @@
 <!-- SELECT title, COUNT(schl_number) as Population FROM outreach WHERE title = 'Test 3' GROUP BY title -->
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/db/config.php';
-class dataTable extends config {
+class dataTableParticipant extends config {
 public function dataTableDepartmentLiteracy(){
             $config = new config;
             $pdo = $config->Con();
@@ -21,7 +21,7 @@ public function dataTableDepartmentLiteracy(){
             echo '<tr>';
             echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
             echo '<td class="text-center">'.$result->count.'<i class="fas fa-users ml-1"></i></td>';
-            echo '<td class="text-center"><a class="btn btn-outline-primary" href="tableDepartment.php?department='.$result->collegeDepartment.'&type='.$result->type.'"><i class="fas fa-eye mr-1"></i>View</td>';
+            echo '<td class="text-center"><a class="btn btn-outline-primary" href="tableDepartmentParticipant.php?department='.$result->collegeDepartment.'&type='.$result->type.'"><i class="fas fa-eye mr-1"></i>View</td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -68,7 +68,7 @@ public function dataTableProponentLiteracy(){
             echo '<tr>';
             echo '<td class="text-center py-3">'.$result->title.'</td>';
             echo '<td class="text-center py-3">'.$result->Population.'<i class="fas fa-users ml-1"></i></td>';
-            echo '<td class="text-center py-3"><a class="btn btn-outline-primary" href="tableActivity.php?act_title='.$result->title.'&act_date='.$result->date.'"><i class="fas fa-eye mr-1"></i>View</a></td>';
+            echo '<td class="text-center py-3"><a class="btn btn-outline-primary" href="tableActivityParticipant.php?act_title='.$result->title.'&act_date='.$result->date.'"><i class="fas fa-eye mr-1"></i>View</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -89,7 +89,7 @@ public function dataTableProponentLiteracy(){
             <label class="col-form-label text-md-right">To: </label>
             <input type="date" class="form-control text-muted d-inline" name="dateTo" required autocomplete="off" style="WIDTH: 200px; HEIGHT: 42px;">
             <button type="submit" class="card-btn btn text-light py-2" name="searchDate-Literacy" style="background-color: #d75093;">Search</button>
-            <a class="btn text-light py-2" href="dataTable?pill=literacy&tab=activity" style="background-color: #d75093;">Clear</a>
+            <a class="btn text-light py-2" href="dataTableParticipant.php?pill=literacy&tab=activity" style="background-color: #d75093;">Clear</a>
             </div>
             </form>';
 }
@@ -150,7 +150,7 @@ public function dataTableDepartmentHealth(){
             echo '<tr>';
             echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
             echo '<td class="text-center">'.$result->count.'<i class="fas fa-users ml-1"></i></td>';
-            echo '<td class="text-center"><a class="btn btn-outline-primary" href="tableDepartment.php?department='.$result->collegeDepartment.'&type='.$result->type.'"><i class="fas fa-eye mr-1"></i>View</td>';
+            echo '<td class="text-center"><a class="btn btn-outline-primary" href="tableDepartmentParticipant.php?department='.$result->collegeDepartment.'&type='.$result->type.'"><i class="fas fa-eye mr-1"></i>View</td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -207,7 +207,7 @@ public function dataTableProponentHealth(){
             echo '<tr>';
             echo '<td class="text-center py-3">'.$result->title.'</td>';
             echo '<td class="text-center py-3">'.$result->Population.'<i class="fas fa-users ml-1"></i></td>';
-            echo '<td class="text-center py-3"><a class="btn btn-outline-primary" href="tableActivity.php?act_title='.$result->title.'&act_date='.$result->date.'"><i class="fas fa-eye mr-1"></i>View</a></td>';
+            echo '<td class="text-center py-3"><a class="btn btn-outline-primary" href="tableActivityParticipant.php?act_title='.$result->title.'&act_date='.$result->date.'"><i class="fas fa-eye mr-1"></i>View</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -228,7 +228,7 @@ public function dataTableProponentHealth(){
             <label class="col-form-label text-md-right">To: </label>
             <input type="date" class="form-control text-muted d-inline" name="dateTo" required autocomplete="off" style="WIDTH: 200px; HEIGHT: 42px;">
             <button type="submit" class="card-btn btn text-light py-2" name="searchDate-Health" style="background-color: #d75093;">Search</button>
-            <a class="btn text-light py-2" href="dataTable?pill=health&tab=activity" style="background-color: #d75093;">Clear</a>
+            <a class="btn text-light py-2" href="dataTableParticipant.php?pill=health&tab=activity" style="background-color: #d75093;">Clear</a>
             </div>
             </form>';
 }
@@ -289,7 +289,7 @@ public function dataTableDepartmentEnvironment(){
             echo '<tr>';
             echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
             echo '<td class="text-center">'.$result->count.'<i class="fas fa-users ml-1"></i></td>';
-            echo '<td class="text-center"><a class="btn btn-outline-primary" href="tableDepartment.php?department='.$result->collegeDepartment.'&type='.$result->type.'"><i class="fas fa-eye mr-1"></i>View</td>';
+            echo '<td class="text-center"><a class="btn btn-outline-primary" href="tableDepartmentParticipant.php?department='.$result->collegeDepartment.'&type='.$result->type.'"><i class="fas fa-eye mr-1"></i>View</td>';
             }
             echo '</table>';
 
@@ -345,7 +345,7 @@ public function dataTableProponentEnvironment(){
             echo '<tr>';
             echo '<td class="text-center py-3">'.$result->title.'</td>';
             echo '<td class="text-center py-3">'.$result->Population.'<i class="fas fa-users ml-1"></i></td>';
-            echo '<td class="text-center py-3"><a class="btn btn-outline-primary" href="tableActivity.php?act_title='.$result->title.'&act_date='.$result->date.'"><i class="fas fa-eye mr-1"></i>View</a></td>';
+            echo '<td class="text-center py-3"><a class="btn btn-outline-primary" href="tableActivityParticipant.php?act_title='.$result->title.'&act_date='.$result->date.'"><i class="fas fa-eye mr-1"></i>View</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -366,7 +366,7 @@ public function dataTableProponentEnvironment(){
 <label class="col-form-label text-md-right">To: </label>
             <input type="date" class="form-control text-muted d-inline" name="dateTo" required autocomplete="off" style="WIDTH: 200px; HEIGHT: 42px;">
             <button type="submit" class="card-btn btn text-light py-2" name="searchDate-Environment" style="background-color: #d75093;">Search</button>
-            <a class="btn text-light py-2" href="dataTable?pill=environment&tab=activity" style="background-color: #d75093;">Clear</a>
+            <a class="btn text-light py-2" href="dataTableParticipant.php?pill=environment&tab=activity" style="background-color: #d75093;">Clear</a>
             </div>
             </form>';
 }
@@ -427,7 +427,7 @@ public function dataTableDepartmentLivelihood(){
             echo '<tr>';
             echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
             echo '<td class="text-center">'.$result->count.'<i class="fas fa-users ml-1"></i></td>';
-            echo '<td class="text-center"><a class="btn btn-outline-primary" href="tableDepartment.php?department='.$result->collegeDepartment.'&type='.$result->type.'"><i class="fas fa-eye mr-1"></i>View</td>';
+            echo '<td class="text-center"><a class="btn btn-outline-primary" href="tableDepartmentParticipant.php?department='.$result->collegeDepartment.'&type='.$result->type.'"><i class="fas fa-eye mr-1"></i>View</td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -484,7 +484,7 @@ public function dataTableProponentLivelihood(){
             echo '<tr>';
             echo '<td class="text-center py-3">'.$result->title.'</td>';
             echo '<td class="text-center py-3">'.$result->Population.'<i class="fas fa-users ml-1"></i></td>';
-            echo '<td class="text-center py-3"><a class="btn btn-outline-primary" href="tableActivity.php?act_title='.$result->title.'&act_date='.$result->date.'"><i class="fas fa-eye mr-1"></i>View</a></td>';
+            echo '<td class="text-center py-3"><a class="btn btn-outline-primary" href="tableActivityParticipant.php?act_title='.$result->title.'&act_date='.$result->date.'"><i class="fas fa-eye mr-1"></i>View</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -505,7 +505,7 @@ public function dataTableProponentLivelihood(){
 <label class="col-form-label text-md-right">To: </label>
             <input type="date" class="form-control text-muted d-inline" name="dateTo" required autocomplete="off" style="WIDTH: 200px; HEIGHT: 42px;">
             <button type="submit" class="card-btn btn text-light py-2" name="searchDate-Livelihood" style="background-color: #d75093;">Search</button>
-            <a class="btn text-light py-2" href="dataTable?pill=livelihood&tab=activity" style="background-color: #d75093;">Clear</a>
+            <a class="btn text-light py-2" href="dataTableParticipant.php?pill=livelihood&tab=activity" style="background-color: #d75093;">Clear</a>
             </div>
             </form>';
 }

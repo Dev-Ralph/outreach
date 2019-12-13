@@ -13,7 +13,7 @@ if(isset($username))
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>College Department</title>
+    <title>Activity</title>
     <link href="vendor/css/bootstrap.min.css" rel="stylesheet">
     <link href="resource/css/edit.css" rel="stylesheet">
     <link href="resource/css/style.css" rel="stylesheet">
@@ -54,7 +54,7 @@ background-attachment: fixed;
   }
 </style>
 
-  <body >
+  <body>
     <nav class="navbar navbar-expand-sm navbar-light bg-white">
       <div class="container-fluid">
           <a class="navbar-brand" href="participant.php"><IMG SRC="resource/img/logo.png" ALT="Logo" WIDTH=250 HEIGHT=80></a>
@@ -62,7 +62,7 @@ background-attachment: fixed;
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ml-auto">
                 <form action="" method="GET" class="form-inline my-2 my-lg-0">
-                  <li class="nav-item"><a class="nav-link text-dark mr-3 mt-3" href="dataTable.php"><i class="fas fa-arrow-left mr-1"></i>Return</a></li>
+                  <li class="nav-item"><a class="nav-link text-dark mr-3 mt-3" href="dataTableParticipant.php"><i class="fas fa-arrow-left mr-1"></i>Return</a></li>
                 </form>
               </ul>
             </div>
@@ -73,11 +73,10 @@ background-attachment: fixed;
         <?php
         require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/tableActivity.php';
         $tableActivity = new tableActivity;
-        $tableActivity->tableCollegeParticipant();
+        $tableActivity->tableActivityParticipant();
         ?>
       </div>
   </body>
-
 <!-- Footer -->
   <footer>
     <div class="container mb-5">
@@ -98,7 +97,7 @@ background-attachment: fixed;
 <script>
 $(document).ready(function(){
      $('#create_excel').click(function(){
-          var excel_data = $('#collgeDepartment').html();
+          var excel_data = $('#activity').html();
           var page = "excel.php?data=" + excel_data;
           window.location = page;
      });

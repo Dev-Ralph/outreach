@@ -62,7 +62,7 @@ background-attachment: fixed;
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ml-auto">
                 <form action="" method="GET" class="form-inline my-2 my-lg-0">
-                  <li class="nav-item"><a class="nav-link text-dark mr-3 mt-3" href="activity.php"><i class="fas fa-arrow-left mr-1"></i>Return</a></li>
+                  <li class="nav-item"><a class="nav-link text-dark mr-3 mt-3" href="participant.php"><i class="fas fa-arrow-left mr-1"></i>Return</a></li>
                 </form>
               </ul>
             </div>
@@ -92,15 +92,15 @@ background-attachment: fixed;
             <div class="tab-content" id="nav-tabContent">
               <div class="tab-pane fade animated fadeInUp <?php if(!empty($_GET['tab'])){if($_GET['tab']=="attendees"){echo "show active";}} ?>" id="nav-attendees" role="tabpanel" aria-labelledby="nav-attendees-tab">
                 <?php
-                require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTable.php';
-                $dataTable = new dataTable;
+                require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTableParticipant.php';
+                $dataTable = new dataTableParticipant;
                 $dataTable->dataTableAttendeesLiteracy();
                 ?>
               </div>
               <div class="tab-pane fade animated fadeInUp <?php if(!empty($_GET['tab'])){if($_GET['tab']=="college"){echo "show active";}} ?>" id="nav-college" role="tabpanel" aria-labelledby="nav-college-tab">
                 <?php
-                require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTable.php';
-                $dataTable = new dataTable;
+                require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTableParticipant.php';
+                $dataTable = new dataTableParticipant;
                 $dataTable->dataTableDepartmentLiteracy();
                 ?>
               </div>
@@ -111,8 +111,8 @@ background-attachment: fixed;
                   $add = new filterDate($_GET['dateFrom'],$_GET['dateTo']);
                   $add->filterActivityLiteracy();
                 }else {
-                  require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTable.php';
-                  $dataTable = new dataTable;
+                  require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTableParticipant.php';
+                  $dataTable = new dataTableParticipant;
                   $dataTable->dataTableProponentLiteracy();
               }
                 ?>
@@ -132,15 +132,15 @@ background-attachment: fixed;
             <div class="tab-content" id="nav-tabContent">
               <div class="tab-pane fade animated fadeInUp <?php if(!empty($_GET['tab'])){if($_GET['tab']=="attendees"){echo "show active";}} ?>" id="nav-attendees1" role="tabpanel" aria-labelledby="nav-attendees1-tab">
                 <?php
-                require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTable.php';
-                $dataTable = new dataTable;
+                require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTableParticipant.php';
+                $dataTable = new dataTableParticipant;
                 $dataTable->dataTableAttendeesHealth();
                 ?>
               </div>
               <div class="tab-pane fade animated fadeInUp <?php if(!empty($_GET['tab'])){if($_GET['tab']=="college"){echo "show active";}} ?>" id="nav-college1" role="tabpanel" aria-labelledby="nav-college1-tab">
                 <?php
-                require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTable.php';
-                $dataTable = new dataTable;
+                require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTableParticipant.php';
+                $dataTable = new dataTableParticipant;
                 $dataTable->dataTableDepartmentHealth();
                 ?>
               </div>
@@ -151,8 +151,8 @@ background-attachment: fixed;
                   $add = new filterDate($_GET['dateFrom'],$_GET['dateTo']);
                   $add->filterActivityHealth();
                 }else {
-                  require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTable.php';
-                  $dataTable = new dataTable;
+                  require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTableParticipant.php';
+                  $dataTable = new dataTableParticipant;
                   $dataTable->dataTableProponentHealth();
               }
                 ?>
@@ -172,15 +172,15 @@ background-attachment: fixed;
             <div class="tab-content" id="nav-tabContent">
               <div class="tab-pane fade animated fadeInUp <?php if(!empty($_GET['tab'])){if($_GET['tab']=="attendees"){echo "show active";}} ?>" id="nav-attendees2" role="tabpanel" aria-labelledby="nav-attendees2-tab">
                 <?php
-                require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTable.php';
-                $dataTable = new dataTable;
+                require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTableParticipant.php';
+                $dataTable = new dataTableParticipant;
                 $dataTable->dataTableAttendeesEnvironment();
                 ?>
               </div>
               <div class="tab-pane fade animated fadeInUp <?php if(!empty($_GET['tab'])){if($_GET['tab']=="college"){echo "show active";}} ?>" id="nav-college2" role="tabpanel" aria-labelledby="nav-college2-tab">
                 <?php
-                require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTable.php';
-                $dataTable = new dataTable;
+                require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTableParticipant.php';
+                $dataTable = new dataTableParticipant;
                 $dataTable->dataTableDepartmentEnvironment();
                 ?>
               </div>
@@ -191,8 +191,8 @@ background-attachment: fixed;
                   $add = new filterDate($_GET['dateFrom'],$_GET['dateTo']);
                   $add->filterActivityEnvironment();
                 }else {
-                  require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTable.php';
-                  $dataTable = new dataTable;
+                  require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTableParticipant.php';
+                  $dataTable = new dataTableParticipant;
                   $dataTable->dataTableProponentEnvironment();
               }
                 ?>
@@ -212,15 +212,15 @@ background-attachment: fixed;
             <div class="tab-content" id="nav-tabContent">
               <div class="tab-pane fade animated fadeInUp <?php if(!empty($_GET['tab'])){if($_GET['tab']=="attendees"){echo "show active";}} ?>" id="nav-attendees3" role="tabpanel" aria-labelledby="nav-attendees3-tab">
                 <?php
-                require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTable.php';
-                $dataTable = new dataTable;
+                require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTableParticipant.php';
+                $dataTable = new dataTableParticipant;
                 $dataTable->dataTableAttendeesLivelihood();
                 ?>
               </div>
               <div class="tab-pane fade animated fadeInUp <?php if(!empty($_GET['tab'])){if($_GET['tab']=="college"){echo "show active";}} ?>" id="nav-college3" role="tabpanel" aria-labelledby="nav-college3-tab">
                 <?php
-                require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTable.php';
-                $dataTable = new dataTable;
+                require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTableParticipant.php';
+                $dataTable = new dataTableParticipant;
                 $dataTable->dataTableDepartmentLivelihood();
                 ?>
               </div>
@@ -231,8 +231,8 @@ background-attachment: fixed;
                   $add = new filterDate($_GET['dateFrom'],$_GET['dateTo']);
                   $add->filterActivityLivelihood();
                 }else {
-                  require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTable.php';
-                  $dataTable = new dataTable;
+                  require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/dataTableParticipant.php';
+                  $dataTable = new dataTableParticipant;
                   $dataTable->dataTableProponentLivelihood();
               }
                 ?>
