@@ -27,19 +27,19 @@ class view extends config {
 
               echo '<table style="width:100%;" class="table">';
               echo '<tr style="color:#d75093">';
-              echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Participant</th> <th class="text-center">ID Number</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th><th class="text-center">Action</th>';
+              echo '<th class="text-left">Activity</th> <th class="text-left">Date</th> <th class="text-left">Participant</th> <th class="text-left">ID Number</th> <th class="text-left">Participation</th> <th class="text-left">College Department</th> <th class="text-left">Proponent</th><th class="text-left">Action</th>';
               echo '</tr>';
               foreach ($results as $result) {
               echo '<tr>';
-              echo '<td class="text-center">'.$result->title.'</td>';
-              echo '<td class="text-center">'.$result->date.'</td>';
+              echo '<td class="text-left">'.$result->title.'</td>';
+              echo '<td class="text-left">'.$result->date.'</td>';
 
-              echo '<td class="text-center">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
-              echo '<td class="text-center">'.$result->schl_number.'</td>';
-              echo '<td class="text-center">'.$result->participation.'</td>';
-              echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
-              echo '<td class="text-center">'.$result->proponent.'</td>';
-              echo  '<td class="text-center"><a class="btn btn-outline-primary" href="editParticipantRecord.php?outreach_id='.$result->outreach_id.'&title='.$result->title.'&date='.$result->date.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
+              echo '<td class="text-left">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
+              echo '<td class="text-left">'.$result->schl_number.'</td>';
+              echo '<td class="text-left">'.$result->participation.'</td>';
+              echo '<td class="text-left">'.$result->collegeDepartment.'</td>';
+              echo '<td class="text-left">'.$result->proponent.'</td>';
+              echo  '<td class="text-left"><a class="btn btn-outline-primary" href="editParticipantRecord.php?outreach_id='.$result->outreach_id.'&title='.$result->title.'&date='.$result->date.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
               echo '</tr>';
               }
               echo '</table>';
@@ -104,19 +104,19 @@ public function viewAllLiteracy(){
             echo '<table style="width:100%" class="table">';
             echo '<tr>';
             echo '<tr style="color:#d75093">';
-            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Participant</th> <th class="text-center">ID Number</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th><th class="text-center">Action</th>';
+            echo '<th class="text-left">Activity</th> <th class="text-left">Date</th> <th class="text-left">Participant</th> <th class="text-left">ID Number</th> <th class="text-left">Participation</th> <th class="text-left">College Department</th> <th class="text-left">Proponent</th><th class="text-left">Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
-            echo '<td class="text-center">'.$result->title.'</td>';
-            echo '<td class="text-center">'.$result->date.'</td>';
+            echo '<td class="text-left">'.$result->title.'</td>';
+            echo '<td class="text-left">'.$result->date.'</td>';
 
-            echo '<td class="text-center">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
-            echo '<td class="text-center">'.$result->schl_number.'</td>';
-            echo '<td class="text-center">'.$result->participation.'</td>';
-            echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
-            echo '<td class="text-center">'.$result->proponent.'</td>';
-            echo  '<td class="text-center"><a class="btn btn-outline-primary" href="editParticipantRecord.php?outreach_id='.$result->outreach_id.'&title='.$result->title.'&date='.$result->date.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
+            echo '<td class="text-left">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
+            echo '<td class="text-left">'.$result->schl_number.'</td>';
+            echo '<td class="text-left">'.$result->participation.'</td>';
+            echo '<td class="text-left">'.$result->collegeDepartment.'</td>';
+            echo '<td class="text-left">'.$result->proponent.'</td>';
+            echo  '<td class="text-left"><a class="btn btn-outline-primary" href="editParticipantRecord.php?outreach_id='.$result->outreach_id.'&title='.$result->title.'&date='.$result->date.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -182,19 +182,19 @@ public function viewAllHealth(){
             echo '<table style="width:100%" class="table">';
             echo '<tr>';
             echo '<tr style="color:#d75093">';
-            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Participant</th> <th class="text-center">ID Number</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th><th class="text-center">Action</th>';
+            echo '<th class="text-left">Activity</th> <th class="text-left">Date</th> <th class="text-left">Participant</th> <th class="text-left">ID Number</th> <th class="text-left">Participation</th> <th class="text-left">College Department</th> <th class="text-left">Proponent</th><th class="text-left">Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
-            echo '<td class="text-center">'.$result->title.'</td>';
-            echo '<td class="text-center">'.$result->date.'</td>';
+            echo '<td class="text-left">'.$result->title.'</td>';
+            echo '<td class="text-left">'.$result->date.'</td>';
 
-            echo '<td class="text-center">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
-            echo '<td class="text-center">'.$result->schl_number.'</td>';
-            echo '<td class="text-center">'.$result->participation.'</td>';
-            echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
-            echo '<td class="text-center">'.$result->proponent.'</td>';
-            echo  '<td class="text-center"><a class="btn btn-outline-primary" href="editParticipantRecord.php?outreach_id='.$result->outreach_id.'&title='.$result->title.'&date='.$result->date.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
+            echo '<td class="text-left">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
+            echo '<td class="text-left">'.$result->schl_number.'</td>';
+            echo '<td class="text-left">'.$result->participation.'</td>';
+            echo '<td class="text-left">'.$result->collegeDepartment.'</td>';
+            echo '<td class="text-left">'.$result->proponent.'</td>';
+            echo  '<td class="text-left"><a class="btn btn-outline-primary" href="editParticipantRecord.php?outreach_id='.$result->outreach_id.'&title='.$result->title.'&date='.$result->date.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -259,19 +259,19 @@ public function viewAllEnvironment(){
             echo '<table style="width:100%" class="table">';
             echo '<tr>';
             echo '<tr style="color:#d75093">';
-            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Participant</th> <th class="text-center">ID Number</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th><th class="text-center">Action</th>';
+            echo '<th class="text-left">Activity</th> <th class="text-left">Date</th> <th class="text-left">Participant</th> <th class="text-left">ID Number</th> <th class="text-left">Participation</th> <th class="text-left">College Department</th> <th class="text-left">Proponent</th><th class="text-left">Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
               echo '<tr>';
-              echo '<td class="text-center">'.$result->title.'</td>';
-              echo '<td class="text-center">'.$result->date.'</td>';
+              echo '<td class="text-left">'.$result->title.'</td>';
+              echo '<td class="text-left">'.$result->date.'</td>';
 
-              echo '<td class="text-center">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
-              echo '<td class="text-center">'.$result->schl_number.'</td>';
-              echo '<td class="text-center">'.$result->participation.'</td>';
-              echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
-              echo '<td class="text-center">'.$result->proponent.'</td>';
-              echo  '<td class="text-center"><a class="btn btn-outline-primary" href="editParticipantRecord.php?outreach_id='.$result->outreach_id.'&title='.$result->title.'&date='.$result->date.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
+              echo '<td class="text-left">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
+              echo '<td class="text-left">'.$result->schl_number.'</td>';
+              echo '<td class="text-left">'.$result->participation.'</td>';
+              echo '<td class="text-left">'.$result->collegeDepartment.'</td>';
+              echo '<td class="text-left">'.$result->proponent.'</td>';
+              echo  '<td class="text-left"><a class="btn btn-outline-primary" href="editParticipantRecord.php?outreach_id='.$result->outreach_id.'&title='.$result->title.'&date='.$result->date.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
               echo '</tr>';
             }
             echo '</table>';
@@ -337,19 +337,19 @@ public function viewAllLivelihood(){
             echo '<table style="width:100%" class="table">';
             echo '<tr>';
             echo '<tr style="color:#d75093">';
-            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Participant</th> <th class="text-center">ID Number</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th><th class="text-center">Action</th>';
+            echo '<th class="text-left">Activity</th> <th class="text-left">Date</th> <th class="text-left">Participant</th> <th class="text-left">ID Number</th> <th class="text-left">Participation</th> <th class="text-left">College Department</th> <th class="text-left">Proponent</th><th class="text-left">Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
               echo '<tr>';
-              echo '<td class="text-center">'.$result->title.'</td>';
-              echo '<td class="text-center">'.$result->date.'</td>';
+              echo '<td class="text-left">'.$result->title.'</td>';
+              echo '<td class="text-left">'.$result->date.'</td>';
 
-              echo '<td class="text-center">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
-              echo '<td class="text-center">'.$result->schl_number.'</td>';
-              echo '<td class="text-center">'.$result->participation.'</td>';
-              echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
-              echo '<td class="text-center">'.$result->proponent.'</td>';
-              echo  '<td class="text-center"><a class="btn btn-outline-primary" href="editParticipantRecord.php?outreach_id='.$result->outreach_id.'&title='.$result->title.'&date='.$result->date.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
+              echo '<td class="text-left">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
+              echo '<td class="text-left">'.$result->schl_number.'</td>';
+              echo '<td class="text-left">'.$result->participation.'</td>';
+              echo '<td class="text-left">'.$result->collegeDepartment.'</td>';
+              echo '<td class="text-left">'.$result->proponent.'</td>';
+              echo  '<td class="text-left"><a class="btn btn-outline-primary" href="editParticipantRecord.php?outreach_id='.$result->outreach_id.'&title='.$result->title.'&date='.$result->date.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
               echo '</tr>';
             }
             echo '</table>';
@@ -417,18 +417,18 @@ public function viewAllSearch(){
             echo '<table style="width:100%" class="table">';
             echo '<tr>';
             echo '<tr style="color:#d75093">';
-            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Participant</th> <th class="text-center">ID Number</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th><th class="text-center">Action</th>';
+            echo '<th class="text-left">Activity</th> <th class="text-left">Date</th> <th class="text-left">Participant</th> <th class="text-left">ID Number</th> <th class="text-left">Participation</th> <th class="text-left">College Department</th> <th class="text-left">Proponent</th><th class="text-left">Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
-            echo '<td class="text-center">'.$result->title.'</td>';
-            echo '<td class="text-center">'.$result->date.'</td>';
-            echo '<td class="text-center">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
-            echo '<td class="text-center">'.$result->schl_number.'</td>';
-            echo '<td class="text-center">'.$result->participation.'</td>';
-            echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
-            echo '<td class="text-center">'.$result->proponent.'</td>';
-            echo  '<td class="text-center"><a class="btn btn-outline-primary" href="editParticipantRecord.php?outreach_id='.$result->outreach_id.'&title='.$result->title.'&date='.$result->date.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
+            echo '<td class="text-left">'.$result->title.'</td>';
+            echo '<td class="text-left">'.$result->date.'</td>';
+            echo '<td class="text-left">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
+            echo '<td class="text-left">'.$result->schl_number.'</td>';
+            echo '<td class="text-left">'.$result->participation.'</td>';
+            echo '<td class="text-left">'.$result->collegeDepartment.'</td>';
+            echo '<td class="text-left">'.$result->proponent.'</td>';
+            echo  '<td class="text-left"><a class="btn btn-outline-primary" href="editParticipantRecord.php?outreach_id='.$result->outreach_id.'&title='.$result->title.'&date='.$result->date.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -498,18 +498,18 @@ public function viewAllLiteracySearch(){
             echo '<table style="width:100%" class="table">';
             echo '<tr>';
             echo '<tr style="color:#d75093">';
-            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Participant</th> <th class="text-center">ID Number</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th><th class="text-center">Action</th>';
+            echo '<th class="text-left">Activity</th> <th class="text-left">Date</th> <th class="text-left">Participant</th> <th class="text-left">ID Number</th> <th class="text-left">Participation</th> <th class="text-left">College Department</th> <th class="text-left">Proponent</th><th class="text-left">Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
-            echo '<td class="text-center">'.$result->title.'</td>';
-            echo '<td class="text-center">'.$result->date.'</td>';
-            echo '<td class="text-center">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
-            echo '<td class="text-center">'.$result->schl_number.'</td>';
-            echo '<td class="text-center">'.$result->participation.'</td>';
-            echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
-            echo '<td class="text-center">'.$result->proponent.'</td>';
-            echo  '<td class="text-center"><a class="btn btn-outline-primary" href="editParticipantRecord.php?outreach_id='.$result->outreach_id.'&title='.$result->title.'&date='.$result->date.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
+            echo '<td class="text-left">'.$result->title.'</td>';
+            echo '<td class="text-left">'.$result->date.'</td>';
+            echo '<td class="text-left">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
+            echo '<td class="text-left">'.$result->schl_number.'</td>';
+            echo '<td class="text-left">'.$result->participation.'</td>';
+            echo '<td class="text-left">'.$result->collegeDepartment.'</td>';
+            echo '<td class="text-left">'.$result->proponent.'</td>';
+            echo  '<td class="text-left"><a class="btn btn-outline-primary" href="editParticipantRecord.php?outreach_id='.$result->outreach_id.'&title='.$result->title.'&date='.$result->date.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -579,18 +579,18 @@ public function viewAllHealthSearch(){
             echo '<table style="width:100%" class="table">';
             echo '<tr>';
             echo '<tr style="color:#d75093">';
-            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Participant</th> <th class="text-center">ID Number</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th><th class="text-center">Action</th>';
+            echo '<th class="text-left">Activity</th> <th class="text-left">Date</th> <th class="text-left">Participant</th> <th class="text-left">ID Number</th> <th class="text-left">Participation</th> <th class="text-left">College Department</th> <th class="text-left">Proponent</th><th class="text-left">Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
-            echo '<td class="text-center">'.$result->title.'</td>';
-            echo '<td class="text-center">'.$result->date.'</td>';
-            echo '<td class="text-center">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
-            echo '<td class="text-center">'.$result->schl_number.'</td>';
-            echo '<td class="text-center">'.$result->participation.'</td>';
-            echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
-            echo '<td class="text-center">'.$result->proponent.'</td>';
-            echo  '<td class="text-center"><a class="btn btn-outline-primary" href="editParticipantRecord.php?outreach_id='.$result->outreach_id.'&title='.$result->title.'&date='.$result->date.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
+            echo '<td class="text-left">'.$result->title.'</td>';
+            echo '<td class="text-left">'.$result->date.'</td>';
+            echo '<td class="text-left">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
+            echo '<td class="text-left">'.$result->schl_number.'</td>';
+            echo '<td class="text-left">'.$result->participation.'</td>';
+            echo '<td class="text-left">'.$result->collegeDepartment.'</td>';
+            echo '<td class="text-left">'.$result->proponent.'</td>';
+            echo  '<td class="text-left"><a class="btn btn-outline-primary" href="editParticipantRecord.php?outreach_id='.$result->outreach_id.'&title='.$result->title.'&date='.$result->date.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -660,18 +660,18 @@ public function viewAllEnvironmentSearch(){
             echo '<table style="width:100%" class="table">';
             echo '<tr>';
             echo '<tr style="color:#d75093">';
-            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Participant</th> <th class="text-center">ID Number</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th><th class="text-center">Action</th>';
+            echo '<th class="text-left">Activity</th> <th class="text-left">Date</th> <th class="text-left">Participant</th> <th class="text-left">ID Number</th> <th class="text-left">Participation</th> <th class="text-left">College Department</th> <th class="text-left">Proponent</th><th class="text-left">Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
-            echo '<td class="text-center">'.$result->title.'</td>';
-            echo '<td class="text-center">'.$result->date.'</td>';
-            echo '<td class="text-center">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
-            echo '<td class="text-center">'.$result->schl_number.'</td>';
-            echo '<td class="text-center">'.$result->participation.'</td>';
-            echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
-            echo '<td class="text-center">'.$result->proponent.'</td>';
-            echo  '<td class="text-center"><a class="btn btn-outline-primary" href="editParticipantRecord.php?outreach_id='.$result->outreach_id.'&title='.$result->title.'&date='.$result->date.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
+            echo '<td class="text-left">'.$result->title.'</td>';
+            echo '<td class="text-left">'.$result->date.'</td>';
+            echo '<td class="text-left">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
+            echo '<td class="text-left">'.$result->schl_number.'</td>';
+            echo '<td class="text-left">'.$result->participation.'</td>';
+            echo '<td class="text-left">'.$result->collegeDepartment.'</td>';
+            echo '<td class="text-left">'.$result->proponent.'</td>';
+            echo  '<td class="text-left"><a class="btn btn-outline-primary" href="editParticipantRecord.php?outreach_id='.$result->outreach_id.'&title='.$result->title.'&date='.$result->date.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
             echo '</tr>';
             }
             echo '</table>';
@@ -740,18 +740,18 @@ public function viewAllLivelihoodSearch(){
             echo '<table style="width:100%" class="table">';
             echo '<tr>';
             echo '<tr style="color:#d75093">';
-            echo '<th class="text-center">Activity</th> <th class="text-center">Date</th> <th class="text-center">Participant</th> <th class="text-center">ID Number</th> <th class="text-center">Participation</th> <th class="text-center">College Department</th> <th class="text-center">Proponent</th><th class="text-center">Action</th>';
+            echo '<th class="text-left">Activity</th> <th class="text-left">Date</th> <th class="text-left">Participant</th> <th class="text-left">ID Number</th> <th class="text-left">Participation</th> <th class="text-left">College Department</th> <th class="text-left">Proponent</th><th class="text-left">Action</th>';
             echo '</tr>';
             foreach ($results as $result) {
             echo '<tr>';
-            echo '<td class="text-center">'.$result->title.'</td>';
-            echo '<td class="text-center">'.$result->date.'</td>';
-            echo '<td class="text-center">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
-            echo '<td class="text-center">'.$result->schl_number.'</td>';
-            echo '<td class="text-center">'.$result->participation.'</td>';
-            echo '<td class="text-center">'.$result->collegeDepartment.'</td>';
-            echo '<td class="text-center">'.$result->proponent.'</td>';
-            echo  '<td class="text-center"><a class="btn btn-outline-primary" href="editParticipantRecord.php?outreach_id='.$result->outreach_id.'&title='.$result->title.'&date='.$result->date.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
+            echo '<td class="text-left">'.$result->title.'</td>';
+            echo '<td class="text-left">'.$result->date.'</td>';
+            echo '<td class="text-left">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</td>';
+            echo '<td class="text-left">'.$result->schl_number.'</td>';
+            echo '<td class="text-left">'.$result->participation.'</td>';
+            echo '<td class="text-left">'.$result->collegeDepartment.'</td>';
+            echo '<td class="text-left">'.$result->proponent.'</td>';
+            echo  '<td class="text-left"><a class="btn btn-outline-primary" href="editParticipantRecord.php?outreach_id='.$result->outreach_id.'&title='.$result->title.'&date='.$result->date.'"><i class="fas fa-edit mr-1"></i>Edit</a></td>';
             echo '</tr>';
             }
             echo '</table>';

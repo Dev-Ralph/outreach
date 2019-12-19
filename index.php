@@ -63,6 +63,18 @@ background-attachment: fixed;
         }
         ?>
         <?php
+        $username_retrieve = $_GET['username_retrieve'];
+        if (isset($_GET['retrieve'])) {
+          header('location: index.php?username_retrieve='.$username_retrieve.'');
+        }
+         ?>
+         <?php
+         $username_retrieve = $_GET['username_retrieve'];
+         if (!empty($_GET['username_retrieve'])) {
+          header('location: send_mail.php?username_retrieve='.$username_retrieve.'');
+        }
+          ?>
+        <?php
         $sent = $_GET['sent'];
         if ($sent == "true") {
           ?>
@@ -77,7 +89,7 @@ background-attachment: fixed;
       <?php
         }
          ?>
-          <div class="d-flex justify-content-center h-100">
+          <div class="d-flex justify-content-center h-100 mb-5">
             <div class="user_card animated zoomIn">
               <div class="d-flex justify-content-center">
                 <div class="brand_logo_container mt-5">
@@ -99,19 +111,50 @@ background-attachment: fixed;
                     <input type="password" name="password" class="form-control input_pass" value="" placeholder="Password" required autocomplete="off">
                   </div>
               </div>
-              <div class="d-flex justify-content-center mt-3 login_container">
+              <div class="row">
+              <div class="d-flex justify-content-center mt-3 login_container col-md-12">
                 <button type="submit" name="login" class="btn login_btn">Login</button>
               </div>
-              <div class="d-flex justify-content-center mt-3">
-              <a href="send_mail.php">Retrieve Account</a>
-              </div>
+            </div>
+            <a class="text-center pt-3" href="" data-toggle="modal" data-target="#exampleModal">
+                  Forgot Password?
+            </a>
             </form>
             </div>
           </div>
       </div>
     </div>
   </div>
-
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Retrieve Password</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form class="" method="GET">
+          <div class="input-group mb-3">
+            <div class="input-group-append">
+              <span class="input-group-text"><i class="fas fa-user"></i></span>
+            </div>
+            <input type="text" name="username_retrieve" class="form-control input_user" value="" placeholder="Username" required autofocus="username" autocomplete="off">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-secondary" name="retrieve">Retrieve</button>
+          <!-- <?php
+          $username_retrieve = $_GET['username_retrieve'];
+          echo '<a class="btn btn-primary" href="send_mail.php?username_retrieve='.$username_retrieve.'">Retrieve</a>';
+           ?> -->
+         </form>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- Footer -->
     <footer>
       <div class="container mb-5">
@@ -135,3 +178,8 @@ background-attachment: fixed;
   <script src="vendor/js/bootstrap.min.js"></script>
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js" integrity="sha256-jGAkJO3hvqIDc4nIY1sfh/FPbV+UK+1N+xJJg6zzr7A=" crossorigin="anonymous"></script> -->
   <script src="vendor/js/main.js"></script>
+  <script type="text/javascript">
+  $('#myModal').on('shown.bs.modal', function () {
+$('#myInput').trigger('focus')
+})
+  </script>

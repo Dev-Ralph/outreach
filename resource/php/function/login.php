@@ -10,6 +10,7 @@ public function __construct($username=null,$password=null){
 public function login(){
     $config = new config;
     $pdo = $config ->Con();
+    session_start();
     if(isset($_GET['username'])){
     $username = $this->username;
     $password = $this->password;
@@ -20,11 +21,22 @@ public function login(){
     foreach ($rows as $row) {
       $username2 = $row->username;
       $password2 = $row->password;
+      $status = $row->status;
+      $account_id = $row->account_id;
     }
-    if ($username == $username2 && $password == $password2){
+    if ($username == $username2 && $password == $password2 && $status == "Administrator"){
     $_SESSION['username'] = $username;
+    $_SESSION['account_id'] = $account_id;
     header('location: activity.php');
-  }else {
+    }elseif ($username == $username2 && $password == $password2 && $status == "Adviser") {
+      $_SESSION['username'] = $username;
+      $_SESSION['account_id'] = $account_id;
+      header('location: activity_adviser.php');
+    }elseif ($username == $username2 && $password == $password2 && $status == "Student") {
+      $_SESSION['username'] = $username;
+      $_SESSION['account_id'] = $account_id;
+      header('location: activity_student.php');
+    }else {
     // header('location: index.php');
     ?>
     <div class="container">

@@ -89,7 +89,7 @@ public function dataTableProponentLiteracy(){
             <label class="col-form-label text-md-right">To: </label>
             <input type="date" class="form-control text-muted d-inline" name="dateTo" required autocomplete="off" style="WIDTH: 200px; HEIGHT: 42px;">
             <button type="submit" class="card-btn btn text-light py-2" name="searchDate-Literacy" style="background-color: #d75093;">Search</button>
-            <a class="btn text-light py-2" href="dataTable?pill=literacy&tab=activity" style="background-color: #d75093;">Clear</a>
+            <a class="btn text-light py-2" href="dataTable.php" style="background-color: #d75093;">Clear</a>
             </div>
             </form>';
 }
@@ -228,7 +228,7 @@ public function dataTableProponentHealth(){
             <label class="col-form-label text-md-right">To: </label>
             <input type="date" class="form-control text-muted d-inline" name="dateTo" required autocomplete="off" style="WIDTH: 200px; HEIGHT: 42px;">
             <button type="submit" class="card-btn btn text-light py-2" name="searchDate-Health" style="background-color: #d75093;">Search</button>
-            <a class="btn text-light py-2" href="dataTable?pill=health&tab=activity" style="background-color: #d75093;">Clear</a>
+            <a class="btn text-light py-2" href="dataTable.php" style="background-color: #d75093;">Clear</a>
             </div>
             </form>';
 }
@@ -366,7 +366,7 @@ public function dataTableProponentEnvironment(){
 <label class="col-form-label text-md-right">To: </label>
             <input type="date" class="form-control text-muted d-inline" name="dateTo" required autocomplete="off" style="WIDTH: 200px; HEIGHT: 42px;">
             <button type="submit" class="card-btn btn text-light py-2" name="searchDate-Environment" style="background-color: #d75093;">Search</button>
-            <a class="btn text-light py-2" href="dataTable?pill=environment&tab=activity" style="background-color: #d75093;">Clear</a>
+            <a class="btn text-light py-2" href="dataTable.php" style="background-color: #d75093;">Clear</a>
             </div>
             </form>';
 }
@@ -505,7 +505,7 @@ public function dataTableProponentLivelihood(){
 <label class="col-form-label text-md-right">To: </label>
             <input type="date" class="form-control text-muted d-inline" name="dateTo" required autocomplete="off" style="WIDTH: 200px; HEIGHT: 42px;">
             <button type="submit" class="card-btn btn text-light py-2" name="searchDate-Livelihood" style="background-color: #d75093;">Search</button>
-            <a class="btn text-light py-2" href="dataTable?pill=livelihood&tab=activity" style="background-color: #d75093;">Clear</a>
+            <a class="btn text-light py-2" href="dataTable.php" style="background-color: #d75093;">Clear</a>
             </div>
             </form>';
 }

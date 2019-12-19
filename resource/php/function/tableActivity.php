@@ -50,7 +50,7 @@ public function tableActivityParticipant(){
             echo '</table>';
             echo '</div>';
 
-            echo '<ul>';
+            echo '<ul class="mb-5">';
             for ($p=1; $p <= $total_pages; $p++) {
               echo '<li class="page-item" style="display: inline-block;margin-left:4px;">';
               echo  '<a class="page-link" href="?act_title='.$title.'&page='.$p.'">'.$p;
@@ -113,5 +113,87 @@ public function tableCollegeParticipant(){
               echo '</li>';
             }
             echo '</ul>';
+}
+public function viewEvaluation(){
+            $config = new config;
+            $pdo = $config->Con();
+
+            $limit = 10;
+            $title = $_GET['act_title'];
+            $date = $_GET['act_date'];
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $s = $pdo->prepare("SELECT * FROM `outreach_activity` WHERE `title` LIKE '%$title%'");
+            $s->execute();
+            $all = $s->fetchAll(PDO::FETCH_ASSOC);
+            $total_results = $s->rowCount();
+            $total_pages = ceil($total_results/$limit);
+
+            if (!isset($_GET['page'])) {
+              $page = 1;
+            } else{
+              $page = $_GET['page'];
+            }
+
+            $start = ($page-1)*$limit;
+
+            $sql = "SELECT * FROM `outreach_activity` WHERE `title` LIKE '%$title%'";
+            $data = $pdo->prepare($sql);
+            $data->execute();
+            $results = $data->fetchAll(PDO::FETCH_OBJ);
+
+            echo '<div class="pb-3 pt-0">';
+            echo '<div class="row">';
+            echo '<div class="col-md-6 px-0">';
+            echo '<p class="font-weight-bold mb-0 col-md-12 animated zoomIn">Evaluation:</p>';
+            foreach ($results as $result) {
+            echo '<p class="text-left d-inline my-0 col-md-2 animated zoomIn">'.$result->mean.'</p>';
+            }
+            echo '</div>';
+
+            echo '<div class="pb-3 pt-0">';
+            echo '<div class="col">';
+            echo '<p class="font-weight-bold mb-0 col-md-12 animated zoomIn">Proponents:</p>';
+            foreach ($results as $result) {
+            echo '<p class="text-left d-inline my-0 col-md-2 animated zoomIn">'.$result->proponent.'</p>';
+            }
+            echo '</div>';
+            echo '</div>';
+            echo '</div>';
+}
+public function viewActivityParticipant(){
+            $config = new config;
+            $pdo = $config->Con();
+
+            $limit = 10;
+            $title = $_GET['act_title'];
+            $date = $_GET['act_date'];
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $s = $pdo->prepare("SELECT * FROM `outreach_participant` WHERE `title` LIKE '%$title%'");
+            $s->execute();
+            $all = $s->fetchAll(PDO::FETCH_ASSOC);
+            $total_results = $s->rowCount();
+            $total_pages = ceil($total_results/$limit);
+
+            if (!isset($_GET['page'])) {
+              $page = 1;
+            } else{
+              $page = $_GET['page'];
+            }
+
+            $start = ($page-1)*$limit;
+
+            $sql = "SELECT * FROM `outreach_participant` WHERE `title` LIKE '%$title%' ORDER BY `p_lastname`";
+            $data = $pdo->prepare($sql);
+            $data->execute();
+            $results = $data->fetchAll(PDO::FETCH_OBJ);
+
+            echo '<div class="pb-5">';
+            echo '<div class="row">';
+            echo '<p class="font-weight-bold mb-0 col-md-12 animated zoomIn">Participants of this activity:</p>';
+            foreach ($results as $result) {
+            echo '<p class="text-left d-inline my-0 col-md-2 animated zoomIn">'.$result->p_lastname.', '.$result->p_firstname.' '.$result->p_middlename.'</p>';
+            }
+            echo '</div>';
+            echo '</div>';
 }
 }

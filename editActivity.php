@@ -56,7 +56,7 @@ background-attachment: fixed;
   <body>
       <nav class="navbar navbar-expand-sm navbar-light bg-white animated fadeInDown">
         <div class="container-fluid">
-            <a class="navbar-brand" href="activity.php"><IMG SRC="resource/img/logo.png" ALT="Logo" WIDTH=250 HEIGHT=80></a>
+            <a class="navbar-brand" href=""><IMG SRC="resource/img/logo.png" ALT="Logo" WIDTH=250 HEIGHT=80></a>
             <button class="navbar-toggler bg-white" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
@@ -173,7 +173,7 @@ background-attachment: fixed;
                               <input id="mean" type="text" class="form-control " name="mean" placeholder="Over-all Mean" value="<?php
                               $edit->editActivity();
                               echo "$edit->mean";
-                              ?>" required autocomplete="off">
+                              ?>" onkeypress="return isNumberKey(event)" required autocomplete="off">
                           <hr />
                           <div class="form-group">
                             <div class="alert alert-dismissible text-dark bg-light my-0" role="alert">
@@ -261,5 +261,18 @@ background-attachment: fixed;
                 counter--;
             });
         });
+    </script>
+    <script language="Javascript">
+       <!--
+       function isNumberKey(evt)
+       {
+          var charCode = (evt.which) ? evt.which : event.keyCode
+          if (charCode != 46 && charCode > 31
+            && (charCode < 48 || charCode > 57))
+             return false;
+
+          return true;
+       }
+       //-->
     </script>
 </html>

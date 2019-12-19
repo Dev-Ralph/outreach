@@ -67,7 +67,7 @@ background-attachment: fixed;
 <body>
         <nav class="navbar navbar-expand-sm navbar-light bg-white">
           <div class="container-fluid">
-              <a class="navbar-brand" href="participant.php"><IMG SRC="resource/img/logo.png" ALT="Logo" WIDTH=250 HEIGHT=80></a>
+              <a class="navbar-brand" href=""><IMG SRC="resource/img/logo.png" ALT="Logo" WIDTH=250 HEIGHT=80></a>
               <button class="navbar-toggler bg-white" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav ml-auto">
@@ -76,16 +76,17 @@ background-attachment: fixed;
                       <li class="nav-item"><a class="nav-link text-dark mr-2 mt-3" href="viewParticipants.php?pg=participant"><span style="color:#d75093"><i class="fas fa-user-friends"></i> View Participants</span></a></li>
                       <li class="nav-item"><a class="nav-link text-dark mr-2 mt-3" href="addActivity.php?pg=participant"><span style="color:#d75093"><i class="fas fa-pen-nib"></i> Add activity</span></a></li>
                       <li class="nav-item"><a class="nav-link text-dark mr-2 mt-3" href="add.php?pg=participant"><span style="color:#d75093"><i class="fas fa-user"></i> Add participant</span></a></li>
+                      <li class="nav-item"><a class="nav-link text-dark mr-2 mt-3" href="addAccount.php?pg=participant"><span style="color:#d75093"><i class="fa fa-address-book"></i>
+                        Add account</span></a></li>
                       <li class="nav-item"><div class="dropdown py-2">
                       <button class="btn btn-secondary dropdown-toggle text-dark mt-3" style="background-color: transparent; border: none;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <span style="color:#d75093">Account</span>
+                          <span style="color:#d75093"><i class="fa fa-cog"></i>
+                            Account</span>
                         </button>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                           <?php
-                          require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/editAccount.php';
-                          $editAccount = new editAccount;
-                          $editAccount->accountId();
-                          echo '<a class="dropdown-item py-2" href="editParticipantAcc.php?account_id='.$editAccount->account_id.'"><span style="color:#d75093"><i class="fas fa-user-edit mr-1"></i>Edit Account</span></a>';
+                          $account_id = $_SESSION['account_id'];
+                          echo '<a class="dropdown-item py-2" href="editParticipantAcc.php?account_id='.$account_id.'"><span style="color:#d75093"><i class="fas fa-user-edit mr-1"></i>Edit Account</span></a>';
                           ?>
                           <a class="dropdown-item" href="#"><button class="btn text-dark" style="background-color:transparent;" name="logout"><span style="color:#d75093"><i class="fas fa-sign-out-alt mr-1"></i>Logout</span></button>
                           <a class="" href=""></a>
@@ -96,12 +97,12 @@ background-attachment: fixed;
                 </div>
               </div>
             </nav>
-            <div class="container">
+            <div class="container-fluid">
               <div class="row">
-                  <h1 class="col-md-12 text-center mt-4 mb-0" style="color:#d75093">Participant</h1>
+                  <h1 class="col-md-12 text-left mt-4 mb-0 pl-4" style="color:#d75093">Participant</h1>
               </div>
             </div>
-            <a type="submit" name="activity" href="activity.php" class="btn btn-default my-3 mr-3 text-light float-right" style="background-color:#d75094"><i class="fas fa-book mr-2"></i>Activity</a>
+            <a type="submit" name="activity" href="activity.php" class="btn btn-default my-3 mr-3 text-light float-right" style="background-color:#d75094"><i class="fas fa-pen-nib mr-2"></i>Activity</a>
             <div class="container-fluid px-0">
             <nav class="mt-3">
             <div class="nav nav-tabs" id="nav-tab" role="tablist">

@@ -68,6 +68,7 @@ public function showEdit(){
               $this->proponent = $result->proponent;
               $this->documentation = $result->documentation;
               $this->image = $result->image;
+              $this->image = $result->mean;
               }
 }
 public function showTitle(){

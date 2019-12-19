@@ -56,7 +56,7 @@ background-attachment: fixed;
   <body>
       <nav class="navbar navbar-expand-sm navbar-light bg-white animated fadeInDown">
         <div class="container-fluid">
-            <a class="navbar-brand" href="activity.php"><IMG SRC="resource/img/logo.png" ALT="Logo" WIDTH=250 HEIGHT=80></a>
+            <a class="navbar-brand" href=""><IMG SRC="resource/img/logo.png" ALT="Logo" WIDTH=250 HEIGHT=80></a>
             <button class="navbar-toggler bg-white" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
@@ -157,7 +157,7 @@ background-attachment: fixed;
                           <div class="col-md-6">
                             <div class="form-group">
                               <label for="mean" class="col-form-label float-left">Over-all Mean</label>
-                              <input id="mean" type="text" class="form-control " name="mean" placeholder="Over-all Mean" required autocomplete="off">
+                              <input id="mean" type="text" class="form-control " name="mean" placeholder="Over-all Mean" onkeypress="return isNumberKey(event)" required autocomplete="off">
                           </div>
                           <hr />
                           <div class="form-group">
@@ -236,5 +236,18 @@ background-attachment: fixed;
                 counter--;
             });
         });
+    </script>
+    <script language="Javascript">
+       <!--
+       function isNumberKey(evt)
+       {
+          var charCode = (evt.which) ? evt.which : event.keyCode
+          if (charCode != 46 && charCode > 31
+            && (charCode < 48 || charCode > 57))
+             return false;
+
+          return true;
+       }
+       //-->
     </script>
 </html>

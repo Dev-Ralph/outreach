@@ -15,7 +15,8 @@ public function __construct($username=null,$password=null,$email=null){
 public function accountId(){
             $config = new config;
             $pdo = $config->Con();
-            $s = $pdo->prepare("SELECT * FROM `account`");
+            $account_id = $_SESSION['account_id'];
+            $s = $pdo->prepare("SELECT * FROM `account` WHERE `account_id` = $account_id");
             $s->execute();
             $results = $s->fetchAll();
             foreach ($results as $result) {

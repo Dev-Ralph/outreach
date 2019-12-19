@@ -13,7 +13,7 @@ if(isset($username))
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Figures | Activity</title>
+    <title>Figures | Participant</title>
     <link href="vendor/css/bootstrap.min.css" rel="stylesheet">
     <link href="resource/css/edit.css" rel="stylesheet">
     <link href="resource/css/style.css" rel="stylesheet">
@@ -57,7 +57,7 @@ background-attachment: fixed;
   <body>
     <nav class="navbar navbar-expand-sm navbar-light bg-white">
       <div class="container-fluid">
-          <a class="navbar-brand" href="activity.php"><IMG SRC="resource/img/logo.png" ALT="Logo" WIDTH=250 HEIGHT=80></a>
+          <a class="navbar-brand" href=""><IMG SRC="resource/img/logo.png" ALT="Logo" WIDTH=250 HEIGHT=80></a>
           <button class="navbar-toggler bg-white" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ml-auto">
@@ -107,7 +107,7 @@ background-attachment: fixed;
               <div class="tab-pane fade animated fadeInUp <?php if(empty($_GET['tab'])){echo "active";}elseif($_GET['tab']=="activity"){echo "active";}?>" id="nav-proponents" role="tabpanel" aria-labelledby="nav-proponents-tab">
                 <?php
                 if (isset($_GET['searchDate-Literacy'])) {
-                  require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/filterDate.php';
+                  require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/filterDateParticipant.php';
                   $add = new filterDate($_GET['dateFrom'],$_GET['dateTo']);
                   $add->filterActivityLiteracy();
                 }else {
@@ -147,7 +147,7 @@ background-attachment: fixed;
               <div class="tab-pane fade animated fadeInUp <?php if(empty($_GET['tab'])){echo "active";}elseif($_GET['tab']=="activity"){echo "active";}?>" id="nav-proponents1" role="tabpanel" aria-labelledby="nav-proponents1-tab">
                 <?php
                 if (isset($_GET['searchDate-Health'])) {
-                  require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/filterDate.php';
+                  require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/filterDateParticipant.php';
                   $add = new filterDate($_GET['dateFrom'],$_GET['dateTo']);
                   $add->filterActivityHealth();
                 }else {
@@ -187,7 +187,7 @@ background-attachment: fixed;
               <div class="tab-pane fade  animated fadeInUp <?php if(empty($_GET['tab'])){echo "active";}elseif($_GET['tab']=="activity"){echo "active";}?>" id="nav-proponents2" role="tabpanel" aria-labelledby="nav-proponents2-tab">
                 <?php
                 if (isset($_GET['searchDate-Environment'])) {
-                  require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/filterDate.php';
+                  require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/filterDateParticipant.php';
                   $add = new filterDate($_GET['dateFrom'],$_GET['dateTo']);
                   $add->filterActivityEnvironment();
                 }else {
@@ -227,7 +227,7 @@ background-attachment: fixed;
               <div class="tab-pane fade animated fadeInUp <?php if(empty($_GET['tab'])){echo "active";}elseif($_GET['tab']=="activity"){echo "active";}?>" id="nav-proponents3" role="tabpanel" aria-labelledby="nav-proponents3-tab">
                 <?php
                 if (isset($_GET['searchDate-Livelihood'])) {
-                  require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/filterDate.php';
+                  require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/filterDateParticipant.php';
                   $add = new filterDate($_GET['dateFrom'],$_GET['dateTo']);
                   $add->filterActivityLivelihood();
                 }else {

@@ -36,59 +36,29 @@
 
     <body>
 
-        <div>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+Launch demo modal
+</button>
 
-            <select>
-
-                <option>Choose Color</option>
-
-                <option value="red">Red</option>
-
-                <option value="green">Green</option>
-
-                <option value="blue">Blue</option>
-
-            </select>
-
-        </div>
-
-        <div class="red box">You have selected <strong>red option</strong> so i am here</div>
-
-        <div class="green box">You have selected <strong>green option</strong> so i am here</div>
-
-        <div class="blue box">You have selected <strong>blue option</strong> so i am here</div>
-
-    </body>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-
-    <script>
-
-    $(document).ready(function(){
-
-        $("select").change(function(){
-
-            $(this).find("option:selected").each(function(){
-
-                var optionValue = $(this).attr("value");
-
-                if(optionValue){
-
-                    $(".box").not("." + optionValue).hide();
-
-                    $("." + optionValue).show();
-
-                } else{
-
-                    $(".box").hide();
-
-                }
-
-            });
-
-        }).change();
-
-    });
-
-    </script>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Retrieve Password</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      ...
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-primary">Save changes</button>
+    </div>
+  </div>
+</div>
+</div>
 
     </html>

@@ -55,7 +55,7 @@ background-attachment: fixed;
   <body >
       <nav class="navbar navbar-expand-sm navbar-light bg-white">
         <div class="container-fluid">
-            <a class="navbar-brand" href="participant.php"><IMG SRC="resource/img/logo.png" ALT="Logo" WIDTH=250 HEIGHT=80></a>
+            <a class="navbar-brand" href=""><IMG SRC="resource/img/logo.png" ALT="Logo" WIDTH=250 HEIGHT=80></a>
             <button class="navbar-toggler bg-white" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
@@ -226,8 +226,18 @@ background-attachment: fixed;
           // echo '<h5 class="text-center">'.$edit->title.'</h5>';
           // echo '<h6 class="text-center">'.$edit->date.'</h6>';
           echo '<h6 class="text-center animated zoomIn">'.$edit->venue.'</h6>';
-          echo '<p class="text-justify pt-3 pb-5 animated zoomIn">'.$edit->documentation.'<p>';
+          echo '<p class="text-justify pt-3 pb-2 animated zoomIn">'.$edit->documentation.'<p>';
         }
+         ?>
+         <?php
+         require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/tableActivity.php';
+         $tableActivity = new tableActivity;
+         $tableActivity->viewEvaluation();
+         ?>
+         <?php
+         require_once $_SERVER['DOCUMENT_ROOT'].'/outreach/resource/php/function/tableActivity.php';
+         $tableActivity = new tableActivity;
+         $tableActivity->viewActivityParticipant();
          ?>
      </div>
 

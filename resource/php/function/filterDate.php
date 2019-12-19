@@ -128,7 +128,7 @@ public function filterActivityHealth(){
   echo '<ul>';
   for ($p=1; $p <= $total_pages; $p++) {
     echo '<li class="page-item" style="display: inline-block;margin-left:4px;">';
-    echo  '<a class="page-link" href="?dateFrom='.$dateFrom.'&dateTo='.$dateTo.'&searchDate-Health='.$search.'&pill=literacy&tab=activity&pageHealth='.$p.'">'.$p;
+    echo  '<a class="page-link" href="?dateFrom='.$dateFrom.'&dateTo='.$dateTo.'&searchDate-Health='.$search.'&pill=health&tab=activity&pageHealth='.$p.'">'.$p;
     echo  '</a>';
     echo '</li>';
   }
@@ -196,7 +196,7 @@ public function filterActivityEnvironment(){
   echo '<ul>';
   for ($p=1; $p <= $total_pages; $p++) {
     echo '<li class="page-item" style="display: inline-block;margin-left:4px;">';
-    echo  '<a class="page-link" href="?dateFrom='.$dateFrom.'&dateTo='.$dateTo.'&searchDate-Environment='.$search.'&pill=Environment&tab=activity&pageEnvironment='.$p.'">'.$p;
+    echo  '<a class="page-link" href="?dateFrom='.$dateFrom.'&dateTo='.$dateTo.'&searchDate-Environment='.$search.'&pill=environment&tab=activity&pageEnvironment='.$p.'">'.$p;
     echo  '</a>';
     echo '</li>';
   }

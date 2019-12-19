@@ -7,7 +7,8 @@ require 'vendor\autoload.php';
 
   $config = new config;
   $pdo = $config->Con();
-  $s = $pdo->prepare("SELECT * FROM `account`");
+  $username_retrieve = $_GET['username_retrieve'];
+  $s = $pdo->prepare("SELECT * FROM `account` WHERE `username` = '$username_retrieve'");
   $s->execute();
   $results = $s->fetchAll();
   foreach ($results as $result) {
@@ -15,7 +16,7 @@ require 'vendor\autoload.php';
       $password = $result->password;
       $email = $result->email;
     }
-// Validation (para hindi mag send ng blank info yung user)
+
 if(empty($email)){
     header("location: index.php?sent=false");
     exit();
